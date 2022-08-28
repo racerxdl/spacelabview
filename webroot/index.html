@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>three.js webgl - SpaceLab</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<link type="text/css" rel="stylesheet" href="main.css">
+	<style>
+		body {
+			background: #000;
+			color: #eee;
+		}
+
+		a {
+			color: #0080ff;
+		}
+
+		b {
+			color: orange
+		}
+	</style>
+</head>
+
+<body>
+
+	<div id="info">
+		<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - SpaceLab Agaris<br />
+		<div id="connstatus">Disconnected</div>
+	</div>
+
+	<!-- Import maps polyfill -->
+	<!-- Remove this when import maps will be widely supported -->
+	<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+
+	<script type="importmap">
+			{
+				"imports": {
+					"three": "./three.module.js"
+				}
+			}
+		</script>
+
+	<script type="module">
+
+		import * as THREE from 'three';
+
+		import Stats from './stats.module.js';
+
+		import { OrbitControls } from './OrbitControls.js';
+		import { FlyControls } from './FlyControls.js';
+		import { EffectComposer } from './EffectComposer.js';
+		import { RenderPass } from './RenderPass.js';
+		import { FilmPass } from './FilmPass.js';
+		import { FontLoader } from './FontLoader.js';
+
+		const radius = (120000 / 2) - 1500; // Agaris is 120km wide, but since thats the average size, we decrement 1km altitude.
+		const MARGIN = 0;
+		let SCREEN_HEIGHT = window.innerHeight - MARGIN * 2;
+		let SCREEN_WIDTH = window.innerWidth;
+
+		let camera, controls, scene, renderer, stats;
+		let geometry, meshPlanet;
+		let dirLight;
+		let planetOffset = [0, 0, 0];
+		let grids = {};
+		let ownerColors = {};
+		let composer;
+		let textFont;
+
+		const textureLoader = new THREE.TextureLoader();
+
+		let d, dPlanet, dMoon;
+		const dMoonVec = new THREE.Vector3();
+
+		const clock = new THREE.Clock();
+
+		function fontLoad() {
+			const loader = new FontLoader();
+			loader.load('helvetiker_regular.typeface.json', function (font) {
+				textFont = font;
+				init();
+				animate();
+			});
+		}
+		function roundRect(ctx, x, y, w, h, r) { ctx.beginPath(); ctx.moveTo(x + r, y); ctx.lineTo(x + w - r, y); ctx.quadraticCurveTo(x + w, y, x + w, y + r); ctx.lineTo(x + w, y + h - r); ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h); ctx.lineTo(x + r, y + h); ctx.quadraticCurveTo(x, y + h, x, y + h - r); ctx.lineTo(x, y + r); ctx.quadraticCurveTo(x, y, x + r, y); ctx.closePath(); ctx.fill(); ctx.stroke(); }
+		function makeTextSprite(message, parameters) {
+			if (parameters === undefined) parameters = {};
+			var fontface = parameters.hasOwnProperty("fontface") ? parameters["fontface"] : "Arial";
+			var fontsize = parameters.hasOwnProperty("fontsize") ? parameters["fontsize"] : 18;
+			var borderThickness = parameters.hasOwnProperty("borderThickness") ? parameters["borderThickness"] : 4;
+			var borderColor = parameters.hasOwnProperty("borderColor") ? parameters["borderColor"] : { r: 0, g: 0, b: 0, a: 1.0 };
+			var backgroundColor = parameters.hasOwnProperty("backgroundColor") ? parameters["backgroundColor"] : { r: 255, g: 255, b: 255, a: 1.0 };
+			var textColor = parameters.hasOwnProperty("textColor") ? parameters["textColor"] : { r: 0, g: 0, b: 0, a: 1.0 };
+
+			var canvas = document.createElement('canvas');
+			var context = canvas.getContext('2d');
+			context.font = "Bold " + fontsize + "px " + fontface;
+			var metrics = context.measureText(message);
+			var textWidth = metrics.width;
+
+			context.fillStyle = "rgba(" + backgroundColor.r + "," + backgroundColor.g + "," + backgroundColor.b + "," + backgroundColor.a + ")";
+			context.strokeStyle = "rgba(" + borderColor.r + "," + borderColor.g + "," + borderColor.b + "," + borderColor.a + ")";
+
+			context.lineWidth = borderThickness;
+			roundRect(context, borderThickness / 2, borderThickness / 2, (textWidth + borderThickness) * 1.1, fontsize * 1.4 + borderThickness, 8);
+
+			context.fillStyle = "rgba(" + textColor.r + ", " + textColor.g + ", " + textColor.b + ", 1.0)";
+			context.fillText(message, borderThickness, fontsize + borderThickness);
+
+			var texture = new THREE.Texture(canvas)
+			texture.needsUpdate = true;
+			// const map = new THREE.TextureLoader().load( './background.jpg' );
+			var spriteMaterial = new THREE.SpriteMaterial({ map: texture});
+			var sprite = new THREE.Sprite(spriteMaterial);
+			// sprite.scale.set(0.5 * fontsize, 0.25 * fontsize, 0.75 * fontsize);
+			const baseScale = 3000;
+			sprite.scale.set(0.5*baseScale, 0.25*baseScale, 0.75*baseScale);
+			return sprite;
+		}
+
+		function newText(message) {
+			return makeTextSprite(message);
+			// const matLite = new THREE.MeshBasicMaterial({
+			// 	color: 0xFFFFFF,
+			// 	transparent: true,
+			// 	opacity: 0.4,
+			// 	side: THREE.DoubleSide
+			// });
+			// const shapes = textFont.generateShapes(message, 100);
+			// const geometry = new THREE.ShapeGeometry(shapes);
+			// geometry.computeBoundingBox();
+			// const xMid = - 0.5 * (geometry.boundingBox.max.x - geometry.boundingBox.min.x);
+			// geometry.translate(xMid, 0, 0);
+			// return new THREE.Mesh(geometry, matLite);
+		}
+
+		fontLoad();
+
+		function init() {
+			camera = new THREE.PerspectiveCamera(25, SCREEN_WIDTH / SCREEN_HEIGHT, 50, 1e7);
+			camera.position.z = radius * 5;
+
+			scene = new THREE.Scene();
+			scene.fog = new THREE.FogExp2(0x000000, 0.00000025);
+			scene.add(new THREE.AmbientLight(0x443333));
+
+			dirLight = new THREE.DirectionalLight(0xffffff);
+			dirLight.position.set(- 1, 0, 1).normalize();
+			scene.add(dirLight);
+
+			const materialNormalMap = new THREE.MeshPhongMaterial({
+
+				specular: 0x333333,
+				shininess: 15,
+				map: textureLoader.load("agaris_texture.jpg"),
+
+				// y scale is negated to compensate for normal map handedness.
+				normalScale: new THREE.Vector2(0.85, - 0.85)
+
+			});
+
+			// planet
+
+			geometry = new THREE.SphereGeometry(radius, 100, 50);
+
+			meshPlanet = new THREE.Mesh(geometry, materialNormalMap);
+			meshPlanet.rotation.y = 3.14;
+			// meshPlanet.rotation.z = tilt;
+			scene.add(meshPlanet);
+
+			renderer = new THREE.WebGLRenderer({ antialias: true });
+			renderer.setPixelRatio(window.devicePixelRatio);
+			renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+			document.body.appendChild(renderer.domElement);
+
+			//
+
+			controls = new OrbitControls(camera, renderer.domElement);
+			controls.minDistance = radius + 5;
+			controls.maxDistance = radius * 20;
+			//
+
+			stats = new Stats();
+			document.body.appendChild(stats.dom);
+
+			window.addEventListener('resize', onWindowResize);
+
+			const renderModel = new RenderPass(scene, camera);
+			const effectFilm = new FilmPass(0.35, 0.75, 2048, false);
+
+			composer = new EffectComposer(renderer);
+
+			composer.addPass(renderModel);
+			composer.addPass(effectFilm);
+			const connection = new WebSocket('ws://localhost:3000/ws');
+			// When the connection is open, send some data to the server
+			connection.onopen = function () {
+				document.getElementById('connstatus').innerHTML = "Connected";
+				connection.send('Ping'); // Send the message 'Ping' to the server
+			};
+
+			// Log errors
+			connection.onerror = function (error) {
+				document.getElementById('connstatus').innerHTML = 'WebSocket Error ' + error;
+			};
+
+			// Log messages from the server
+			connection.onmessage = function (e) {
+				try {
+					const data = JSON.parse(e.data);
+					switch (data.Type) {
+						case "planets": planetsUpdateCallback(data.Content); break;
+						case "gridUpdate": gridUpdateCallback(data.Content); break;
+						case "chat": newChatCallback(data.Content); break;
+						case "grids": gridsCallback(data.Content); break;
+					}
+				} catch (e) {
+					document.getElementById('connstatus').innerHTML = 'Error parsing server data:' + e;
+					console.log(e);
+				}
+			};
+		}
+		function planetsUpdateCallback(data) {
+			console.log(data);
+			const agaris = data["Planet Agaris-12345d120000"];
+			planetOffset[0] = agaris.Position.X;
+			planetOffset[1] = agaris.Position.Y;
+			planetOffset[2] = agaris.Position.Z;
+			console.log(`Agaris Offset: ${planetOffset}`);
+		}
+
+		function newChatCallback(data) {
+			console.log(`(${data.DisplayName}): ${data.Content}`);
+		}
+
+		function gridsCallback(data) {
+			Object.keys(data).forEach((k) => {
+				gridUpdateCallback({
+					Grid: data[k],
+					IsNew: true,
+				});
+			})
+		}
+
+		function gridUpdateCallback(data) {
+			const gridData = data.Grid;
+			if (data.IsNew) {
+				if (!ownerColors[gridData.OwnerDisplayName]) {
+					ownerColors[gridData.OwnerDisplayName] = pickOwnerColor();
+				}
+				const materialNormalMap = new THREE.MeshPhongMaterial({
+					specular: 0x333333,
+					color: ownerColors[gridData.OwnerDisplayName],
+					shininess: 15,
+				});
+
+				const geometry = new THREE.SphereGeometry(100, 8, 8);
+				const gridMesh = new THREE.Mesh(geometry, materialNormalMap);
+				gridMesh.position.x = gridData.Position.X - planetOffset[0];
+				gridMesh.position.y = gridData.Position.Y - planetOffset[1];
+				gridMesh.position.z = gridData.Position.Z - planetOffset[2];
+				scene.add(gridMesh);
+
+				const gridText = newText(gridData.DisplayName);
+				gridText.position.x = gridData.Position.X - planetOffset[0];
+				gridText.position.y = gridData.Position.Y - planetOffset[1];
+				gridText.position.z = gridData.Position.Z - planetOffset[2];
+				scene.add(gridText);
+
+				const ng = {
+					gridData: gridData,
+					mesh: gridMesh,
+					text: gridText,
+				};
+				grids[gridData.EntityId] = ng;
+			} else if (data.IsDeleted) {
+				const grid = grids[gridData.EntityId];
+				if (grid) {
+					scene.remove(grid.mesh);
+					delete (grids[gridData.EntityId]);
+				}
+			} else { // Update
+				if (!grids[gridData.EntityId]) {
+					// For some reason, we didnt added it.
+					data.IsNew = true;
+					return gridUpdateCallback(data);
+				}
+				const { mesh, text } = grids[gridData.EntityId];
+				mesh.position.x = gridData.Position.X - planetOffset[0];
+				mesh.position.y = gridData.Position.Y - planetOffset[1];
+				mesh.position.z = gridData.Position.Z - planetOffset[2];
+				text.position.x = gridData.Position.X - planetOffset[0];
+				text.position.y = gridData.Position.Y - planetOffset[1];
+				text.position.z = gridData.Position.Z - planetOffset[2];
+				grids[gridData.EntityId].griData = gridData;
+			}
+		}
+
+		function onWindowResize() {
+
+			SCREEN_HEIGHT = window.innerHeight;
+			SCREEN_WIDTH = window.innerWidth;
+
+			camera.aspect = SCREEN_WIDTH / SCREEN_HEIGHT;
+			camera.updateProjectionMatrix();
+
+			renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+			composer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+
+		}
+
+		function animate() {
+			requestAnimationFrame(animate);
+
+			render();
+			stats.update();
+		}
+
+		function render() {
+			const delta = clock.getDelta();
+
+			composer.render(delta);
+			const scale = controls.getDistance() / radius;
+			Object.keys(grids).forEach(k => {
+				grids[k].mesh.scale.set(scale, scale, scale);
+			})
+		}
+
+		function pickOwnerColor() {
+			const names = Object.keys(colors);
+			let found = false;
+			let name, value;
+			do {
+				name = names[(Math.random() * names.length) >>> 0];
+				value = colors[name];
+				found = Object.keys(ownerColors)
+					.map(k => ownerColors[k])
+					.map(v => v == value)
+					.reduce((a, v) => a || v, false);
+			} while (found);
+			return value;
+		}
+
+		const colors = {
+			"Aliceblue            ": 0xf0f8ff,
+			"Antiquewhite         ": 0xfaebd7,
+			"Aqua                 ": 0x00ffff,
+			"Aquamarine           ": 0x7fffd4,
+			"Azure                ": 0xf0ffff,
+			"Beige                ": 0xf5f5dc,
+			"Bisque               ": 0xffe4c4,
+			"Black                ": 0x000000,
+			"Blanchedalmond       ": 0xffebcd,
+			"Blue                 ": 0x0000ff,
+			"Blueviolet           ": 0x8a2be2,
+			"Brown                ": 0xa52a2a,
+			"Burlywood            ": 0xdeb887,
+			"Cadetblue            ": 0x5f9ea0,
+			"Chartreuse           ": 0x7fff00,
+			"Chocolate            ": 0xd2691e,
+			"Coral                ": 0xff7f50,
+			"Cornflowerblue       ": 0x6495ed,
+			"Cornsilk             ": 0xfff8dc,
+			"Crimson              ": 0xdc143c,
+			"Cyan                 ": 0x00ffff,
+			"Darkblue             ": 0x00008b,
+			"Darkcyan             ": 0x008b8b,
+			"Darkgoldenrod        ": 0xb8860b,
+			"Darkgray             ": 0xa9a9a9,
+			"Darkgreen            ": 0x006400,
+			"Darkgrey             ": 0xa9a9a9,
+			"Darkkhaki            ": 0xbdb76b,
+			"Darkmagenta          ": 0x8b008b,
+			"Darkolivegreen       ": 0x556b2f,
+			"Darkorange           ": 0xff8c00,
+			"Darkorchid           ": 0x9932cc,
+			"Darkred              ": 0x8b0000,
+			"Darksalmon           ": 0xe9967a,
+			"Darkseagreen         ": 0x8fbc8f,
+			"Darkslateblue        ": 0x483d8b,
+			"Darkslategray        ": 0x2f4f4f,
+			"Darkslategrey        ": 0x2f4f4f,
+			"Darkturquoise        ": 0x00ced1,
+			"Darkviolet           ": 0x9400d3,
+			"Deeppink             ": 0xff1493,
+			"Deepskyblue          ": 0x00bfff,
+			"Dimgray              ": 0x696969,
+			"Dimgrey              ": 0x696969,
+			"Dodgerblue           ": 0x1e90ff,
+			"Firebrick            ": 0xb22222,
+			"Floralwhite          ": 0xfffaf0,
+			"Forestgreen          ": 0x228b22,
+			"Fuchsia              ": 0xff00ff,
+			"Gainsboro            ": 0xdcdcdc,
+			"Ghostwhite           ": 0xf8f8ff,
+			"Gold                 ": 0xffd700,
+			"Goldenrod            ": 0xdaa520,
+			"Gray                 ": 0x808080,
+			"Green                ": 0x008000,
+			"Greenyellow          ": 0xadff2f,
+			"Grey                 ": 0x808080,
+			"Honeydew             ": 0xf0fff0,
+			"Hotpink              ": 0xff69b4,
+			"Indianred            ": 0xcd5c5c,
+			"Indigo               ": 0x4b0082,
+			"Ivory                ": 0xfffff0,
+			"Khaki                ": 0xf0e68c,
+			"Lavender             ": 0xe6e6fa,
+			"Lavenderblush        ": 0xfff0f5,
+			"Lawngreen            ": 0x7cfc00,
+			"Lemonchiffon         ": 0xfffacd,
+			"Lightblue            ": 0xadd8e6,
+			"Lightcoral           ": 0xf08080,
+			"Lightcyan            ": 0xe0ffff,
+			"Lightgoldenrodyellow ": 0xfafad2,
+			"Lightgray            ": 0xd3d3d3,
+			"Lightgreen           ": 0x90ee90,
+			"Lightgrey            ": 0xd3d3d3,
+			"Lightpink            ": 0xffb6c1,
+			"Lightsalmon          ": 0xffa07a,
+			"Lightseagreen        ": 0x20b2aa,
+			"Lightskyblue         ": 0x87cefa,
+			"Lightslategray       ": 0x778899,
+			"Lightslategrey       ": 0x778899,
+			"Lightsteelblue       ": 0xb0c4de,
+			"Lightyellow          ": 0xffffe0,
+			"Lime                 ": 0x00ff00,
+			"Limegreen            ": 0x32cd32,
+			"Linen                ": 0xfaf0e6,
+			"Magenta              ": 0xff00ff,
+			"Maroon               ": 0x800000,
+			"Mediumaquamarine     ": 0x66cdaa,
+			"Mediumblue           ": 0x0000cd,
+			"Mediumorchid         ": 0xba55d3,
+			"Mediumpurple         ": 0x9370db,
+			"Mediumseagreen       ": 0x3cb371,
+			"Mediumslateblue      ": 0x7b68ee,
+			"Mediumspringgreen    ": 0x00fa9a,
+			"Mediumturquoise      ": 0x48d1cc,
+			"Mediumvioletred      ": 0xc71585,
+			"Midnightblue         ": 0x191970,
+			"Mintcream            ": 0xf5fffa,
+			"Mistyrose            ": 0xffe4e1,
+			"Moccasin             ": 0xffe4b5,
+			"Navajowhite          ": 0xffdead,
+			"Navy                 ": 0x000080,
+			"Oldlace              ": 0xfdf5e6,
+			"Olive                ": 0x808000,
+			"Olivedrab            ": 0x6b8e23,
+			"Orange               ": 0xffa500,
+			"Orangered            ": 0xff4500,
+			"Orchid               ": 0xda70d6,
+			"Palegoldenrod        ": 0xeee8aa,
+			"Palegreen            ": 0x98fb98,
+			"Paleturquoise        ": 0xafeeee,
+			"Palevioletred        ": 0xdb7093,
+			"Papayawhip           ": 0xffefd5,
+			"Peachpuff            ": 0xffdab9,
+			"Peru                 ": 0xcd853f,
+			"Pink                 ": 0xffc0cb,
+			"Plum                 ": 0xdda0dd,
+			"Powderblue           ": 0xb0e0e6,
+			"Purple               ": 0x800080,
+			"Red                  ": 0xff0000,
+			"Rosybrown            ": 0xbc8f8f,
+			"Royalblue            ": 0x4169e1,
+			"Saddlebrown          ": 0x8b4513,
+			"Salmon               ": 0xfa8072,
+			"Sandybrown           ": 0xf4a460,
+			"Seagreen             ": 0x2e8b57,
+			"Seashell             ": 0xfff5ee,
+			"Sienna               ": 0xa0522d,
+			"Silver               ": 0xc0c0c0,
+			"Skyblue              ": 0x87ceeb,
+			"Slateblue            ": 0x6a5acd,
+			"Slategray            ": 0x708090,
+			"Slategrey            ": 0x708090,
+			"Snow                 ": 0xfffafa,
+			"Springgreen          ": 0x00ff7f,
+			"Steelblue            ": 0x4682b4,
+			"Tan                  ": 0xd2b48c,
+			"Teal                 ": 0x008080,
+			"Thistle              ": 0xd8bfd8,
+			"Tomato               ": 0xff6347,
+			"Turquoise            ": 0x40e0d0,
+			"Violet               ": 0xee82ee,
+			"Wheat                ": 0xf5deb3,
+			"White                ": 0xffffff,
+			"Whitesmoke           ": 0xf5f5f5,
+			"Yellow               ": 0xffff00,
+			"Yellowgreen          ": 0x9acd32,
+		}
+	</script>
+</body>
+
+</html>
