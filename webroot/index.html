@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>three.js webgl - SpaceLab</title>
+	<title>SpaceLab Viewer</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link type="text/css" rel="stylesheet" href="main.css">
@@ -19,14 +19,60 @@
 		b {
 			color: orange
 		}
+
+		#planets {
+			position: fixed;
+			bottom: 0px;
+			left: 0px;
+			min-width: 200px;
+			background-color: #393838c4;
+			color: white;
+			border-radius: 0 25px 0 0;
+		}
+
+		#planets li {
+			cursor: pointer;
+		}
+
+		#planets li:hover {
+			background-color: rgb(110, 110, 0);
+			cursor: pointer;
+		}
+
+		#chat {
+			position: fixed;
+			right: 0px;
+			top: 0px;
+			height: 100%;
+			width: 250px;
+			background-color: #393838c4;
+		}
+
+		#chat h2 {
+			text-align: center;
+			width: 100%;
+		}
+
+		#messageList {
+			list-style-type: none;
+			padding: 1em;
+			margin: 0;
+		}
 	</style>
 </head>
 
 <body>
 
 	<div id="info">
-		<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - SpaceLab Agaris<br />
+		<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - SpaceLab<br />
+		<div id="focusname">Focused at EarthLike</div>
 		<div id="connstatus">Disconnected</div>
+	</div>
+	<div id="planets">
+		Loading planets
+	</div>
+	<div id="chat">
+		Loading chat
 	</div>
 
 	<!-- Import maps polyfill -->
@@ -39,7 +85,7 @@
 					"three": "./three.module.js"
 				}
 			}
-		</script>
+	</script>
 
 	<script type="module">
 
@@ -54,7 +100,6 @@
 		import { FilmPass } from './FilmPass.js';
 		import { FontLoader } from './FontLoader.js';
 
-		const radius = (120000 / 2) - 1500; // Agaris is 120km wide, but since thats the average size, we decrement 1km altitude.
 		const MARGIN = 0;
 		let SCREEN_HEIGHT = window.innerHeight - MARGIN * 2;
 		let SCREEN_WIDTH = window.innerWidth;
@@ -62,17 +107,19 @@
 		let camera, controls, scene, renderer, stats;
 		let geometry, meshPlanet;
 		let dirLight;
-		let planetOffset = [0, 0, 0];
 		let grids = {};
+		let voxels = {};
 		let ownerColors = {};
 		let composer;
 		let textFont;
 
 		const textureLoader = new THREE.TextureLoader();
+		const cubeTextureLoader = new THREE.CubeTextureLoader();
 
 		let d, dPlanet, dMoon;
 		const dMoonVec = new THREE.Vector3();
 
+		const msgList = document.createElement("ul");
 		const clock = new THREE.Clock();
 
 		function fontLoad() {
@@ -111,35 +158,27 @@
 			var texture = new THREE.Texture(canvas)
 			texture.needsUpdate = true;
 			// const map = new THREE.TextureLoader().load( './background.jpg' );
-			var spriteMaterial = new THREE.SpriteMaterial({ map: texture});
+			var spriteMaterial = new THREE.SpriteMaterial({ map: texture });
 			var sprite = new THREE.Sprite(spriteMaterial);
 			// sprite.scale.set(0.5 * fontsize, 0.25 * fontsize, 0.75 * fontsize);
 			const baseScale = 3000;
-			sprite.scale.set(0.5*baseScale, 0.25*baseScale, 0.75*baseScale);
+			sprite.scale.set(0.5 * baseScale, 0.25 * baseScale, 0.75 * baseScale);
 			return sprite;
 		}
 
 		function newText(message) {
 			return makeTextSprite(message);
-			// const matLite = new THREE.MeshBasicMaterial({
-			// 	color: 0xFFFFFF,
-			// 	transparent: true,
-			// 	opacity: 0.4,
-			// 	side: THREE.DoubleSide
-			// });
-			// const shapes = textFont.generateShapes(message, 100);
-			// const geometry = new THREE.ShapeGeometry(shapes);
-			// geometry.computeBoundingBox();
-			// const xMid = - 0.5 * (geometry.boundingBox.max.x - geometry.boundingBox.min.x);
-			// geometry.translate(xMid, 0, 0);
-			// return new THREE.Mesh(geometry, matLite);
 		}
 
 		fontLoad();
 
 		function init() {
+			document.getElementById("chat").innerHTML = "<h2>Chat</h2>";
+			msgList.id = "messageList";
+			document.getElementById("chat").appendChild(msgList);
+
 			camera = new THREE.PerspectiveCamera(25, SCREEN_WIDTH / SCREEN_HEIGHT, 50, 1e7);
-			camera.position.z = radius * 5;
+			camera.position.z = 100e3 * 5;
 
 			scene = new THREE.Scene();
 			scene.fog = new THREE.FogExp2(0x000000, 0.00000025);
@@ -149,25 +188,15 @@
 			dirLight.position.set(- 1, 0, 1).normalize();
 			scene.add(dirLight);
 
-			const materialNormalMap = new THREE.MeshPhongMaterial({
-
-				specular: 0x333333,
-				shininess: 15,
-				map: textureLoader.load("agaris_texture.jpg"),
-
-				// y scale is negated to compensate for normal map handedness.
-				normalScale: new THREE.Vector2(0.85, - 0.85)
-
-			});
-
-			// planet
-
-			geometry = new THREE.SphereGeometry(radius, 100, 50);
-
-			meshPlanet = new THREE.Mesh(geometry, materialNormalMap);
-			meshPlanet.rotation.y = 3.14;
-			// meshPlanet.rotation.z = tilt;
-			scene.add(meshPlanet);
+			const texture = cubeTextureLoader.load([
+				'img/BackgroundCube-0.jpg',
+				'img/BackgroundCube-1.jpg',
+				'img/BackgroundCube-2.jpg',
+				'img/BackgroundCube-3.jpg',
+				'img/BackgroundCube-4.jpg',
+				'img/BackgroundCube-5.jpg',
+			]);
+			scene.background = texture;
 
 			renderer = new THREE.WebGLRenderer({ antialias: true });
 			renderer.setPixelRatio(window.devicePixelRatio);
@@ -177,8 +206,8 @@
 			//
 
 			controls = new OrbitControls(camera, renderer.domElement);
-			controls.minDistance = radius + 5;
-			controls.maxDistance = radius * 20;
+			controls.minDistance = 0;
+			controls.maxDistance = 200e6 * 20;
 			//
 
 			stats = new Stats();
@@ -221,17 +250,127 @@
 				}
 			};
 		}
-		function planetsUpdateCallback(data) {
-			console.log(data);
-			const agaris = data["Planet Agaris-12345d120000-8612260831509104856"];
-			planetOffset[0] = agaris.X;
-			planetOffset[1] = agaris.Y;
-			planetOffset[2] = agaris.Z;
-			console.log(`Agaris Offset: ${planetOffset}`);
+		function shouldScale(planetName) {
+			return planetName.indexOf("Mars") >= 0 ||
+				planetName.indexOf("Earth") >= 0 ||
+				planetName.indexOf("Alien") >= 0;
+		}
+		const planetTextures = {
+			"Agaris": textureLoader.load("agaris_texture.jpg"),
 		}
 
+		function hmfile(planetName) {
+			planetName = planetName.toLowerCase();
+			if (planetName.indexOf("earthlike") >= 0) {
+				return textureLoader.load("img/planets/hm_earthlike.png");
+			}
+			if (planetName.indexOf("alien") >= 0) {
+				return textureLoader.load("img/planets/hm_alien.png");
+			}
+			if (planetName.indexOf("europa") >= 0) {
+				return textureLoader.load("img/planets/hm_europa.png");
+			}
+			if (planetName.indexOf("agaris") >= 0) {
+				return textureLoader.load("img/planets/hm_agaris.png");
+			}
+			if (planetName.indexOf("mars") >= 0) {
+				return textureLoader.load("img/planets/hm_mars.png");
+			}
+			if (planetName.indexOf("moon") >= 0) {
+				return textureLoader.load("img/planets/hm_moon.png");
+			}
+			if (planetName.indexOf("triton") >= 0) {
+				return textureLoader.load("img/planets/hm_triton.png");
+			}
+			if (planetName.indexOf("titan") >= 0) {
+				return textureLoader.load("img/planets/hm_titan.png");
+			}
+			if (planetName.indexOf("pertam") >= 0) {
+				return textureLoader.load("img/planets/hm_pertam.png");
+			}
+
+			return null; // textureLoader.load("img/planets/hm_earthlike.png");
+		}
+
+		function planetsUpdateCallback(data) {
+			console.log(data);
+			document.getElementById('planets').innerHTML = '';
+			const planetOl = document.createElement("ol");
+			document.getElementById('planets').appendChild(planetOl);
+			Object.keys(data).forEach((name) => {
+				const voxelData = data[name];
+				if (name != "" && voxelData.DebugName.indexOf("MyPlanet") > 0) {
+					console.log(`Detected planet ${name}`);
+					let map = null;
+					if (voxelData.DebugName.indexOf("Agaris") >= 0) {
+						map = planetTextures["Agaris"];
+					}
+					const materialMap = new THREE.MeshPhongMaterial({
+						specular: 0x333333,
+						shininess: 15,
+						color: map === null ? pickOwnerColor() : null,
+						map,
+						displacementMap: hmfile(voxelData.DebugName),
+						displacementScale: voxelData.Size * 0.025,
+						normalScale: new THREE.Vector2(1, - 1),
+						bumpMap: hmfile(voxelData.DebugName),
+						bumpScale: voxelData.Size * 0.025,
+					});
+
+					geometry = new THREE.SphereGeometry(0.972 * voxelData.Size / 2, 256, 128); // Assume X=Y=Z
+
+					const mesh = new THREE.Mesh(geometry, materialMap);
+					mesh.rotation.y = 3.14;
+					mesh.position.x = voxelData.X;
+					mesh.position.y = voxelData.Y;
+					mesh.position.z = voxelData.Z;
+					// meshPlanet.rotation.z = tilt;
+					scene.add(mesh);
+					voxelData.mesh = mesh;
+					voxels[name] = voxelData;
+					const p = document.createElement("li");
+					p.onclick = () => { centerOn(name); }
+					// p.setAttribute("onclick", `javascript:centerOn("${name}")`);
+					p.innerText = name.split("-")[0];
+					planetOl.appendChild(p);
+				}
+			});
+		}
+
+		function centerOn(voxelName) {
+			console.log(`Centering on ${voxelName}`)
+			document.getElementById('focusname').innerText = (`Focused on ${voxelName.split("-")[0]}`)
+			const voxelData = voxels[voxelName];
+			console.log(camera);
+			const radius = voxelData.Size / 2;
+
+			camera.position.x = voxelData.X;
+			camera.position.y = voxelData.Y;
+			camera.position.z = voxelData.Z + voxelData.Size * 5;
+			controls.update();
+
+			controls.target.x = voxelData.X;
+			controls.target.y = voxelData.Y;
+			controls.target.z = voxelData.Z;
+			controls.update();
+		}
+
+		const messages = [];
+
 		function newChatCallback(data) {
-			console.log(`(${data.Name}): ${data.Content}`);
+			messages.push(data);
+			if (messages.length > 10) {
+				messages.splice(0, 1);
+			}
+
+			while (msgList.childNodes.length != messages.length) {
+				msgList.appendChild(document.createElement("li"));
+			}
+
+			for (let i = 0; i < messages.length; i++) {
+				const msg = messages[i];
+				msgList.childNodes[messages.length - 1 - i].innerHTML = `<B>${msg.From}</B>: ${msg.Message}`;
+			}
 		}
 
 		function gridsCallback(data) {
@@ -246,26 +385,26 @@
 		function gridUpdateCallback(data) {
 			const gridData = data.Grid;
 			if (data.IsNew) {
-				if (!ownerColors[gridData.Owner]) {
-					ownerColors[gridData.Owner] = pickOwnerColor();
+				if (!ownerColors[gridData.Faction]) {
+					ownerColors[gridData.Faction] = pickOwnerColor();
 				}
 				const materialNormalMap = new THREE.MeshPhongMaterial({
 					specular: 0x333333,
-					color: ownerColors[gridData.Owner],
+					color: ownerColors[gridData.Faction],
 					shininess: 15,
 				});
 
 				const geometry = new THREE.SphereGeometry(100, 8, 8);
 				const gridMesh = new THREE.Mesh(geometry, materialNormalMap);
-				gridMesh.position.x = gridData.X - planetOffset[0];
-				gridMesh.position.y = gridData.Y - planetOffset[1];
-				gridMesh.position.z = gridData.Z - planetOffset[2];
+				gridMesh.position.x = gridData.X;
+				gridMesh.position.y = gridData.Y;
+				gridMesh.position.z = gridData.Z;
 				scene.add(gridMesh);
 
 				const gridText = newText(gridData.Name);
-				gridText.position.x = gridData.X - planetOffset[0];
-				gridText.position.y = gridData.Y - planetOffset[1];
-				gridText.position.z = gridData.Z - planetOffset[2];
+				gridText.position.x = gridData.X;
+				gridText.position.y = gridData.Y;
+				gridText.position.z = gridData.Z;
 				scene.add(gridText);
 
 				const ng = {
@@ -287,12 +426,12 @@
 					return gridUpdateCallback(data);
 				}
 				const { mesh, text } = grids[gridData.EntityId];
-				mesh.position.x = gridData.X - planetOffset[0];
-				mesh.position.y = gridData.Y - planetOffset[1];
-				mesh.position.z = gridData.Z - planetOffset[2];
-				text.position.x = gridData.X - planetOffset[0];
-				text.position.y = gridData.Y - planetOffset[1];
-				text.position.z = gridData.Z - planetOffset[2];
+				mesh.position.x = gridData.X;
+				mesh.position.y = gridData.Y;
+				mesh.position.z = gridData.Z;
+				text.position.x = gridData.X;
+				text.position.y = gridData.Y;
+				text.position.z = gridData.Z;
 				grids[gridData.EntityId].griData = gridData;
 			}
 		}
@@ -319,12 +458,7 @@
 
 		function render() {
 			const delta = clock.getDelta();
-
 			composer.render(delta);
-			const scale = controls.getDistance() / radius;
-			Object.keys(grids).forEach(k => {
-				grids[k].mesh.scale.set(scale, scale, scale);
-			})
 		}
 
 		function pickOwnerColor() {
