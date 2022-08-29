@@ -223,15 +223,15 @@
 		}
 		function planetsUpdateCallback(data) {
 			console.log(data);
-			const agaris = data["Planet Agaris-12345d120000"];
-			planetOffset[0] = agaris.Position.X;
-			planetOffset[1] = agaris.Position.Y;
-			planetOffset[2] = agaris.Position.Z;
+			const agaris = data["Planet Agaris-12345d120000-8612260831509104856"];
+			planetOffset[0] = agaris.X;
+			planetOffset[1] = agaris.Y;
+			planetOffset[2] = agaris.Z;
 			console.log(`Agaris Offset: ${planetOffset}`);
 		}
 
 		function newChatCallback(data) {
-			console.log(`(${data.DisplayName}): ${data.Content}`);
+			console.log(`(${data.Name}): ${data.Content}`);
 		}
 
 		function gridsCallback(data) {
@@ -246,26 +246,26 @@
 		function gridUpdateCallback(data) {
 			const gridData = data.Grid;
 			if (data.IsNew) {
-				if (!ownerColors[gridData.OwnerDisplayName]) {
-					ownerColors[gridData.OwnerDisplayName] = pickOwnerColor();
+				if (!ownerColors[gridData.Owner]) {
+					ownerColors[gridData.Owner] = pickOwnerColor();
 				}
 				const materialNormalMap = new THREE.MeshPhongMaterial({
 					specular: 0x333333,
-					color: ownerColors[gridData.OwnerDisplayName],
+					color: ownerColors[gridData.Owner],
 					shininess: 15,
 				});
 
 				const geometry = new THREE.SphereGeometry(100, 8, 8);
 				const gridMesh = new THREE.Mesh(geometry, materialNormalMap);
-				gridMesh.position.x = gridData.Position.X - planetOffset[0];
-				gridMesh.position.y = gridData.Position.Y - planetOffset[1];
-				gridMesh.position.z = gridData.Position.Z - planetOffset[2];
+				gridMesh.position.x = gridData.X - planetOffset[0];
+				gridMesh.position.y = gridData.Y - planetOffset[1];
+				gridMesh.position.z = gridData.Z - planetOffset[2];
 				scene.add(gridMesh);
 
-				const gridText = newText(gridData.DisplayName);
-				gridText.position.x = gridData.Position.X - planetOffset[0];
-				gridText.position.y = gridData.Position.Y - planetOffset[1];
-				gridText.position.z = gridData.Position.Z - planetOffset[2];
+				const gridText = newText(gridData.Name);
+				gridText.position.x = gridData.X - planetOffset[0];
+				gridText.position.y = gridData.Y - planetOffset[1];
+				gridText.position.z = gridData.Z - planetOffset[2];
 				scene.add(gridText);
 
 				const ng = {
@@ -287,12 +287,12 @@
 					return gridUpdateCallback(data);
 				}
 				const { mesh, text } = grids[gridData.EntityId];
-				mesh.position.x = gridData.Position.X - planetOffset[0];
-				mesh.position.y = gridData.Position.Y - planetOffset[1];
-				mesh.position.z = gridData.Position.Z - planetOffset[2];
-				text.position.x = gridData.Position.X - planetOffset[0];
-				text.position.y = gridData.Position.Y - planetOffset[1];
-				text.position.z = gridData.Position.Z - planetOffset[2];
+				mesh.position.x = gridData.X - planetOffset[0];
+				mesh.position.y = gridData.Y - planetOffset[1];
+				mesh.position.z = gridData.Z - planetOffset[2];
+				text.position.x = gridData.X - planetOffset[0];
+				text.position.y = gridData.Y - planetOffset[1];
+				text.position.z = gridData.Z - planetOffset[2];
 				grids[gridData.EntityId].griData = gridData;
 			}
 		}

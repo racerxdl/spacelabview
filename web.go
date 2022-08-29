@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/gorilla/websocket"
-	"github.com/racerxdl/spacelabview/api"
+	"github.com/racerxdl/spacelabview/spacelab"
 )
 
 var upgrader = websocket.Upgrader{
@@ -19,21 +19,21 @@ type wsMessage struct {
 	Content interface{}
 }
 
-func wshandler(notify *api.Notify, w http.ResponseWriter, r *http.Request) {
+func wshandler(notify *spacelab.Notify, w http.ResponseWriter, r *http.Request) {
 	c, err := upgrader.Upgrade(w, r, nil)
 	if err != nil {
 		log.Error("upgrade:", err)
 		return
 	}
 	defer c.Close()
-	chatSub := notify.SubscribeChatMessage(func(e api.ChatMessage) {
+	chatSub := notify.SubscribeChatMessage(func(e spacelab.Message) {
 		m := wsMessage{Type: "chat", Content: e}
 		d, _ := json.Marshal(m)
 		c.WriteMessage(websocket.TextMessage, d)
 	})
 	defer notify.Unsubscribe(chatSub)
 
-	gridSub := notify.SubscribeGridUpdate(func(e api.GridUpdate) {
+	gridSub := notify.SubscribeGridUpdate(func(e spacelab.GridUpdate) {
 		m := wsMessage{Type: "gridUpdate", Content: e}
 		d, _ := json.Marshal(m)
 		c.WriteMessage(websocket.TextMessage, d)
@@ -60,7 +60,7 @@ func wshandler(notify *api.Notify, w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func StartWeb(notify *api.Notify) {
+func StartWeb(notify *spacelab.Notify) {
 	fs := http.FileServer(http.Dir("./webroot"))
 
 	http.HandleFunc("/ws", func(w http.ResponseWriter, r *http.Request) {
