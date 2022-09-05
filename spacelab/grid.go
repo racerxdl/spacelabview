@@ -2,6 +2,18 @@ package spacelab
 
 import "fmt"
 
+type GridGroup struct {
+	Grids   []Grid
+	Owner   string
+	Faction string
+	Tag     string
+	Blocks  int
+}
+
+func (g GridGroup) String() string {
+	return fmt.Sprintf("GridGroup(%s) - NumBlocks: %d, NumGrids: %d", g.Owner, g.Blocks, len(g.Grids))
+}
+
 type Grid struct {
 	Id            string
 	Name          string

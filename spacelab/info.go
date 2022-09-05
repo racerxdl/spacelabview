@@ -8,6 +8,7 @@ const (
 	infoFactionsEndpoint = infoEndpoint + "/factions"
 	infoPlayersEndpoint  = infoEndpoint + "/players"
 	infoGridsEndpoint    = infoEndpoint + "/grids"
+	infoV2GridsEndpoint  = infoEndpoint + "/v2grids"
 )
 
 func (s *API) Voxels() ([]Voxel, error) {
@@ -50,6 +51,17 @@ func (s *API) Grids() ([]Grid, error) {
 	}
 
 	g := []Grid{}
+	err = json.Unmarshal([]byte(res), &g)
+	return g, err
+}
+
+func (s *API) GridsV2() ([]GridGroup, error) {
+	res, err := s.Get(infoV2GridsEndpoint, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	g := []GridGroup{}
 	err = json.Unmarshal([]byte(res), &g)
 	return g, err
 }
