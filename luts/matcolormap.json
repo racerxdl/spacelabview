@@ -1,0 +1,140 @@
+{
+   "Triton": {
+      "Name": "Triton", 
+      "DefaultMaterial": {
+         "R": 228, 
+         "G": 236, 
+         "B": 244, 
+         "Material": "Snow", 
+         "Depth": 0
+      }, 
+      "SimpleMaterials": {}, 
+      "ComplexMaterials": {
+         "0": {
+            "id": 0, 
+            "name": "Planet Features", 
+            "rules": [
+               {
+                  "MinHeight": -0.01, 
+                  "MaxHeight": 0.0003, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 187, 
+                        "G": 192, 
+                        "B": 195, 
+                        "Material": "TritonIce", 
+                        "Depth": 8
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0001, 
+                  "MaxHeight": 0.4, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 33.0, 
+                  "Layers": [
+                     {
+                        "R": 228, 
+                        "G": 236, 
+                        "B": 244, 
+                        "Material": "Snow", 
+                        "Depth": 8
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0001, 
+                  "MaxHeight": 0.4, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 31.0, 
+                  "SlopeMax": 38.0, 
+                  "Layers": [
+                     {
+                        "R": 228, 
+                        "G": 236, 
+                        "B": 244, 
+                        "Material": "Snow", 
+                        "Depth": 8
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0001, 
+                  "MaxHeight": 0.4, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 36.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 73, 
+                        "G": 73, 
+                        "B": 73, 
+                        "Material": "TritonStone", 
+                        "Depth": 8
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.4, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 60.0, 
+                  "Layers": [
+                     {
+                        "R": 228, 
+                        "G": 236, 
+                        "B": 244, 
+                        "Material": "Snow", 
+                        "Depth": 8
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.4, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 59.0, 
+                  "SlopeMax": 64.0, 
+                  "Layers": [
+                     {
+                        "R": 228, 
+                        "G": 236, 
+                        "B": 244, 
+                        "Material": "Snow", 
+                        "Depth": 8
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.4, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 63.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 73, 
+                        "G": 73, 
+                        "B": 73, 
+                        "Material": "TritonStone", 
+                        "Depth": 8
+                     }
+                  ]
+               }
+            ]
+         }
+      }
+   }
+}

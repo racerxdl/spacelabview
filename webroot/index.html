@@ -112,6 +112,8 @@
 		let ownerColors = {};
 		let composer;
 		let textFont;
+		let planetsLoaded = false;
+		let planetLayerData = {};
 
 		const textureLoader = new THREE.TextureLoader();
 		const cubeTextureLoader = new THREE.CubeTextureLoader();
@@ -161,7 +163,7 @@
 			var spriteMaterial = new THREE.SpriteMaterial({ map: texture });
 			var sprite = new THREE.Sprite(spriteMaterial);
 			// sprite.scale.set(0.5 * fontsize, 0.25 * fontsize, 0.75 * fontsize);
-			const baseScale = 3000;
+			const baseScale = 50000;
 			sprite.scale.set(0.5 * baseScale, 0.25 * baseScale, 0.75 * baseScale);
 			return sprite;
 		}
@@ -177,7 +179,7 @@
 			msgList.id = "messageList";
 			document.getElementById("chat").appendChild(msgList);
 
-			camera = new THREE.PerspectiveCamera(25, SCREEN_WIDTH / SCREEN_HEIGHT, 50, 1e7);
+			camera = new THREE.PerspectiveCamera(25, SCREEN_WIDTH / SCREEN_HEIGHT, 10000, 8500000);
 			camera.position.z = 100e3 * 5;
 
 			scene = new THREE.Scene();
@@ -216,12 +218,12 @@
 			window.addEventListener('resize', onWindowResize);
 
 			const renderModel = new RenderPass(scene, camera);
-			const effectFilm = new FilmPass(0.35, 0.75, 2048, false);
+			//const effectFilm = new FilmPass(0.35, 0.75, 2048, false);
 
 			composer = new EffectComposer(renderer);
 
 			composer.addPass(renderModel);
-			composer.addPass(effectFilm);
+			//composer.addPass(effectFilm);
 			const connection = new WebSocket('ws://localhost:3000/ws');
 			// When the connection is open, send some data to the server
 			connection.onopen = function () {
@@ -256,40 +258,256 @@
 				planetName.indexOf("Alien") >= 0;
 		}
 		const planetTextures = {
-			"Agaris": textureLoader.load("agaris_texture.jpg"),
+			"Agaris": [
+				'img/planets-cube/agaris/front.jpg',
+				'img/planets-cube/agaris/right.jpg',
+				'img/planets-cube/agaris/up.jpg',
+				'img/planets-cube/agaris/down.jpg',
+				'img/planets-cube/agaris/back.jpg',
+				'img/planets-cube/agaris/left.jpg',
+			],
+			"EarthLike": [
+				'img/planets-cube/earthlike/front.jpg',
+				'img/planets-cube/earthlike/right.jpg',
+				'img/planets-cube/earthlike/up.jpg',
+				'img/planets-cube/earthlike/down.jpg',
+				'img/planets-cube/earthlike/back.jpg',
+				'img/planets-cube/earthlike/left.jpg',
+			],
+			"Moon": [
+				'img/planets-cube/moon/front.jpg',
+				'img/planets-cube/moon/right.jpg',
+				'img/planets-cube/moon/up.jpg',
+				'img/planets-cube/moon/down.jpg',
+				'img/planets-cube/moon/back.jpg',
+				'img/planets-cube/moon/left.jpg',
+			],
+			"Mars": [
+				'img/planets-cube/mars/front.jpg',
+				'img/planets-cube/mars/right.jpg',
+				'img/planets-cube/mars/up.jpg',
+				'img/planets-cube/mars/down.jpg',
+				'img/planets-cube/mars/back.jpg',
+				'img/planets-cube/mars/left.jpg',
+			],
+			"Europa": [
+				'img/planets-cube/europa/front.jpg',
+				'img/planets-cube/europa/right.jpg',
+				'img/planets-cube/europa/up.jpg',
+				'img/planets-cube/europa/down.jpg',
+				'img/planets-cube/europa/back.jpg',
+				'img/planets-cube/europa/left.jpg',
+			],
+			"Alien": [
+				'img/planets-cube/alien/front.jpg',
+				'img/planets-cube/alien/right.jpg',
+				'img/planets-cube/alien/up.jpg',
+				'img/planets-cube/alien/down.jpg',
+				'img/planets-cube/alien/back.jpg',
+				'img/planets-cube/alien/left.jpg',
+			],
+			"Titan": [
+				'img/planets-cube/titan/front.jpg',
+				'img/planets-cube/titan/right.jpg',
+				'img/planets-cube/titan/up.jpg',
+				'img/planets-cube/titan/down.jpg',
+				'img/planets-cube/titan/back.jpg',
+				'img/planets-cube/titan/left.jpg',
+			],
+			"Pertam": [
+				'img/planets-cube/pertam/front.jpg',
+				'img/planets-cube/pertam/right.jpg',
+				'img/planets-cube/pertam/up.jpg',
+				'img/planets-cube/pertam/down.jpg',
+				'img/planets-cube/pertam/back.jpg',
+				'img/planets-cube/pertam/left.jpg',
+			],
+			"Triton": [
+				'img/planets-cube/triton/front.jpg',
+				'img/planets-cube/triton/right.jpg',
+				'img/planets-cube/triton/up.jpg',
+				'img/planets-cube/triton/down.jpg',
+				'img/planets-cube/triton/back.jpg',
+				'img/planets-cube/triton/left.jpg',
+			],
 		}
 
 		function hmfile(planetName) {
 			planetName = planetName.toLowerCase();
 			if (planetName.indexOf("earthlike") >= 0) {
-				return textureLoader.load("img/planets/hm_earthlike.jpg");
+				let materialArray = [
+					'img/planets-cube/earthlike/hm/front.jpg',
+					'img/planets-cube/earthlike/hm/right.jpg',
+					'img/planets-cube/earthlike/hm/up.jpg',
+					'img/planets-cube/earthlike/hm/down.jpg',
+					'img/planets-cube/earthlike/hm/back.jpg',
+					'img/planets-cube/earthlike/hm/left.jpg',
+				];
+
+				return materialArray;
 			}
 			if (planetName.indexOf("alien") >= 0) {
-				return textureLoader.load("img/planets/hm_alien.jpg");
+				let materialArray = [
+					'img/planets-cube/alien/hm/front.jpg',
+					'img/planets-cube/alien/hm/right.jpg',
+					'img/planets-cube/alien/hm/up.jpg',
+					'img/planets-cube/alien/hm/down.jpg',
+					'img/planets-cube/alien/hm/back.jpg',
+					'img/planets-cube/alien/hm/left.jpg',
+				];
+
+				return materialArray;
 			}
 			if (planetName.indexOf("europa") >= 0) {
-				return textureLoader.load("img/planets/hm_europa.jpg");
+				let materialArray = [
+					'img/planets-cube/europa/hm/front.jpg',
+					'img/planets-cube/europa/hm/right.jpg',
+					'img/planets-cube/europa/hm/up.jpg',
+					'img/planets-cube/europa/hm/down.jpg',
+					'img/planets-cube/europa/hm/back.jpg',
+					'img/planets-cube/europa/hm/left.jpg',
+				];
+
+				return materialArray;
 			}
 			if (planetName.indexOf("agaris") >= 0) {
-				return textureLoader.load("img/planets/hm_agaris.jpg");
+				let materialArray = [
+					'img/planets-cube/agaris/hm/front.jpg',
+					'img/planets-cube/agaris/hm/right.jpg',
+					'img/planets-cube/agaris/hm/up.jpg',
+					'img/planets-cube/agaris/hm/down.jpg',
+					'img/planets-cube/agaris/hm/back.jpg',
+					'img/planets-cube/agaris/hm/left.jpg',
+				];
+
+				return materialArray;
 			}
 			if (planetName.indexOf("mars") >= 0) {
-				return textureLoader.load("img/planets/hm_mars.jpg");
+				let materialArray = [
+					'img/planets-cube/mars/hm/front.jpg',
+					'img/planets-cube/mars/hm/right.jpg',
+					'img/planets-cube/mars/hm/up.jpg',
+					'img/planets-cube/mars/hm/down.jpg',
+					'img/planets-cube/mars/hm/back.jpg',
+					'img/planets-cube/mars/hm/left.jpg',
+				];
+
+				return materialArray;
 			}
 			if (planetName.indexOf("moon") >= 0) {
-				return textureLoader.load("img/planets/hm_moon.jpg");
+				let materialArray = [
+					'img/planets-cube/moon/hm/front.jpg',
+					'img/planets-cube/moon/hm/right.jpg',
+					'img/planets-cube/moon/hm/up.jpg',
+					'img/planets-cube/moon/hm/down.jpg',
+					'img/planets-cube/moon/hm/back.jpg',
+					'img/planets-cube/moon/hm/left.jpg',
+				];
+
+				return materialArray;
 			}
 			if (planetName.indexOf("triton") >= 0) {
-				return textureLoader.load("img/planets/hm_triton.jpg");
+				let materialArray = [
+					'img/planets-cube/triton/hm/front.jpg',
+					'img/planets-cube/triton/hm/right.jpg',
+					'img/planets-cube/triton/hm/up.jpg',
+					'img/planets-cube/triton/hm/down.jpg',
+					'img/planets-cube/triton/hm/back.jpg',
+					'img/planets-cube/triton/hm/left.jpg',
+				];
+
+				return materialArray;
 			}
 			if (planetName.indexOf("titan") >= 0) {
-				return textureLoader.load("img/planets/hm_titan.jpg");
+				let materialArray = [
+					'img/planets-cube/titan/hm/front.jpg',
+					'img/planets-cube/titan/hm/right.jpg',
+					'img/planets-cube/titan/hm/up.jpg',
+					'img/planets-cube/titan/hm/down.jpg',
+					'img/planets-cube/titan/hm/back.jpg',
+					'img/planets-cube/titan/hm/left.jpg',
+				];
+
+				return materialArray;
 			}
 			if (planetName.indexOf("pertam") >= 0) {
-				return textureLoader.load("img/planets/hm_pertam.jpg");
+				let materialArray = [
+					'img/planets-cube/pertam/hm/front.jpg',
+					'img/planets-cube/pertam/hm/right.jpg',
+					'img/planets-cube/pertam/hm/up.jpg',
+					'img/planets-cube/pertam/hm/down.jpg',
+					'img/planets-cube/pertam/hm/back.jpg',
+					'img/planets-cube/pertam/hm/left.jpg',
+				];
+
+				return materialArray;
 			}
 
 			return null; // textureLoader.load("img/planets/hm_earthlike.jpg");
+		}
+
+		let cachedMagicSphere;
+
+		function magicSphereGeometry(radius, segments) {
+			if (!cachedMagicSphere) {
+				cachedMagicSphere = new THREE.BoxGeometry(1, 1, 1, segments, segments, segments);
+				const uv = new THREE.Vector2();
+				const repeat = new THREE.Vector2(1 / 3, 1 / 2);
+				const offsets = [
+					new THREE.Vector2(0, 0),
+					new THREE.Vector2(0, 1 / 2),
+					new THREE.Vector2(1 / 3, 0),
+					new THREE.Vector2(1 / 3, 1 / 2),
+					new THREE.Vector2(2 / 3, 0),
+					new THREE.Vector2(2 / 3, 1 / 2)
+				];
+				const uvAttribute = cachedMagicSphere.getAttribute('uv');
+
+				const midx = (idx) => {
+					for (let i = 0; i < cachedMagicSphere.groups.count; i++) {
+						const group = cachedMagicSphere.groups[i];
+						if (group.start <= idx && idx - group.start < group.count) {
+							return group.materialIndex;
+						}
+					}
+					return 0;
+				}
+
+				for (let i = 0; i < cachedMagicSphere.index.count; i += 3) {
+					const materialIndex = midx(i);
+					for (let j = 0; j < 3; j++) {
+						const faceIdx = cachedMagicSphere.index[i * 3 + j];
+						uv.fromBufferAttribute(uvAttribute, faceIdx);
+						uv.multiply(repeat).add(offsets[materialIndex]);
+						uvAttribute.setXY(faceIdx, uv.x, uv.y);
+					}
+				}
+				uvAttribute.needsUpdate = true;
+			}
+			const geometry = cachedMagicSphere.clone();
+			const vertex = new THREE.Vector3();
+			const normal = new THREE.Vector3();
+			window.hx = geometry;
+			window.vertex = THREE.Vector3;
+			console.log(geometry);
+
+			// texture is a collage; set offset/repeat per material index
+
+			const positionAttribute = geometry.getAttribute('position');
+			const normalAttribute = geometry.getAttribute('normal');
+			// morph box into a sphere
+			for (let i = 0; i < positionAttribute.count; i++) {
+				vertex.fromBufferAttribute(positionAttribute, i);
+				vertex.normalize();
+				normalAttribute.setXYZ(i, vertex.x, vertex.y, vertex.z);
+				vertex.multiplyScalar(radius);
+				positionAttribute.setXYZ(i, vertex.x, vertex.y, vertex.z);
+			}
+
+			positionAttribute.needsUpdate = true;
+			normalAttribute.needsUpdate = true;
+
+			return geometry;
 		}
 
 		function planetsUpdateCallback(data) {
@@ -297,36 +515,111 @@
 			document.getElementById('planets').innerHTML = '';
 			const planetOl = document.createElement("ol");
 			document.getElementById('planets').appendChild(planetOl);
+			let firstPlanet;
 			Object.keys(data).forEach((name) => {
 				const voxelData = data[name];
 				if (name != "" && voxelData.DebugName.indexOf("MyPlanet") > 0) {
 					console.log(`Detected planet ${name}`);
+					if (!firstPlanet && name.indexOf("Agaris") > - 1) {
+						firstPlanet = name;
+					}
 					let map = null;
 					if (voxelData.DebugName.indexOf("Agaris") >= 0) {
 						map = planetTextures["Agaris"];
 					}
-					const materialMap = new THREE.MeshPhongMaterial({
-						specular: 0x333333,
-						shininess: 15,
-						color: map === null ? pickOwnerColor() : null,
-						map,
-						displacementMap: hmfile(voxelData.DebugName),
-						displacementScale: voxelData.Size * 0.025,
-						normalScale: new THREE.Vector2(1, - 1),
-						bumpMap: hmfile(voxelData.DebugName),
-						bumpScale: voxelData.Size * 0.025,
-					});
+					if (voxelData.DebugName.indexOf("EarthLike") >= 0) {
+						map = planetTextures["EarthLike"];
+					}
+					if (voxelData.DebugName.indexOf("Moon") >= 0) {
+						map = planetTextures["Moon"];
+					}
+					if (voxelData.DebugName.indexOf("Mars") >= 0) {
+						map = planetTextures["Mars"];
+					}
+					if (voxelData.DebugName.indexOf("Europa") >= 0) {
+						map = planetTextures["Europa"];
+					}
+					if (voxelData.DebugName.indexOf("Alien") >= 0) {
+						map = planetTextures["Alien"];
+					}
+					if (voxelData.DebugName.indexOf("Titan") >= 0) {
+						map = planetTextures["Titan"];
+					}
+					if (voxelData.DebugName.indexOf("Pertam") >= 0) {
+						map = planetTextures["Pertam"];
+					}
+					if (voxelData.DebugName.indexOf("Triton") >= 0) {
+						map = planetTextures["Triton"];
+					}
+					const maxHillSize = (1 + voxelData.HillParameters.Item2) * voxelData.Size;
+					const minHillSize = (1 + voxelData.HillParameters.Item1) * voxelData.Size;
+					const hillDelta = (maxHillSize - minHillSize) / 2;
+					let mat = hmfile(voxelData.DebugName);
+					if (mat.length > 0) {
+						mat = mat.map((mat, idx) => {
+							const hmTex = textureLoader.load(mat);
+							const mapTex = (map !== null && map.length > idx) ? textureLoader.load(map[idx]) : null;
+							return new THREE.MeshPhongMaterial({
+								specular: 0x333333,
+								shininess: 5,
+								color: map === null || map.length === 0 ? pickOwnerColor() : null,
+								map: mapTex,
+								displacementMap: hmTex,
+								displacementScale: hillDelta,
+								normalScale: new THREE.Vector2(1, - 1),
+								bumpMap: hmTex,
+								bumpScale: hillDelta/2,
+								// polygonOffset: true,
+								// polygonOffsetFactor: 1, // positive value pushes polygon further away
+								// polygonOffsetUnits: 1
+							});
+						});
+					} else {
+						mat = new THREE.MeshPhongMaterial({
+							specular: 0x333333,
+							shininess: 5,
+							color: map === null ? pickOwnerColor() : null,
+							map,
+							displacementMap: mat,
+							displacementScale: hillDelta,
+							normalScale: new THREE.Vector2(1, - 1),
+							bumpMap: mat,
+							bumpScale: hillDelta/2,
+							polygonOffset: true,
+							polygonOffsetFactor: 1, // positive value pushes polygon further away
+							polygonOffsetUnits: 1
+						});
+					}
 
-					geometry = new THREE.SphereGeometry(0.972 * voxelData.Size / 2, 256, 128); // Assume X=Y=Z
-
-					const mesh = new THREE.Mesh(geometry, materialMap);
-					mesh.rotation.y = 3.14;
+					geometry = magicSphereGeometry(minHillSize / 2, 256);
+					const mesh = new THREE.Mesh(geometry, mat);
+					// mesh.rotation.y = Math.PI/2;
 					mesh.position.x = voxelData.X;
 					mesh.position.y = voxelData.Y;
 					mesh.position.z = voxelData.Z;
-					// meshPlanet.rotation.z = tilt;
 					scene.add(mesh);
 					voxelData.mesh = mesh;
+
+					if (name.indexOf("Agaris") > -1) {
+						console.log(`Creating water for ${name}`);
+						const water = new THREE.SphereGeometry((minHillSize * 1.013) / 2, 64, 64);
+						const waterMaterial = new THREE.MeshPhongMaterial({
+							specular: 0x555555,
+							shininess: 25,
+							color: 0x1c526a,
+							normalScale: new THREE.Vector2(1, - 1),
+							opacity: 0.8,
+							transparent: true,
+						});
+						const waterMesh = new THREE.Mesh(water, waterMaterial);
+						waterMesh.rotation.y = 3.14;
+						waterMesh.position.x = voxelData.X;
+						waterMesh.position.y = voxelData.Y;
+						waterMesh.position.z = voxelData.Z;
+						scene.add(waterMesh);
+						voxelData.waterMesh = waterMesh;
+					}
+
 					voxels[name] = voxelData;
 					const p = document.createElement("li");
 					p.onclick = () => { centerOn(name); }
@@ -335,6 +628,11 @@
 					planetOl.appendChild(p);
 				}
 			});
+
+			if (!planetsLoaded && firstPlanet.indexOf("Agaris") > -1) {
+				planetsLoaded = true;
+				centerOn(firstPlanet)
+			}
 		}
 
 		function centerOn(voxelName) {
@@ -384,7 +682,9 @@
 
 		function gridUpdateCallback(data) {
 			const gridData = data.Grid;
+			gridData.EntityId = gridData.EntityId || gridData.Id;
 			if (data.IsNew) {
+				console.log(`New Grid: ${gridData.Name}, ${gridData.EntityId}`, gridData)
 				if (!ownerColors[gridData.Faction]) {
 					ownerColors[gridData.Faction] = pickOwnerColor();
 				}
@@ -394,6 +694,7 @@
 					shininess: 15,
 				});
 
+				// const geometry = new THREE.SphereGeometry(1000, 8, 8);
 				const geometry = new THREE.SphereGeometry(100, 8, 8);
 				const gridMesh = new THREE.Mesh(geometry, materialNormalMap);
 				gridMesh.position.x = gridData.X;
@@ -417,6 +718,7 @@
 				const grid = grids[gridData.EntityId];
 				if (grid) {
 					scene.remove(grid.mesh);
+					scene.remove(grid.text);
 					delete (grids[gridData.EntityId]);
 				}
 			} else { // Update
@@ -425,6 +727,13 @@
 					data.IsNew = true;
 					return gridUpdateCallback(data);
 				}
+				const gridI = grids[gridData.EntityId];
+				if (gridData.Name != gridI.gridData.Name) {
+					console.log(`Grid ${gridData.EntityId} renamed from ${gridI.gridData.Name} to ${gridData.Name}`);
+					scene.remove(gridI.text);
+					gridI.text = newText(gridData.Name);
+					scene.add(gridI.text);
+				}
 				const { mesh, text } = grids[gridData.EntityId];
 				mesh.position.x = gridData.X;
 				mesh.position.y = gridData.Y;
@@ -432,7 +741,7 @@
 				text.position.x = gridData.X;
 				text.position.y = gridData.Y;
 				text.position.z = gridData.Z;
-				grids[gridData.EntityId].griData = gridData;
+				grids[gridData.EntityId].gridData = gridData;
 			}
 		}
 
