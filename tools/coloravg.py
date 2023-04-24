@@ -22,5 +22,5 @@ for filename in os.listdir("./assets/DDS"):
         colors[filename] = [r,g,b]
 
 # Save
-with open("matcoloravg.json", "w") as f:
+with open("./luts/matcoloravg.json", "w") as f:
     f.write(json.dumps(colors, indent=3))

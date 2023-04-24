@@ -22,7 +22,7 @@ def parseXML(fullpath):
         pass
 
 # traverse root directory, and list directories as dirs and files as files
-for root, dirs, files in os.walk("assets"):
+for root, dirs, files in os.walk("./assets"):
     path = root.split(os.sep)
     #print((len(path) - 1) * '---', os.path.basename(root))
     for file in files:
@@ -30,5 +30,5 @@ for root, dirs, files in os.walk("assets"):
             fullpath = os.path.join(root, file)
             parseXML(fullpath)
 
-with open("matfiles.json", "w") as f:
+with open("./luts/matfiles.json", "w") as f:
     f.write(json.dumps(voxelMaterialToFile, indent=3))
