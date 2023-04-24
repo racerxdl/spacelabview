@@ -223,6 +223,18 @@ class SpaceSocket {
         }
     }
 
+    globalInfoCallback(data) {
+        this.globalInfo = data;
+        document.dispatchEvent(new CustomEvent("sunPosition", {
+            detail: {
+                x: data.SunNormalizedX,
+                y: data.SunNormalizedY,
+                z: data.SunNormalizedZ,
+                intensity: data.SunIntensity,
+            }
+        }))
+    }
+
     addMesh(mesh) {
         document.dispatchEvent(new CustomEvent("addMesh", {
             detail: mesh,
@@ -243,6 +255,7 @@ class SpaceSocket {
                 case "gridUpdate": this.gridUpdateCallback(data.Content); break;
                 case "chat": this.newChatCallback(data.Content); break;
                 case "grids": this.gridsCallback(data.Content); break;
+                case "globalInfo": this.globalInfoCallback(data.Content); break;
             }
         } catch (e) {
             document.dispatchEvent(new CustomEvent("SpaceError", {
@@ -259,7 +272,6 @@ class SpaceSocket {
         document.dispatchEvent(new CustomEvent("SpaceError", {
             detail: {
                 message: 'Websocket Error:' + error,
-                msg,
                 error,
             }
         }));

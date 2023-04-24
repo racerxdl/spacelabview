@@ -57,10 +57,4 @@ Credits:
 
 Some gamedata is used for generating the required textures. Here are the list of changes I had to do.
 
-### Agaris
-
-As is, no changes required...
-
-### Vanilla Planets
-
 Weirdly, I had to swap the front and left images, and rotate 180 degrees the up image.

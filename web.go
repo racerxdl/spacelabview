@@ -26,6 +26,13 @@ func wshandler(notify *spacelab.Notify, w http.ResponseWriter, r *http.Request) 
 		return
 	}
 	defer c.Close()
+	globalInfoSub := notify.SubscribeGlobalInfo(func(e spacelab.GlobalInfo) {
+		m := wsMessage{Type: "globalInfo", Content: e}
+		d, _ := json.Marshal(m)
+		c.WriteMessage(websocket.TextMessage, d)
+	})
+	defer notify.Unsubscribe(globalInfoSub)
+
 	chatSub := notify.SubscribeChatMessage(func(e spacelab.Message) {
 		m := wsMessage{Type: "chat", Content: e}
 		d, _ := json.Marshal(m)

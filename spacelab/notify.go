@@ -8,10 +8,11 @@ import (
 )
 
 const (
-	gridUpdateTopic  = "gridUpdate"
-	chatMessageTopic = "chatMessage"
-	minDeltaUpdate   = 10 // Meters
-	minNumBlocks     = 20
+	globalUpdateTopic = "globalUpdate"
+	gridUpdateTopic   = "gridUpdate"
+	chatMessageTopic  = "chatMessage"
+	minDeltaUpdate    = 10 // Meters
+	minNumBlocks      = 20
 )
 
 type Notify struct {
@@ -21,6 +22,7 @@ type Notify struct {
 	log     slog.Instance
 	bus     *pubsub.Bus
 	voxels  map[string]Voxel
+	global  GlobalInfo
 }
 
 func MakeNotify(api *API) *Notify {
@@ -39,6 +41,9 @@ func (n *Notify) SubscribeGridUpdate(cb func(e GridUpdate)) *pubsub.Subscription
 
 func (n *Notify) SubscribeChatMessage(cb func(e Message)) *pubsub.Subscription {
 	return n.bus.Subscribe(chatMessageTopic, cb)
+}
+func (n *Notify) SubscribeGlobalInfo(cb func(e GlobalInfo)) *pubsub.Subscription {
+	return n.bus.Subscribe(globalUpdateTopic, cb)
 }
 
 func (n *Notify) Unsubscribe(subscription *pubsub.Subscription) {
@@ -91,6 +96,7 @@ func (n *Notify) GetGrids() map[string]Grid {
 }
 
 func (n *Notify) refresh() {
+	n.updateGlobal()
 	n.updateChat()
 	n.updateGrids()
 }
@@ -109,7 +115,17 @@ func (n *Notify) updateChat() {
 		n.bus.Publish(chatMessageTopic, message)
 	}
 }
-
+func (n *Notify) updateGlobal() {
+	ginfo, err := n.api.GlobalInfo()
+	if err != nil {
+		n.log.Error("error reading global info: %s", err)
+		return
+	}
+	if ginfo.ChangedSince(n.global) {
+		n.global = ginfo
+		n.bus.Publish(globalUpdateTopic, n.global)
+	}
+}
 func (n *Notify) updateGrids() {
 	// Update Grids
 	grids, err := n.api.Grids()

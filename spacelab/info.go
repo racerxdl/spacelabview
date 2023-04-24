@@ -4,12 +4,24 @@ import "encoding/json"
 
 const (
 	infoEndpoint         = "/info"
+	infoGlobalEndpoint   = infoEndpoint + "/global"
 	infoVoxelsEndpoint   = infoEndpoint + "/voxels"
 	infoFactionsEndpoint = infoEndpoint + "/factions"
 	infoPlayersEndpoint  = infoEndpoint + "/players"
 	infoGridsEndpoint    = infoEndpoint + "/grids"
 	infoV2GridsEndpoint  = infoEndpoint + "/v2grids"
 )
+
+func (s *API) GlobalInfo() (GlobalInfo, error) {
+	res, err := s.Get(infoGlobalEndpoint, nil)
+	if err != nil {
+		return GlobalInfo{}, err
+	}
+
+	g := GlobalInfo{}
+	err = json.Unmarshal([]byte(res), &g)
+	return g, err
+}
 
 func (s *API) Voxels() ([]Voxel, error) {
 	res, err := s.Get(infoVoxelsEndpoint, nil)

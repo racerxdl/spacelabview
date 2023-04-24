@@ -113,6 +113,10 @@ function init() {
 			context.scene.remove(event.detail);
 		}
 	})
+	document.addEventListener('sunPosition', (event) => {
+		const {x,y,z,intensity} = event.detail;
+		context.dirLight.position.set(x, y, z)
+	})
 
 	animate();
 }
