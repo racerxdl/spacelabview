@@ -91,14 +91,14 @@ func main() {
 	notify.Start()
 	defer notify.Stop()
 
-	cleanupGrids(s)
+	// cleanupGrids(s)
 
 	t := time.NewTicker(time.Minute * 60)
 
 	go func() {
 		for {
 			<-t.C
-			cleanupGrids(s)
+			// cleanupGrids(s)
 		}
 	}()
 

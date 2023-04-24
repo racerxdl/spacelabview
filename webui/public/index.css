@@ -89,3 +89,55 @@ a, button, input, select {
 	margin-top: 20px;
 	padding: 10px;
 }
+
+body {
+	background: #000;
+	color: #eee;
+}
+
+a {
+	color: #0080ff;
+}
+
+b {
+	color: orange
+}
+
+#planets {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	min-width: 200px;
+	background-color: #393838c4;
+	color: white;
+	border-radius: 0 25px 0 0;
+}
+
+#planets li {
+	cursor: pointer;
+}
+
+#planets li:hover {
+	background-color: rgb(110, 110, 0);
+	cursor: pointer;
+}
+
+#chat {
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	height: 100%;
+	width: 250px;
+	background-color: #393838c4;
+}
+
+#chat h2 {
+	text-align: center;
+	width: 100%;
+}
+
+#messageList {
+	list-style-type: none;
+	padding: 1em;
+	margin: 0;
+}

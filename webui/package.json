@@ -1,0 +1,22 @@
+{
+  "name": "spacelab-webui",
+  "version": "1.0.0",
+  "description": "SpaceLab Viewer Web Interface",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "mkdir -p dist && cp -R public/* dist/ && webpack serve --open --mode development & webpack --watch",
+    "watch": "webpack --watch"
+  },
+  "author": "Lucas Teske",
+  "license": "MIT",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.1",
+    "webpack": "^5.80.0",
+    "webpack-cli": "^5.0.2",
+    "webpack-dev-server": "^4.13.3"
+  },
+  "dependencies": {
+    "three": "^0.151.3"
+  }
+}
