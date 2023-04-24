@@ -5,6 +5,8 @@ This is WAY under testing and development. But it does generate some nice maps.
 
 REQUIRES SpaceLab Plugin on Torch (To be released yet)
 
+![Preview](preview.jpg)
+
 # Generating material textures from game assets
 
 Check `tools/surfacegen.py`. In the start of the file you will find these lines:
@@ -44,9 +46,12 @@ go build -o agarismap.exe
 The source-code itself is under MIT License. The assets under webui/public/img should be dealt as proprietary.
 
 * Vanilla Planets (EarthLike, Alien, Moon, Mars, Europa, Triton, Titan, Pertam): [Keen Software House](https://github.com/KeenSoftwareHouse)
-* Agaris: [CptArthur](https://github.com/CptArthur)
+* Agaris: [CptArthur](https://github.com/CptArthur) [Agaris with Roads Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=2567339915)
+* Milkway Skybox: [Milkway Skybox](https://steamcommunity.com/sharedfiles/filedetails/?id=670718659)
 
 # CHANGES TO GAME DATA
+
+Some gamedata is used for generating the required textures. Here are the list of changes I had to do.
 
 ### Agaris
 
