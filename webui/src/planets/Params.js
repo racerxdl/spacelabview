@@ -15,8 +15,9 @@ const Params = {
     // Viewport
     viewportNear: 10000,
     viewportFar: 8500000,
-    viewportFov: 25,
+    viewportFov: 70,
     viewportZPos: 100e3 * 5,
+    viewportDistanceFactor: 2,
     viewportMargin: 0,
     // Camera
     cameraMinDistance: 0,
@@ -24,7 +25,7 @@ const Params = {
     // Scene
     sceneFogColor: 0x000000,
     sceneFogDensity: 0.00000025,
-    sceneAmbientLight: 0x443333,
+    sceneAmbientLight: 0x221111,
     sceneSunColor: 0xffffff,
     // Renderer:
     rendererAntialias: true,

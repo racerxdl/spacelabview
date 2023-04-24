@@ -171,7 +171,7 @@ function centerOn(voxelName) {
 
 	context.camera.position.x = planet.voxelData.X;
 	context.camera.position.y = planet.voxelData.Y;
-	context.camera.position.z = planet.voxelData.Z + radius * 5;
+	context.camera.position.z = planet.voxelData.Z + radius * PlanetParams.viewportDistanceFactor;
 	context.controls.update();
 
 	context.controls.target.x = planet.voxelData.X;
