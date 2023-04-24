@@ -45,6 +45,10 @@ go build -o agarismap.exe
 
 The source-code itself is under MIT License. The assets under webui/public/img should be dealt as proprietary.
 
+Most of them were generated using tools on folder `tools` using real game data. They should be dealt as proprietary unless otherwise explicit.
+
+Credits:
+
 * Vanilla Planets (EarthLike, Alien, Moon, Mars, Europa, Triton, Titan, Pertam): [Keen Software House](https://github.com/KeenSoftwareHouse)
 * Agaris: [CptArthur](https://github.com/CptArthur) [Agaris with Roads Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=2567339915)
 * Milkway Skybox: [Milkway Skybox](https://steamcommunity.com/sharedfiles/filedetails/?id=670718659)
