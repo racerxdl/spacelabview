@@ -3,6 +3,8 @@
 
 This is WAY under testing and development. But it does generate some nice maps.
 
+REQUIRES SpaceLab Plugin on Torch (To be released yet)
+
 # Generating material textures from game assets
 
 Check `tools/surfacegen.py`. In the start of the file you will find these lines:
