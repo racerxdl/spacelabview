@@ -39,6 +39,13 @@ go build -o agarismap
 go build -o agarismap.exe
 ```
 
+# License
+
+The source-code itself is under MIT License. The assets under webui/public/img should be dealt as proprietary.
+
+* Vanilla Planets (EarthLike, Alien, Moon, Mars, Europa, Triton, Titan, Pertam): [Keen Software House](https://github.com/KeenSoftwareHouse)
+* Agaris: [CptArthur](https://github.com/CptArthur)
+
 # CHANGES TO GAME DATA
 
 ### Agaris
