@@ -13,8 +13,8 @@ const Params = {
     gridSphereSpecularColor: 0x333333,
     gridSphereSpecularShininess: 0x333333,
     // Viewport
-    viewportNear: 10000,
-    viewportFar: 8500000,
+    viewportNear: 1000,
+    viewportFar: 4000000,
     viewportFov: 70,
     viewportZPos: 100e3 * 5,
     viewportDistanceFactor: 2,
@@ -24,7 +24,7 @@ const Params = {
     cameraMaxDistance: 200e6 * 20,
     // Scene
     sceneFogColor: 0x000000,
-    sceneFogDensity: 0.00000025,
+    sceneFogDensity: 0.00000055,
     sceneAmbientLight: 0x221111,
     sceneSunColor: 0xffffff,
     // Renderer:

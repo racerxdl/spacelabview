@@ -57,11 +57,11 @@ class SpaceSocket {
                     data: planetDataByInstance ? planetDataByInstance : planetDataByName,
                     voxelData,
                 }
-                preloadPlanetTexture(planetData.data.pathPrefix)
-                planetData.heightMapTextures = planetHeightMaps(planetData.data.pathPrefix),
-                    planetData.textures = planetTextures(planetData.data.pathPrefix),
+                preloadPlanetTexture(planetData.data.pathPrefix);
+                planetData.heightMapTextures = planetHeightMaps(planetData.data.pathPrefix);
+                planetData.textures = planetTextures(planetData.data.pathPrefix);
 
-                    planetData.maxHillSize = (1 + voxelData.HillParameters.Item2) * voxelData.Size;
+                planetData.maxHillSize = (1 + voxelData.HillParameters.Item2) * voxelData.Size;
                 planetData.minHillSize = (1 + voxelData.HillParameters.Item1) * voxelData.Size;
                 planetData.hillDelta = (planetData.maxHillSize - planetData.minHillSize) / 2;
 
@@ -108,6 +108,50 @@ class SpaceSocket {
                     ss.addMesh(planetData.waterMesh);
                 }
 
+                if (voxelData.HasAtmosphere && planetData.data.sky) {
+                    const sky = planetData.data.sky;
+                    sky.forEach((skyData) => {
+                        const geometry = new THREE.SphereGeometry((voxelData.Size+2*planetData.hillDelta*skyData.altitude) / 2, PlanetParams.waterSphereSegments, PlanetParams.waterSphereSegments);
+                        let map=null, alpha=null;
+                        if (skyData.texture) {
+                            map = ss.textureLoader.load(`img/sky/${skyData.texture}`);
+                        }
+                        if (skyData.alpha) {
+                            alpha = ss.textureLoader.load(`img/sky/${skyData.alpha}`);
+                        }
+                        const material = new THREE.MeshPhongMaterial({
+                            specular: 0x333333,
+                            shininess: 10,
+                            color: skyData.color,
+                            normalScale: new THREE.Vector2(1, - 1),
+                            map,
+                            alphaMap: alpha,
+                            transparent: true,
+                            opacity: 0.5
+                        });
+                        const skyMesh = new THREE.Mesh(geometry , material);
+                        skyMesh.position.x = voxelData.X;
+                        skyMesh.position.y = voxelData.Y;
+                        skyMesh.position.z = voxelData.Z;
+
+                        skyMesh.rotationAxis = skyData.rotationAxis.clone();
+
+                        skyMesh.rotation.set(
+                            skyData.rotationAxis.x * skyData.rotationOffset,
+                            skyData.rotationAxis.y * skyData.rotationOffset,
+                            skyData.rotationAxis.z * skyData.rotationOffset
+                        );
+                        skyMesh.rotationSpeed = skyData.rotationSpeed;
+                        skyMesh.renderCall = (function(delta, context) {
+                            this.rotation.x += this.rotationAxis.x * this.rotationSpeed * delta
+                            this.rotation.y += this.rotationAxis.y * this.rotationSpeed * delta
+                            this.rotation.z += this.rotationAxis.z * this.rotationSpeed * delta
+                        }).bind(skyMesh);
+                        ss.addMesh(skyMesh)
+                        ss.addRenderCall(skyMesh.renderCall);
+                    })
+                }
+
                 ss.voxels[name] = planetData;
                 document.dispatchEvent(new CustomEvent("new_planet", {
                     detail: name,
@@ -148,7 +192,7 @@ class SpaceSocket {
         const gridData = data.Grid;
         gridData.EntityId = gridData.EntityId || gridData.Id;
         if (data.IsNew) {
-            console.log(`New Grid: ${gridData.Name}, ${gridData.EntityId}`, gridData)
+            // console.log(`New Grid: ${gridData.Name}, ${gridData.EntityId}`, gridData)
             if (!this.ownerColors[gridData.Faction]) {
                 this.ownerColors[gridData.Faction] = this.pickNewOwnerColor();
             }
@@ -223,6 +267,12 @@ class SpaceSocket {
         }
     }
 
+    addRenderCall(call) {
+        document.dispatchEvent(new CustomEvent("addRenderCall", {
+            detail: call,
+        }));
+    }
+
     globalInfoCallback(data) {
         this.globalInfo = data;
         document.dispatchEvent(new CustomEvent("sunPosition", {
@@ -278,8 +328,8 @@ class SpaceSocket {
         //console.error(`Websocket Error: ${error}`);
     }
     onOpen() {
-        console.log(`Websocket Opened`);
         this.conn.send('ping'); // Send the message 'Ping' to the server
+        document.dispatchEvent(new CustomEvent("wsConnected", {}));
     }
 }
 

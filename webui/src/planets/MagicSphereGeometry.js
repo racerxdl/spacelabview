@@ -4,12 +4,12 @@
 
 import * as THREE from 'three';
 
-let cachedMagicSphere;
+let cachedMagicSpheres = {};
 
 function magicSphereGeometry(radius, segments) {
-    if (!cachedMagicSphere) {
-        console.log(`Magic Sphere not cached. Caching it...`)
-        cachedMagicSphere = new THREE.BoxGeometry(1, 1, 1, segments, segments, segments);
+    if (!cachedMagicSpheres[segments]) {
+        console.log(`Magic Sphere (${segments}) not cached. Caching it...`)
+        cachedMagicSpheres[segments] = new THREE.BoxGeometry(1, 1, 1, segments, segments, segments);
         const uv = new THREE.Vector2();
         const repeat = new THREE.Vector2(1 / 3, 1 / 2);
         const offsets = [
@@ -20,11 +20,11 @@ function magicSphereGeometry(radius, segments) {
             new THREE.Vector2(2 / 3, 0),
             new THREE.Vector2(2 / 3, 1 / 2)
         ];
-        const uvAttribute = cachedMagicSphere.getAttribute('uv');
+        const uvAttribute = cachedMagicSpheres[segments].getAttribute('uv');
 
         const midx = (idx) => {
-            for (let i = 0; i < cachedMagicSphere.groups.count; i++) {
-                const group = cachedMagicSphere.groups[i];
+            for (let i = 0; i < cachedMagicSpheres[segments].groups.count; i++) {
+                const group = cachedMagicSpheres[segments].groups[i];
                 if (group.start <= idx && idx - group.start < group.count) {
                     return group.materialIndex;
                 }
@@ -32,10 +32,10 @@ function magicSphereGeometry(radius, segments) {
             return 0;
         }
 
-        for (let i = 0; i < cachedMagicSphere.index.count; i += 3) {
+        for (let i = 0; i < cachedMagicSpheres[segments].index.count; i += 3) {
             const materialIndex = midx(i);
             for (let j = 0; j < 3; j++) {
-                const faceIdx = cachedMagicSphere.index[i * 3 + j];
+                const faceIdx = cachedMagicSpheres[segments].index[i * 3 + j];
                 uv.fromBufferAttribute(uvAttribute, faceIdx);
                 uv.multiply(repeat).add(offsets[materialIndex]);
                 uvAttribute.setXY(faceIdx, uv.x, uv.y);
@@ -43,7 +43,7 @@ function magicSphereGeometry(radius, segments) {
         }
         uvAttribute.needsUpdate = true;
     }
-    const geometry = cachedMagicSphere.clone();
+    const geometry = cachedMagicSpheres[segments].clone();
     const vertex = new THREE.Vector3();
 
     // texture is a collage; set offset/repeat per material index

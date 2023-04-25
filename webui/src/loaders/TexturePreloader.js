@@ -6,14 +6,14 @@ window.itemsToLoad = 0;
 window.itemsLoaded = 0;
 
 function preloadTexture(texturePath) {
-    const img = new Image();
-    window.itemsToLoad++;
-    img.src = texturePath;
-    img.onload = () => {
-        window.itemsLoaded++;
-        document.dispatchEvent(new Event("item_loaded"));
-        // console.log(`Image ${texturePath} loaded...`);
-    }
+    // const img = new Image();
+    // window.itemsToLoad++;
+    // img.src = texturePath;
+    // img.onload = () => {
+    //     window.itemsLoaded++;
+    //     document.dispatchEvent(new Event("item_loaded"));
+    //     // console.log(`Image ${texturePath} loaded...`);
+    // }
 }
 
 const cubeMapFaces = ["front", "right", "up", "down", "back", "left"];

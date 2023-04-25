@@ -5,13 +5,15 @@ import PlanetParams from "./planets/Params";
 
 import { OrbitControls, FlyControls, EffectComposer, RenderPass, FilmPass } from './viewport';
 import { planetTextures } from './loaders/TexturePreloader';
+import { preGenerate, preloadAll } from './loaders/Preloader';
 
 const context = {
 	loadedPlanets: [],
-	chat: []
+	chat: [],
+	renderCalls: []
 }
 
-function init() {
+async function init() {
 	// Early listeners
 	document.addEventListener('SpaceError', (event) => {
 		if (event.detail instanceof String) {
@@ -24,11 +26,23 @@ function init() {
 		console.error(event.detail)
 	})
 	document.addEventListener('item_loaded', () => {
-		updateStatus(`Loaded ${window.itemsLoaded}/${window.itemsToLoad}`);
+		updateStatus(`<B>Loaded ${window.imagesLoaded}/${window.imagesToLoadCount} images.</B>`);
 	})
 	document.addEventListener('chatMessage', (event) => {
 		onChatMessage(event.detail);
 	});
+	document.addEventListener('addRenderCall', (event) => {
+		context.renderCalls.push(event.detail);
+	})
+	document.addEventListener('wsConnected', () => {
+		updateStatus(`<B>Connected!</B>`);
+	})
+
+	updateStatus(`Loading items...`);
+	await preloadAll();
+	updateStatus(`Pre-generating meshes`);
+	await preGenerate();
+	updateStatus(`All cached!`);
 
 	// Main Code
 	const SCREEN_HEIGHT = window.innerHeight - PlanetParams.viewportMargin * 2;
@@ -91,7 +105,8 @@ function init() {
 	//composer.addPass(effectFilm);
 
 
-	context.ss = new SpaceSocket('ws://localhost:3000/ws');
+	updateStatus(`<B>Connecting...</B>`);
+	context.ss = new SpaceSocket('wss://spacelab.lucasteske.dev/ws');
 	window.ss = context.ss;
 	document.addEventListener('new_planet', (event) => {
 		const planetName = event.detail;
@@ -190,6 +205,7 @@ function animate() {
 
 function render() {
 	const delta = context.clock.getDelta();
+	context.renderCalls.forEach((call) => call(delta, context));
 	context.composer.render(delta);
 }
 
