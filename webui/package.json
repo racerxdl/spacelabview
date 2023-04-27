@@ -19,6 +19,7 @@
     "write-file-webpack-plugin": "^4.5.1"
   },
   "dependencies": {
+    "camera-controls": "^2.3.4",
     "jquery": "^3.6.4",
     "three": "^0.151.3"
   }

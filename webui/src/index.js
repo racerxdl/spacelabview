@@ -6,6 +6,10 @@ import PlanetParams from "./planets/Params";
 import { OrbitControls, EffectComposer, RenderPass, FilmPass } from './viewport';
 import { preGenerate, preloadAll } from './loaders/Preloader';
 import $ from "jquery";
+import CameraControls from 'camera-controls';
+import * as holdEvent from 'hold-event';
+
+CameraControls.install({ THREE: THREE });
 
 const context = {
 	loadedPlanets: [],
@@ -14,6 +18,18 @@ const context = {
 }
 
 window.$ = window.jQuery = $;
+
+const KEYCODE = {
+	W: 87,
+	A: 65,
+	S: 83,
+	D: 68,
+	ARROW_LEFT: 37,
+	ARROW_UP: 38,
+	ARROW_RIGHT: 39,
+	ARROW_DOWN: 40,
+};
+
 
 async function init() {
 	// Early listeners
@@ -49,6 +65,8 @@ async function init() {
 	// Main Code
 	const SCREEN_HEIGHT = window.innerHeight - PlanetParams.viewportMargin * 2;
 	const SCREEN_WIDTH = window.innerWidth;
+
+
 	context.chatMsgList = document.createElement("ul");
 	context.chatMsgList.id = "messageList";
 
@@ -56,6 +74,7 @@ async function init() {
 	context.textureLoader = new THREE.TextureLoader();
 	context.cubeTextureLoader = new THREE.CubeTextureLoader();
 	context.clock = new THREE.Clock();
+	context.pointer = new THREE.Vector2();
 
 	document.getElementById("chat").innerHTML = "<h2>Chat</h2>";
 	document.getElementById("chat").appendChild(context.chatMsgList);
@@ -74,6 +93,7 @@ async function init() {
 	context.dirLight = new THREE.DirectionalLight(PlanetParams.sceneSunColor);
 	context.dirLight.position.set(-1, 0, 1).normalize();
 	context.scene.add(context.dirLight);
+	context.planetBoundingSpheres = [];
 
 	const texture = context.cubeTextureLoader.load([
 		'img/BackgroundCube-0.jpg',
@@ -92,12 +112,22 @@ async function init() {
 
 	//
 
-	context.controls = new OrbitControls(context.camera, context.renderer.domElement);
+	// context.controls = new OrbitControls(context.camera, context.renderer.domElement);
+	context.controls = new CameraControls(context.camera, context.renderer.domElement);
 	context.controls.minDistance = PlanetParams.cameraMinDistance;
 	context.controls.maxDistance = PlanetParams.cameraMaxDistance;
+	context.controls.setLookAt(
+		0, 0, 0,
+		0, 0, 200e3 * PlanetParams.viewportDistanceFactor,
+		true);
+
+	context.controls.infinityDolly = true;
+	context.controls.dollySpeed = 0.1;
+
 	context.cameraTargetV = new THREE.Vector3();
 	context.cameraPositionV = new THREE.Vector3();
 	context.cameraMoving = false;
+	context.raycaster = new THREE.Raycaster();
 	//
 
 	// stats = new Stats();
@@ -105,6 +135,7 @@ async function init() {
 
 
 	window.addEventListener('resize', onWindowResize);
+	window.context = context;
 
 	context.renderModel = new RenderPass(context.scene, context.camera);
 	//const effectFilm = new FilmPass(0.35, 0.75, 2048, false);
@@ -119,10 +150,9 @@ async function init() {
 	window.ss = context.ss;
 	document.addEventListener('new_planet', (event) => {
 		const planetName = event.detail;
-		//if (!context.centeredOn) {
 		centerOn(planetName);
-		//}
 		context.loadedPlanets.push(planetName);
+		context.planetBoundingSpheres.push(context.ss.getPlanet(planetName).boundingSphere);
 		refreshPlanets();
 	})
 
@@ -141,16 +171,34 @@ async function init() {
 		const { x, y, z, intensity } = event.detail;
 		context.dirLight.position.set(x, y, z)
 	})
-	document.addEventListener('mousedown', () => {
-		if (context.cameraMoving) {
-			const deltaControl = context.controls.target.distanceTo(context.cameraTargetV);
-			const deltaCamera = context.camera.position.distanceTo(context.cameraPositionV);
-			console.log(`Cancelling movement ${deltaControl} ${deltaCamera}`);
-			if (deltaControl < 20000 && deltaCamera < 20000) {
-				context.cameraMoving = false;
-			}
+
+	document.addEventListener('mousemove', onPointerMove);
+	context.renderer.domElement.addEventListener('click', () => {
+		if (context.INTERSECTED != null) {
+			centerOn(context.INTERSECTED.planetName);
+			context.INTERSECTED.visible = false;
+			context.INTERSECTED.null;
 		}
-	});
+	})
+
+	const wKey = new holdEvent.KeyboardKeyHold(KEYCODE.W, 16.666);
+	const aKey = new holdEvent.KeyboardKeyHold(KEYCODE.A, 16.666);
+	const sKey = new holdEvent.KeyboardKeyHold(KEYCODE.S, 16.666);
+	const dKey = new holdEvent.KeyboardKeyHold(KEYCODE.D, 16.666);
+	aKey.addEventListener('holding', function (event) { context.controls.truck(- PlanetParams.cameraSpeed * event.deltaTime, 0, false) });
+	dKey.addEventListener('holding', function (event) { context.controls.truck(PlanetParams.cameraSpeed * event.deltaTime, 0, false) });
+	wKey.addEventListener('holding', function (event) { context.controls.forward(PlanetParams.cameraSpeed * event.deltaTime, false) });
+	sKey.addEventListener('holding', function (event) { context.controls.forward(- PlanetParams.cameraSpeed * event.deltaTime, false) });
+
+	const leftKey = new holdEvent.KeyboardKeyHold(KEYCODE.ARROW_LEFT, 100);
+	const rightKey = new holdEvent.KeyboardKeyHold(KEYCODE.ARROW_RIGHT, 100);
+	const upKey = new holdEvent.KeyboardKeyHold(KEYCODE.ARROW_UP, 100);
+	const downKey = new holdEvent.KeyboardKeyHold(KEYCODE.ARROW_DOWN, 100);
+	leftKey.addEventListener('holding', function (event) { context.controls.rotate(- 0.1 * THREE.MathUtils.DEG2RAD * event.deltaTime, 0, true) });
+	rightKey.addEventListener('holding', function (event) { context.controls.rotate(0.1 * THREE.MathUtils.DEG2RAD * event.deltaTime, 0, true) });
+	upKey.addEventListener('holding', function (event) { context.controls.rotate(0, - 0.05 * THREE.MathUtils.DEG2RAD * event.deltaTime, true) });
+	downKey.addEventListener('holding', function (event) { context.controls.rotate(0, 0.05 * THREE.MathUtils.DEG2RAD * event.deltaTime, true) });
+
 
 	animate();
 }
@@ -191,6 +239,11 @@ function refreshPlanets() {
 	document.getElementById('planets').appendChild(planetOl);
 }
 
+function onPointerMove(event) {
+	context.pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
+	context.pointer.y = - (event.clientY / window.innerHeight) * 2 + 1;
+}
+
 function centerOn(voxelName) {
 	console.log(`Centering on ${voxelName}`)
 	const planet = context.ss.getPlanet(voxelName);
@@ -202,31 +255,48 @@ function centerOn(voxelName) {
 	context.centeredOn = voxelName;
 	document.getElementById('focusname').innerText = (`Focused on ${planet.instanceName}`)
 
-	const radius = planet.maxHillSize / 2;
-
-	context.cameraPositionV.x = planet.voxelData.X;
-	context.cameraPositionV.y = planet.voxelData.Y;
-	context.cameraPositionV.z = planet.voxelData.Z + radius * PlanetParams.viewportDistanceFactor;
-
 	context.cameraTargetV.x = planet.voxelData.X;
 	context.cameraTargetV.y = planet.voxelData.Y;
 	context.cameraTargetV.z = planet.voxelData.Z;
-	context.cameraMoving = true;
+
+	context.controls.moveTo(context.cameraTargetV.x, context.cameraTargetV.y, context.cameraTargetV.z, true);
+
 }
 
 window.centerOn = centerOn;
 
 function animate() {
 	requestAnimationFrame(animate);
-	if (context.cameraMoving) {
-		const deltaControl = context.controls.target.distanceTo(context.cameraTargetV);
-		const deltaCamera = context.camera.position.distanceTo(context.cameraPositionV);
-		context.controls.update();
-		context.controls.target.lerp(context.cameraTargetV, 0.1);
-		context.camera.position.lerp(context.cameraPositionV, 0.1);
-		if (deltaControl < 500 && deltaCamera < 500) {
-			context.cameraMoving = false;
+
+	context.raycaster.setFromCamera(context.pointer, context.camera);
+	const intersects = context.raycaster.intersectObjects(context.planetBoundingSpheres, false);
+	if (intersects.length > 0) {
+		const obj = intersects[0].object;
+		if (context.INTERSECTED != obj && obj.planetName !== context.centeredOn) {
+			if (context.INTERSECTED) {
+				context.INTERSECTED.material.emissive.setHex(context.INTERSECTED.currentHex)
+				context.INTERSECTED.material.color.setHex(context.INTERSECTED.currentHex)
+				context.INTERSECTED.visible = false;
+			}
+
+			context.INTERSECTED = intersects[0].object;
+			context.INTERSECTED.currentHex = context.INTERSECTED.material.emissive.getHex();
+			context.INTERSECTED.material.emissive.setHex(0xff0000);
+			context.INTERSECTED.material.color.setHex(0xff0000);
+			context.INTERSECTED.visible = true;
+			context.renderer.domElement.style.cursor = 'pointer';
 		}
+	} else {
+		if (context.INTERSECTED) {
+			context.INTERSECTED.material.emissive.setHex(context.INTERSECTED.currentHex)
+			context.INTERSECTED.material.color.setHex(context.INTERSECTED.currentHex)
+			context.INTERSECTED.visible = false;
+		}
+		context.renderer.domElement.style.cursor = '';
+		context.INTERSECTED = null;
+	}
+	if (context.INTERSECTED && context.INTERSECTED.visible) {
+		context.INTERSECTED.rotation.y += 0.01;
 	}
 	render();
 	//stats.update();
@@ -234,6 +304,7 @@ function animate() {
 
 function render() {
 	const delta = context.clock.getDelta();
+	context.controls.update(delta);
 	context.renderCalls.forEach((call) => call(delta, context));
 	context.composer.render(delta);
 

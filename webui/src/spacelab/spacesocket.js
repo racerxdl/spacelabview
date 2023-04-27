@@ -108,6 +108,7 @@ class SpaceSocket {
                     ss.addMesh(planetData.waterMesh);
                 }
 
+
                 if (voxelData.HasAtmosphere && planetData.data.sky) {
                     const sky = planetData.data.sky;
                     sky.forEach((skyData) => {
@@ -151,6 +152,17 @@ class SpaceSocket {
                         ss.addRenderCall(skyMesh.renderCall);
                     })
                 }
+
+                planetData.boundingSphere = new THREE.Mesh(
+                    new THREE.SphereGeometry((planetData.minHillSize * 1.5) / 2, PlanetParams.waterSphereSegments/4, PlanetParams.waterSphereSegments/4),
+                    new THREE.MeshLambertMaterial( { color: 0xFF0000, transparent: true, opacity: 0.2, wireframe: true } )
+                );
+                planetData.boundingSphere.position.x = voxelData.X;
+                planetData.boundingSphere.position.y = voxelData.Y;
+                planetData.boundingSphere.position.z = voxelData.Z;
+                planetData.boundingSphere.visible = false;
+                planetData.boundingSphere.planetName = name;
+                ss.addMesh(planetData.boundingSphere);
 
                 ss.voxels[name] = planetData;
                 document.dispatchEvent(new CustomEvent("new_planet", {
@@ -196,16 +208,12 @@ class SpaceSocket {
             if (!this.ownerColors[gridData.Faction]) {
                 this.ownerColors[gridData.Faction] = this.pickNewOwnerColor();
             }
-
-            const materialNormalMap = new THREE.MeshPhongMaterial({
-                specular: PlanetParams.gridSphereSpecularColor,
-                color: this.ownerColors[gridData.Faction],
-                shininess: PlanetParams.gridSphereSpecularShininess,
-            });
-
+            const gridMaterial = new THREE.MeshLambertMaterial( {
+                color: this.ownerColors[gridData.Faction], emissive: this.ownerColors[gridData.Faction]
+            } )
             // const geometry = new THREE.SphereGeometry(1000, 8, 8);
             const geometry = new THREE.SphereGeometry(PlanetParams.gridSphereDiameterFactor, PlanetParams.gridSphereSegments, PlanetParams.gridSphereSegments);
-            const gridMesh = new THREE.Mesh(geometry, materialNormalMap);
+            const gridMesh = new THREE.Mesh(geometry, gridMaterial);
             gridMesh.position.x = gridData.X;
             gridMesh.position.y = gridData.Y;
             gridMesh.position.z = gridData.Z;
