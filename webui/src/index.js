@@ -1,17 +1,19 @@
 import * as THREE from 'three';
 
-import SpaceSocket from "./spacelab/websocket";
+import SpaceSocket from "./spacelab/spacesocket";
 import PlanetParams from "./planets/Params";
 
-import { OrbitControls, FlyControls, EffectComposer, RenderPass, FilmPass } from './viewport';
-import { planetTextures } from './loaders/TexturePreloader';
+import { OrbitControls, EffectComposer, RenderPass, FilmPass } from './viewport';
 import { preGenerate, preloadAll } from './loaders/Preloader';
+import $ from "jquery";
 
 const context = {
 	loadedPlanets: [],
 	chat: [],
 	renderCalls: []
 }
+
+window.$ = window.jQuery = $;
 
 async function init() {
 	// Early listeners
@@ -57,6 +59,10 @@ async function init() {
 
 	document.getElementById("chat").innerHTML = "<h2>Chat</h2>";
 	document.getElementById("chat").appendChild(context.chatMsgList);
+	$("#chat_tab").on('click', () => { $("#chat").animate({ width: 'toggle' }); });
+	$("#planets_tab").on('click', () => { $("#planets").animate({ height: 'toggle' }) });
+	$("#chat").animate({ width: 'toggle' });
+	$("#planets").animate({ height: 'toggle' });
 
 	context.camera = new THREE.PerspectiveCamera(PlanetParams.viewportFov, SCREEN_WIDTH / SCREEN_HEIGHT, PlanetParams.viewportNear, PlanetParams.viewportFar);
 	context.camera.position.z = PlanetParams.viewportZPos;
@@ -89,6 +95,9 @@ async function init() {
 	context.controls = new OrbitControls(context.camera, context.renderer.domElement);
 	context.controls.minDistance = PlanetParams.cameraMinDistance;
 	context.controls.maxDistance = PlanetParams.cameraMaxDistance;
+	context.cameraTargetV = new THREE.Vector3();
+	context.cameraPositionV = new THREE.Vector3();
+	context.cameraMoving = false;
 	//
 
 	// stats = new Stats();
@@ -102,17 +111,17 @@ async function init() {
 
 	context.composer = new EffectComposer(context.renderer);
 	context.composer.addPass(context.renderModel);
-	//composer.addPass(effectFilm);
+	//context.composer.addPass(effectFilm);
 
 
 	updateStatus(`<B>Connecting...</B>`);
-	context.ss = new SpaceSocket('wss://spacelab.lucasteske.dev/ws');
+	context.ss = new SpaceSocket('ws://localhost:3000/ws');
 	window.ss = context.ss;
 	document.addEventListener('new_planet', (event) => {
 		const planetName = event.detail;
-		if (!context.centeredOn) {
-			centerOn(planetName);
-		}
+		//if (!context.centeredOn) {
+		centerOn(planetName);
+		//}
 		context.loadedPlanets.push(planetName);
 		refreshPlanets();
 	})
@@ -129,9 +138,19 @@ async function init() {
 		}
 	})
 	document.addEventListener('sunPosition', (event) => {
-		const {x,y,z,intensity} = event.detail;
+		const { x, y, z, intensity } = event.detail;
 		context.dirLight.position.set(x, y, z)
 	})
+	document.addEventListener('mousedown', () => {
+		if (context.cameraMoving) {
+			const deltaControl = context.controls.target.distanceTo(context.cameraTargetV);
+			const deltaCamera = context.camera.position.distanceTo(context.cameraPositionV);
+			console.log(`Cancelling movement ${deltaControl} ${deltaCamera}`);
+			if (deltaControl < 20000 && deltaCamera < 20000) {
+				context.cameraMoving = false;
+			}
+		}
+	});
 
 	animate();
 }
@@ -179,26 +198,36 @@ function centerOn(voxelName) {
 		console.error(`Planet ${voxelName} not found`);
 		return;
 	}
+	$("#planets").animate({ height: 'hide' });
 	context.centeredOn = voxelName;
 	document.getElementById('focusname').innerText = (`Focused on ${planet.instanceName}`)
 
 	const radius = planet.maxHillSize / 2;
 
-	context.camera.position.x = planet.voxelData.X;
-	context.camera.position.y = planet.voxelData.Y;
-	context.camera.position.z = planet.voxelData.Z + radius * PlanetParams.viewportDistanceFactor;
-	context.controls.update();
+	context.cameraPositionV.x = planet.voxelData.X;
+	context.cameraPositionV.y = planet.voxelData.Y;
+	context.cameraPositionV.z = planet.voxelData.Z + radius * PlanetParams.viewportDistanceFactor;
 
-	context.controls.target.x = planet.voxelData.X;
-	context.controls.target.y = planet.voxelData.Y;
-	context.controls.target.z = planet.voxelData.Z;
-	context.controls.update();
+	context.cameraTargetV.x = planet.voxelData.X;
+	context.cameraTargetV.y = planet.voxelData.Y;
+	context.cameraTargetV.z = planet.voxelData.Z;
+	context.cameraMoving = true;
 }
 
 window.centerOn = centerOn;
 
 function animate() {
 	requestAnimationFrame(animate);
+	if (context.cameraMoving) {
+		const deltaControl = context.controls.target.distanceTo(context.cameraTargetV);
+		const deltaCamera = context.camera.position.distanceTo(context.cameraPositionV);
+		context.controls.update();
+		context.controls.target.lerp(context.cameraTargetV, 0.1);
+		context.camera.position.lerp(context.cameraPositionV, 0.1);
+		if (deltaControl < 500 && deltaCamera < 500) {
+			context.cameraMoving = false;
+		}
+	}
 	render();
 	//stats.update();
 }
@@ -207,6 +236,7 @@ function render() {
 	const delta = context.clock.getDelta();
 	context.renderCalls.forEach((call) => call(delta, context));
 	context.composer.render(delta);
+
 }
 
 function onWindowResize() {

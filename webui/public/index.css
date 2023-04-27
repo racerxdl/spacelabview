@@ -71,16 +71,16 @@ a, button, input, select {
 	background: rgba(0,0,0,0.7);
 }
 
-	#overlay button {
-		background: transparent;
-		border: 0;
-		border: 1px solid rgb(255, 255, 255);
-		border-radius: 4px;
-		color: #ffffff;
-		padding: 12px 18px;
-		text-transform: uppercase;
-		cursor: pointer;
-	}
+#overlay button {
+	background: transparent;
+	border: 0;
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 4px;
+	color: #ffffff;
+	padding: 12px 18px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
 
 #notSupported {
 	width: 50%;
@@ -103,7 +103,7 @@ b {
 	color: orange
 }
 
-#planets {
+#planets_bar {
 	position: fixed;
 	bottom: 0px;
 	left: 0px;
@@ -116,19 +116,58 @@ b {
 #planets li {
 	cursor: pointer;
 }
+#planets_tab {
+	text-align: center;
+	padding-top: 1em;
+	cursor: pointer;
+	border-radius: 0 25px 0 0;
+}
+#planets_tab:hover {
+	background-color: #FF6f6fc4;
+}
 
 #planets li:hover {
 	background-color: rgb(110, 110, 0);
 	cursor: pointer;
 }
 
-#chat {
+#chat_bar {
 	position: fixed;
 	right: 0px;
 	top: 0px;
 	height: 100%;
-	width: 250px;
 	background-color: #393838c4;
+	cursor: pointer;
+}
+
+#chat {
+	width: 250px;
+}
+
+#chat_tab {
+	width: 200px;
+	float: left;
+	margin-left: -8.6em;
+	text-align: center;
+	margin-top: 8em;
+	background-color: #393838c4;
+	-webkit-border-top-left-radius: 15px;
+	-webkit-border-top-right-radius: 15px;
+	-moz-border-radius-topleft: 15px;
+	-moz-border-radius-topright: 15px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+
+    transform: rotate(-90deg);
+    transform-origin: right, top;
+    -ms-transform: rotate(-90deg);
+    -ms-transform-origin:right, top;
+    -webkit-transform: rotate(-90deg);
+    -webkit-transform-origin:right, top;
+    position: absolute;
+}
+#chat_tab:hover {
+	background-color: #FF6f6fc4;
 }
 
 #chat h2 {

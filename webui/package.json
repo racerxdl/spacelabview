@@ -5,18 +5,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "mkdir -p dist && cp -R public/* dist/ && webpack serve --open --mode development & webpack --watch",
+    "start": "mkdir -p dist && webpack serve --open --mode development",
     "watch": "webpack --watch"
   },
   "author": "Lucas Teske",
   "license": "MIT",
   "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
     "html-webpack-plugin": "^5.5.1",
     "webpack": "^5.80.0",
     "webpack-cli": "^5.0.2",
-    "webpack-dev-server": "^4.13.3"
+    "webpack-dev-server": "^4.13.3",
+    "write-file-webpack-plugin": "^4.5.1"
   },
   "dependencies": {
+    "jquery": "^3.6.4",
     "three": "^0.151.3"
   }
 }
