@@ -77,11 +77,18 @@ class SpaceSocket {
                         normalScale: new THREE.Vector2(1, - 1),
                         bumpMap: hmTex,
                         bumpScale: planetData.hillDelta / 2,
+                        //wireframe: true
                     });
                 });
-                planetData.geometry = magicSphereGeometry(planetData.minHillSize / 2, PlanetParams.sphereCubeDivisions);
-                planetData.mesh = new THREE.Mesh(planetData.geometry, planetData.materials);
-                // planetData.mesh.rotation.y = Math.PI/2;
+                planetData.mesh = new THREE.LOD();
+                PlanetParams.planetLOD.forEach((lod) => {
+                    const geometry = magicSphereGeometry(planetData.minHillSize / 2, lod.divisions);
+                    const mesh = new THREE.Mesh(geometry, planetData.materials);
+                    planetData.mesh.addLevel(mesh, lod.distance);
+                });
+                // planetData.geometry = magicSphereGeometry(planetData.minHillSize / 2, PlanetParams.sphereCubeDivisions);
+                // planetData.mesh = new THREE.Mesh(planetData.geometry, planetData.materials);
+                // // planetData.mesh.rotation.y = Math.PI/2;
                 planetData.mesh.position.x = voxelData.X;
                 planetData.mesh.position.y = voxelData.Y;
                 planetData.mesh.position.z = voxelData.Z;

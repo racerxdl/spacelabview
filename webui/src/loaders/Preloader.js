@@ -69,10 +69,15 @@ function preloadAll() {
 
 function preGenerate() {
     magicSphereGeometry(100, Params.gridSphereSegments);
-    magicSphereGeometry(100, Params.sphereCubeDivisions);
-    magicSphereGeometry(100, Params.sphereCubeDivisions/2); // LOD
-    magicSphereGeometry(100, Params.sphereCubeDivisions/4); // LOD
-    magicSphereGeometry(100, Params.sphereCubeDivisions/8); // LOD
+    Params.planetLOD.forEach((lod) => {
+        magicSphereGeometry(100, lod.divisions);
+    });
+    // magicSphereGeometry(100, Params.sphereCubeDivisions*2);
+    // magicSphereGeometry(100, Params.sphereCubeDivisions);
+    // magicSphereGeometry(100, Params.sphereCubeDivisions/2); // LOD
+    // magicSphereGeometry(100, Params.sphereCubeDivisions/4); // LOD
+    // magicSphereGeometry(100, Params.sphereCubeDivisions/8); // LOD
+    // magicSphereGeometry(100, Params.sphereCubeDivisions/16); // LOD
     magicSphereGeometry(100, Params.waterSphereSegments);
 }
 
