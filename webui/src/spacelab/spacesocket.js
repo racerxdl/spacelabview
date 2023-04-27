@@ -154,7 +154,7 @@ class SpaceSocket {
                 }
 
                 planetData.boundingSphere = new THREE.Mesh(
-                    new THREE.SphereGeometry((planetData.minHillSize * 1.5) / 2, PlanetParams.waterSphereSegments/4, PlanetParams.waterSphereSegments/4),
+                    new THREE.SphereGeometry((planetData.maxHillSize * 1.1) / 2, PlanetParams.waterSphereSegments/4, PlanetParams.waterSphereSegments/4),
                     new THREE.MeshLambertMaterial( { color: 0xFF0000, transparent: true, opacity: 0.2, wireframe: true } )
                 );
                 planetData.boundingSphere.position.x = voxelData.X;

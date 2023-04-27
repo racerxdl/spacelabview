@@ -122,7 +122,7 @@ async function init() {
 		true);
 
 	context.controls.infinityDolly = true;
-	context.controls.dollySpeed = 0.1;
+	context.controls.dollySpeed = PlanetParams.dollySpeed;
 
 	context.cameraTargetV = new THREE.Vector3();
 	context.cameraPositionV = new THREE.Vector3();
@@ -150,7 +150,8 @@ async function init() {
 	window.ss = context.ss;
 	document.addEventListener('new_planet', (event) => {
 		const planetName = event.detail;
-		centerOn(planetName);
+		//centerOn(planetName);
+		context.controls.fitToBox( context.scene, true, { paddingLeft: 25, paddingRight: 25, paddingBottom: 25, paddingTop: 25 } )
 		context.loadedPlanets.push(planetName);
 		context.planetBoundingSpheres.push(context.ss.getPlanet(planetName).boundingSphere);
 		refreshPlanets();
@@ -178,6 +179,12 @@ async function init() {
 			centerOn(context.INTERSECTED.planetName);
 			context.INTERSECTED.visible = false;
 			context.INTERSECTED.null;
+		}
+	})
+	context.renderer.domElement.addEventListener('dblclick', () => {
+		if (context.centeredOn) {
+			const planet = context.ss.getPlanet(context.centeredOn);
+			context.controls.fitToBox( planet.mesh, true, { paddingLeft: 5, paddingRight: 5, paddingBottom: 5, paddingTop: 5 } );
 		}
 	})
 
@@ -258,9 +265,12 @@ function centerOn(voxelName) {
 	context.cameraTargetV.x = planet.voxelData.X;
 	context.cameraTargetV.y = planet.voxelData.Y;
 	context.cameraTargetV.z = planet.voxelData.Z;
-
+	const planetOrbit = 5000 + planet.voxelData.Size/2;
+	if (context.controls.distance < planetOrbit) {
+		context.controls.distance = planetOrbit;
+	}
 	context.controls.moveTo(context.cameraTargetV.x, context.cameraTargetV.y, context.cameraTargetV.z, true);
-
+	context.controls.fitToBox( planet.mesh, true, { paddingLeft: 5, paddingRight: 5, paddingBottom: 5, paddingTop: 5 } );
 }
 
 window.centerOn = centerOn;

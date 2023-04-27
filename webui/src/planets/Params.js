@@ -23,6 +23,7 @@ const Params = {
     cameraMinDistance: 1000,
     cameraMaxDistance: 4000000,
     cameraSpeed: 100,
+    dollySpeed: 0.1,
     // Scene
     sceneFogColor: 0x000000,
     sceneFogDensity: 0.00000015,
