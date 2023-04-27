@@ -55,6 +55,8 @@ async function init() {
 	document.addEventListener('wsConnected', () => {
 		updateStatus(`<B>Connected!</B>`);
 	})
+	$("#chat").animate({ width: 'toggle' });
+	$("#planets").animate({ height: 'toggle' });
 
 	updateStatus(`Loading items...`);
 	await preloadAll();
@@ -80,8 +82,6 @@ async function init() {
 	document.getElementById("chat").appendChild(context.chatMsgList);
 	$("#chat_tab").on('click', () => { $("#chat").animate({ width: 'toggle' }); });
 	$("#planets_tab").on('click', () => { $("#planets").animate({ height: 'toggle' }) });
-	$("#chat").animate({ width: 'toggle' });
-	$("#planets").animate({ height: 'toggle' });
 
 	context.camera = new THREE.PerspectiveCamera(PlanetParams.viewportFov, SCREEN_WIDTH / SCREEN_HEIGHT, PlanetParams.viewportNear, PlanetParams.viewportFar);
 	context.camera.position.z = PlanetParams.viewportZPos;

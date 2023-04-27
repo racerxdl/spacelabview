@@ -47,12 +47,24 @@ planets.forEach((planet) => {
     })
 })
 
+const chunkSize = 10;
+
 function preloadAll() {
     window.imagesToLoadCount = imagesToLoad.length;
     window.imagesLoaded = 0;
-    const promises = Promise.all(imagesToLoad.map((img) => preloadTexture(img)))
 
-    return promises;
+    return new Promise(async (resolve) => {
+        // Chunks so the browser doesn't freeze before loading all images
+        const chunks = Math.round(imagesToLoad.length / chunkSize);
+        for (let i = 0; i < chunks; i++) {
+            const chunk = imagesToLoad.slice(i * chunkSize, (i + 1) * chunkSize);
+            console.log(`Loading ${i * chunkSize} -> ${(i + 1) * chunkSize} images...`);
+            await Promise.all(chunk.map((img) => preloadTexture(img)));
+        }
+        resolve();
+
+    });
+    // const promises = Promise.all(imagesToLoad.map((img) => preloadTexture(img)))
 }
 
 function preGenerate() {
@@ -60,6 +72,7 @@ function preGenerate() {
     magicSphereGeometry(100, Params.sphereCubeDivisions);
     magicSphereGeometry(100, Params.sphereCubeDivisions/2); // LOD
     magicSphereGeometry(100, Params.sphereCubeDivisions/4); // LOD
+    magicSphereGeometry(100, Params.sphereCubeDivisions/8); // LOD
     magicSphereGeometry(100, Params.waterSphereSegments);
 }
 
