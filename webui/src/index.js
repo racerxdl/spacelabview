@@ -110,9 +110,6 @@ async function init() {
 	context.renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
 	document.body.appendChild(context.renderer.domElement);
 
-	//
-
-	// context.controls = new OrbitControls(context.camera, context.renderer.domElement);
 	context.controls = new CameraControls(context.camera, context.renderer.domElement);
 	context.controls.minDistance = PlanetParams.cameraMinDistance;
 	context.controls.maxDistance = PlanetParams.cameraMaxDistance;
@@ -122,13 +119,38 @@ async function init() {
 		true);
 
 	context.controls.infinityDolly = true;
-	context.controls.dollySpeed = PlanetParams.dollySpeed;
+
+	context.controls.dollySpeed = PlanetParams.dollySpeed.normal;
+
+	function isKey(e, key) {
+		return e.key == key
+	}
+
+	const dollySpeed = (released, controls) => {
+		return (event) => {
+			if (released && (isKey(event, 'Shift') || isKey(event, 'Control'))) {
+				controls.dollySpeed = PlanetParams.dollySpeed.normal;
+				return;
+			}
+
+			if (isKey(event, 'Shift')) {
+				controls.dollySpeed = PlanetParams.dollySpeed.fast;
+				return;
+
+			} else if (isKey(event, 'Control')) {
+				controls.dollySpeed = PlanetParams.dollySpeed.slow;
+				return;
+			}
+		}
+	}
+
+	window.addEventListener('keyup', dollySpeed(true, context.controls));
+	window.addEventListener('keydown', dollySpeed(false, context.controls));
 
 	context.cameraTargetV = new THREE.Vector3();
 	context.cameraPositionV = new THREE.Vector3();
 	context.cameraMoving = false;
 	context.raycaster = new THREE.Raycaster();
-	//
 
 	// stats = new Stats();
 	// document.body.appendChild(stats.dom);
