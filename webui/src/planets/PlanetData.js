@@ -5,6 +5,11 @@
 import * as THREE from 'three';
 
 const planets = {
+    "planet crait": {
+        name: "Planet Crait",
+        pathPrefix: "planet_crait",
+        isVanilla: false,
+    },
     "planet agaris": {
         name: "Planet Agaris",
         water: {

@@ -4,6 +4,7 @@
 
 
 const Params = {
+    WebsocketURL: "wss://spacelab.lucasteske.dev/ws",
     // Planet Mesh
     sphereCubeDivisions: 256, // Number of divisions on Cube Spheres used for Planet Mesh
     waterSphereSegments: 64,

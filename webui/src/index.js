@@ -146,7 +146,7 @@ async function init() {
 
 
 	updateStatus(`<B>Connecting...</B>`);
-	context.ss = new SpaceSocket('ws://localhost:3000/ws');
+	context.ss = new SpaceSocket(PlanetParams.WebsocketURL);
 	window.ss = context.ss;
 	document.addEventListener('new_planet', (event) => {
 		const planetName = event.detail;

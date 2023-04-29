@@ -40,7 +40,7 @@ class SpaceSocket {
             if (name != "" && voxelData.DebugName.indexOf("MyPlanet") > 0) {
                 const planetNameInfo = name.split("-");
                 const instanceName = planetNameInfo[0];
-                const basePlanet = planetNameInfo[1];
+                const basePlanet = planetNameInfo[1] || "";
                 const generatorParams = planetNameInfo.length == 4 ? planetNameInfo[3] : planetNameInfo[2];
                 console.log(`Detected planet ${instanceName} (${name})`);
                 const planetDataByInstance = PlanetData[basePlanet.toLowerCase()];
