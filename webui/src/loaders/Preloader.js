@@ -6,7 +6,10 @@ import { magicSphereGeometry } from "../planets/MagicSphereGeometry";
 import Params from "../planets/Params";
 
 const planets = [
-    "agaris", "alien", "earthlike", "europa", "mars", "moon", "pertam", "titan", "triton"
+    // Vanilla
+    "alien", "earthlike", "europa", "mars", "moon", "pertam", "titan", "triton",
+    // Ares At War
+    "agaris", "agaris2", "bylen", "planet_crait", "planet_lezuno", "planet_lorus", "planet_thora_4"
 ]
 const cubeMapFaces = ["front", "right", "up", "down", "back", "left"];
 

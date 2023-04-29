@@ -12,12 +12,12 @@ from libs.datatypes import *
 from libs.mathtool import *
 
 
-# planetData = "assets/Agaris/Data/Agaris.sbc"
-# planetName = "Planet Agaris"
-# baseAssetPath = "assets/Agaris/Data/PlanetDataFiles/Planet Agaris/"
-planetData = "assets/Triton.sbc"
-planetName = "Triton"
-baseAssetPath = "assets/Triton/"
+planetData = "assets/Ares/Planet Agaris.sbc"
+planetName = "Planet Agaris"
+baseAssetPath = "assets/Ares/PlanetDataFiles/Planet Agaris/"
+# planetData = "assets/PlanetGeneratorDefinitions.sbc"
+# planetName = "Europa"
+# baseAssetPath = "assets/Europa/"
 
 
 if __name__ == "__main__":
@@ -30,6 +30,9 @@ if __name__ == "__main__":
     with open("./luts/matcoloravg.json") as f:
         matcoloravg = json.loads(f.read())
 
+    with open("./luts/matcolormap.json") as f:
+        planetDefinitions = json.loads(f.read())
+
     # Build Material ID Map from planet SBC data
     materialIdMap = {}
     dom1 = parse(planetData)
@@ -38,7 +41,7 @@ if __name__ == "__main__":
     if len(planetDefinitionsXml) == 0:
         planetDefinitionsXml = dom1.getElementsByTagName("PlanetGeneratorDefinitions")
 
-    planetDefinitions = {}
+    #planetDefinitions = {}
     for planetDefinition in planetDefinitionsXml:
         pd = PlanetDefinition.from_xml_element(planetDefinition)
         print(pd.Name)
@@ -50,6 +53,7 @@ if __name__ == "__main__":
         f.write(MyEncoder().encode(planetDefinitions))
 
     currentPlanet = planetDefinitions[planetName]
+    print(currentPlanet.ComplexMaterials)
 
     for p in cubemap:
         hmPath = os.path.join(baseAssetPath, f"{p}.png")

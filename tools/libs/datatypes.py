@@ -233,10 +233,19 @@ class PlanetDefinition:
                         print(f"404: {layer.Material}")
                         continue
                     file = matfiles[layer.Material]
-                    if not file in matcoloravg:
-                        print(f"404 color: {file}")
-                        continue
-                    layer.R, layer.G, layer.B = matcoloravg[file]
+                    path = file["path"]
+                    file = file["file"]
+                    colorset = False
+                    if path in matcoloravg:
+                        if file in matcoloravg[path]:
+                            layer.R, layer.G, layer.B = matcoloravg[path][file]
+                            colorset = True
+                    if not colorset:
+                        if file in matcoloravg["default"]:
+                            layer.R, layer.G, layer.B = matcoloravg["default"][file]
+                        else:
+                            print(f"404 color: {path} | {file}")
+
         # Cache Simple
         for matid in self.SimpleMaterials:
             layer = self.SimpleMaterials[matid]
@@ -244,15 +253,31 @@ class PlanetDefinition:
                 print(f"404: {layer.Material}")
                 continue
             file = matfiles[layer.Material]
-            if not file in matcoloravg:
-                print(f"404 color: {file}")
-                continue
-            layer.R, layer.G, layer.B = matcoloravg[file]
+            path = file["path"]
+            file = file["file"]
+            colorset = False
+            if path in matcoloravg:
+                if file in matcoloravg[path]:
+                    layer.R, layer.G, layer.B = matcoloravg[path][file]
+                    colorset = True
+            if not colorset:
+                if file in matcoloravg["default"]:
+                    layer.R, layer.G, layer.B = matcoloravg["default"][file]
+                else:
+                    print(f"404 color: {path} | {file}")
         # Cache default
         if not self.DefaultMaterial.Material in matfiles:
             return
         file = matfiles[self.DefaultMaterial.Material]
-        if not file in matcoloravg:
-            return
-        self.DefaultMaterial.R, self.DefaultMaterial.G, self.DefaultMaterial.B = matcoloravg[
-            file]
+        path = file["path"]
+        file = file["file"]
+        colorset = False
+        if path in matcoloravg:
+            if file in matcoloravg[path]:
+                self.DefaultMaterial.R, self.DefaultMaterial.G, self.DefaultMaterial.B = matcoloravg[path][file]
+                colorset = True
+        if not colorset:
+            if file in matcoloravg["default"]:
+                self.DefaultMaterial.R, self.DefaultMaterial.G, self.DefaultMaterial.B = matcoloravg["default"][file]
+            else:
+                print(f"404 color: {path} | {file}")

@@ -1,114 +1,594 @@
 {
-   "Bylen": "Bylen_cm.png",
-   "ParadiseGrass": "ParadiseGrass_cm.png",
-   "ParadiseGrass2": "Grass2_cm.png",
-   "ParadiseGrass3": "Grass3_cm.png",
-   "ParadiseSand2": "ParadiseSand2_cm.png",
-   "ParadiseSand": "ParadiseSand_cm.png",
-   "ParadiseLake": "Lake_cm.png",
-   "ParadiseRock": "Rock_cm.png",
-   "ParadiseSandRock": "SandRock_cm.png",
-   "ParadiseGrassRock": "GrassRock_cm.png",
-   "XieSoil": "XieSoil_cm.png",
-   "XieSoilRock": "XieSoilRock_cm.png",
-   "XieRock": "XieRock_cm.png",
-   "MuonSoil": "MuonSoil_cm.png",
-   "MuonRock": "MuonRock_cm.png",
-   "MuonSoilRock": "MuonSoilRock_cm.png",
-   "MuonLake": "MuonLake_cm.png",
-   "KorSoil": "KorSoil_cm.png",
-   "KorRock": "KorRock_cm.png",
-   "DwateSoil": "DwateSoil_cm.png",
-   "DwateRock": "DwateRock_cm.png",
-   "ZiroSoil": "ZiroSoil_cm.png",
-   "ZiroRock": "ZiroRock_cm.png",
-   "UnlirSand": "UnlirSand_cm.png",
-   "UnlirSandRock": "UnlirSandRock_cm.png",
-   "UnlirRock": "UnlirRock_cm.png",
-   "DebugMaterial": "DebugTexture_cm.png",
-   "Sand_02": "Sand_02_ForAxisXZ_cm.png",
-   "DesertRocks": "RocksDesert_ForAxisXZ_cm.png",
-   "MarsRocks": "MarsRocks_01_ForAxisXZ_cm.png",
-   "MarsSoil": "MarsSoil_01_ForAxisXZ_cm.png",
-   "MoonSoil": "MoonSoil_01_ForAxisXZ_cm.png",
-   "MoonRocks": "MoonRocks_01_ForAxisXZ_cm.png",
-   "Snow": "Snow_01_ForAxisXZ_cm.png",
-   "Ice": "IceEuropa_cm.png",
-   "IceEuropa2": "IceEuropa2_cm.png",
-   "Grass": "Grass_cm.png",
-   "Grass bare": "Grass_cm.png",
-   "Rocks_grass": "Rocks_Grass_cm.png",
-   "Grass_old": "Grass_old_cm.png",
-   "Grass_old bare": "Grass_old_cm.png",
-   "Grass_02": "Grass_02_cm.png",
-   "Woods_grass": "Woods_grass_cm.png",
-   "Woods_grass bare": "Woods_grass_cm.png",
-   "Soil": "Soil_cm.png",
-   "Stone": "EarthStone_cm.png",
-   "AlienGreenGrass": "AlienGreenGrass_cm.png",
-   "AlienGreenGrass bare": "AlienGreenGrass_cm.png",
-   "AlienIce_03": "AlienIce_03_cm.png",
-   "AlienRockyTerrain": "AlienRockyTerrain_cm.png",
-   "AlienRockyMountain": "AlienRockyMountain_cm.png",
-   "AlienSand": "AlienSand_cm.png",
-   "AlienRockGrass": "AlienRockGrass_cm.png",
-   "AlienRockGrass bare": "AlienRockGrass_cm.png",
-   "AlienOrangeGrass": "AlienOrangeGrass_cm.png",
-   "AlienOrangeGrass bare": "AlienOrangeGrass_cm.png",
-   "AlienIce": "AlienIce_cm.png",
-   "AlienSnow": "AlienSnow_cm.png",
-   "AlienYellowGrass": "AlienYellowGrass_cm.png",
-   "AlienYellowGrass bare": "AlienYellowGrass_cm.png",
-   "AlienSoil": "AlienSoil_cm.png",
-   "Stone_01": "Stone_01_ForAxisXZ_cm.png",
-   "Stone_02": "Stone_02_ForAxisXZ_cm.png",
-   "Stone_03": "Stone_03_ForAxisXZ_cm.png",
-   "Stone_04": "Stone_04_ForAxisXZ_cm.png",
-   "Stone_05": "Stone_05_ForAxisXZ_cm.png",
-   "Iron_01": "Iron_01_ForAxisXZ_cm.png",
-   "Iron_02": "Iron_02_ForAxisXZ_cm.png",
-   "Nickel_01": "Nickel_01_ForAxisXZ_cm.png",
-   "Cobalt_01": "Cobalt_01_ForAxisXZ_cm.png",
-   "Magnesium_01": "Magnesium_01_ForAxisXZ_cm.png",
-   "Silicon_01": "Silicon_01_ForAxisXZ_cm.png",
-   "Silver_01": "Silver_01_ForAxisXZ_cm.png",
-   "Gold_01": "Gold_01_ForAxisXZ_cm.png",
-   "Platinum_01": "Platinum_01_ForAxisXZ_cm.png",
-   "Uraninite_01": "Uraninite_01_ForAxisXZ_cm.png",
-   "Ice_01": "Ice_01_ForAxisXZ_cm.png",
-   "Ice_02": "Ice_02_cm.png",
-   "Ice_03": "Ice_03_cm.png",
-   "SmallMoonRocks": "MoonRocks_01_ForAxisXZ_cm.png",
-   "CrackedSoil": "CrackedSoil_cm.png",
-   "DustyRocks": "DustyRocks_v01_cm.png",
-   "DustyRocks2": "DustyRocks_v02_cm.png",
-   "DustyRocks3": "DustyRocks_v03_cm.png",
-   "PertamSand": "PertamSand_cm.png",
-   "TritonStone": "TritonStone_1_cm.png",
-   "TritonBlend": "TritonBlend_1_cm.png",
-   "TritonIce": "TritonIce_1_cm.png",
-   "RavLava": "RavLava_cm.png",
-   "RavRock": "RavRock_cm.png",
-   "RavCrackedRock": "RavCrackedRock_cm.png",
-   "RavSoil": "RavSoil_cm.png",
-   "DOCSandGrass": "EarthSand_cm.png",
-   "RedSeaGrass2": "AlienRockGrass_cm.png",
-   "RedSeaGrass2 bare": "DarinusGrass2_cm.png",
-   "Gravel": "Gravel_cm.png",
-   "Gravel02": "Gravel_02_cm.png",
-   "AlienSandSea": "AlienSand_cm.png",
-   "DarkRockSea": "DarkRock_cm.png",
-   "DarkSoilSea": "DarkSoil_cm.png",
-   "DarkRock1Sea": "DarkRock1_cm.png",
-   "Rocks_grassSea": "Rocks_Grass_cm.png",
-   "TritonIceSea": "TritonIce_1_cm.png",
-   "DOC Sand_02": "EarthSand_cm.png",
-   "Grass_old DOC": "EarthGrass_03_cm.png",
-   "Grass_old DOC BARE": "EarthGrass_03_cm.png",
-   "DarinusRock": "DarinusRock_cm.png",
-   "DarinusGrass2": "DarinusGrass2_cm.png",
-   "DarinusGrass2 bare": "DarinusGrass2_cm.png",
-   "AlienDead": "AlienSoil_cm.png",
-   "MarsAlien": "MarsSoil_01_ForAxisXZ_cm.png",
-   "Blacksand": "BlackSand_cm.png"
+   "Bylen": {
+      "path": "Bylen",
+      "file": "Bylen_cm.png"
+   },
+   "ParadiseGrass": {
+      "path": "ParadiseGrass",
+      "file": "ParadiseGrass_cm.png"
+   },
+   "ParadiseGrass2": {
+      "path": "ParadiseGrass2",
+      "file": "Grass2_cm.png"
+   },
+   "ParadiseGrass3": {
+      "path": "ParadiseGrass2",
+      "file": "Grass3_cm.png"
+   },
+   "ParadiseSand2": {
+      "path": "ParadiseSand2",
+      "file": "ParadiseSand2_cm.png"
+   },
+   "ParadiseSand": {
+      "path": "ParadiseSand",
+      "file": "ParadiseSand_cm.png"
+   },
+   "ParadiseLake": {
+      "path": "ParadiseLake",
+      "file": "Lake_cm.png"
+   },
+   "ParadiseRock": {
+      "path": "ParadiseRock",
+      "file": "Rock_cm.png"
+   },
+   "ParadiseSandRock": {
+      "path": "ParadiseSandRock",
+      "file": "SandRock_cm.png"
+   },
+   "ParadiseGrassRock": {
+      "path": "ParadiseGrassRock",
+      "file": "GrassRock_cm.png"
+   },
+   "XieSoil": {
+      "path": "XieSoil",
+      "file": "XieSoil_cm.png"
+   },
+   "XieSoilRock": {
+      "path": "XieSoil",
+      "file": "XieSoilRock_cm.png"
+   },
+   "XieRock": {
+      "path": "XieRock",
+      "file": "XieRock_cm.png"
+   },
+   "MuonSoil": {
+      "path": "MuonSoil",
+      "file": "MuonSoil_cm.png"
+   },
+   "MuonRock": {
+      "path": "MuonRock",
+      "file": "MuonRock_cm.png"
+   },
+   "MuonSoilRock": {
+      "path": "MuonRock",
+      "file": "MuonSoilRock_cm.png"
+   },
+   "MuonLake": {
+      "path": "ParadiseLake",
+      "file": "MuonLake_cm.png"
+   },
+   "KorSoil": {
+      "path": "KorSoil",
+      "file": "KorSoil_cm.png"
+   },
+   "KorRock": {
+      "path": "KorRock",
+      "file": "KorRock_cm.png"
+   },
+   "DwateSoil": {
+      "path": "DwateSoil",
+      "file": "DwateSoil_cm.png"
+   },
+   "DwateRock": {
+      "path": "DwateRock",
+      "file": "DwateRock_cm.png"
+   },
+   "ZiroSoil": {
+      "path": "ZiroSoil",
+      "file": "ZiroSoil_cm.png"
+   },
+   "ZiroRock": {
+      "path": "ZiroRock",
+      "file": "ZiroRock_cm.png"
+   },
+   "UnlirSand": {
+      "path": "UnlirSand",
+      "file": "UnlirSand_cm.png"
+   },
+   "UnlirSandRock": {
+      "path": "UnlirSandRock",
+      "file": "UnlirSandRock_cm.png"
+   },
+   "UnlirRock": {
+      "path": "UnlirRock",
+      "file": "UnlirRock_cm.png"
+   },
+   "DebugMaterial": {
+      "path": "default",
+      "file": "DebugTexture_cm.png"
+   },
+   "Sand_02": {
+      "path": "default",
+      "file": "Sand_02_ForAxisXZ_cm.png"
+   },
+   "DesertRocks": {
+      "path": "default",
+      "file": "RocksDesert_ForAxisXZ_cm.png"
+   },
+   "MarsRocks": {
+      "path": "default",
+      "file": "MarsRocks_01_ForAxisXZ_cm.png"
+   },
+   "MarsSoil": {
+      "path": "default",
+      "file": "MarsSoil_01_ForAxisXZ_cm.png"
+   },
+   "MoonSoil": {
+      "path": "default",
+      "file": "MoonSoil_01_ForAxisXZ_cm.png"
+   },
+   "MoonRocks": {
+      "path": "default",
+      "file": "MoonRocks_01_ForAxisXZ_cm.png"
+   },
+   "Snow": {
+      "path": "default",
+      "file": "Snow_01_ForAxisXZ_cm.png"
+   },
+   "Ice": {
+      "path": "default",
+      "file": "IceEuropa_cm.png"
+   },
+   "IceEuropa2": {
+      "path": "default",
+      "file": "IceEuropa2_cm.png"
+   },
+   "Grass": {
+      "path": "default",
+      "file": "Grass_cm.png"
+   },
+   "Grass bare": {
+      "path": "default",
+      "file": "Grass_cm.png"
+   },
+   "Rocks_grass": {
+      "path": "default",
+      "file": "Rocks_Grass_cm.png"
+   },
+   "Grass_old": {
+      "path": "default",
+      "file": "Grass_old_cm.png"
+   },
+   "Grass_old bare": {
+      "path": "default",
+      "file": "Grass_old_cm.png"
+   },
+   "Grass_02": {
+      "path": "default",
+      "file": "Grass_02_cm.png"
+   },
+   "Woods_grass": {
+      "path": "default",
+      "file": "Woods_grass_cm.png"
+   },
+   "Woods_grass bare": {
+      "path": "default",
+      "file": "Woods_grass_cm.png"
+   },
+   "Soil": {
+      "path": "default",
+      "file": "Soil_cm.png"
+   },
+   "Stone": {
+      "path": "default",
+      "file": "EarthStone_cm.png"
+   },
+   "AlienGreenGrass": {
+      "path": "default",
+      "file": "AlienGreenGrass_cm.png"
+   },
+   "AlienGreenGrass bare": {
+      "path": "default",
+      "file": "AlienGreenGrass_cm.png"
+   },
+   "AlienIce_03": {
+      "path": "default",
+      "file": "AlienIce_03_cm.png"
+   },
+   "AlienRockyTerrain": {
+      "path": "default",
+      "file": "AlienRockyTerrain_cm.png"
+   },
+   "AlienRockyMountain": {
+      "path": "default",
+      "file": "AlienRockyMountain_cm.png"
+   },
+   "AlienSand": {
+      "path": "default",
+      "file": "AlienSand_cm.png"
+   },
+   "AlienRockGrass": {
+      "path": "default",
+      "file": "AlienRockGrass_cm.png"
+   },
+   "AlienRockGrass bare": {
+      "path": "default",
+      "file": "AlienRockGrass_cm.png"
+   },
+   "AlienOrangeGrass": {
+      "path": "default",
+      "file": "AlienOrangeGrass_cm.png"
+   },
+   "AlienOrangeGrass bare": {
+      "path": "default",
+      "file": "AlienOrangeGrass_cm.png"
+   },
+   "AlienIce": {
+      "path": "default",
+      "file": "AlienIce_cm.png"
+   },
+   "AlienSnow": {
+      "path": "default",
+      "file": "AlienSnow_cm.png"
+   },
+   "AlienYellowGrass": {
+      "path": "default",
+      "file": "AlienYellowGrass_cm.png"
+   },
+   "AlienYellowGrass bare": {
+      "path": "default",
+      "file": "AlienYellowGrass_cm.png"
+   },
+   "AlienSoil": {
+      "path": "default",
+      "file": "AlienSoil_cm.png"
+   },
+   "Stone_01": {
+      "path": "default",
+      "file": "Stone_01_ForAxisXZ_cm.png"
+   },
+   "Stone_02": {
+      "path": "default",
+      "file": "Stone_02_ForAxisXZ_cm.png"
+   },
+   "Stone_03": {
+      "path": "default",
+      "file": "Stone_03_ForAxisXZ_cm.png"
+   },
+   "Stone_04": {
+      "path": "default",
+      "file": "Stone_04_ForAxisXZ_cm.png"
+   },
+   "Stone_05": {
+      "path": "default",
+      "file": "Stone_05_ForAxisXZ_cm.png"
+   },
+   "Iron_01": {
+      "path": "default",
+      "file": "Iron_01_ForAxisXZ_cm.png"
+   },
+   "Iron_02": {
+      "path": "default",
+      "file": "Iron_02_ForAxisXZ_cm.png"
+   },
+   "Nickel_01": {
+      "path": "default",
+      "file": "Nickel_01_ForAxisXZ_cm.png"
+   },
+   "Cobalt_01": {
+      "path": "default",
+      "file": "Cobalt_01_ForAxisXZ_cm.png"
+   },
+   "Magnesium_01": {
+      "path": "default",
+      "file": "Magnesium_01_ForAxisXZ_cm.png"
+   },
+   "Silicon_01": {
+      "path": "default",
+      "file": "Silicon_01_ForAxisXZ_cm.png"
+   },
+   "Silver_01": {
+      "path": "default",
+      "file": "Silver_01_ForAxisXZ_cm.png"
+   },
+   "Gold_01": {
+      "path": "default",
+      "file": "Gold_01_ForAxisXZ_cm.png"
+   },
+   "Platinum_01": {
+      "path": "default",
+      "file": "Platinum_01_ForAxisXZ_cm.png"
+   },
+   "Uraninite_01": {
+      "path": "default",
+      "file": "Uraninite_01_ForAxisXZ_cm.png"
+   },
+   "Ice_01": {
+      "path": "default",
+      "file": "Ice_01_ForAxisXZ_cm.png"
+   },
+   "Ice_02": {
+      "path": "default",
+      "file": "Ice_02_cm.png"
+   },
+   "Ice_03": {
+      "path": "default",
+      "file": "Ice_03_cm.png"
+   },
+   "SmallMoonRocks": {
+      "path": "default",
+      "file": "MoonRocks_01_ForAxisXZ_cm.png"
+   },
+   "CrackedSoil": {
+      "path": "Pertam",
+      "file": "CrackedSoil_cm.png"
+   },
+   "DustyRocks": {
+      "path": "Pertam",
+      "file": "DustyRocks_v01_cm.png"
+   },
+   "DustyRocks2": {
+      "path": "Pertam",
+      "file": "DustyRocks_v02_cm.png"
+   },
+   "DustyRocks3": {
+      "path": "Pertam",
+      "file": "DustyRocks_v03_cm.png"
+   },
+   "PertamSand": {
+      "path": "Pertam",
+      "file": "PertamSand_cm.png"
+   },
+   "TritonStone": {
+      "path": "Triton",
+      "file": "TritonStone_1_cm.png"
+   },
+   "TritonBlend": {
+      "path": "Triton",
+      "file": "TritonBlend_1_cm.png"
+   },
+   "TritonIce": {
+      "path": "Triton",
+      "file": "TritonIce_1_cm.png"
+   },
+   "Gravel": {
+      "path": "Gravel",
+      "file": "Gravel_cm.png"
+   },
+   "Gravel02": {
+      "path": "Gravel",
+      "file": "Gravel_02_cm.png"
+   },
+   "AlienSandSea": {
+      "path": "default",
+      "file": "AlienSand_cm.png"
+   },
+   "DarkRockSea": {
+      "path": "DarkRock",
+      "file": "DarkRock_cm.png"
+   },
+   "DarkSoilSea": {
+      "path": "DarkRock",
+      "file": "DarkSoil_cm.png"
+   },
+   "DarkRock1Sea": {
+      "path": "DarkRock",
+      "file": "DarkRock1_cm.png"
+   },
+   "Rocks_grassSea": {
+      "path": "default",
+      "file": "Rocks_Grass_cm.png"
+   },
+   "Snow_MEwoodsgrass": {
+      "path": "Snow",
+      "file": "Snow_Woods_needles_cm.png"
+   },
+   "034": {
+      "path": "Planet snow",
+      "file": "034_cm.png"
+   },
+   "S_034": {
+      "path": "Planet snow",
+      "file": "S_034_cm.png"
+   },
+   "Forest01": {
+      "path": "Planet snow",
+      "file": "mud01_cm.png"
+   },
+   "Forest02": {
+      "path": "037",
+      "file": "037_cm.png"
+   },
+   "048": {
+      "path": "048",
+      "file": "048_cm.png"
+   },
+   "SnowSoil": {
+      "path": "SoilSnow",
+      "file": "Soil_cm.png"
+   },
+   "DeepSnow": {
+      "path": "default",
+      "file": "Snow_01_ForAxisXZ_cm.png"
+   },
+   "LV": {
+      "path": "LV",
+      "file": "lv_cm.png"
+   },
+   "MEwoods": {
+      "path": "MEwoods",
+      "file": "Woods_cm.png"
+   },
+   "MERocks": {
+      "path": "MERocks",
+      "file": "Rocks_Grass_cm.png"
+   },
+   "DOC-BeachSand": {
+      "path": "Doctor/DOC-BeachSand",
+      "file": "EarthSand_cm.png"
+   },
+   "DOC-TundraGrass": {
+      "path": "Doctor/DOC-TundraGrass",
+      "file": "EarthGrass_03_cm.png"
+   },
+   "DOC-TundraGrass-BARE": {
+      "path": "Doctor/DOC-TundraGrass",
+      "file": "EarthGrass_03_cm.png"
+   },
+   "DOC-DarinusRock": {
+      "path": "Doctor/DOC-DarinusRock",
+      "file": "DarinusRock_cm.png"
+   },
+   "DOC-DarinusGrass2": {
+      "path": "Doctor/DOC-DarinusGrass2",
+      "file": "DarinusGrass2_cm.png"
+   },
+   "DOC-DarinusGrass2 bare": {
+      "path": "Doctor/DOC-DarinusGrass2",
+      "file": "DarinusGrass2_cm.png"
+   },
+   "DOC-RavLava": {
+      "path": "Doctor/DOC-RavLava",
+      "file": "RavLava_cm.png"
+   },
+   "DOC-RavRock": {
+      "path": "Doctor/DOC-RavRock",
+      "file": "RavRock_cm.png"
+   },
+   "DOC-RavCrackedRock": {
+      "path": "Doctor/DOC-RavCrackedRock",
+      "file": "RavCrackedRock_cm.png"
+   },
+   "DOC-RavSoil": {
+      "path": "Doctor/DOC-RavSoil",
+      "file": "RavSoil_cm.png"
+   },
+   "MoonAlien": {
+      "path": "default",
+      "file": "MoonSoil_01_ForAxisXZ_cm.png"
+   },
+   "Saltflat": {
+      "path": "SWBF",
+      "file": "Saltflat_cm.png"
+   },
+   "Crystalsoil": {
+      "path": "Crystals",
+      "file": "Crystals_cm.png"
+   },
+   "Crystalsand": {
+      "path": "Crystals",
+      "file": "AlienSand_cm.png"
+   },
+   "Redsand": {
+      "path": "Alien",
+      "file": "AlienSand_cm.png"
+   },
+   "RedRocks": {
+      "path": "Crait/REDSOIL",
+      "file": "MarsRocks_01_ForAxisXZ_cm.png"
+   },
+   "CraitIce": {
+      "path": "default",
+      "file": "AlienIce_03_cm.png"
+   },
+   "AlienSnowSpider": {
+      "path": "default",
+      "file": "AlienSnow_cm.png"
+   },
+   "046": {
+      "path": "046",
+      "file": "046_cm.png"
+   },
+   "Cronyx": {
+      "path": "default",
+      "file": "Nickel_01_ForAxisXZ_cm.png"
+   },
+   "Dorium": {
+      "path": "default",
+      "file": "AlienGreenGrass_cm.png"
+   },
+   "S_Gravel": {
+      "path": "Gravel",
+      "file": "S_Gravel_02_cm.png"
+   },
+   "DarkRock": {
+      "path": "DarkRock",
+      "file": "DarkRock_cm.png"
+   },
+   "DarkSoil": {
+      "path": "DarkRock",
+      "file": "DarkSoil_cm.png"
+   },
+   "purple Grass": {
+      "path": "Tropical",
+      "file": "Grass_cm.png"
+   },
+   "AlienDead": {
+      "path": "default",
+      "file": "AlienSoil_cm.png"
+   },
+   "MarsAlien": {
+      "path": "default",
+      "file": "MarsSoil_01_ForAxisXZ_cm.png"
+   },
+   "Blacksand": {
+      "path": "Planet 36/SAND",
+      "file": "BlackSand_cm.png"
+   },
+   "RavLava": {
+      "path": "RavLava",
+      "file": "RavLava_cm.png"
+   },
+   "RavRock": {
+      "path": "RavRock",
+      "file": "RavRock_cm.png"
+   },
+   "RavCrackedRock": {
+      "path": "RavCrackedRock",
+      "file": "RavCrackedRock_cm.png"
+   },
+   "RavSoil": {
+      "path": "RavSoil",
+      "file": "RavSoil_cm.png"
+   },
+   "DOCSandGrass": {
+      "path": "Earth/Sand",
+      "file": "EarthSand_cm.png"
+   },
+   "RedSeaGrass2": {
+      "path": "default",
+      "file": "AlienRockGrass_cm.png"
+   },
+   "RedSeaGrass2 bare": {
+      "path": "DarinusGrass2",
+      "file": "DarinusGrass2_cm.png"
+   },
+   "TritonIceSea": {
+      "path": "Triton",
+      "file": "TritonIce_1_cm.png"
+   },
+   "DOC Sand_02": {
+      "path": "Earth/Sand",
+      "file": "EarthSand_cm.png"
+   },
+   "Grass_old DOC": {
+      "path": "Earth/Grass_03",
+      "file": "EarthGrass_03_cm.png"
+   },
+   "Grass_old DOC BARE": {
+      "path": "Earth/Grass_03",
+      "file": "EarthGrass_03_cm.png"
+   },
+   "DarinusRock": {
+      "path": "DarinusRock",
+      "file": "DarinusRock_cm.png"
+   },
+   "DarinusGrass2": {
+      "path": "DarinusGrass2",
+      "file": "DarinusGrass2_cm.png"
+   },
+   "DarinusGrass2 bare": {
+      "path": "DarinusGrass2",
+      "file": "DarinusGrass2_cm.png"
+   }
 }

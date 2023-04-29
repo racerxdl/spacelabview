@@ -16,8 +16,20 @@ def parseXML(fullpath):
                 continue
             matid = idtype[0].getElementsByTagName("SubtypeId")[0].firstChild.data
             texfile = m.getElementsByTagName("ColorMetalXZnY")[0].firstChild.data
-            texfile = os.path.basename(texfile.replace("\\","/").replace(".dds", ".png"))
-            voxelMaterialToFile[matid] = texfile
+            texfile2 = texfile.replace("Textures\\Voxels\\", "").replace("\\", "/")
+            texfile = os.path.basename(texfile2.replace("\\","/").replace(".dds", ".png"))
+            texpath = texfile2.replace(".dds", ".png").replace(texfile, "").strip()
+            if texpath == "":
+                texpath = "default"
+            if texpath[len(texpath)-1] == "/":
+                texpath = texpath[:-1]
+            if matid in voxelMaterialToFile:
+                print(f"DUPLICATE: {matid}")
+
+            voxelMaterialToFile[matid] = {
+                "path": texpath,
+                "file": texfile
+            }
     except Exception:
         pass
 

@@ -9,6 +9,110 @@ const planets = {
         name: "Planet Crait",
         pathPrefix: "planet_crait",
         isVanilla: false,
+        sky: [
+            {
+                color: 0xFFFFFF,
+                rotationSpeed: 0.0006,
+                rotationAxis: new THREE.Vector3(0, 1, 0),
+                rotationOffset: 0.15,
+                altitude: 1,
+                alpha: 'earthlike.jpg',
+            },
+        ]
+    },
+    "agaris ii": {
+        name: "Planet Agaris II",
+        pathPrefix: "agaris2",
+        isVanilla: false,
+        sky: []
+    },
+    "bylen": {
+        name: "Planet Bylen",
+        color: 0x222222,
+        isVanilla: false,
+        pathPrefix: "bylen",
+        gasPlanet: true,
+        sky: [
+            {
+                color: 0xFFFFFF,
+                rotationSpeed: 0,
+                rotationAxis: new THREE.Vector3(0, 1, 0),
+                rotationOffset: 3.2,
+                altitude: 1,
+                alpha: 'bylenclouds.jpg',
+            },
+            {
+                color: 0xFFFFFF,
+                rotationSpeed: 0.0002,
+                rotationAxis: new THREE.Vector3(1, 0.2, -0.2),
+                rotationOffset: 2.5,
+                altitude: 2,
+                alpha: 'bylenclouds.jpg',
+            },
+            {
+                color: 0xFFFFFF,
+                rotationSpeed: 0.0002,
+                rotationAxis: new THREE.Vector3(-0.2, 0.2, 1),
+                rotationOffset: 4.2,
+                altitude: 3,
+                alpha: 'bylenclouds.jpg',
+            },
+            {
+                ring: true,
+                color: 0xFFFFFF,
+                rotationSpeed: 0.0002,
+                rotationAxis: new THREE.Vector3(-0.2, 0.2, 1),
+                rotationOffset: 4.2,
+                altitude: 1,
+                alpha: 'bylenring_alpha.jpg',
+                texture: 'bylenring.jpg',
+            },
+        ]
+    },
+    "planet lezuno": {
+        name: "Planet Lezuno",
+        pathPrefix: "planet_lezuno",
+        isVanilla: false,
+        sky: [
+            {
+                color: 0xFFFFFF,
+                rotationSpeed: 0.0006,
+                rotationAxis: new THREE.Vector3(0, 1, 0),
+                rotationOffset: 0.15,
+                altitude: 1,
+                alpha: 'earthlike.jpg',
+            },
+        ]
+    },
+    "planet thora iv": {
+        name: "Planet Thora IV",
+        pathPrefix: "planet_thora_4",
+        isVanilla: false,
+        sky: [
+            {
+                color: 0xFFFFFF,
+                rotationSpeed: 0.0006,
+                rotationAxis: new THREE.Vector3(0, 1, 0),
+                rotationOffset: 0.15,
+                altitude: 1,
+                alpha: 'earthlike.jpg',
+            },
+        ]
+    },
+    "planet lorus": {
+        name: "Planet Lorus",
+        pathPrefix: "planet_lorus",
+        isVanilla: false,
+        sky: [
+            {
+                color: 0xFFFFFF,
+                rotationSpeed: 0.0006,
+                rotationAxis: new THREE.Vector3(0, 1, 0),
+                rotationOffset: 0.15,
+                altitude: 1,
+                alpha: 'earthlike.jpg',
+            },
+        ]
     },
     "planet agaris": {
         name: "Planet Agaris",
