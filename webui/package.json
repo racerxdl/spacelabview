@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "camera-controls": "^2.3.4",
+    "hold-event": "^0.2.0",
     "jquery": "^3.6.4",
     "three": "^0.151.3"
   }
