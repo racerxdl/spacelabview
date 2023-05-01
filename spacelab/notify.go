@@ -10,6 +10,7 @@ import (
 const (
 	globalUpdateTopic = "globalUpdate"
 	gridUpdateTopic   = "gridUpdate"
+	playerUpdateTopic = "playerUpdate"
 	chatMessageTopic  = "chatMessage"
 	minDeltaUpdate    = 10 // Meters
 	minNumBlocks      = 20
@@ -22,21 +23,27 @@ type Notify struct {
 	log     slog.Instance
 	bus     *pubsub.Bus
 	voxels  map[string]Voxel
+	players map[string]Player
 	global  GlobalInfo
 }
 
 func MakeNotify(api *API) *Notify {
 	return &Notify{
-		api:    api,
-		grids:  make(map[string]Grid),
-		voxels: make(map[string]Voxel),
-		log:    slog.Scope("SpaceNotify"),
-		bus:    pubsub.NewBus(),
+		api:     api,
+		grids:   make(map[string]Grid),
+		voxels:  make(map[string]Voxel),
+		players: make(map[string]Player),
+		log:     slog.Scope("SpaceNotify"),
+		bus:     pubsub.NewBus(),
 	}
 }
 
 func (n *Notify) SubscribeGridUpdate(cb func(e GridUpdate)) *pubsub.Subscription {
 	return n.bus.Subscribe(gridUpdateTopic, cb)
+}
+
+func (n *Notify) SubscribePlayerUpdate(cb func(e PlayerUpdate)) *pubsub.Subscription {
+	return n.bus.Subscribe(playerUpdateTopic, cb)
 }
 
 func (n *Notify) SubscribeChatMessage(cb func(e Message)) *pubsub.Subscription {
@@ -95,10 +102,15 @@ func (n *Notify) GetGrids() map[string]Grid {
 	return n.grids
 }
 
+func (n *Notify) GetPlayers() map[string]Player {
+	return n.players
+}
+
 func (n *Notify) refresh() {
 	n.updateGlobal()
 	n.updateChat()
 	n.updateGrids()
+	n.updatePlayers()
 }
 
 func (n *Notify) updateChat() {
@@ -169,6 +181,52 @@ func (n *Notify) updateGrids() {
 			n.log.Info("Grid %q just disappeared", grid.Name)
 			n.bus.Publish(gridUpdateTopic, notification)
 			delete(n.grids, id)
+		}
+	}
+}
+
+func (n *Notify) updatePlayers() {
+	// Update Grids
+	players, err := n.api.Players()
+	if err != nil {
+		n.log.Error("error reading players: %s", err)
+		return
+	}
+
+	playersNow := make(map[string]string)
+	for _, player := range players {
+		if !player.IsOnline {
+			continue // Skip
+		}
+		notification := PlayerUpdate{}
+		id := player.Id
+		notification.Player = player
+		playersNow[id] = id
+
+		_, ok := n.players[id]
+		if !ok {
+			notification.IsNew = true
+			n.players[id] = player
+			n.log.Info("Player %q just appeared", player.Name)
+		}
+
+		g := n.players[id]
+
+		if g.DistanceTo(player) > minDeltaUpdate {
+			n.players[id] = player
+			n.bus.Publish(playerUpdateTopic, notification)
+		}
+	}
+
+	for id, player := range n.players {
+		_, ok := playersNow[id]
+		if !ok {
+			notification := PlayerUpdate{}
+			notification.IsDeleted = true
+			notification.Player = player
+			n.log.Info("Player %q just disappeared", player.Name)
+			n.bus.Publish(playerUpdateTopic, notification)
+			delete(n.players, id)
 		}
 	}
 }

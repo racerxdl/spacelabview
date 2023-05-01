@@ -185,6 +185,7 @@ class SpaceSocket {
     gridsCallback(data) {
         const ss = this;
         Object.keys(data).forEach((k) => {
+            console.log(data[k])
             ss.gridUpdateCallback({
                 Grid: data[k],
                 IsNew: true,
@@ -207,7 +208,7 @@ class SpaceSocket {
     }
 
     gridUpdateCallback(data) {
-        const gridData = data.Grid;
+        const gridData = data.Grid || data.Player;
         gridData.EntityId = gridData.EntityId || gridData.Id;
         if (data.IsNew) {
             // console.log(`New Grid: ${gridData.Name}, ${gridData.EntityId}`, gridData)
@@ -327,8 +328,10 @@ class SpaceSocket {
             switch (data.Type) {
                 case "planets": this.planetsUpdateCallback(data.Content); break;
                 case "gridUpdate": this.gridUpdateCallback(data.Content); break;
+                case "playerUpdate": this.gridUpdateCallback(data.Content); break;
                 case "chat": this.newChatCallback(data.Content); break;
                 case "grids": this.gridsCallback(data.Content); break;
+                case "players": this.gridsCallback(data.Content); break;
                 case "globalInfo": this.globalInfoCallback(data.Content); break;
             }
         } catch (e) {

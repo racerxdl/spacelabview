@@ -47,6 +47,13 @@ func wshandler(notify *spacelab.Notify, w http.ResponseWriter, r *http.Request) 
 	})
 	defer notify.Unsubscribe(gridSub)
 
+	playerSub := notify.SubscribePlayerUpdate(func(e spacelab.PlayerUpdate) {
+		m := wsMessage{Type: "playerUpdate", Content: e}
+		d, _ := json.Marshal(m)
+		c.WriteMessage(websocket.TextMessage, d)
+	})
+	defer notify.Unsubscribe(playerSub)
+
 	planets := notify.GetPlanets()
 	m := wsMessage{Type: "planets", Content: planets}
 	d, _ := json.Marshal(m)
@@ -54,6 +61,11 @@ func wshandler(notify *spacelab.Notify, w http.ResponseWriter, r *http.Request) 
 
 	grids := notify.GetGrids()
 	m = wsMessage{Type: "grids", Content: grids}
+	d, _ = json.Marshal(m)
+	c.WriteMessage(websocket.TextMessage, d)
+
+	players := notify.GetPlayers()
+	m = wsMessage{Type: "players", Content: players}
 	d, _ = json.Marshal(m)
 	c.WriteMessage(websocket.TextMessage, d)
 
