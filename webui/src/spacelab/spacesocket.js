@@ -4,11 +4,8 @@
 import * as THREE from 'three';
 
 import PlanetData from "../planets/PlanetData";
-import {
-    preloadPlanetTexture,
-    planetHeightMaps,
-    planetTextures,
-} from "../loaders/TexturePreloader"
+import { loadTexture } from "../loaders/TexturePreloader"
+import { planetHeightMaps, planetTextures } from "../loaders/Preloader";
 import PlanetParams from "../planets/Params";
 import { magicSphereGeometry } from "../planets/MagicSphereGeometry"
 import { pickRandomColor } from '../colors';
@@ -24,7 +21,6 @@ class SpaceSocket {
         this.conn.onerror = this.onError.bind(this);
         this.grids = {};
         this.voxels = {};
-        this.textureLoader = new THREE.TextureLoader();
         this.ownerColors = {};
     }
 
@@ -32,10 +28,10 @@ class SpaceSocket {
         return this.voxels[name];
     }
 
-    planetsUpdateCallback(data) {
+    async planetsUpdateCallback(data) {
         const ss = this;
 
-        Object.keys(data).forEach((name) => {
+        const loads = Object.keys(data).map(async (name) => {
             const voxelData = data[name];
             if (name != "" && voxelData.DebugName.indexOf("MyPlanet") > 0) {
                 const planetNameInfo = name.split("-");
@@ -57,7 +53,7 @@ class SpaceSocket {
                     data: planetDataByInstance ? planetDataByInstance : planetDataByName,
                     voxelData,
                 }
-                preloadPlanetTexture(planetData.data.pathPrefix);
+
                 planetData.heightMapTextures = planetHeightMaps(planetData.data.pathPrefix);
                 planetData.textures = planetTextures(planetData.data.pathPrefix);
 
@@ -65,13 +61,13 @@ class SpaceSocket {
                 planetData.minHillSize = (1 + voxelData.HillParameters.Item1) * voxelData.Size;
                 planetData.hillDelta = (planetData.maxHillSize - planetData.minHillSize) / 2;
 
-                planetData.materials = planetData.textures.map((texture, idx) => {
+                planetData.materials = await Promise.all(planetData.textures.map(async (texture, idx) => {
                     const heightMapTexture = planetData.heightMapTextures[idx];
-                    const hmTex = ss.textureLoader.load(heightMapTexture);
+                    const hmTex = await loadTexture(heightMapTexture);
                     return new THREE.MeshPhongMaterial({
                         specular: 0x333333,
                         shininess: 5,
-                        map: ss.textureLoader.load(texture),
+                        map: await loadTexture(texture),
                         displacementMap: hmTex,
                         displacementScale: planetData.hillDelta,
                         normalScale: new THREE.Vector2(1, - 1),
@@ -79,7 +75,7 @@ class SpaceSocket {
                         bumpScale: planetData.hillDelta / 2,
                         //wireframe: true
                     });
-                });
+                }));
                 planetData.mesh = new THREE.LOD();
                 PlanetParams.planetLOD.forEach((lod) => {
                     const geometry = magicSphereGeometry(planetData.minHillSize / 2, lod.divisions);
@@ -118,14 +114,14 @@ class SpaceSocket {
 
                 if (voxelData.HasAtmosphere && planetData.data.sky) {
                     const sky = planetData.data.sky;
-                    sky.forEach((skyData) => {
+                    await Promise.all(sky.map(async (skyData) => {
                         const geometry = new THREE.SphereGeometry((voxelData.Size+2*planetData.hillDelta*skyData.altitude) / 2, PlanetParams.waterSphereSegments, PlanetParams.waterSphereSegments);
                         let map=null, alpha=null;
                         if (skyData.texture) {
-                            map = ss.textureLoader.load(`img/sky/${skyData.texture}`);
+                            map = await loadTexture(`img/sky/${skyData.texture}`);
                         }
                         if (skyData.alpha) {
-                            alpha = ss.textureLoader.load(`img/sky/${skyData.alpha}`);
+                            alpha = await loadTexture(`img/sky/${skyData.alpha}`);
                         }
                         const material = new THREE.MeshPhongMaterial({
                             specular: 0x333333,
@@ -135,12 +131,14 @@ class SpaceSocket {
                             map,
                             alphaMap: alpha,
                             transparent: true,
-                            opacity: 0.5
+                            opacity: 0.5,
+                            depthWrite: false,
                         });
                         const skyMesh = new THREE.Mesh(geometry , material);
                         skyMesh.position.x = voxelData.X;
                         skyMesh.position.y = voxelData.Y;
                         skyMesh.position.z = voxelData.Z;
+                        skyMesh.depthWrite = false;
 
                         skyMesh.rotationAxis = skyData.rotationAxis.clone();
 
@@ -157,7 +155,7 @@ class SpaceSocket {
                         }).bind(skyMesh);
                         ss.addMesh(skyMesh)
                         ss.addRenderCall(skyMesh.renderCall);
-                    })
+                    }));
                 }
 
                 planetData.boundingSphere = new THREE.Mesh(
@@ -177,6 +175,7 @@ class SpaceSocket {
                 }));
             }
         });
+        await Promise.all(loads);
     }
 
     newChatCallback(data) {
@@ -229,7 +228,10 @@ class SpaceSocket {
             gridText.position.x = gridData.X;
             gridText.position.y = gridData.Y;
             gridText.position.z = gridData.Z;
-
+            gridMesh.spriteText = gridText;
+            gridMesh.spriteText.visible = false;
+            gridMesh.spriteText.position.multiplyScalar(PlanetParams.gridSpriteLabelRadiusOffset);
+            gridMesh.name = `${gridData.Name} (${gridData.EntityId})`
             const ng = {
                 gridData: gridData,
                 mesh: gridMesh,
@@ -242,6 +244,7 @@ class SpaceSocket {
                 detail: {
                     id: gridData.EntityId,
                     name: gridData.Name,
+                    mesh: gridMesh,
                 }
             }));
         } else if (data.IsDeleted) {
@@ -267,8 +270,12 @@ class SpaceSocket {
                         text: grid.text,
                     }
                 }));
+                gridI.name = `${gridData.Name} (${gridData.EntityId})`
                 this.removeMesh(gridI.text);
+                const visibleState = gridI.text.visible;
                 gridI.text = newText(gridData.Name);
+                gridData.spriteText = gridI.text;
+                gridI.text.visible = visibleState;
                 this.addMesh(gridI.text);
             }
             const { mesh, text } = this.grids[gridData.EntityId];
@@ -278,6 +285,8 @@ class SpaceSocket {
             text.position.x = gridData.X;
             text.position.y = gridData.Y;
             text.position.z = gridData.Z;
+            text.position.multiplyScalar(PlanetParams.gridSpriteLabelRadiusOffset);
+
             this.grids[gridData.EntityId].gridData = gridData;
         }
     }

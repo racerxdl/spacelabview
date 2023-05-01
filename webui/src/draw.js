@@ -45,6 +45,8 @@ function makeTextSprite(message, parameters) {
     // const map = new THREE.TextureLoader().load( './background.jpg' );
     const spriteMaterial = new THREE.SpriteMaterial({ map: texture });
     const sprite = new THREE.Sprite(spriteMaterial);
+    //sprite.depthWrite = false;
+    sprite.alphaTest = 0.1;
     // sprite.scale.set(0.5 * fontsize, 0.25 * fontsize, 0.75 * fontsize);
     const baseScale = 50000;
     sprite.scale.set(0.5 * baseScale, 0.25 * baseScale, 0.75 * baseScale);

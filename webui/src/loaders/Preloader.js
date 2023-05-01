@@ -4,6 +4,7 @@
 
 import { magicSphereGeometry } from "../planets/MagicSphereGeometry";
 import Params from "../planets/Params";
+import { loadTexture } from "./TexturePreloader";
 
 const planets = [
     // Vanilla
@@ -27,7 +28,6 @@ const imagesToLoad = [
     "img/sky/mars.jpg",
     "img/sky/titan_alpha.jpg",
     "img/sky/titan_tex.jpg",
-    "img/sky/alien.jpg",
     "img/sky/alien.jpg",
 ]
 
@@ -62,12 +62,11 @@ function preloadAll() {
         for (let i = 0; i < chunks; i++) {
             const chunk = imagesToLoad.slice(i * chunkSize, (i + 1) * chunkSize);
             console.log(`Loading ${i * chunkSize} -> ${(i + 1) * chunkSize} images...`);
-            await Promise.all(chunk.map((img) => preloadTexture(img)));
+            await Promise.all(chunk.map((img) => loadTexture(img)));
         }
         resolve();
 
     });
-    // const promises = Promise.all(imagesToLoad.map((img) => preloadTexture(img)))
 }
 
 function preGenerate() {
@@ -75,16 +74,19 @@ function preGenerate() {
     Params.planetLOD.forEach((lod) => {
         magicSphereGeometry(100, lod.divisions);
     });
-    // magicSphereGeometry(100, Params.sphereCubeDivisions*2);
-    // magicSphereGeometry(100, Params.sphereCubeDivisions);
-    // magicSphereGeometry(100, Params.sphereCubeDivisions/2); // LOD
-    // magicSphereGeometry(100, Params.sphereCubeDivisions/4); // LOD
-    // magicSphereGeometry(100, Params.sphereCubeDivisions/8); // LOD
-    // magicSphereGeometry(100, Params.sphereCubeDivisions/16); // LOD
     magicSphereGeometry(100, Params.waterSphereSegments);
+}
+
+function planetHeightMaps(planetPrefix) {
+    return cubeMapFaces.map((face) => `img/planets-cube/${planetPrefix}/hm/${face}.jpg`);
+}
+function planetTextures(planetPrefix) {
+    return cubeMapFaces.map((face) => `img/planets-cube/${planetPrefix}/${face}.jpg`);
 }
 
 export {
     preloadAll,
     preGenerate,
+    planetHeightMaps,
+    planetTextures,
 }

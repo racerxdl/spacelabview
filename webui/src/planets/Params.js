@@ -23,6 +23,7 @@ const Params = {
     gridSphereSegments: 8,
     gridSphereSpecularColor: 0x333333,
     gridSphereSpecularShininess: 0x333333,
+    gridSpriteLabelRadiusOffset: 1.05,
     // Viewport
     viewportNear: 1000,
     viewportFar: 8000000,

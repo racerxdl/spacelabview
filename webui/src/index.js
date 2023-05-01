@@ -13,6 +13,7 @@ CameraControls.install({ THREE: THREE });
 
 const context = {
 	loadedPlanets: [],
+	gridMeshes: [],
 	chat: [],
 	renderCalls: []
 }
@@ -194,21 +195,40 @@ async function init() {
 		const { x, y, z, intensity } = event.detail;
 		context.dirLight.position.set(x, y, z)
 	})
+	document.addEventListener('newGrid', (event) => {
+		const { mesh } = event.detail;
+		context.gridMeshes.push(mesh);
+	});
 
 	document.addEventListener('mousemove', onPointerMove);
 	context.renderer.domElement.addEventListener('click', () => {
-		if (context.INTERSECTED != null) {
-			centerOn(context.INTERSECTED.planetName);
-			context.INTERSECTED.visible = false;
-			context.INTERSECTED.null;
+		if (context.intersectedPlanet != null) {
+			centerOn(context.intersectedPlanet.planetName);
+			context.intersectedPlanet.visible = false;
+			context.intersectedPlanet.null;
+		}
+		if (context.intersectedGrid != null) {
+			if (context.selectedGrid == null || context.selectedGrid.name != context.intersectedGrid.name) {
+				console.log(`Selected grid ${context.intersectedGrid.name}`)
+				if (context.selectedGrid) {
+					context.selectedGrid.spriteText.visible = false;
+				}
+				context.selectedGrid = context.intersectedGrid;
+				context.selectedGrid.spriteText.visible = true;
+				context.controls.moveTo(context.selectedGrid.position.x, context.selectedGrid.position.y, context.selectedGrid.position.z, true);
+			} else {
+				console.log(`Unselected grid ${context.intersectedGrid.name}`)
+				context.selectedGrid.spriteText.visible = false;
+				context.selectedGrid = null;
+			}
 		}
 	})
-	context.renderer.domElement.addEventListener('dblclick', () => {
-		if (context.centeredOn) {
-			const planet = context.ss.getPlanet(context.centeredOn);
-			context.controls.fitToBox( planet.mesh, true, { paddingLeft: 5, paddingRight: 5, paddingBottom: 5, paddingTop: 5 } );
-		}
-	})
+	// context.renderer.domElement.addEventListener('dblclick', () => {
+	// 	if (context.centeredOn) {
+	// 		const planet = context.ss.getPlanet(context.centeredOn);
+	// 		context.controls.fitToBox( planet.mesh, true, { paddingLeft: 5, paddingRight: 5, paddingBottom: 5, paddingTop: 5 } );
+	// 	}
+	// })
 
 	const wKey = new holdEvent.KeyboardKeyHold(KEYCODE.W, 16.666);
 	const aKey = new holdEvent.KeyboardKeyHold(KEYCODE.A, 16.666);
@@ -280,6 +300,10 @@ function centerOn(voxelName) {
 		console.error(`Planet ${voxelName} not found`);
 		return;
 	}
+	if (context.selectedGrid) {
+		context.selectedGrid.spriteText.visible = false;
+		context.selectedGrid = null;
+	}
 	$("#planets").animate({ height: 'hide' });
 	context.centeredOn = voxelName;
 	document.getElementById('focusname').innerText = (`Focused on ${planet.instanceName}`)
@@ -301,35 +325,70 @@ function animate() {
 	requestAnimationFrame(animate);
 
 	context.raycaster.setFromCamera(context.pointer, context.camera);
+	// Check planet intersect
 	const intersects = context.raycaster.intersectObjects(context.planetBoundingSpheres, false);
 	if (intersects.length > 0) {
 		const obj = intersects[0].object;
-		if (context.INTERSECTED != obj && obj.planetName !== context.centeredOn) {
-			if (context.INTERSECTED) {
-				context.INTERSECTED.material.emissive.setHex(context.INTERSECTED.currentHex)
-				context.INTERSECTED.material.color.setHex(context.INTERSECTED.currentHex)
-				context.INTERSECTED.visible = false;
+		if (context.intersectedPlanet != obj && obj.planetName !== context.centeredOn) {
+			if (context.intersectedPlanet) {
+				context.intersectedPlanet.material.emissive.setHex(context.intersectedPlanet.currentHex)
+				context.intersectedPlanet.material.color.setHex(context.intersectedPlanet.currentHex)
+				context.intersectedPlanet.visible = false;
 			}
 
-			context.INTERSECTED = intersects[0].object;
-			context.INTERSECTED.currentHex = context.INTERSECTED.material.emissive.getHex();
-			context.INTERSECTED.material.emissive.setHex(0xff0000);
-			context.INTERSECTED.material.color.setHex(0xff0000);
-			context.INTERSECTED.visible = true;
+			context.intersectedPlanet = intersects[0].object;
+			context.intersectedPlanet.currentHex = context.intersectedPlanet.material.emissive.getHex();
+			context.intersectedPlanet.material.emissive.setHex(0xff0000);
+			context.intersectedPlanet.material.color.setHex(0xff0000);
+			context.intersectedPlanet.visible = true;
 			context.renderer.domElement.style.cursor = 'pointer';
 		}
 	} else {
-		if (context.INTERSECTED) {
-			context.INTERSECTED.material.emissive.setHex(context.INTERSECTED.currentHex)
-			context.INTERSECTED.material.color.setHex(context.INTERSECTED.currentHex)
-			context.INTERSECTED.visible = false;
+		if (context.intersectedPlanet) {
+			context.intersectedPlanet.material.emissive.setHex(context.intersectedPlanet.currentHex)
+			context.intersectedPlanet.material.color.setHex(context.intersectedPlanet.currentHex)
+			context.intersectedPlanet.visible = false;
 		}
-		context.renderer.domElement.style.cursor = '';
-		context.INTERSECTED = null;
+		context.renderer.domElement.style.cursor = context.intersectedGrid == null ? '' : context.renderer.domElement.style.cursor;
+		context.intersectedPlanet = null;
 	}
-	if (context.INTERSECTED && context.INTERSECTED.visible) {
-		context.INTERSECTED.rotation.y += 0.01;
+	if (context.intersectedPlanet && context.intersectedPlanet.visible) {
+		context.intersectedPlanet.rotation.y += 0.01;
 	}
+
+	// Check grid intersect
+	const gridIntersects = context.raycaster.intersectObjects(context.gridMeshes, false);
+	if (gridIntersects.length > 0) {
+		const obj = gridIntersects[0].object;
+		if (context.intersectedGrid != obj && obj.planetName !== context.centeredOn) {
+			if (context.intersectedGrid) {
+				context.intersectedGrid.material.emissive.setHex(context.intersectedGrid.currentHex)
+				context.intersectedGrid.material.color.setHex(context.intersectedGrid.currentHex)
+				context.intersectedGrid.spriteText.visible = false;
+			}
+
+			context.intersectedGrid = gridIntersects[0].object;
+			context.intersectedGrid.currentHex = context.intersectedGrid.material.emissive.getHex();
+			context.intersectedGrid.material.emissive.setHex(0xff0000);
+			context.intersectedGrid.material.color.setHex(0xff0000);
+			context.intersectedGrid.spriteText.visible = true;
+			context.renderer.domElement.style.cursor = 'pointer';
+		}
+	} else {
+		if (context.intersectedGrid) {
+			context.intersectedGrid.material.emissive.setHex(context.intersectedGrid.currentHex)
+			context.intersectedGrid.material.color.setHex(context.intersectedGrid.currentHex)
+			context.intersectedGrid.spriteText.visible = false;
+		}
+		context.renderer.domElement.style.cursor = context.intersectedPlanet == null ? '' : context.renderer.domElement.style.cursor;
+		context.intersectedGrid = null;
+	}
+
+	if (context.selectedGrid) {
+		context.selectedGrid.spriteText.visible = true;
+		context.controls.moveTo(context.selectedGrid.position.x, context.selectedGrid.position.y, context.selectedGrid.position.z, true);
+	}
+
 	render();
 	//stats.update();
 }
