@@ -99,6 +99,21 @@ const planets = {
             },
         ]
     },
+    "planet thora 4": {
+        name: "Planet Thora 4",
+        pathPrefix: "planet_thora_4",
+        isVanilla: false,
+        sky: [
+            {
+                color: 0xFFFFFF,
+                rotationSpeed: 0.0006,
+                rotationAxis: new THREE.Vector3(0, 1, 0),
+                rotationOffset: 0.15,
+                altitude: 1,
+                alpha: 'earthlike.jpg',
+            },
+        ]
+    },
     "planet lorus": {
         name: "Planet Lorus",
         pathPrefix: "planet_lorus",
