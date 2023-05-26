@@ -132,7 +132,7 @@ class SpaceSocket {
                             map,
                             alphaMap: alpha,
                             transparent: true,
-                            opacity: 0.5,
+                            opacity: 0.6,
                             depthWrite: false,
                         });
                         const skyMesh = new THREE.Mesh(geometry , material);
@@ -173,9 +173,9 @@ class SpaceSocket {
                     }
                     const material = new THREE.MeshLambertMaterial({
                         specular: 0xFFFFFF,
-                        shininess: 10,
+                        shininess: 90,
                         color: ringData.color,
-                        //normalScale: new THREE.Vector2(1, - 1),
+                        normalScale: new THREE.Vector2(-1, 1),
                         map,
                         alphaMap: alpha,
                         transparent: true,

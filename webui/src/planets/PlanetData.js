@@ -46,7 +46,7 @@ const planets = {
                 rotationAxis: new THREE.Vector3(0, 1, 0),
                 rotationOffset: 3.2,
                 altitude: 1,
-                alpha: 'bylenclouds.jpg',
+                texture: 'bylenclouds.jpg',
             },
             {
                 color: 0xFFFFFF,
@@ -54,7 +54,7 @@ const planets = {
                 rotationAxis: new THREE.Vector3(1, 0.2, -0.2),
                 rotationOffset: 2.5,
                 altitude: 2,
-                alpha: 'bylenclouds.jpg',
+                texture: 'bylenclouds.jpg',
             },
             {
                 color: 0xFFFFFF,
@@ -62,7 +62,7 @@ const planets = {
                 rotationAxis: new THREE.Vector3(-0.2, 0.2, 1),
                 rotationOffset: 4.2,
                 altitude: 3,
-                alpha: 'bylenclouds.jpg',
+                texture: 'bylenclouds.jpg',
             },
             // {
             //     ring: true,
