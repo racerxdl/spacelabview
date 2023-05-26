@@ -32,6 +32,13 @@ const planets = {
         isVanilla: false,
         pathPrefix: "bylen",
         gasPlanet: true,
+        ring: {
+            color: 0xFFFFFF,
+            alpha: 'bylenring_alpha.jpg',
+            texture: 'bylenring.jpg',
+            rotation: new THREE.Vector3(0, 0, 0),
+            size: 2.2,
+        },
         sky: [
             {
                 color: 0xFFFFFF,
@@ -57,16 +64,16 @@ const planets = {
                 altitude: 3,
                 alpha: 'bylenclouds.jpg',
             },
-            {
-                ring: true,
-                color: 0xFFFFFF,
-                rotationSpeed: 0.0002,
-                rotationAxis: new THREE.Vector3(-0.2, 0.2, 1),
-                rotationOffset: 4.2,
-                altitude: 1,
-                alpha: 'bylenring_alpha.jpg',
-                texture: 'bylenring.jpg',
-            },
+            // {
+            //     ring: true,
+            //     color: 0xFFFFFF,
+            //     rotationSpeed: 0.0002,
+            //     rotationAxis: new THREE.Vector3(-0.2, 0.2, 1),
+            //     rotationOffset: 4.2,
+            //     altitude: 1,
+            //     alpha: 'bylenring_alpha.jpg',
+            //     texture: 'bylenring.jpg',
+            // },
         ]
     },
     "planet lezuno": {

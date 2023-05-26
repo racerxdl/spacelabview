@@ -7,9 +7,10 @@ import PlanetData from "../planets/PlanetData";
 import { loadTexture } from "../loaders/TexturePreloader"
 import { planetHeightMaps, planetTextures } from "../loaders/Preloader";
 import PlanetParams from "../planets/Params";
-import { magicSphereGeometry } from "../planets/MagicSphereGeometry"
+import { magicSphereGeometry } from "../geometry/MagicSphereGeometry"
 import { pickRandomColor } from '../colors';
 import { newText } from '../draw';
+import { GenerateRing } from '../geometry/Ring';
 
 class SpaceSocket {
 
@@ -156,6 +157,39 @@ class SpaceSocket {
                         ss.addMesh(skyMesh)
                         ss.addRenderCall(skyMesh.renderCall);
                     }));
+                }
+
+                if (planetData.data.ring) {
+                    const ringData = planetData.data.ring;
+                    const innerRadius = (planetData.maxHillSize * 1.5) / 2;
+                    const outerRadius = (planetData.maxHillSize * ringData.size) / 2
+                    const geometry = GenerateRing(innerRadius, outerRadius, PlanetParams.waterSphereSegments);
+                    let map = null, alpha = null;
+                    if (ringData.texture) {
+                        map = await loadTexture(`img/sky/${ringData.texture}`);
+                    }
+                    if (ringData.alpha) {
+                        alpha = await loadTexture(`img/sky/${ringData.alpha}`);
+                    }
+                    const material = new THREE.MeshLambertMaterial({
+                        specular: 0xFFFFFF,
+                        shininess: 10,
+                        color: ringData.color,
+                        //normalScale: new THREE.Vector2(1, - 1),
+                        map,
+                        alphaMap: alpha,
+                        transparent: true,
+                        //opacity: 0.8,
+                        depthWrite: true,
+                        side: THREE.DoubleSide,
+                    });
+                    planetData.ring = new THREE.Mesh( geometry, material );
+                    planetData.ring.position.x = voxelData.X;
+                    planetData.ring.position.y = voxelData.Y;
+                    planetData.ring.position.z = voxelData.Z;
+                    // planetData.ring.rotation.z = Math.PI/2;
+                    planetData.ring.rotation.x = Math.PI/2;
+                    ss.addMesh(planetData.ring);
                 }
 
                 planetData.boundingSphere = new THREE.Mesh(

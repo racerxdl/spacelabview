@@ -43,8 +43,8 @@ const Params = {
     // Scene
     sceneFogColor: 0x000000,
     sceneFogDensity: 0.00000015,
-    sceneAmbientLight: 0x443333,
-    sceneSunColor: 0xffffff,
+    sceneAmbientLight: 0x444444,
+    sceneSunColor: 0xfff0f0,
     // Renderer:
     rendererAntialias: true,
 }

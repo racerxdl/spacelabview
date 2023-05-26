@@ -2,7 +2,7 @@
     Preloads required files
 */
 
-import { magicSphereGeometry } from "../planets/MagicSphereGeometry";
+import { magicSphereGeometry } from "../geometry/MagicSphereGeometry";
 import Params from "../planets/Params";
 import { loadTexture } from "./TexturePreloader";
 
