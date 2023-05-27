@@ -33,6 +33,7 @@ const KEYCODE = {
 
 
 async function init() {
+	context.overlaymode = (window.location.hash||"").indexOf("overlay") > -1;
 	// Early listeners
 	document.addEventListener('SpaceError', (event) => {
 		if (event.detail instanceof String) {
@@ -56,6 +57,14 @@ async function init() {
 	document.addEventListener('wsConnected', () => {
 		updateStatus(`<B>Connected!</B>`);
 	})
+	if (context.overlaymode) {
+		console.log("Overlay mode enabled");
+		$("#chat").hide();
+		$("#planets").hide();
+		$("#info").hide();
+		$("#planets_bar").hide();
+		$("#chat_bar").hide();
+	}
 	$("#chat").animate({ width: 'toggle' });
 	$("#planets").animate({ height: 'toggle' });
 
@@ -96,17 +105,19 @@ async function init() {
 	context.scene.add(context.dirLight);
 	context.planetBoundingSpheres = [];
 
-	const texture = context.cubeTextureLoader.load([
-		'img/BackgroundCube-0.jpg',
-		'img/BackgroundCube-1.jpg',
-		'img/BackgroundCube-2.jpg',
-		'img/BackgroundCube-3.jpg',
-		'img/BackgroundCube-4.jpg',
-		'img/BackgroundCube-5.jpg',
-	]);
-	context.scene.background = texture;
+	if (!context.overlaymode) {
+		const texture = context.cubeTextureLoader.load([
+			'img/BackgroundCube-0.jpg',
+			'img/BackgroundCube-1.jpg',
+			'img/BackgroundCube-2.jpg',
+			'img/BackgroundCube-3.jpg',
+			'img/BackgroundCube-4.jpg',
+			'img/BackgroundCube-5.jpg',
+		]);
+		context.scene.background = texture;
+	}
 
-	context.renderer = new THREE.WebGLRenderer({ antialias: PlanetParams.rendererAntialias });
+	context.renderer = new THREE.WebGLRenderer({ antialias: PlanetParams.rendererAntialias, alpha: true });
 	context.renderer.setPixelRatio(window.devicePixelRatio);
 	context.renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
 	document.body.appendChild(context.renderer.domElement);
