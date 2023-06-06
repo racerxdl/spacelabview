@@ -83,7 +83,6 @@ async function init() {
 	context.chatMsgList.id = "messageList";
 
 	context.centeredOn = false;
-	context.textureLoader = new THREE.TextureLoader();
 	context.cubeTextureLoader = new THREE.CubeTextureLoader();
 	context.clock = new THREE.Clock();
 	context.pointer = new THREE.Vector2();

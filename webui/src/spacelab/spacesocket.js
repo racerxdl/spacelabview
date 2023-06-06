@@ -71,7 +71,7 @@ class SpaceSocket {
                         map: await loadTexture(texture),
                         displacementMap: hmTex,
                         displacementScale: planetData.hillDelta,
-                        normalScale: new THREE.Vector2(1, - 1),
+                        //normalScale: new THREE.Vector2(1, - 1),
                         bumpMap: hmTex,
                         bumpScale: planetData.hillDelta / 2,
                         //wireframe: true
