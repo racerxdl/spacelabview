@@ -11,6 +11,7 @@ async function loadTexture(texturePath) {
         return cachedTextures[texturePath];
     }
     cachedTextures[texturePath] = loader.load(texturePath);
+    cachedTextures[texturePath].anisotropy = 8;
 
     return cachedTextures[texturePath];
 }

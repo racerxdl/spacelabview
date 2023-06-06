@@ -42,8 +42,8 @@ function makeTextSprite(message, parameters) {
 
     const texture = new THREE.Texture(canvas)
     texture.needsUpdate = true;
-    // const map = new THREE.TextureLoader().load( './background.jpg' );
-    const spriteMaterial = new THREE.SpriteMaterial({ map: texture });
+    const spriteMaterial = new THREE.SpriteMaterial({ map: texture,
+        depthTest: false });
     const sprite = new THREE.Sprite(spriteMaterial);
     //sprite.depthWrite = false;
     sprite.alphaTest = 0.1;
