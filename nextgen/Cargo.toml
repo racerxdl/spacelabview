@@ -5,12 +5,18 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[profile.dev.package.png]
-opt-level = 3
-[profile.dev.package.image]
+# Enable a small amount of optimization in debug mode
+[profile.dev]
+opt-level = 0
+
+# Enable high optimizations for dependencies (incl. Bevy), but not for our code:
+[profile.dev.package."*"]
 opt-level = 3
 
 [dependencies]
+bevy =  { version = "0.10.1", features=["jpeg"] }
+bevy-inspector-egui = "0.18.3"
+bevy_flycam = "0.10.1"
 bytemuck = { version = "1.13.1", features = ["derive"] }
 futures = "0.3.28"
 futures-intrusive = "0.5.0"
@@ -22,4 +28,4 @@ renderdoc = "0.11.0"
 serde = { version = "1.0", features = ["derive"] }
 serde-xml-rs = "0.6.0"
 serde_json = "1.0.96"
-wgpu = "0.16.1"
+wgpu = "0.15.1"

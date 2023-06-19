@@ -1,9 +1,9 @@
-use std::{borrow::Cow, mem, num::NonZeroU32};
+use std::{borrow::Cow, mem};
 
 use bytemuck::{Pod, Zeroable};
 use wgpu::util::DeviceExt;
 
-use crate::gpu::{gpu::Gpu, texture::Texture, self};
+use crate::gpu::{gpu::Gpu, texture::Texture};
 
 use super::matcolormap::{PlanetMaterial};
 
@@ -113,9 +113,7 @@ impl PlanetMaterial {
 
 #[derive(Debug)]
 struct MaterialRuleData {
-    name: String,
     param_buf: wgpu::Buffer,
-    items: u32,
 }
 
 impl MaterialRuleData {
@@ -127,9 +125,7 @@ impl MaterialRuleData {
         });
 
         MaterialRuleData {
-            name: name.to_string(),
             param_buf,
-            items: data.len() as u32,
         }
     }
 
@@ -137,16 +133,11 @@ impl MaterialRuleData {
         self.param_buf.as_entire_binding()
     }
 
-    pub fn items(&self) -> u32 {
-        self.items
-    }
-
     pub fn binding_type(&self) -> wgpu::BindingType {
         wgpu::BindingType::Buffer {
             ty: wgpu::BufferBindingType::Storage { read_only: true },
             has_dynamic_offset: false,
             min_binding_size: wgpu::BufferSize::new(mem::size_of::<GPUMaterialRule>() as _),
-            // min_binding_size: None,
         }
     }
 }
@@ -156,7 +147,7 @@ pub async fn generate_material_gpu(
     materialmap: &Texture,
     heightmap: &Texture,
     latlut: &Texture,
-    slope: &Texture,
+    normalmap: &Texture,
     materials: &PlanetMaterial,
 ) -> Option<Texture> {
     let device = &gpu_device.device;
@@ -166,8 +157,8 @@ pub async fn generate_material_gpu(
     let height = heightmap.height();
     if latlut.width() != width
         || latlut.height() != height
-        || slope.width() != width
-        || slope.height() != height
+        || normalmap.width() != width
+        || normalmap.height() != height
         || materialmap.width() != width
         || materialmap.height() != height
     {
@@ -323,7 +314,7 @@ pub async fn generate_material_gpu(
             },
             wgpu::BindGroupEntry {
                 binding: 6,
-                resource: slope.binding_resource(),
+                resource: normalmap.binding_resource(),
             },
             wgpu::BindGroupEntry {
                 binding: 7,

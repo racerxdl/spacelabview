@@ -13,24 +13,15 @@ var<uniform> params : LatLutGenParams;
 var texture: texture_storage_2d<rgba8unorm, write>;
 
 fn compute_point(u: f32, v: f32, face: i32) -> vec3<f32> {
-    var point: vec3<f32>;
-
-    if face == 0 { // "front"
-        point = vec3<f32>(u, v, -1.0);
-    } else if face == 1 { // "back"
-        point = vec3<f32>(-u, v, 1.0);
-    } else if face == 2 { // "down"
-        point = vec3<f32>(u, -1.0, v);
-    } else if face == 3 { // "up"
-        point = vec3<f32>(u, 1.0, -v);
-    } else if face == 4 {// "left"
-        point = vec3<f32>(-1.0, v, -u);
-    } else if face == 5 {// "right"
-        point = vec3<f32>(1.0, v, u);
-    } else {
-        point = vec3<f32>(0.0, 0.0, 0.0);
+    switch (face) {
+        case 0:     { return vec3<f32>(u, v, -1.0);    } // "front"
+        case 1:     { return vec3<f32>(-u, v, 1.0);    } // "back"
+        case 2:     { return vec3<f32>(u, -1.0, v);    } // "down"
+        case 3:     { return vec3<f32>(u, 1.0, -v);    } // "up"
+        case 4:     { return vec3<f32>(-1.0, v, -u);   } // "left"
+        case 5:     { return vec3<f32>(1.0, v, u);     } // "right"
+        default:    { return vec3<f32>(0.0, 0.0, 0.0); } // "none"
     }
-    return point;
 }
 
 const rad2deg: f32 = 57.29577951308232;  // approximately equal to 180/pi

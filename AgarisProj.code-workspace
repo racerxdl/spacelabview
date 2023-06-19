@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "nextgen"
+		}
+	],
+	"settings": {
+		"rust-analyzer.linkedProjects": [
+			"./nextgen/Cargo.toml"
+		]
+	}
+}

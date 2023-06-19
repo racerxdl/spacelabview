@@ -1,7 +1,6 @@
-use std::{borrow::Cow, fs};
+use std::{borrow::Cow};
 
 use bytemuck::{Pod, Zeroable};
-use image::{ImageBuffer, Rgba};
 use std::mem;
 use wgpu::util::DeviceExt;
 

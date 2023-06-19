@@ -1,6 +1,3 @@
-use wgpu::InstanceDescriptor;
-
-
 pub struct Gpu {
     pub instance: wgpu::Instance,
     pub adapter: wgpu::Adapter,

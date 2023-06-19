@@ -1,4 +1,7 @@
-use image::{GenericImageView, ImageBuffer, Luma, Rgba, Rgb};
+use std::num::NonZeroU32;
+
+use bevy::{prelude::Image, render::texture::TextureFormatPixelInfo};
+use image::{GenericImageView, ImageBuffer, Luma, Rgba, Rgb, DynamicImage};
 
 use super::gpu;
 
@@ -104,8 +107,8 @@ impl Texture {
             data,
             wgpu::ImageDataLayout {
                 offset: 0,
-                bytes_per_row: Some(4 * self.texture.size().width),
-                rows_per_image: Some(self.texture.size().height),
+                bytes_per_row: NonZeroU32::new(4 * self.texture.size().width),
+                rows_per_image: NonZeroU32::new(self.texture.size().height),
             },
             self.texture.size(),
         );
@@ -122,8 +125,8 @@ impl Texture {
             bytemuck::cast_slice(data),
             wgpu::ImageDataLayout {
                 offset: 0,
-                bytes_per_row: Some(4 * self.texture.size().width),
-                rows_per_image: Some(self.texture.size().height),
+                bytes_per_row: NonZeroU32::new(4 * self.texture.size().width),
+                rows_per_image: NonZeroU32::new(self.texture.size().height),
             },
             self.texture.size(),
         );
@@ -178,8 +181,8 @@ impl Texture {
                 buffer: &output_buffer,
                 layout: wgpu::ImageDataLayout {
                     offset: 0,
-                    bytes_per_row: Some(u32_size * width),
-                    rows_per_image: Some(height),
+                    bytes_per_row: NonZeroU32::new(u32_size * width),
+                    rows_per_image: NonZeroU32::new(height),
                 },
             },
             texsize,
@@ -236,4 +239,31 @@ fn convert_rgb8_to_rgba8(rgb: &ImageBuffer<Rgb<u8>, Vec<u8>>, width: u32, height
         rgba.extend_from_slice(&rgba_pixel.0);
     }
     rgba
+}
+
+
+pub fn image_from_bevy(bimg: &Image) -> DynamicImage { //
+    let width = bimg.texture_descriptor.size.width;
+    let height = bimg.texture_descriptor.size.height;
+    let pixel_size = bimg.texture_descriptor.format.pixel_size();
+    match pixel_size {
+        4 => {
+            let img : ImageBuffer<Rgba<u8>, Vec<u8>> = ImageBuffer::from_raw(width, height,bimg.data.clone()).unwrap();
+            DynamicImage::ImageRgba8(img)
+        },
+        3 => {
+            let img : ImageBuffer<Rgb<u8>, Vec<u8>> = ImageBuffer::from_raw(width, height,bimg.data.clone()).unwrap();
+            DynamicImage::ImageRgb8(img)
+        }
+        2 => {
+            let c = bimg.data.chunks_exact(2).map(|x| u16::from_ne_bytes([x[0], x[1]])).collect::<Vec<u16>>();
+            let img : ImageBuffer<Luma<u16>, Vec<u16>> = ImageBuffer::from_raw(width, height,c).unwrap();
+            DynamicImage::ImageLuma16(img)
+        }
+        1 => {
+            let img : ImageBuffer<Luma<u8>, Vec<u8>> = ImageBuffer::from_raw(width, height,bimg.data.clone()).unwrap();
+            DynamicImage::ImageLuma8(img)
+        }
+        _ => panic!("Invalid pixel size")
+    }
 }
