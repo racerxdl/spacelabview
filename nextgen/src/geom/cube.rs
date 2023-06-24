@@ -260,7 +260,6 @@ impl CubeSphere {
         // Adjust the mesh to be a sphere
         for vertex in vertices.iter_mut() {
             vertex.position = vertex.position.normalize();
-            vertex.normal = vertex.position;
         }
 
         let hill_delta = self.hill_params[1] - self.hill_params[0];
@@ -276,7 +275,32 @@ impl CubeSphere {
                     vertex.position.y *= self.radius * (1.0 - self.hill_params[0] + h * hill_delta);
                     vertex.position.z *= self.radius * (1.0 - self.hill_params[0] + h * hill_delta);
                 }
+
+                for i in (0..meshdata.indices.len()).step_by(3) {
+                    let i0 = meshdata.indices[i] as usize;
+                    let i1 = meshdata.indices[i+1] as usize;
+                    let i2 = meshdata.indices[i+2] as usize;
+
+                    let p0 = vertices[i0].position;
+                    let p1 = vertices[i1].position;
+                    let p2 = vertices[i2].position;
+
+                    let u = p1 - p0;
+                    let v = p2 - p0;
+
+                    let normal = u.cross(v).normalize();
+
+                    // Update vertex normals. This assumes that triangles and vertices
+                    // are shared among faces. If not, you would need to average the normals.
+                    vertices[i0].normal += normal;
+                    vertices[i1].normal += normal;
+                    vertices[i2].normal += normal;
+                }
+
             }
+        }
+        for vertex in vertices.iter_mut() {
+            vertex.normal = vertex.normal.normalize();
         }
 
         meshdata

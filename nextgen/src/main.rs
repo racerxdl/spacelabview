@@ -65,31 +65,37 @@ fn setup(
         StandardMaterial {
             base_color_texture: Some(asset_server.load("left.jpg")),
             normal_map_texture: Some(asset_server.load("left_normal.jpg")),
+            flip_normal_map_y: true,
             ..default()
         },
         StandardMaterial {
             base_color_texture: Some(asset_server.load("back.jpg")),
             normal_map_texture: Some(asset_server.load("back_normal.jpg")),
+            flip_normal_map_y: true,
             ..default()
         },
         StandardMaterial {
             base_color_texture: Some(asset_server.load("up.jpg")),
             normal_map_texture: Some(asset_server.load("up_normal.jpg")),
+            flip_normal_map_y: true,
             ..default()
         },
         StandardMaterial {
             base_color_texture: Some(asset_server.load("down.jpg")),
             normal_map_texture: Some(asset_server.load("down_normal.jpg")),
+            flip_normal_map_y: true,
             ..default()
         },
         StandardMaterial {
             base_color_texture: Some(asset_server.load("front.jpg")),
             normal_map_texture: Some(asset_server.load("front_normal.jpg")),
+            flip_normal_map_y: true,
             ..default()
         },
         StandardMaterial {
             base_color_texture: Some(asset_server.load("right.jpg")),
             normal_map_texture: Some(asset_server.load("right_normal.jpg")),
+            flip_normal_map_y: true,
             ..default()
         },
     ];
@@ -168,8 +174,8 @@ fn main() {
         .add_plugin(WireframePlugin)
         .add_plugin(PlayerPlugin)
         .insert_resource(MovementSettings {
-            sensitivity: 0.00015, // default: 0.00012
-            speed: 12.0, // default: 12.0
+            sensitivity: 0.00010, // default: 0.00012
+            speed: 6.0, // default: 12.0
         })
         .add_plugin(PlanetPlugin)
         .add_startup_system(setup)
