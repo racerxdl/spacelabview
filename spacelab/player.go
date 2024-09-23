@@ -7,6 +7,8 @@ type Player struct {
 	SteamId  string
 	IsOnline bool
 	X, Y, Z  float64
+	Position Vector3
+	Rotation Quaternion
 }
 
 func (g Player) DistanceTo(g2 Player) float64 {

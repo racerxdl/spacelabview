@@ -58,8 +58,8 @@ class SpaceSocket {
                 planetData.heightMapTextures = planetHeightMaps(planetData.data.pathPrefix);
                 planetData.textures = planetTextures(planetData.data.pathPrefix);
 
-                planetData.maxHillSize = (1 + voxelData.HillParameters.Item2) * voxelData.Size;
-                planetData.minHillSize = (1 + voxelData.HillParameters.Item1) * voxelData.Size;
+                planetData.maxHillSize = (1 + voxelData.HillParameters[1]) * voxelData.Size;
+                planetData.minHillSize = (1 + voxelData.HillParameters[0]) * voxelData.Size;
                 planetData.hillDelta = (planetData.maxHillSize - planetData.minHillSize) / 2;
 
                 planetData.materials = await Promise.all(planetData.textures.map(async (texture, idx) => {

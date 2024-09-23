@@ -1,6 +1,7 @@
 package spacelab
 
 type GlobalInfo struct {
+	SunNormalized            Vector3
 	SunNormalizedX           float64
 	SunNormalizedY           float64
 	SunNormalizedZ           float64

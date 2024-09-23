@@ -68,12 +68,32 @@ func (s *API) Grids() ([]Grid, error) {
 }
 
 func (s *API) GridsV2() ([]GridGroup, error) {
-	res, err := s.Get(infoV2GridsEndpoint, nil)
+	grids, err := s.Grids()
 	if err != nil {
 		return nil, err
 	}
-
 	g := []GridGroup{}
-	err = json.Unmarshal([]byte(res), &g)
+
+	for _, grid := range grids {
+		found := false
+		for i, gg := range g {
+			if gg.Owner == grid.Owner {
+				gg.Grids = append(gg.Grids, grid)
+				gg.Blocks += grid.Blocks
+				g[i] = gg
+				found = true
+				break
+			}
+		}
+		if !found {
+			g = append(g, GridGroup{
+				Owner:  grid.Owner,
+				Tag:    grid.FactionTag,
+				Blocks: grid.Blocks,
+				Grids:  []Grid{grid},
+			})
+		}
+	}
+
 	return g, err
 }

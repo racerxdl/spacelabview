@@ -30,6 +30,8 @@ type Grid struct {
 	RelGroupCount int
 	PCU           int
 	X, Y, Z       float64
+	Position      Vector3
+	Rotation      Quaternion
 }
 
 func (g Grid) String() string {
