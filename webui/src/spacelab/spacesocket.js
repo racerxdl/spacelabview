@@ -16,13 +16,27 @@ class SpaceSocket {
 
     constructor(socketUrl) {
         this.socketUrl = socketUrl;
-        this.conn = new WebSocket(socketUrl);
-        this.conn.onopen = this.onOpen.bind(this);
-        this.conn.onmessage = this.onMessage.bind(this);
-        this.conn.onerror = this.onError.bind(this);
         this.grids = {};
         this.voxels = {};
         this.ownerColors = {};
+        this.connect();
+    }
+
+    connect() {
+        if (this.conn) {
+            this.conn.close();
+            this.conn.onopen = null;
+            this.conn.onmessage = null;
+            this.conn.onerror = null;
+            this.conn.onclose = null;
+        }
+
+        console.log(`Connecting to ${this.socketUrl}`);
+        this.conn = new WebSocket(this.socketUrl);
+        this.conn.onopen = this.onOpen.bind(this);
+        this.conn.onmessage = this.onMessage.bind(this);
+        this.conn.onerror = this.onError.bind(this);
+        this.conn.onclose = this.onClose.bind(this);
     }
 
     getPlanet(name) {
@@ -386,11 +400,17 @@ class SpaceSocket {
                 error,
             }
         }));
+        this.connect();
         //console.error(`Websocket Error: ${error}`);
     }
     onOpen() {
         this.conn.send('ping'); // Send the message 'Ping' to the server
         document.dispatchEvent(new CustomEvent("wsConnected", {}));
+    }
+
+    onClose() {
+        document.dispatchEvent(new CustomEvent("wsDisconnected", {}));
+        this.connect();
     }
 }
 
