@@ -7,6 +7,23 @@ use super::{coloravg::MatColorAverage, matfile::MatFile};
 #[derive(Debug, Serialize, Deserialize, PartialEq)]
 pub struct PlanetMaterials(pub HashMap<String, PlanetMaterial>);
 
+#[derive(Debug, Deserialize, Serialize, PartialEq)]
+pub struct OreMap {
+    #[serde(rename = "Value")]
+    pub value: Option<u32>,
+    #[serde(rename = "Type")]
+    pub ore_type: Option<String>,
+    #[serde(rename = "Start")]
+    pub start: Option<u32>,
+    #[serde(rename = "Depth")]
+    pub depth: Option<u32>,
+    #[serde(rename = "TargetColor")]
+    pub target_color: Option<[u32; 3]>,
+    #[serde(rename = "ColorInfluence")]
+    pub color_influence: Option<u32>,
+}
+
+
 #[derive(Debug, Serialize, Deserialize, PartialEq)]
 pub struct PlanetMaterial {
     #[serde(rename = "Name")]
@@ -17,6 +34,10 @@ pub struct PlanetMaterial {
     pub simple_materials: HashMap<String, MaterialLayer>,
     #[serde(rename = "ComplexMaterials")]
     pub complex_materials: HashMap<String, VoxelMaterial>,
+    #[serde(rename = "Ores")]
+    pub ores: HashMap<String, OreMap>,
+    #[serde(rename = "BaseFolder")]
+    pub base_path: String,
 }
 
 #[derive(Debug, Serialize, Deserialize, PartialEq)]

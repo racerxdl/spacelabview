@@ -213,6 +213,7 @@ class PlanetDefinition:
     SimpleMaterials = {}
     ComplexMaterials = {}
     Ores = {}
+    BaseFolder = ""
 
     @classmethod
     def from_xml_element(cls, element):
@@ -243,12 +244,17 @@ class PlanetDefinition:
             pd.DefaultMaterial = MaterialLayer.from_dom_element(
                 defaultSurface[0])
 
+        pd.Ores = {}
+
         ores = element.getElementsByTagName("OreMappings")
         if len(ores) > 0:
             oremaps = ores[0].getElementsByTagName("Ore")
+            #print(f"{len(oremaps)} Ores for {pd.Name}")
             for ore in oremaps:
                 om = OreMap.from_xml_element(ore)
                 pd.Ores[om.Value] = om
+        #else:
+        #    print(f"No ores for {pd.Name}")
 
         return pd
 

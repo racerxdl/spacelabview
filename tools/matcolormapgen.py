@@ -10,55 +10,107 @@ from libs.datatypes import *
 from libs.mathtool import *
 
 planets = [
+    # Ares at War
     {
         "planetData": "assets/Ares/Planet Agaris.sbc",
         "planetName": "Planet Agaris",
         "baseAssetPath": "assets/Ares/PlanetDataFiles/Planet Agaris/"
     },
     {
-        "planetData": "assets/Ares/Planet Agaris - Lava.sbc",
-        "planetName": "Planet Agaris - Lava",
+        "planetData": "assets/Ares/PlanetBylen.sbc",
+        "planetName": "PlanetBylen",
+        "baseAssetPath": "assets/Ares/PlanetDataFiles/PlanetBylen/"
+    },
+    {
+        "planetData": "assets/Ares/PlanetBylen - Lava.sbc",
+        "planetName": "PlanetBylen - Lava",
         "baseAssetPath": "assets/Ares/PlanetDataFiles/Planet Agaris/"
     },
     {
+        "planetData": "assets/Ares/Planet Crait.sbc",
+        "planetName": "Planet Crait",
+        "baseAssetPath": "assets/Ares/PlanetDataFiles/Planet Crait/"
+    },
+    {
+        "planetData": "assets/Ares/Planet Crait - Lava.sbc",
+        "planetName": "Planet Crait - Lava",
+        "baseAssetPath": "assets/Ares/PlanetDataFiles/Planet Crait/"
+    },
+    {
+        "planetData": "assets/Ares/Planet Kamino.sbc",
+        "planetName": "Planet Kamino",
+        "baseAssetPath": "assets/Ares/PlanetDataFiles/Planet Kamino/"
+    },
+    {
+        "planetData": "assets/Ares/Planet Lezuno.sbc",
+        "planetName": "Planet Lezuno",
+        "baseAssetPath": "assets/Ares/PlanetDataFiles/Planet Lezuno/"
+    },
+    {
+        "planetData": "assets/Ares/Planet Lezuno - Lava.sbc",
+        "planetName": "Planet Lezuno - Lava",
+        "baseAssetPath": "assets/Ares/PlanetDataFiles/Planet Lezuno/"
+    },
+    {
+        "planetData": "assets/Ares/Planet Lorus.sbc",
+        "planetName": "Planet Lorus",
+        "baseAssetPath": "assets/Ares/PlanetDataFiles/Planet Lorus/"
+    },
+    {
+        "planetData": "assets/Ares/Planet Lorus - Lava.sbc",
+        "planetName": "Planet Lorus - Lava",
+        "baseAssetPath": "assets/Ares/PlanetDataFiles/Planet Lorus/"
+    },
+    {
+        "planetData": "assets/Ares/Planet Thora 4.sbc",
+        "planetName": "Planet Thora 4",
+        "baseAssetPath": "assets/Ares/PlanetDataFiles/Planet Thora 4/"
+    },
+    {
+        "planetData": "assets/Ares/Planet Thora 4 - Lava.sbc",
+        "planetName": "Planet Thora 4 - Lava",
+        "baseAssetPath": "assets/Ares/PlanetDataFiles/Planet Thora 4/"
+    },
+    # Vanilla
+    {
         "planetData": "assets/Vanilla/PlanetGeneratorDefinitions.sbc",
         "planetName": "Alien",
-        "baseAssetPath": "assets/Alien/"
+        "baseAssetPath": "assets/Vanilla/PlanetDataFiles/Alien/"
     },
     {
         "planetData": "assets/Vanilla/PlanetGeneratorDefinitions.sbc",
         "planetName": "EarthLike",
-        "baseAssetPath": "assets/EarthLike/"
+        "baseAssetPath": "assets/Vanilla/PlanetDataFiles/EarthLike/"
     },
     {
         "planetData": "assets/Vanilla/PlanetGeneratorDefinitions.sbc",
         "planetName": "Europa",
-        "baseAssetPath": "assets/Europa/"
+        "baseAssetPath": "assets/Vanilla/PlanetDataFiles/Europa/"
     },
     {
         "planetData": "assets/Vanilla/PlanetGeneratorDefinitions.sbc",
         "planetName": "Mars",
-        "baseAssetPath": "assets/Mars/"
+        "baseAssetPath": "assets/Vanilla/PlanetDataFiles/Mars/"
     },
     {
         "planetData": "assets/Vanilla/PlanetGeneratorDefinitions.sbc",
         "planetName": "Moon",
-        "baseAssetPath": "assets/Moon/"
+        "baseAssetPath": "assets/Vanilla/PlanetDataFiles/Moon/"
     },
     {
         "planetData": "assets/Vanilla/PlanetGeneratorDefinitions.sbc",
         "planetName": "Pertam",
-        "baseAssetPath": "assets/Pertam/"
+        "baseAssetPath": "assets/Vanilla/PlanetDataFiles/Pertam/"
     },
     {
         "planetData": "assets/Vanilla/PlanetGeneratorDefinitions.sbc",
         "planetName": "Titan",
-        "baseAssetPath": "assets/Titan/"
+        "baseAssetPath": "assets/Vanilla/PlanetDataFiles/Titan/"
     },
     {
         "planetData": "assets/Vanilla/PlanetGeneratorDefinitions.sbc",
         "planetName": "Triton",
-        "baseAssetPath": "assets/Triton/"
+        "baseAssetPath": "assets/Vanilla/PlanetDataFiles/Triton/"
     }
 ]
 
@@ -97,6 +149,7 @@ if __name__ == "__main__":
             if pd.Name == planetName:
                 pd.cache(matfiles, matcoloravg)
                 planetDefinitions[pd.Name] = pd
+            pd.BaseFolder = baseAssetPath
 
     with open("./luts/matcolormap.json", "w") as f:
         f.write(MyEncoder().encode(planetDefinitions))

@@ -163,33 +163,99 @@ fn setup(
 }
 
 fn main() {
-    App::new()
-        .add_plugins(DefaultPlugins.set(RenderPlugin {
-            wgpu_settings: WgpuSettings {
-                features: Features::POLYGON_MODE_LINE,
-                ..default()
-            },
-        }))
-        .add_plugin(WorldInspectorPlugin::new())
-        .add_plugin(WireframePlugin)
-        .add_plugin(PlayerPlugin)
-        .insert_resource(MovementSettings {
-            sensitivity: 0.00010, // default: 0.00012
-            speed: 6.0, // default: 12.0
-        })
-        .add_plugin(PlanetPlugin)
-        .add_startup_system(setup)
-        .run();
+    gen_main();
+    //App::new()
+    //    .add_plugins(DefaultPlugins.set(RenderPlugin {
+    //        wgpu_settings: WgpuSettings {
+    //            features: Features::POLYGON_MODE_LINE,
+    //            ..default()
+    //        },
+    //    }))
+    //    .add_plugin(WorldInspectorPlugin::new())
+    //    .add_plugin(WireframePlugin)
+    //    .add_plugin(PlayerPlugin)
+    //    .insert_resource(MovementSettings {
+    //        sensitivity: 0.00010, // default: 0.00012
+    //        speed: 6.0, // default: 12.0
+    //    })
+    //    .add_plugin(PlanetPlugin)
+    //    .add_startup_system(setup)
+    //    .run();
 }
 
-// Old main from generator
-fn gen_main() {
+fn gen_planet(planet_definitions: &PlanetMaterials, planet_name: String) {
     let mut rd: Option<RenderDoc<V110>> = RenderDoc::new().ok();
 
     let gpu_device = futures::executor::block_on(gpu::gpu::open_default()).unwrap();
     if rd.is_some() {
         rd.as_mut().unwrap().start_frame_capture(null(), null());
     }
+    let start = SystemTime::now();
+
+    let texture_folder_name = planet_definitions.0[&planet_name].base_path.clone();
+
+    // Create dir if not exists
+    std::fs::create_dir_all(planet_name.clone()).unwrap();
+
+    for face in CUBEMAP.iter() {
+        let latlut =
+            futures::executor::block_on(gpu_generate_latlut_inner(&gpu_device, face, 2048, 2048))
+                .unwrap();
+        let heightmap = Texture::from_file(
+            &gpu_device,
+            format!("../{}/{}.png", texture_folder_name, face).as_str(),
+            wgpu::TextureFormat::R32Float,
+            Some("HeightMap"),
+        );
+        let materialmap = Texture::from_file(
+            &gpu_device,
+            format!(
+                "../{}/{}_mat.png",
+                texture_folder_name,
+                face
+            )
+            .as_str(),
+            wgpu::TextureFormat::Rgba8Unorm,
+            Some("MaterialMap"),
+        );
+
+        let normal =
+            futures::executor::block_on(gpu_generate_normal_inner(&gpu_device, &heightmap))
+                .unwrap();
+
+        futures::executor::block_on(
+            normal.save_to_file(&gpu_device, format!("{}/{}_normal.jpg", planet_name, face).as_str()),
+        );
+
+        let material = futures::executor::block_on(generate_material_gpu(
+            &gpu_device,
+            &materialmap,
+            &heightmap,
+            &latlut,
+            &normal,
+            &planet_definitions.0[&planet_name],
+        ));
+
+        futures::executor::block_on(
+            material
+                .unwrap()
+                .save_to_file(&gpu_device, format!("{}/{}.jpg", planet_name, face).as_str()),
+        );
+    }
+    let delta = SystemTime::now().duration_since(start).unwrap();
+
+    println!(
+        "GPU Compute Time elapsed: {}.{:03} seconds",
+        delta.as_secs(),
+        delta.subsec_millis()
+    );
+    if rd.is_some() {
+        rd.unwrap().end_frame_capture(null(), null());
+    }
+}
+
+// Old main from generator
+fn gen_main() {
     // println!("Hello, world!");
     // let file = File::open("../assets/Ares/Planet Agaris.sbc").expect("Failed to open XML file");
     // let reader = BufReader::new(file);
@@ -205,58 +271,16 @@ fn gen_main() {
     // println!("{:#?} matColorAvg", matcoloravg);
     let planet_definitions: PlanetMaterials = load_json_file("../luts/matcolormap.json").unwrap();
 
-    let start = SystemTime::now();
-    for face in CUBEMAP.iter() {
-        let latlut =
-            futures::executor::block_on(gpu_generate_latlut_inner(&gpu_device, face, 2048, 2048))
-                .unwrap();
-        let heightmap = Texture::from_file(
-            &gpu_device,
-            format!("../assets/Ares/PlanetDataFiles/Planet Agaris/{}.png", face).as_str(),
-            wgpu::TextureFormat::R32Float,
-            Some("HeightMap"),
-        );
-        let materialmap = Texture::from_file(
-            &gpu_device,
-            format!(
-                "../assets/Ares/PlanetDataFiles/Planet Agaris/{}_mat.png",
-                face
-            )
-            .as_str(),
-            wgpu::TextureFormat::Rgba8Unorm,
-            Some("MaterialMap"),
-        );
+    let planets = planet_definitions.0.keys();
 
-        let normal =
-            futures::executor::block_on(gpu_generate_normal_inner(&gpu_device, &heightmap))
-                .unwrap();
-
-        futures::executor::block_on(
-            normal.save_to_file(&gpu_device, format!("{}_normal.jpg", face).as_str()),
-        );
-
-        let material = futures::executor::block_on(generate_material_gpu(
-            &gpu_device,
-            &materialmap,
-            &heightmap,
-            &latlut,
-            &normal,
-            &planet_definitions.0["Planet Agaris"],
-        ));
-        futures::executor::block_on(
-            material
-                .unwrap()
-                .save_to_file(&gpu_device, format!("{}.jpg", face).as_str()),
-        );
+    for planet in planets {
+        // Skip planets that end on - Lava
+        if planet.ends_with(" - Lava") {
+            continue;
+        }
+        println!("Planet: {}", planet);
+        gen_planet(&planet_definitions, planet.clone());
     }
-    let delta = SystemTime::now().duration_since(start).unwrap();
 
-    println!(
-        "GPU Compute Time elapsed: {}.{:03} seconds",
-        delta.as_secs(),
-        delta.subsec_millis()
-    );
-    if rd.is_some() {
-        rd.unwrap().end_frame_capture(null(), null());
-    }
+
 }

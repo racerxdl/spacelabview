@@ -48,7 +48,11 @@ impl Texture {
         format: wgpu::TextureFormat,
         label: Option<&str>,
     ) -> Self {
-        let img = image::open(path).unwrap();
+        let img_res = image::open(path);
+        let img = match img_res {
+            Ok(img) => img,
+            Err(e) => panic!("Failed to load texture {}: {}", path, e),
+        };
         let dimensions = img.dimensions();
         let width = dimensions.0;
         let height = dimensions.1;
