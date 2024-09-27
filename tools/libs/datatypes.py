@@ -168,12 +168,51 @@ class VoxelMaterial:
         return json.dumps(self, default=lambda o: o.__dict__,
                           sort_keys=True, indent=4)
 
+class OreMap:
+    Value = int
+    Type = str
+    Start = int
+    Depth = int
+    TargetColor = (int,int,int)
+    ColorInfluence = int
+
+    @classmethod
+    def from_xml_element(cls, element):
+        ore = OreMap()
+        ore.Value = int(element.attributes["Value"].nodeValue)
+        ore.Type = element.attributes["Type"].nodeValue
+        ore.Start = int(element.attributes["Start"].nodeValue)
+        ore.Depth = int(element.attributes["Depth"].nodeValue)
+        if "TargetColor" in element.attributes:
+            TargetColor = element.attributes["TargetColor"].nodeValue
+            # TargetColor in format #RRGGBB convert to tuple
+            ore.TargetColor = (int(TargetColor[1:3], 16), int(TargetColor[3:5], 16), int(TargetColor[5:7], 16))
+        else:
+            ore.TargetColor = (0,0,0)
+
+        if "ColorInfluence" in element.attributes:
+            ore.ColorInfluence = int(element.attributes["ColorInfluence"].nodeValue)
+        else:
+            ore.ColorInfluence = 0
+
+        return ore
+
+    def toJSON(self):
+        return json.dumps(self, default=lambda o: o.__dict__,
+                          sort_keys=True, indent=4)
+
+    def __repr__(self) -> str:
+        return self.__str__()
+
+    def __str__(self) -> str:
+        return f"OreMap(Value={self.Value}, Type={self.Type}, Start={self.Start}, Depth={self.Depth}, TargetColor={self.TargetColor}, ColorInfluence={self.ColorInfluence})"
 
 class PlanetDefinition:
     Name = str
     DefaultMaterial = MaterialLayer
     SimpleMaterials = {}
     ComplexMaterials = {}
+    Ores = {}
 
     @classmethod
     def from_xml_element(cls, element):
@@ -203,6 +242,13 @@ class PlanetDefinition:
         if len(defaultSurface) > 0:
             pd.DefaultMaterial = MaterialLayer.from_dom_element(
                 defaultSurface[0])
+
+        ores = element.getElementsByTagName("OreMappings")
+        if len(ores) > 0:
+            oremaps = ores[0].getElementsByTagName("Ore")
+            for ore in oremaps:
+                om = OreMap.from_xml_element(ore)
+                pd.Ores[om.Value] = om
 
         return pd
 

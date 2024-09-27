@@ -4,7 +4,7 @@ import os
 import json
 import math
 from xml.dom.minidom import parse
-from PIL import Image
+from PIL import Image, ImageFilter, ImageEnhance
 from itertools import repeat
 from multiprocessing import Pool, freeze_support
 
@@ -18,7 +18,48 @@ baseAssetPath = "assets/Ares/PlanetDataFiles/Planet Agaris/"
 # planetData = "assets/PlanetGeneratorDefinitions.sbc"
 # planetName = "Europa"
 # baseAssetPath = "assets/Europa/"
-
+oreElementShort = {
+    "Iron_01": "Fe",
+    "Nickel_01": "Ni",
+    "Silicon_01": "Si",
+    "Magnesium_01": "Mg",
+    "Cobalt_01": "Co",
+    "Silver_01": "Ag",
+    "Gold_01": "Au",
+    "Platinum_01": "Pt",
+    "Uraninite_01": "U",
+    "Copper": "Cu",
+    "Bauxite": "Al",
+    "Coal": "C",
+    "Titanium": "Ti",
+    "OilSand": "Oil",
+    "Sulfur": "S",
+    "Lithium": "Li",
+    "Tantalum": "Ta",
+    "Cronyx": "Cr",
+    "Dorium": "Dor"
+}
+oreColors = {
+    "Iron_01": (255,216,0),
+    "Nickel_01": (239,166,117),
+    "Silicon_01": (216,107,128),
+    "Magnesium_01": (0, 255, 255),
+    "Cobalt_01": (181,254,0),
+    "Silver_01": (145,145,145),
+    "Gold_01": (255,0,220),
+    "Platinum_01": (219,249,255),
+    "Uraninite_01": (155,114,241),
+    "Copper": (184,115,51),
+    "Bauxite": (249,166,64),
+    "Coal": (145,145,145),
+    "Titanium": (81,127,84),
+    "OilSand": (183,0,3),
+    "Sulfur": (190,167,151),
+    "Lithium": (172,80,141),
+    "Tantalum": (255,0,0),
+    "Cronyx": (184,115,51),
+    "Dorium": (181,254,0)
+}
 
 if __name__ == "__main__":
     freeze_support()
@@ -90,17 +131,17 @@ if __name__ == "__main__":
         slopePath = os.path.join(baseAssetPath, f"{p}_slope.png")
         if not os.path.exists(slopePath):
             sm = Image.new(mode="RGB", size=im.size)
-            for y0 in range(0, height):
-                for x0 in range(0, width):
+            for y0 in range(0, height-1):
+                for x0 in range(0, width-1):
                     x1 = x0+1
                     y1 = y0+1
 
                     x = x1 - x0
                     y = y1 - y0
 
-                    if x1 >= width:
+                    if x1 > width:
                         x1 -= width
-                    if y1 >= height:
+                    if y1 > height:
                         y1 -= height
 
                     z0, _, _ = hm.getpixel((x0, y0))
@@ -109,30 +150,40 @@ if __name__ == "__main__":
                     a = int(
                         abs(math.asin(z / math.sqrt(x*x + y*y + z*z)) * rad2deg))
                     sm.putpixel((x0, y0), (a, a, a))
-
+            #for i in range(3):
+            #    sm = sm.filter(ImageFilter.GaussianBlur(radius=2))
+            #    sm = ImageEnhance.Sharpness(sm).enhance(8)
             sm.save(slopePath)
         else:
             print(f"Cached slope at {slopePath}")
             sm = Image.open(slopePath).convert('RGB')
 
         tex = Image.new(mode="RGB", size=im.size)
-        r, _,  _ = im.split()  # Red Channel contains biome
+        #r, _,  _ = im.split()  # Red Channel contains biome
 
         for y in range(0, height):
             if y % 100 == 0:
                 print(f"Line {y} from {height}")
             for x in range(0, width):
-                v, _, _ = im.getpixel((x, y))
-                h, _, _ = hm.getpixel((x, y))
-                s, _, _ = sm.getpixel((x, y))
-                h /= 255.0
-                lat,_,_ = latlutimg.getpixel((x,y))
-                color = currentPlanet.get_color(v, h, lat, s)
-                tex.putpixel((x, y), color)
+                v, _, ore = im.getpixel((x, y))
+                if ore == 0 and not ore in pd.Ores:
+                    h, _, _ = hm.getpixel((x, y))
+                    s, _, _ = sm.getpixel((x, y))
+                    h /= 255.0
+                    lat,_,_ = latlutimg.getpixel((x,y))
+                    color = currentPlanet.get_color(v, h, lat, s)
+                    tex.putpixel((x, y), color)
+                else:
+                    ore = pd.Ores[ore]
+                    if oreColors[ore.Type]:
+                        tex.putpixel((x, y), oreColors[ore.Type])
+                    else:
+                        tex.putpixel((x, y), ore.TargetColor)
+
 
         #idsNotFound = ",".join(idsNotFound)
         # print(f"IDs not found: {idsNotFound}")
         #tex = tex.filter(ImageFilter.GaussianBlur(radius=2))
         #tex = ImageEnhance.Sharpness(tex).enhance(8)
         tex.save(f"{p}.jpg")
-        #break
+        break

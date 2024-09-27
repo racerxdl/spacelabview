@@ -1,22 +1,442 @@
 {
    "default": {
-      "Iron_01_ForAxisXZ_distance_cm.png": [
+      "DarkTrans_add.png": [
+         49,
+         0,
+         0
+      ],
+      "Dark_add.png": [
+         49,
+         0,
+         0
+      ],
+      "Cobalt_01_ForAxisXZ_distance_cm.png": [
+         55,
+         45,
+         33
+      ],
+      "MarsRocks_01_ForAxisXZ_far_ng.png": [
+         128,
+         128,
+         255
+      ],
+      "IceEuropa_Far1_cm.png": [
+         154,
+         193,
+         210
+      ],
+      "MoonSoil_01_ForAxisXZ_far_ng.png": [
+         128,
+         128,
+         255
+      ],
+      "Stone_04_ForAxisY_cm.png": [
+         135,
+         142,
+         157
+      ],
+      "Silicon_01_ForAxisY_cm.png": [
+         76,
+         76,
+         76
+      ],
+      "AlienSand_Far2_cm.png": [
+         207,
+         187,
+         157
+      ],
+      "AlienRockyTerrain_Far2_ng.png": [
+         157,
+         102,
+         221
+      ],
+      "MarsSoil_01_ForAxisXZ_add.png": [
+         253,
+         0,
+         255
+      ],
+      "AlienIce_Thumbnail.png": [
+         13,
+         167,
+         152
+      ],
+      "AlienIce_03_cm.png": [
+         152,
+         83,
+         73
+      ],
+      "Grass_Far1_cm.png": [
+         85,
+         101,
+         44
+      ],
+      "Soil_cm.png": [
+         119,
+         104,
+         85
+      ],
+      "Sand_02_ForAxisXZ_Far1_ng.png": [
+         114,
+         112,
+         250
+      ],
+      "Stone_02_ForAxisXZ_distance_ng.png": [
+         127,
+         127,
+         244
+      ],
+      "AlienRockyTerrain_ng.png": [
+         96,
+         86,
+         210
+      ],
+      "AlienSoil_Far1_ng.png": [
+         128,
+         127,
+         246
+      ],
+      "Woods_02_ng.png": [
+         21,
+         39,
+         254
+      ],
+      "Stone_02_ForAxisXZ_ng.png": [
+         170,
+         146,
+         242
+      ],
+      "DebugTexture_add.png": [
+         255,
+         0,
+         0
+      ],
+      "Rocks_Grass_Rock_cm.png": [
+         92,
+         96,
+         82
+      ],
+      "Stone_01_ForAxisXZ_distance_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Rocks_Grass_ng.png": [
+         123,
+         122,
+         253
+      ],
+      "RocksDistance_ng.png": [
+         128,
+         128,
+         255
+      ],
+      "Grass_distance_ng.png": [
+         133,
+         138,
+         255
+      ],
+      "Helium4_01_ForAxisY_cm.png": [
+         0,
+         3,
+         4
+      ],
+      "EarthGreenGrass_Far1_ng.png": [
+         127,
+         127,
+         253
+      ],
+      "Stone_05_ForAxisXZ_add.png": [
+         255,
+         0,
+         255
+      ],
+      "AlienRockyMountain_Thumbnail.png": [
+         74,
+         54,
+         55
+      ],
+      "SandDistance_ng.png": [
+         128,
+         128,
+         255
+      ],
+      "RocksDesert_ForAxisXZ_Rocks_ng.png": [
+         131,
+         129,
+         253
+      ],
+      "Ice_03_ng.png": [
+         125,
+         128,
+         255
+      ],
+      "Soil_Far1_ng.png": [
+         127,
+         127,
+         250
+      ],
+      "AlienRockyTerrain_add.png": [
+         253,
+         0,
+         239
+      ],
+      "Stone_01_ForAxisXZ_distance_ng.png": [
+         122,
+         127,
+         255
+      ],
+      "AlienSoil_Thumbnail.png": [
+         73,
+         64,
+         65
+      ],
+      "Stone_03_ForAxisXZ_ng.png": [
+         123,
+         126,
+         244
+      ],
+      "Uraninite_01_ForAxisXZ_cm.png": [
+         96,
+         95,
+         92
+      ],
+      "Gold_01_ForAxisXZ_distance_cm.png": [
+         105,
+         101,
+         92
+      ],
+      "Magnesium_01_ForAxisXZ_ng.png": [
+         132,
+         108,
+         245
+      ],
+      "Grass_cm.png": [
+         50,
+         60,
+         25
+      ],
+      "AlienYellowGrass_Far1_cm.png": [
+         105,
+         75,
+         31
+      ],
+      "Snow_01_Far2_add.png": [
+         255,
+         0,
+         255
+      ],
+      "AlienIce_Far1_add.png": [
+         255,
+         27,
+         255
+      ],
+      "Uraninite_01_Thumbnail.png": [
+         46,
+         51,
+         68
+      ],
+      "Green_ng.png": [
+         138,
+         127,
+         255
+      ],
+      "Desert_01_ForAxisXZ_distance_1_cm.png": [
+         73,
+         48,
+         29
+      ],
+      "AlienSnow_Far2_cm.png": [
+         239,
+         239,
+         239
+      ],
+      "Gold_01_ForAxisXZ_ng.png": [
+         129,
+         111,
+         247
+      ],
+      "RockyDesert_01_ForAxisXZ_ng.png": [
+         129,
+         128,
+         255
+      ],
+      "Iron_01_ForAxisXZ_cm.png": [
          87,
          76,
          71
       ],
-      "square_fullcolor.png": [
-         42,
-         58,
+      "Ice_01_ForAxisXZ_distance_add.png": [
+         253,
+         0,
+         218
+      ],
+      "Stone_05_ForAxisXZ_distance_cm.png": [
+         111,
+         111,
+         123
+      ],
+      "Woods_needles_distance_ng.png": [
+         113,
+         126,
+         245
+      ],
+      "Helium4_01_ForAxisXZ_add.png": [
+         255,
+         2,
+         0
+      ],
+      "AlienGreenGrass_Far2_cm.png": [
+         75,
+         90,
+         3
+      ],
+      "IceEuropa_cm.png": [
+         139,
+         169,
+         185
+      ],
+      "Ice_01_Thumbnail.png": [
+         158,
+         182,
+         224
+      ],
+      "RocksDesert_ForAxisXZ_Far1_ng.png": [
+         145,
+         106,
+         255
+      ],
+      "MoonRocks_01_ForAxisXZ_cm.png": [
+         173,
+         170,
+         165
+      ],
+      "Desert_01_ForAxisY_cm.png": [
+         73,
+         48,
+         29
+      ],
+      "Iron_02_ForAxisXZ_cm.png": [
+         75,
+         63,
+         61
+      ],
+      "Cobalt_01_ForAxisXZ_distance_add.png": [
+         255,
+         0,
+         0
+      ],
+      "Uraninite_01_ForAxisXZ_distance_cm.png": [
+         14,
+         14,
+         13
+      ],
+      "Ice_01_ForAxisXZ_ng.png": [
+         127,
+         127,
+         255
+      ],
+      "Stone_01_ForAxisY_ng.png": [
+         125,
+         127,
+         255
+      ],
+      "AlienRockyMountain_Far1_cm.png": [
+         86,
+         60,
+         55
+      ],
+      "Platinum_01_ForAxisXZ_distance_cm.png": [
+         182,
+         182,
+         182
+      ],
+      "Grass_old_Far1_add.png": [
+         255,
+         0,
+         255
+      ],
+      "EarthIce_Far2_cm.png": [
+         59,
+         104,
+         115
+      ],
+      "Brown_ng.png": [
+         128,
+         128,
+         255
+      ],
+      "MarsRocks_01_ForAxisXZ_ng.png": [
+         175,
+         176,
+         219
+      ],
+      "Snow_01_Far2_ng.png": [
+         124,
+         116,
+         255
+      ],
+      "Rocks_02_distance_cm.png": [
+         60,
+         63,
          70
       ],
-      "Rocks_Far1_cm.png": [
-         128,
-         132,
-         139
+      "AlienRockyMountain_add.png": [
+         255,
+         0,
+         255
       ],
-      "Palm_02_Leaves_ng.png": [
+      "Stone_01_Thumbnail.png": [
+         122,
+         118,
+         123
+      ],
+      "Rocks_Grass_Far1_ng.png": [
+         117,
+         118,
+         252
+      ],
+      "AlienOrangeGrass_Far2_cm.png": [
+         184,
+         121,
+         22
+      ],
+      "Sand_02_ForAxisXZ_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Desert_01_ForAxisY_distance_1_ng.png": [
+         144,
+         126,
+         254
+      ],
+      "Magnesium_01_ForAxisXZ_distance_ng.png": [
          127,
+         127,
+         255
+      ],
+      "AlienOrangeGrass_cm.png": [
+         178,
+         119,
+         30
+      ],
+      "Stone_04_ForAxisXZ_distance_ng.png": [
+         119,
+         114,
+         251
+      ],
+      "Gold_01_Thumbnail.png": [
+         156,
+         131,
+         68
+      ],
+      "AlienGrassOrange_ForAxisXZ_cm.png": [
+         181,
+         117,
+         72
+      ],
+      "Silicon_01_ForAxisY_distance_ng.png": [
+         128,
          127,
          255
       ],
@@ -25,374 +445,44 @@
          186,
          228
       ],
-      "RavCrackedRock_add.png": [
-         0,
-         0,
-         0
-      ],
-      "Foam.png": [
+      "Gold_01_ForAxisXZ_distance_add.png": [
          255,
-         255,
+         0,
          255
       ],
-      "DustyRocks_v02_cm.png": [
-         179,
-         136,
-         100
-      ],
-      "Snow_01_Far1_cm.png": [
-         225,
-         238,
-         241
-      ],
-      "RavSoil_ng.png": [
-         82,
-         117,
-         237
-      ],
-      "AlienOrangeGrass_Far1_cm.png": [
-         183,
-         120,
-         22
-      ],
-      "Gravel_cm.png": [
-         151,
-         150,
-         146
-      ],
-      "DeepOcean_cm.png": [
-         76,
-         66,
-         61
-      ],
-      "AlienIce_03_cm.png": [
-         152,
-         83,
-         73
-      ],
-      "SafeZoneShield_Disco_ng.png": [
+      "Rocks_Grass_distance_ng.png": [
          127,
-         127,
+         129,
          255
       ],
-      "OceanFloor_ng.png": [
-         127,
-         127,
-         246
-      ],
-      "Silicon_01_ForAxisY_distance_cm.png": [
-         33,
-         33,
-         33
-      ],
-      "Rocks_Grass_Far2_cm.png": [
-         71,
-         72,
-         67
-      ],
-      "AlienSoil_Far2_cm.png": [
-         15,
-         8,
-         6
-      ],
-      "Soil_Far2_cm.png": [
+      "Iron_01_Thumbnail.png": [
          115,
-         101,
-         81
+         93,
+         101
       ],
-      "Sand_02_ForAxisXZ_Far2_cm.png": [
-         180,
-         142,
-         92
-      ],
-      "Green_cm.png": [
-         82,
-         104,
-         50
-      ],
-      "EarthIce_Far1_cm.png": [
-         60,
-         106,
-         117
-      ],
-      "Rocks_02_distance_cm.png": [
-         61,
-         64,
-         71
-      ],
-      "Ice_01_ForAxisXZ_distance_cm.png": [
-         57,
-         73,
-         95
-      ],
-      "CopperDark_cm.png": [
-         255,
-         200,
-         178
-      ],
-      "PaintedMetalBlue_cm.png": [
-         0,
-         203,
-         254
+      "Iron_03_ForAxisXZ_cm.png": [
+         40,
+         40,
+         41
       ],
       "Woods_grass_Far2_cm.png": [
-         74,
+         75,
          72,
          35
       ],
-      "Woods_distance_cm.png": [
-         24,
-         14,
-         8
-      ],
-      "DarinusGrass2_04_cm.png": [
-         77,
-         86,
-         26
-      ],
-      "Tub.png": [
+      "Stone_03_ForAxisXZ_add.png": [
+         255,
          0,
-         0,
-         0
+         255
       ],
-      "Ice_02_Far2_cm.png": [
-         87,
-         96,
-         101
-      ],
-      "IceEuropa2_cm.png": [
-         131,
-         160,
-         175
-      ],
-      "Stone_04_ForAxisXZ_cm.png": [
-         122,
+      "EarthStone_Far2_ng.png": [
+         128,
          123,
-         138
+         249
       ],
-      "MuonLake_cm.png": [
-         3,
-         3,
-         3
-      ],
-      "TitanSkySolid_Alphamask.png": [
-         255,
-         255,
-         255
-      ],
-      "AlienRockyMountain_Far2_cm.png": [
-         86,
-         60,
-         55
-      ],
-      "AlienRockGrass_Tubes01_cm.png": [
-         81,
-         48,
-         31
-      ],
-      "AlienIce_Far2_cm.png": [
-         3,
-         180,
-         155
-      ],
-      "ParadiseGrass_cm.png": [
-         78,
-         64,
-         30
-      ],
-      "GodRay.png": [
-         255,
-         255,
-         255
-      ],
-      "Grass_02_distance_cm.png": [
-         88,
-         95,
-         29
-      ],
-      "AlienRockGrass_Far2_cm.png": [
-         184,
-         143,
-         98
-      ],
-      "Grass_old_Far2_cm.png": [
-         131,
-         107,
-         64
-      ],
-      "DeepOceanRock_cm.png": [
-         73,
-         64,
-         59
-      ],
-      "Desert_01_ForAxisXZ_distance_2_cm.png": [
-         73,
-         48,
-         29
-      ],
-      "Magnesium_01_ForAxisXZ_cm.png": [
-         92,
-         93,
-         90
-      ],
-      "DarinusGrass_ng.png": [
-         77,
-         175,
-         242
-      ],
-      "Stone_01_ForAxisXZ_distance_cm.png": [
-         178,
-         178,
-         178
-      ],
-      "AlienGrassYellow_ForAxisXZ_cm.png": [
-         189,
-         176,
-         67
-      ],
-      "Desert_01_ForAxisY_distance_1_cm.png": [
-         72,
-         48,
-         29
-      ],
-      "AlienGrassOrange_ForAxisXZ_cm.png": [
-         181,
-         117,
-         72
-      ],
-      "Magnesium_01_ForAxisY_distance_cm.png": [
-         66,
-         61,
-         55
-      ],
-      "RavCrackedRock_cm.png": [
-         25,
-         24,
-         24
-      ],
-      "DarkSoil_cm.png": [
-         36,
-         21,
-         13
-      ],
-      "EarthGrass_03_ng.png": [
-         54,
-         190,
-         251
-      ],
-      "Iron_01_ForAxisXZ_cm.png": [
-         87,
-         76,
-         70
-      ],
-      "TitanSky_cm.png": [
-         168,
-         61,
-         36
-      ],
-      "OrillaSand_02_cm.png": [
-         193,
-         176,
-         139
-      ],
-      "AlienRockGrass_Far1_cm.png": [
-         189,
-         164,
-         126
-      ],
-      "RockyDesert_01_ForAxisXZ_cm.png": [
-         177,
-         133,
-         103
-      ],
-      "RavRock_cm.png": [
-         2,
-         2,
-         2
-      ],
-      "DarinusGrass_cm.png": [
-         63,
-         43,
-         26
-      ],
-      "MartianSky_cm.png": [
-         255,
-         255,
-         255
-      ],
-      "AlienRockyTerrain_Far1_cm.png": [
-         122,
-         52,
-         39
-      ],
-      "Rocks_Grass_Rock_cm.png": [
-         92,
-         95,
-         82
-      ],
-      "Gold_01_ForAxisXZ_distance_cm.png": [
-         105,
-         101,
-         92
-      ],
-      "Desert_01_ForAxisY_distance_2_cm.png": [
-         73,
-         48,
-         29
-      ],
-      "Ice_02_Far1_cm.png": [
-         97,
-         106,
-         111
-      ],
-      "AlienSoil_Far1_cm.png": [
-         18,
-         10,
-         7
-      ],
-      "CrackedSoil_cm.png": [
-         168,
-         127,
-         91
-      ],
-      "RavCrackedRock_ng.png": [
-         128,
-         128,
-         252
-      ],
-      "DarkSoil_ng.png": [
-         126,
-         126,
-         247
-      ],
-      "Copper_cm.png": [
-         255,
-         214,
-         188
-      ],
-      "Stone_05_ForAxisXZ_distance_cm.png": [
-         111,
-         111,
-         123
-      ],
-      "Bubble.png": [
-         95,
-         95,
-         95
-      ],
-      "DarinusGrass_02_ng.png": [
-         129,
-         128,
-         254
-      ],
-      "PertamSand_cm.png": [
-         177,
-         137,
-         104
-      ],
-      "DarkTrans_add.png": [
-         49,
-         0,
+      "AlienGreenGrass_cm.png": [
+         56,
+         83,
          0
       ],
       "Ice_01_ForAxisY_cm.png": [
@@ -400,73 +490,1438 @@
          57,
          82
       ],
-      "Snow_01_Far2_cm.png": [
-         225,
-         238,
-         241
+      "Nickel_01_ForAxisXZ_ng.png": [
+         133,
+         107,
+         245
       ],
-      "RavLava_ng.png": [
+      "Stone_03_ForAxisXZ_distance_cm.png": [
+         58,
+         58,
+         62
+      ],
+      "AlienSoil_ng.png": [
+         128,
          127,
+         255
+      ],
+      "Desert_01_ForAxisY_distance_2_add.png": [
+         252,
+         0,
+         0
+      ],
+      "Grass_02_ng.png": [
+         184,
+         179,
+         255
+      ],
+      "Magnesium_01_ForAxisY_cm.png": [
+         92,
+         93,
+         90
+      ],
+      "Iron_03_ForAxisXZ_add.png": [
+         255,
+         0,
+         0
+      ],
+      "Stone_04_Thumbnail.png": [
+         161,
+         163,
+         182
+      ],
+      "Stone_01_ForAxisXZ_ng.png": [
+         124,
+         126,
+         255
+      ],
+      "RocksDesert_ForAxisXZ_Far2_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Green_add.png": [
+         240,
+         0,
+         255
+      ],
+      "Silicon_01_ForAxisXZ_distance_cm.png": [
+         96,
+         96,
+         94
+      ],
+      "Dummy_add.png": [
+         239,
+         0,
+         239
+      ],
+      "AlienIce_Far1_ng.png": [
+         128,
+         127,
+         255
+      ],
+      "DebugTexture_cm.png": [
+         186,
+         186,
+         186
+      ],
+      "Rocks_Far1_ng.png": [
+         140,
+         141,
+         246
+      ],
+      "Green2_cm.png": [
+         84,
+         100,
+         44
+      ],
+      "AlienRockGrass_Far1_cm.png": [
+         189,
+         164,
+         126
+      ],
+      "AlienRockGrass_ng.png": [
+         127,
+         127,
+         242
+      ],
+      "Grass_old_Far2_ng.png": [
+         126,
+         125,
+         254
+      ],
+      "Magnesium_01_Thumbnail.png": [
+         72,
+         108,
+         139
+      ],
+      "Soil_Far2_cm.png": [
+         115,
+         101,
+         81
+      ],
+      "Woods_grass_distance_cm.png": [
+         34,
+         25,
+         12
+      ],
+      "RocksDesert_ForAxisXZ_add.png": [
+         255,
+         0,
+         204
+      ],
+      "EarthIce_cm.png": [
+         61,
+         109,
+         120
+      ],
+      "Stone_04_ForAxisXZ_add.png": [
+         255,
+         0,
+         255
+      ],
+      "RocksDesert_Thumbnail.png": [
+         200,
+         155,
+         123
+      ],
+      "Ice_01_ForAxisXZ_far_cm.png": [
+         47,
+         78,
+         123
+      ],
+      "MoonRocks_01_ForAxisXZ_far_ng.png": [
+         128,
+         128,
+         255
+      ],
+      "Uraninite_01_ForAxisXZ_distance_add.png": [
+         255,
+         0,
+         255
+      ],
+      "EarthGreenGrass_Far2_cm.png": [
+         26,
+         40,
+         13
+      ],
+      "SandWhite_ForAxisXZ_ng.png": [
+         141,
+         124,
+         255
+      ],
+      "AlienYellowGrass_cm.png": [
+         131,
+         103,
+         46
+      ],
+      "Rocks_add.png": [
+         252,
+         0,
+         215
+      ],
+      "MoonSoil_01_ForAxisXZ_ng.png": [
+         126,
+         126,
+         253
+      ],
+      "AlienIce_cm.png": [
+         0,
+         167,
+         140
+      ],
+      "Iron_04_ForAxisXZ_add.png": [
+         255,
+         0,
+         0
+      ],
+      "MarsSoil_01_ForAxisXZ_far_ng.png": [
+         128,
+         128,
+         255
+      ],
+      "Ice_01_ForAxisXZ_distance_ng.png": [
+         128,
+         127,
+         255
+      ],
+      "RedRockMountains_ForAxisXZ_cm.png": [
+         160,
+         58,
+         56
+      ],
+      "Desert_01_ForAxisXZ_add.png": [
+         252,
+         0,
+         218
+      ],
+      "AlienRockyMountain_cm.png": [
+         109,
+         73,
+         64
+      ],
+      "RedRockyTerrain_ForAxisXZ_ng.png": [
+         115,
+         200,
+         218
+      ],
+      "Helium4_01_ForAxisY_add.png": [
+         255,
+         1,
+         0
+      ],
+      "AlienSoil_Far2_cm.png": [
+         15,
+         9,
+         6
+      ],
+      "Sand_02_ForAxisXZ_Far2_cm.png": [
+         180,
+         141,
+         92
+      ],
+      "Woods_ng.png": [
+         117,
+         131,
+         252
+      ],
+      "Desert_01_ForAxisXZ_ng.png": [
+         129,
+         114,
+         254
+      ],
+      "AlienSand_Thumbnail.png": [
+         211,
+         189,
+         159
+      ],
+      "AlienRockyTerrain_Far1_cm.png": [
+         122,
+         52,
+         39
+      ],
+      "AlienSand_Far1_ng.png": [
+         128,
+         129,
+         254
+      ],
+      "Rocks_Grass_Far2_add.png": [
+         213,
+         0,
+         255
+      ],
+      "IceEuropa_Far2_ng.png": [
+         128,
+         128,
+         255
+      ],
+      "Stone_04_ForAxisY_distance_cm.png": [
+         16,
+         19,
+         24
+      ],
+      "EarthStone_ng.png": [
+         136,
+         132,
+         248
+      ],
+      "Silicon_01_ForAxisXZ_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Ice_03_Thumbnail.png": [
+         127,
+         176,
+         219
+      ],
+      "AlienIce_03_add.png": [
+         255,
+         0,
+         247
+      ],
+      "Desert_01_ForAxisY_far_cm.png": [
+         80,
+         53,
+         32
+      ],
+      "AlienSnow_Far1_ng.png": [
+         128,
+         128,
+         255
+      ],
+      "AlienSand_ng.png": [
+         128,
+         128,
+         252
+      ],
+      "Desert_01_ForAxisXZ_distance_2_ng.png": [
+         133,
+         85,
+         243
+      ],
+      "RocksDesert_ForAxisXZ_cm.png": [
+         176,
+         133,
+         98
+      ],
+      "Sand_02_ForAxisXZ_Pixelized_cm.png": [
+         185,
+         145,
+         97
+      ],
+      "Silicon_01_ForAxisY_add.png": [
+         251,
+         0,
+         189
+      ],
+      "MarsSoil_01_ForAxisXZ_cm.png": [
+         180,
+         107,
+         59
+      ],
+      "Iron_04_ForAxisXZ_cm.png": [
+         59,
+         61,
+         59
+      ],
+      "Stone_02_ForAxisXZ_distance_add.png": [
+         255,
+         0,
+         255
+      ],
+      "AlienYellowGrass_Far2_ng.png": [
+         132,
          127,
          253
       ],
-      "Dark_add.png": [
-         49,
-         0,
-         0
+      "Sand_02_ForAxisXZ_ng.png": [
+         136,
+         125,
+         254
       ],
-      "Water.png": [
-         51,
-         96,
+      "Platinum_01_ForAxisXZ_cm.png": [
+         102,
+         99,
+         93
+      ],
+      "Magnesium_01_ForAxisY_distance_cm.png": [
+         66,
+         61,
+         55
+      ],
+      "Stone_03_Thumbnail.png": [
+         129,
+         131,
          148
       ],
-      "Stone_04_ForAxisY_cm.png": [
-         135,
-         142,
-         158
-      ],
-      "Lava.png": [
-         254,
-         185,
-         0
-      ],
-      "RavCrackedRock_add - Copy.png": [
+      "Silver_01_ForAxisXZ_distance_add.png": [
+         255,
          0,
+         255
+      ],
+      "Desert_01_ForAxisXZ_distance_1_add.png": [
+         246,
          0,
          0
       ],
-      "BlackSand_cm.png": [
-         3,
-         3,
-         3
+      "Stone_02_ForAxisY_ng.png": [
+         156,
+         180,
+         237
       ],
       "Silver_01_ForAxisXZ_distance_cm.png": [
          72,
          71,
          68
       ],
-      "MoonRocks_01_ForAxisXZ_cm.png": [
+      "Rocks_Far1_add.png": [
+         253,
+         0,
+         248
+      ],
+      "Woods_grass_ng.png": [
+         125,
+         125,
+         247
+      ],
+      "AlienSnow_ng.png": [
+         127,
+         127,
+         254
+      ],
+      "Desert_01_ForAxisY_distance_2_cm.png": [
+         73,
+         48,
+         29
+      ],
+      "MarsRocks_01_ForAxisXZ_Rocks_ng.png": [
+         106,
+         131,
+         248
+      ],
+      "Rocks_grass_Thumbnail.png": [
+         86,
+         93,
+         85
+      ],
+      "AlienOrangeGrass_Far1_ng.png": [
+         126,
+         128,
+         253
+      ],
+      "Rocks_Grass_Far2_cm.png": [
+         68,
+         69,
+         65
+      ],
+      "Silicon_01_ForAxisY_distance_add.png": [
+         255,
+         0,
+         0
+      ],
+      "Iron_01_ForAxisXZ_distance_ng.png": [
+         131,
+         144,
+         247
+      ],
+      "EarthIce_Far1_ng.png": [
+         127,
+         127,
+         255
+      ],
+      "Rocks_Grass_distance_add.png": [
+         249,
+         0,
+         191
+      ],
+      "Snow_01_Far1_cm.png": [
+         225,
+         238,
+         241
+      ],
+      "Woods_grass_Thumbnail.png": [
+         86,
+         86,
+         59
+      ],
+      "AlienRockyMountain_Far2_ng.png": [
+         128,
+         123,
+         249
+      ],
+      "Grass_Far1_add.png": [
+         253,
+         0,
+         254
+      ],
+      "Stone_02_ForAxisY_distance_cm.png": [
+         61,
+         63,
+         69
+      ],
+      "EarthIce_Thumbnail.png": [
+         74,
+         138,
+         169
+      ],
+      "Rocks_ng.png": [
+         128,
+         127,
+         249
+      ],
+      "Snow_01_Thumbnail.png": [
+         207,
+         215,
+         236
+      ],
+      "Silicon_01_ForAxisXZ_cm.png": [
+         99,
+         99,
+         97
+      ],
+      "Soil_distance_ng.png": [
+         114,
+         121,
+         255
+      ],
+      "Stone_03_ForAxisY_distance_cm.png": [
+         48,
+         46,
+         42
+      ],
+      "Grass_02_Thumbnail.png": [
+         64,
+         76,
+         52
+      ],
+      "Stone_03_ForAxisXZ_distance_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Helium3_01_ForAxisXZ_add.png": [
+         255,
+         0,
+         0
+      ],
+      "Rocks_02_ng.png": [
+         119,
+         94,
+         253
+      ],
+      "Cobalt_01_Thumbnail.png": [
+         117,
+         132,
+         170
+      ],
+      "Uraninite_01_ForAxisXZ_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Stone_03_ForAxisY_distance_add.png": [
+         255,
+         0,
+         0
+      ],
+      "Stone_05_ForAxisXZ_ng.png": [
+         76,
+         129,
+         214
+      ],
+      "RocksDesert_ForAxisXZ_Far2_cm.png": [
          170,
-         168,
-         163
-      ],
-      "MartianSky_Alphamask.png": [
-         5,
-         5,
-         5
-      ],
-      "Silver_01_ForAxisXZ_cm.png": [
-         102,
-         100,
+         126,
          93
       ],
-      "ReinforcedArmor_cm.png": [
-         112,
-         112,
-         112
+      "AlienGreenGrass_Far1_ng.png": [
+         128,
+         128,
+         251
       ],
-      "Palm_02_Leaves_alphamask.png": [
+      "Cobalt_01_ForAxisXZ_ng.png": [
+         129,
+         127,
+         248
+      ],
+      "IceEuropa_Thumbnail.png": [
+         181,
+         208,
+         230
+      ],
+      "Iron_02_ForAxisXZ_distance_ng.png": [
+         131,
+         144,
+         247
+      ],
+      "Desert_01_ForAxisXZ_far_ng.png": [
+         128,
+         128,
+         255
+      ],
+      "Woods_needles_cm.png": [
+         83,
+         68,
+         52
+      ],
+      "Grass_old_Far1_cm.png": [
+         129,
+         106,
+         65
+      ],
+      "Grass_02_distance_cm.png": [
+         86,
+         93,
+         29
+      ],
+      "AlienRockGrass_Far2_ng.png": [
+         131,
+         131,
+         252
+      ],
+      "Ice_01_ForAxisXZ_add.png": [
+         255,
          0,
+         255
+      ],
+      "Rocks_Far2_cm.png": [
+         129,
+         133,
+         140
+      ],
+      "Grass_old_cm.png": [
+         139,
+         115,
+         68
+      ],
+      "AlienIce_Far2_cm.png": [
+         3,
+         180,
+         155
+      ],
+      "Stone_03_ForAxisY_ng.png": [
+         128,
+         127,
+         246
+      ],
+      "Stone_01_ForAxisY_distance_cm.png": [
+         31,
+         26,
+         24
+      ],
+      "Helium4_01_ForAxisXZ_cm.png": [
+         20,
+         33,
+         40
+      ],
+      "Sand_02_ForAxisXZ_Far1_add.png": [
+         248,
+         0,
+         255
+      ],
+      "EarthStone_Thumbnail.png": [
+         101,
+         103,
+         99
+      ],
+      "Silver_01_ForAxisXZ_ng.png": [
+         125,
+         126,
+         252
+      ],
+      "Snow_01_ForAxisXZ_ng.png": [
+         127,
+         127,
+         255
+      ],
+      "Iron_02_ForAxisXZ_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Grass_old_add.png": [
+         250,
+         0,
+         255
+      ],
+      "Ice_03_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Stone_04_ForAxisXZ_ng.png": [
+         126,
+         125,
+         244
+      ],
+      "Stone_02_ForAxisXZ_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Nickel_01_ForAxisXZ_distance_ng.png": [
+         129,
+         129,
+         248
+      ],
+      "EarthStone_Far1_cm.png": [
+         84,
+         84,
+         83
+      ],
+      "RockyDesert_01_ForAxisXZ_far_ng.png": [
+         128,
+         128,
+         255
+      ],
+      "Helium3_01_ForAxisXZ_cm.png": [
+         23,
+         58,
+         74
+      ],
+      "Soil_Thumbnail.png": [
+         135,
+         125,
+         113
+      ],
+      "Woods_distance_cm.png": [
+         24,
+         14,
+         8
+      ],
+      "Woods_grass_Far1_ng.png": [
+         127,
+         126,
+         252
+      ],
+      "IceEuropa2_Thumbnail.png": [
+         163,
+         202,
+         216
+      ],
+      "AlienYellowGrass_Thumbnail.png": [
+         135,
+         114,
+         70
+      ],
+      "EarthStone_Far2_cm.png": [
+         84,
+         84,
+         83
+      ],
+      "AlienGreenGrass_ng.png": [
+         129,
+         128,
+         253
+      ],
+      "Ice_01_ForAxisY_ng.png": [
+         129,
+         119,
+         252
+      ],
+      "Woods_grass_Far2_ng.png": [
+         126,
+         126,
+         250
+      ],
+      "Iron_03_ForAxisXZ_ng.png": [
+         127,
+         126,
+         255
+      ],
+      "Magnesium_01_ForAxisXZ_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Grass_02_cm.png": [
+         43,
+         54,
+         21
+      ],
+      "Magnesium_01_ForAxisY_ng.png": [
+         132,
+         109,
+         245
+      ],
+      "Nickel_01_ForAxisXZ_cm.png": [
+         168,
+         163,
+         137
+      ],
+      "Silver_01_Thumbnail.png": [
+         131,
+         138,
+         157
+      ],
+      "Grass_old_Far2_add.png": [
+         255,
+         0,
+         255
+      ],
+      "AlienSoil_cm.png": [
+         28,
+         19,
+         15
+      ],
+      "MoonSoil_01_Thumbnail.png": [
+         173,
+         174,
+         180
+      ],
+      "Stone_03_ForAxisXZ_distance_ng.png": [
+         120,
+         114,
+         252
+      ],
+      "Iron_02_ForAxisXZ_distance_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Stone_02_ForAxisY_add.png": [
+         166,
+         0,
+         255
+      ],
+      "Stone_01_ForAxisXZ_cm.png": [
+         78,
+         77,
+         77
+      ],
+      "AlienGreenGrass_Thumbnail.png": [
+         66,
+         110,
+         31
+      ],
+      "Grass_old_Far2_cm.png": [
+         131,
+         107,
+         64
+      ],
+      "AlienIce_Far1_cm.png": [
+         0,
+         162,
+         137
+      ],
+      "Silicon_01_ForAxisXZ_distance_ng.png": [
+         152,
+         158,
+         223
+      ],
+      "AlienRockGrass_Far1_ng.png": [
+         127,
+         127,
+         253
+      ],
+      "AlienRockGrass_cm.png": [
+         139,
+         84,
+         51
+      ],
+      "DebugTexture_ng.png": [
+         128,
+         128,
+         255
+      ],
+      "Rocks_Far1_cm.png": [
+         130,
+         134,
+         140
+      ],
+      "MoonRocks_01_ForAxisXZ_ng.png": [
+         175,
+         176,
+         219
+      ],
+      "Desert_01_ForAxisY_ng.png": [
+         144,
+         126,
+         254
+      ],
+      "AlienRockGrass_add.png": [
+         254,
+         0,
+         0
+      ],
+      "AlienGreenGrass_Far2_ng.png": [
+         117,
+         126,
+         248
+      ],
+      "IceEuropa_ng.png": [
+         128,
+         126,
+         255
+      ],
+      "RocksDesert_ForAxisXZ_Far1_cm.png": [
+         173,
+         128,
+         94
+      ],
+      "Ice_01_ForAxisXZ_cm.png": [
+         17,
+         33,
+         43
+      ],
+      "RocksDesert_ForAxisXZ_Far1_add.png": [
+         255,
+         0,
+         135
+      ],
+      "Uraninite_01_ForAxisXZ_distance_ng.png": [
+         132,
+         99,
+         238
+      ],
+      "AlienOrangeGrass_Thumbnail.png": [
+         166,
+         95,
+         44
+      ],
+      "Iron_02_ForAxisXZ_ng.png": [
+         135,
+         104,
+         244
+      ],
+      "EarthIce_Far2_ng.png": [
+         127,
+         127,
+         255
+      ],
+      "Magnesium_01_ForAxisXZ_distance_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Brown_cm.png": [
+         25,
+         39,
+         15
+      ],
+      "MarsRocks_01_ForAxisXZ_cm.png": [
+         182,
+         108,
+         58
+      ],
+      "Cobalt_01_ForAxisXZ_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Snow_01_Far2_cm.png": [
+         225,
+         238,
+         241
+      ],
+      "Magnesium_01_ForAxisY_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Platinum_01_ForAxisXZ_distance_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Rocks_02_distance_ng.png": [
+         104,
+         100,
+         255
+      ],
+      "Stone_01_ForAxisY_cm.png": [
+         80,
+         80,
+         79
+      ],
+      "Desert_01_ForAxisY_distance_1_add.png": [
+         246,
+         0,
+         0
+      ],
+      "AlienRockyMountain_Far1_ng.png": [
+         128,
+         123,
+         249
+      ],
+      "Platinum_01_ForAxisXZ_distance_ng.png": [
+         128,
+         122,
+         248
+      ],
+      "Silicon_01_ForAxisY_distance_cm.png": [
+         32,
+         30,
+         32
+      ],
+      "Rocks_Grass_distance_cm.png": [
+         90,
+         88,
+         73
+      ],
+      "Nickel_01_Thumbnail.png": [
+         132,
+         134,
+         115
+      ],
+      "Snow_01_ForAxisXZ_far_ng.png": [
+         128,
+         128,
+         255
+      ],
+      "Silicon_01_ForAxisXZ_distance_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Rocks_Grass_Far1_cm.png": [
+         109,
+         107,
+         101
+      ],
+      "AlienOrangeGrass_Far2_ng.png": [
+         126,
+         128,
+         252
+      ],
+      "Desert_01_ForAxisY_distance_1_cm.png": [
+         73,
+         48,
+         29
+      ],
+      "Magnesium_01_ForAxisXZ_distance_cm.png": [
+         70,
+         103,
+         107
+      ],
+      "AlienOrangeGrass_ng.png": [
+         128,
+         126,
+         252
+      ],
+      "Stone_04_ForAxisXZ_distance_cm.png": [
+         66,
+         66,
+         77
+      ],
+      "Stone_03_ForAxisY_add.png": [
+         250,
+         0,
+         192
+      ],
+      "Woods_add.png": [
+         251,
+         0,
+         173
+      ],
+      "Uraninite_01_ForAxisXZ_ng.png": [
+         126,
+         123,
+         242
+      ],
+      "Gold_01_ForAxisXZ_distance_ng.png": [
+         138,
+         159,
+         246
+      ],
+      "Stone_03_ForAxisXZ_cm.png": [
+         72,
+         72,
+         76
+      ],
+      "MoonRocks_01_Thumbnail.png": [
+         160,
+         161,
+         166
+      ],
+      "Stone_01_ForAxisXZ_distance_cm.png": [
+         178,
+         178,
+         178
+      ],
+      "AlienSnow_Thumbnail.png": [
+         207,
+         220,
+         252
+      ],
+      "Magnesium_01_ForAxisXZ_cm.png": [
+         91,
+         93,
+         89
+      ],
+      "Grass_ng.png": [
+         130,
+         128,
+         252
+      ],
+      "Snow_01_ForAxisXZ_add.png": [
+         253,
+         0,
+         255
+      ],
+      "AlienYellowGrass_Far1_ng.png": [
+         128,
+         127,
+         246
+      ],
+      "Gold_01_ForAxisXZ_cm.png": [
+         72,
+         71,
+         68
+      ],
+      "RockyDesert_01_ForAxisXZ_cm.png": [
+         177,
+         133,
+         103
+      ],
+      "AlienSnow_Far2_ng.png": [
+         127,
+         127,
+         255
+      ],
+      "Woods_grass_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Iron_01_ForAxisXZ_ng.png": [
+         135,
+         104,
+         244
+      ],
+      "AlienGrass_ForAxisXZ_ng.png": [
+         133,
+         120,
+         255
+      ],
+      "Desert_01_ForAxisXZ_distance_1_ng.png": [
+         133,
+         84,
+         241
+      ],
+      "Ice_01_ForAxisY_add.png": [
+         253,
+         0,
+         210
+      ],
+      "Green_cm.png": [
+         88,
+         109,
+         54
+      ],
+      "Stone_01_ForAxisXZ_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Iron_01_ForAxisXZ_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Stone_02_Thumbnail.png": [
+         127,
+         135,
+         153
+      ],
+      "Woods_needles_distance_cm.png": [
+         33,
+         22,
+         12
+      ],
+      "Stone_05_ForAxisXZ_distance_ng.png": [
+         127,
+         113,
+         242
+      ],
+      "MarsRocks_01_Thumbnail.png": [
+         159,
+         106,
+         74
+      ],
+      "Iron_02_Thumbnail.png": [
+         139,
+         122,
+         129
+      ],
+      "IceEuropa_Far1_ng.png": [
+         125,
+         127,
+         255
+      ],
+      "MoonSoil_01_ForAxisXZ_far_cm.png": [
+         98,
+         88,
+         72
+      ],
+      "Stone_04_ForAxisY_ng.png": [
+         117,
+         117,
+         247
+      ],
+      "Silicon_01_ForAxisY_ng.png": [
+         104,
+         130,
+         234
+      ],
+      "Cobalt_01_ForAxisXZ_distance_ng.png": [
+         128,
+         127,
+         255
+      ],
+      "MarsRocks_01_ForAxisXZ_far_cm.png": [
+         98,
+         64,
+         32
+      ],
+      "AlienSand_Far2_ng.png": [
+         124,
+         127,
+         254
+      ],
+      "AlienRockyTerrain_Far2_cm.png": [
+         119,
+         53,
+         40
+      ],
+      "Woods_02_cm.png": [
+         11,
+         6,
+         4
+      ],
+      "Stone_02_ForAxisXZ_cm.png": [
+         56,
+         58,
+         60
+      ],
+      "Stone_01_ForAxisY_add.png": [
+         255,
+         0,
+         255
+      ],
+      "MarsSoil_01_Thumbnail.png": [
+         145,
+         89,
+         60
+      ],
+      "Rocks_Grass_Rock_ng.png": [
+         111,
+         106,
+         236
+      ],
+      "AlienIce_03_ng.png": [
+         126,
+         128,
+         255
+      ],
+      "Stone_02_ForAxisXZ_distance_cm.png": [
+         91,
+         106,
+         123
+      ],
+      "AlienRockyTerrain_cm.png": [
+         129,
+         58,
+         44
+      ],
+      "AlienSoil_Far1_cm.png": [
+         18,
+         10,
+         7
+      ],
+      "Grass_Far1_ng.png": [
+         133,
+         123,
+         255
+      ],
+      "Soil_ng.png": [
+         127,
+         127,
+         250
+      ],
+      "Sand_02_ForAxisXZ_Far1_cm.png": [
+         180,
+         141,
+         92
+      ],
+      "Grass_distance_cm.png": [
+         32,
+         39,
+         8
+      ],
+      "Snow_01_Far1_add.png": [
+         255,
+         0,
+         255
+      ],
+      "MoonSoil_01_ForAxisXZ_add.png": [
+         251,
+         0,
+         255
+      ],
+      "RocksDistance_cm.png": [
+         154,
+         155,
+         156
+      ],
+      "MarsRocks_01_ForAxisXZ_add.png": [
+         239,
+         0,
+         255
+      ],
+      "Rocks_Grass_cm.png": [
+         63,
+         62,
+         58
+      ],
+      "AlienIce_Far2_add.png": [
+         239,
+         24,
+         239
+      ],
+      "IceEuropa_add.png": [
+         255,
+         0,
+         182
+      ],
+      "Soil_Far1_cm.png": [
+         120,
+         104,
+         85
+      ],
+      "Ice_03_cm.png": [
+         20,
+         37,
+         49
+      ],
+      "Helium4_01_ForAxisY_ng.png": [
+         105,
+         123,
+         250
+      ],
+      "AlienRockGrass_Thumbnail.png": [
+         149,
+         114,
+         91
+      ],
+      "EarthGreenGrass_Far1_cm.png": [
+         37,
+         53,
+         20
+      ],
+      "RocksDesert_ForAxisXZ_Rocks_cm.png": [
+         216,
+         178,
+         127
+      ],
+      "SandDistance_cm.png": [
+         192,
+         156,
+         111
+      ],
+      "RockyDesert_01_ForAxisXZ_add.png": [
+         252,
+         0,
+         185
+      ],
+      "Rocks_Far2_ng.png": [
+         174,
+         180,
+         215
+      ],
+      "Grass_old_ng.png": [
+         152,
+         139,
+         242
+      ],
+      "AlienRockGrass_Far2_cm.png": [
+         183,
+         142,
+         97
+      ],
+      "Stone_01_ForAxisY_distance_ng.png": [
+         128,
+         128,
+         243
+      ],
+      "AlienIce_Far2_ng.png": [
+         128,
+         127,
+         255
+      ],
+      "Desert_01_ForAxisY_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Stone_03_ForAxisY_cm.png": [
+         150,
+         153,
+         157
+      ],
+      "Iron_02_ForAxisXZ_distance_cm.png": [
+         80,
+         60,
+         59
+      ],
+      "Cobalt_01_ForAxisXZ_cm.png": [
+         72,
+         73,
+         71
+      ],
+      "AlienRockyTerrain_Thumbnail.png": [
+         106,
+         60,
+         56
+      ],
+      "Grass_old_Far1_ng.png": [
+         126,
+         126,
+         254
+      ],
+      "Grass_02_distance_ng.png": [
+         132,
+         134,
+         230
+      ],
+      "Desert_01_ForAxisXZ_far_cm.png": [
+         80,
+         52,
+         32
+      ],
+      "Woods_needles_ng.png": [
+         110,
+         135,
+         246
+      ],
+      "Gold_01_ForAxisXZ_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Soil_add.png": [
+         254,
+         0,
+         201
+      ],
+      "Helium4_01_ForAxisXZ_ng.png": [
+         131,
+         96,
+         244
+      ],
+      "Silver_01_ForAxisXZ_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Stone_04_ForAxisY_distance_add.png": [
+         255,
+         0,
+         0
+      ],
+      "Magnesium_01_ForAxisY_distance_add.png": [
+         255,
          0,
          0
       ],
@@ -475,214 +1930,344 @@
          238,
          241
       ],
-      "BlackSand_ng.png": [
-         110,
-         142,
-         241
+      "Stone_05_Thumbnail.png": [
+         126,
+         130,
+         155
       ],
-      "Coral_01_cm.png": [
-         0,
-         0,
-         0
+      "Stone_04_ForAxisXZ_cm.png": [
+         122,
+         122,
+         137
       ],
-      "OrillaSand_cm.png": [
-         186,
-         169,
-         128
+      "Silver_01_ForAxisXZ_cm.png": [
+         103,
+         100,
+         93
       ],
-      "RavSoil_cm.png": [
-         7,
-         7,
-         7
-      ],
-      "AlienOrangeGrass_Far2_cm.png": [
-         184,
-         121,
-         22
-      ],
-      "Stone_02_ForAxisXZ_distance_cm.png": [
-         90,
-         106,
-         123
-      ],
-      "ReinforcedArmor_add.png": [
+      "Grass_02_add.png": [
          255,
          0,
          255
       ],
-      "EarthStone_Far2_cm.png": [
-         84,
-         84,
+      "Nickel_01_ForAxisXZ_distance_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Helium3_01_ForAxisXZ_ng.png": [
+         130,
+         103,
+         249
+      ],
+      "Woods_distance_ng.png": [
+         96,
+         130,
+         246
+      ],
+      "Woods_grass_Far1_cm.png": [
+         81,
+         74,
+         39
+      ],
+      "Nickel_01_ForAxisXZ_distance_cm.png": [
+         167,
+         163,
+         137
+      ],
+      "EarthStone_Far1_ng.png": [
+         128,
+         123,
+         249
+      ],
+      "RockyDesert_01_ForAxisXZ_far_cm.png": [
+         101,
+         100,
+         100
+      ],
+      "Stone_05_ForAxisXZ_distance_add.png": [
+         255,
+         0,
+         255
+      ],
+      "MarsRocks_01_ForAxisXZ_Rocks_cm.png": [
+         192,
+         130,
+         69
+      ],
+      "Desert_01_ForAxisY_distance_2_ng.png": [
+         144,
+         126,
+         254
+      ],
+      "AlienOrangeGrass_Far1_cm.png": [
+         183,
+         119,
+         22
+      ],
+      "Rocks_Grass_Far2_ng.png": [
+         128,
+         125,
+         245
+      ],
+      "Nickel_01_ForAxisXZ_add.png": [
+         255,
+         0,
+         255
+      ],
+      "AlienSnow_cm.png": [
+         239,
+         239,
+         239
+      ],
+      "Platinum_01_ForAxisXZ_add.png": [
+         255,
+         0,
+         255
+      ],
+      "AlienRockyMountain_Far2_cm.png": [
+         86,
+         60,
+         55
+      ],
+      "Stone_02_ForAxisY_distance_ng.png": [
+         128,
+         128,
+         246
+      ],
+      "Platinum_01_Thumbnail.png": [
+         87,
+         95,
+         110
+      ],
+      "Iron_01_ForAxisXZ_distance_cm.png": [
+         86,
+         75,
+         70
+      ],
+      "EarthIce_Far1_cm.png": [
+         58,
+         104,
+         115
+      ],
+      "AlienRock_Dummy_add.png": [
+         239,
+         1,
+         239
+      ],
+      "Snow_01_Far1_ng.png": [
+         125,
+         121,
+         255
+      ],
+      "Stone_03_ForAxisY_distance_ng.png": [
+         128,
+         127,
+         255
+      ],
+      "Soil_distance_cm.png": [
+         49,
+         36,
+         23
+      ],
+      "Sand_02_ForAxisXZ_Far2_add.png": [
+         247,
+         0,
+         255
+      ],
+      "Iron_01_ForAxisXZ_distance_add.png": [
+         255,
+         0,
+         255
+      ],
+      "Silicon_01_ForAxisXZ_ng.png": [
+         166,
+         168,
+         224
+      ],
+      "Rocks_cm.png": [
+         130,
+         134,
+         141
+      ],
+      "Silicon_01_Thumbnail.png": [
+         90,
+         100,
+         118
+      ],
+      "RocksDesert_ForAxisXZ_Far2_ng.png": [
+         222,
+         106,
+         255
+      ],
+      "Stone_05_ForAxisXZ_cm.png": [
+         79,
+         79,
          83
       ],
-      "EarthGrass_03_cm.png": [
-         88,
+      "AlienIce_03_Thumbnail.png": [
+         165,
+         94,
+         94
+      ],
+      "AlienGreenGrass_Far1_cm.png": [
          71,
-         34
+         85,
+         2
+      ],
+      "AlienGrass_ForAxisXZ_add.png": [
+         69,
+         0,
+         218
+      ],
+      "Rocks_02_cm.png": [
+         60,
+         63,
+         71
+      ],
+      "Rocks_Grass_Far1_add.png": [
+         213,
+         0,
+         255
+      ],
+      "EarthStone_cm.png": [
+         87,
+         84,
+         80
+      ],
+      "Sand_02_Thumbnail.png": [
+         217,
+         178,
+         139
+      ],
+      "AlienIce_add.png": [
+         255,
+         23,
+         255
+      ],
+      "RocksDesert_ForAxisXZ_ng.png": [
+         124,
+         118,
+         255
       ],
       "AlienSand_cm.png": [
          189,
          164,
          127
       ],
-      "Ice_01_ForAxisXZ_far_cm.png": [
-         47,
-         78,
-         123
-      ],
-      "Woods_grass_cm.png": [
-         79,
-         71,
-         39
-      ],
-      "Landsky_texture_cm.png": [
-         255,
-         255,
-         255
-      ],
-      "TritonBlend_1_cm.png": [
-         15,
-         15,
-         15
-      ],
-      "EarthIce_cm.png": [
-         61,
-         109,
-         120
-      ],
-      "PhysicalSplashSmall.png": [
-         254,
-         254,
-         254
-      ],
-      "SandDistance_cm.png": [
-         192,
-         157,
-         112
-      ],
-      "54_ng.png": [
-         128,
-         126,
-         253
-      ],
-      "EarthSand_ng.png": [
-         110,
-         142,
-         241
-      ],
-      "Soil_cm.png": [
-         119,
-         104,
-         85
-      ],
-      "WaterSquareFlat.png": [
-         41,
-         57,
-         74
-      ],
-      "XboxWater_cm.png": [
-         37,
-         126,
-         165
-      ],
-      "AlienYellowGrass_Far1_cm.png": [
-         105,
-         75,
-         31
-      ],
-      "OrillaSand_ng.png": [
-         237,
-         237,
-         255
-      ],
-      "PhysicalSplash.png": [
-         254,
-         254,
-         254
-      ],
-      "AlienYellowGrass_cm.png": [
-         111,
-         81,
-         34
-      ],
-      "DesertRocks_v1_cm.png": [
-         184,
-         140,
-         99
-      ],
-      "DebugSquare.png": [
-         254,
-         254,
-         254
-      ],
-      "DarkRock_ng.png": [
-         129,
-         130,
-         231
-      ],
-      "Coral_01_ng.png": [
-         128,
-         127,
-         254
-      ],
-      "Stone_03_ForAxisY_distance_cm.png": [
+      "Desert_01_ForAxisXZ_distance_2_cm.png": [
+         73,
          48,
-         46,
-         42
+         29
       ],
-      "Stone_01_ForAxisY_cm.png": [
-         80,
-         80,
-         79
+      "Desert_01_ForAxisY_far_ng.png": [
+         134,
+         82,
+         243
       ],
-      "Grass_02_cm.png": [
-         43,
-         54,
-         21
-      ],
-      "WaterSquareDark.png": [
-         40,
-         88,
-         107
-      ],
-      "Iron_03_ForAxisXZ_cm.png": [
-         40,
-         40,
-         41
-      ],
-      "Seagull.png": [
-         0,
-         0,
-         0
-      ],
-      "RavRock_ng.png": [
-         126,
-         125,
+      "AlienSnow_Far1_cm.png": [
+         239,
+         239,
          239
       ],
-      "Rocks_Grass_Far1_cm.png": [
-         109,
-         107,
-         101
+      "AlienYellowGrass_Far2_cm.png": [
+         111,
+         82,
+         36
       ],
-      "DarinusGrass2_cm.png": [
-         75,
-         67,
-         39
+      "Platinum_01_ForAxisXZ_ng.png": [
+         128,
+         126,
+         248
       ],
-      "Woods_grass_distance_cm.png": [
-         33,
-         25,
-         12
+      "RedRockyTerrain_ForAxisXZ_add.png": [
+         251,
+         0,
+         184
       ],
-      "PaintedMetalRed_cm.png": [
-         248,
+      "Sand_02_ForAxisXZ_cm.png": [
+         182,
+         145,
+         100
+      ],
+      "Iron_04_ForAxisXZ_ng.png": [
+         127,
+         128,
+         255
+      ],
+      "Rocks_Grass_add.png": [
+         244,
+         0,
+         255
+      ],
+      "EarthStone_add.png": [
+         237,
+         0,
+         255
+      ],
+      "MarsSoil_01_ForAxisXZ_ng.png": [
+         126,
+         125,
+         247
+      ],
+      "RedRockMountains_ForAxisXZ_add.png": [
+         251,
+         0,
+         159
+      ],
+      "AlienGrassYellow_ForAxisXZ_cm.png": [
+         189,
+         176,
+         67
+      ],
+      "Grass_old_Thumbnail.png": [
+         85,
+         78,
+         48
+      ],
+      "Stone_02_ForAxisY_cm.png": [
+         76,
+         77,
+         77
+      ],
+      "Magnesium_01_ForAxisY_distance_ng.png": [
+         128,
+         127,
+         255
+      ],
+      "MoonRocks_01_ForAxisXZ_add.png": [
+         239,
+         0,
+         255
+      ],
+      "Woods_grass_cm.png": [
+         80,
+         71,
+         40
+      ],
+      "Silver_01_ForAxisXZ_distance_ng.png": [
+         128,
+         125,
+         250
+      ],
+      "Stone_02_ForAxisY_distance_add.png": [
+         255,
          0,
          0
       ],
-      "MartianSky02_cm.png": [
+      "AlienGreenGrass_add.png": [
          255,
-         255,
+         4,
+         255
+      ],
+      "EarthGreenGrass_Far2_ng.png": [
+         145,
+         129,
+         253
+      ],
+      "Ice_01_ForAxisXZ_far_ng.png": [
+         128,
+         128,
          255
       ],
       "MoonRocks_01_ForAxisXZ_far_cm.png": [
@@ -690,922 +2275,370 @@
          85,
          72
       ],
-      "TritonAurora_alphamask.png": [
-         1,
-         1,
-         1
+      "Woods_grass_distance_ng.png": [
+         116,
+         109,
+         253
       ],
-      "RavSoil_ng1.png": [
-         122,
-         125,
-         254
+      "Soil_Far2_ng.png": [
+         127,
+         126,
+         250
       ],
-      "MarsRocks_01_ForAxisXZ_far_cm.png": [
-         98,
-         64,
-         32
+      "Desert_01_ForAxisXZ_distance_2_add.png": [
+         240,
+         0,
+         0
+      ],
+      "EarthIce_ng.png": [
+         128,
+         127,
+         255
+      ],
+      "Rocks_Far2_add.png": [
+         247,
+         0,
+         255
+      ],
+      "AlienIce_ng.png": [
+         128,
+         127,
+         255
+      ],
+      "Soil_distance_add.png": [
+         148,
+         255,
+         255
+      ],
+      "MoonSoil_01_ForAxisXZ_cm.png": [
+         142,
+         140,
+         135
       ],
       "MarsSoil_01_ForAxisXZ_far_cm.png": [
          64,
          36,
          16
       ],
-      "Silicon_01_ForAxisXZ_distance_cm.png": [
-         96,
-         95,
-         93
+      "Grass_Thumbnail.png": [
+         86,
+         94,
+         60
       ],
-      "AlienRockGrass_cm.png": [
-         139,
-         85,
-         51
-      ],
-      "AlienGreenGrass_Far1_cm.png": [
-         71,
-         85,
-         2
-      ],
-      "Iron_04_ForAxisXZ_cm.png": [
-         59,
-         61,
-         59
-      ],
-      "54_cm.png": [
-         56,
-         121,
-         144
-      ],
-      "AlienRockyMountain_cm.png": [
-         109,
-         73,
-         64
-      ],
-      "Palm_02_Bark_ng.png": [
+      "AlienYellowGrass_ng.png": [
          128,
          127,
-         254
-      ],
-      "DarinusRock_cm.png": [
-         119,
-         102,
-         86
-      ],
-      "Dorium_cm.png": [
-         163,
-         205,
-         171
-      ],
-      "Stone_01_ForAxisXZ_cm.png": [
-         78,
-         77,
-         77
-      ],
-      "SafeZoneShield_Gloura_ng.png": [
-         127,
-         127,
          255
-      ],
-      "EarthFarClouds_Alphamask.png": [
-         18,
-         18,
-         18
-      ],
-      "Rocks_Grass_distance_cm.png": [
-         89,
-         87,
-         73
-      ],
-      "AlienSky_Alphamask.png": [
-         6,
-         6,
-         6
-      ],
-      "AlienGreenGrass_cm.png": [
-         57,
-         83,
-         0
-      ],
-      "WaterPixel.png": [
-         31,
-         61,
-         82
-      ],
-      "RocksDistance_cm.png": [
-         154,
-         155,
-         156
-      ],
-      "Gold_01_ForAxisXZ_cm.png": [
-         72,
-         71,
-         68
-      ],
-      "AlienIce_Far1_cm.png": [
-         0,
-         143,
-         117
-      ],
-      "Cheese.png": [
-         253,
-         205,
-         66
-      ],
-      "FoamLight.png": [
-         254,
-         254,
-         254
-      ],
-      "Ice_03_cm.png": [
-         20,
-         37,
-         49
-      ],
-      "RavLava_add.png": [
-         255,
-         186,
-         0
-      ],
-      "Grass_distance_cm.png": [
-         33,
-         40,
-         8
-      ],
-      "AlienIce_cm.png": [
-         0,
-         150,
-         123
-      ],
-      "Gravel_ng.png": [
-         81,
-         93,
-         232
-      ],
-      "Magnesium_01_ForAxisXZ_distance_cm.png": [
-         70,
-         103,
-         107
-      ],
-      "AlienOrangeGrass_cm.png": [
-         178,
-         119,
-         30
-      ],
-      "DarinusGrass_04_ng.png": [
-         129,
-         126,
-         251
-      ],
-      "TitanSkySolid_cm.png": [
-         199,
-         120,
-         79
-      ],
-      "Cobalt_01_ForAxisXZ_cm.png": [
-         72,
-         73,
-         71
-      ],
-      "Silicon_01_ForAxisXZ_cm.png": [
-         99,
-         99,
-         97
-      ],
-      "Landsky_texture_alphamask.png": [
-         3,
-         3,
-         3
-      ],
-      "BylenClouds.png": [
-         115,
-         167,
-         222
-      ],
-      "IceEuropa2_Far1_cm.png": [
-         117,
-         145,
-         159
-      ],
-      "IceEuropa_Far2_cm.png": [
-         143,
-         168,
-         182
-      ],
-      "Stone_05_ForAxisXZ_cm.png": [
-         78,
-         78,
-         82
-      ],
-      "Helium4_01_ForAxisXZ_cm.png": [
-         20,
-         33,
-         40
-      ],
-      "Stone_04_ForAxisY_distance_cm.png": [
-         16,
-         19,
-         24
-      ],
-      "Nickel_01_ForAxisXZ_cm.png": [
-         168,
-         163,
-         137
-      ],
-      "Gravel_cm - Copy.png": [
-         151,
-         150,
-         145
-      ],
-      "RedRockyTerrain_ForAxisXZ_cm.png": [
-         163,
-         51,
-         35
-      ],
-      "EarthSand_cm.png": [
-         233,
-         228,
-         208
-      ],
-      "AlienRockGrass_Tubes01_ng.png": [
-         128,
-         126,
-         253
-      ],
-      "MarsRocks_01_ForAxisXZ_Rocks_cm.png": [
-         191,
-         129,
-         69
-      ],
-      "AlienSnow_cm.png": [
-         239,
-         239,
-         239
-      ],
-      "WaterSquare.png": [
-         49,
-         107,
-         123
-      ],
-      "IceEuropa_Far1_cm.png": [
-         154,
-         193,
-         210
-      ],
-      "OrillaSand_02_ng.png": [
-         30,
-         96,
-         236
-      ],
-      "RavSoil_add.png": [
-         0,
-         0,
-         0
-      ],
-      "Grass_cm.png": [
-         50,
-         60,
-         25
-      ],
-      "AlienRockyTerrain_Far2_cm.png": [
-         119,
-         54,
-         40
-      ],
-      "Desert_01_ForAxisY_cm.png": [
-         73,
-         48,
-         29
-      ],
-      "Helium4_01_ForAxisY_cm.png": [
-         0,
-         3,
-         4
-      ],
-      "Uraninite_01_ForAxisXZ_distance_cm.png": [
-         34,
-         34,
-         33
-      ],
-      "Lake_ng.png": [
-         127,
-         127,
-         255
-      ],
-      "AlienSoil_cm.png": [
-         28,
-         19,
-         15
       ],
       "SandWhite_ForAxisXZ_cm.png": [
          193,
          186,
          167
       ],
-      "Platinum_01_ForAxisXZ_cm.png": [
-         102,
-         99,
-         93
-      ],
-      "TritonIce_1_cm.png": [
-         196,
-         200,
-         203
-      ],
-      "DarinusRock_add.png": [
-         251,
+      "Stone_04_ForAxisY_add.png": [
+         252,
          0,
          184
+      ],
+      "Sand_02_ForAxisXZ_Far2_ng.png": [
+         114,
+         112,
+         250
+      ],
+      "RedRockyTerrain_ForAxisXZ_cm.png": [
+         163,
+         51,
+         35
+      ],
+      "AlienSoil_Far2_ng.png": [
+         120,
+         127,
+         249
+      ],
+      "RedRockMountains_ForAxisXZ_ng.png": [
+         117,
+         133,
+         254
+      ],
+      "Ice_01_ForAxisXZ_distance_cm.png": [
+         57,
+         73,
+         95
+      ],
+      "AlienRockyMountain_ng.png": [
+         136,
+         132,
+         248
+      ],
+      "Stone_01_ForAxisY_distance_add.png": [
+         255,
+         0,
+         0
+      ],
+      "AlienRockyTerrain_Far1_ng.png": [
+         158,
+         103,
+         222
       ],
       "AlienSand_Far1_cm.png": [
          207,
          187,
          156
       ],
-      "IceEuropa2_Far2_cm.png": [
-         101,
-         130,
-         145
+      "IceEuropa_Far2_cm.png": [
+         142,
+         167,
+         181
+      ],
+      "Stone_04_ForAxisY_distance_ng.png": [
+         116,
+         117,
+         247
+      ],
+      "Stone_04_ForAxisXZ_distance_add.png": [
+         255,
+         0,
+         255
+      ],
+      "SandWhite_ForAxisXZ_add.png": [
+         252,
+         0,
+         128
       ],
       "Woods_cm.png": [
          81,
          62,
          50
       ],
-      "EarthFarClouds_cm.png": [
-         255,
-         255,
-         255
-      ],
-      "AlienRockyTerrain_cm.png": [
-         129,
-         58,
-         44
-      ],
-      "TritonAurora_cm.png": [
-         1,
-         1,
-         1
-      ],
-      "TitanSky_Alphamask.png": [
-         7,
-         7,
-         7
-      ],
-      "Cloud_sphere_alphamask.png": [
-         3,
-         3,
-         3
-      ],
-      "DarinusGrass2_03_cm.png": [
-         114,
-         12,
-         0
-      ],
-      "MarsSoil_01_ForAxisXZ_cm.png": [
-         180,
-         107,
-         59
-      ],
-      "Ice_02_cm.png": [
-         105,
-         116,
-         121
-      ],
-      "Lake_cm.png": [
-         0,
-         5,
-         6
-      ],
-      "Palm_02_Bark_cm.png": [
-         59,
-         64,
-         11
-      ],
-      "Stone_03_ForAxisY_cm.png": [
-         150,
-         153,
-         157
-      ],
-      "EarthGreenGrass_Far2_cm.png": [
-         27,
-         41,
-         14
-      ],
-      "ReinforcedArmor_ng.png": [
-         128,
-         128,
-         254
-      ],
-      "Coral_02_ng.png": [
-         128,
-         127,
-         254
-      ],
-      "OceanFloor_cm.png": [
-         100,
-         94,
-         52
-      ],
-      "AlienSnow_Far1_cm.png": [
-         239,
-         239,
-         239
-      ],
-      "MoonSoil_01_ForAxisXZ_cm.png": [
-         155,
-         152,
-         148
-      ],
-      "ParadiseGrass_ng.png": [
-         126,
-         126,
-         248
-      ],
-      "Woods_needles_distance_cm.png": [
-         33,
-         22,
-         12
-      ],
-      "RedRockMountains_ForAxisXZ_cm.png": [
-         164,
-         60,
-         58
-      ],
-      "XboxWater_ng.png": [
-         215,
-         219,
-         245
-      ],
-      "Desert_01_ForAxisXZ_distance_1_cm.png": [
-         72,
-         48,
-         29
-      ],
-      "DarinusGrass2_02_cm.png": [
-         119,
-         15,
-         0
-      ],
-      "Beans.png": [
-         203,
-         58,
-         1
-      ],
-      "Stone_03_ForAxisXZ_cm.png": [
-         73,
-         73,
-         76
-      ],
-      "AlienGreenGrass_Far2_cm.png": [
-         76,
-         91,
-         3
-      ],
-      "WaterSquareLight.png": [
-         97,
-         195,
-         222
-      ],
-      "DustyRocks_v03_cm.png": [
-         181,
-         141,
-         103
-      ],
-      "Rocks_cm.png": [
-         130,
-         134,
-         141
-      ],
-      "Woods_needles_cm.png": [
-         83,
-         68,
-         52
-      ],
-      "AlienRockyMountain_Far1_cm.png": [
-         86,
-         60,
-         55
-      ],
-      "AlienSky_cm.png": [
-         255,
-         255,
-         255
-      ],
-      "DarkRock1_ng.png": [
-         175,
-         175,
-         219
-      ],
-      "RocksDesert_ForAxisXZ_cm.png": [
-         176,
-         133,
-         98
-      ],
-      "MartianSky02_Alphamask.png": [
-         3,
-         3,
-         3
-      ],
-      "AlienSand_Far2_cm.png": [
-         205,
-         184,
-         154
-      ],
-      "OceanFloor_add.png": [
-         184,
-         0,
-         184
-      ],
-      "DeepOceanRock_ng.png": [
-         127,
-         127,
-         255
-      ],
-      "Platinum_01_ForAxisXZ_distance_cm.png": [
-         182,
-         182,
-         182
-      ],
-      "DarkRock_cm.png": [
-         8,
-         8,
-         6
-      ],
-      "Stone_02_ForAxisY_distance_cm.png": [
-         69,
-         70,
-         77
-      ],
-      "Desert_01_ForAxisY_far_cm.png": [
-         81,
-         53,
-         32
-      ],
-      "Brown_cm.png": [
-         25,
-         39,
-         15
-      ],
-      "RocksDesert_ForAxisXZ_Far2_cm.png": [
-         169,
-         126,
-         93
-      ],
-      "Green2_cm.png": [
-         84,
-         99,
-         43
-      ],
-      "IceEuropa_cm.png": [
-         137,
-         167,
-         183
-      ],
-      "Magnesium_01_ForAxisY_cm.png": [
-         91,
-         93,
-         89
-      ],
-      "Woods_grass_Far1_cm.png": [
-         82,
-         74,
-         39
-      ],
-      "Uraninite_01_ForAxisXZ_cm.png": [
-         95,
-         93,
-         90
-      ],
-      "Grass_Far1_cm.png": [
-         86,
-         101,
-         44
-      ],
-      "RocksDesert_ForAxisXZ_Rocks_cm.png": [
-         216,
-         178,
-         127
-      ],
-      "DarinusGrass2_01_cm.png": [
-         50,
-         49,
-         6
-      ],
-      "Silicon_01_ForAxisY_cm.png": [
-         77,
-         78,
-         77
-      ],
-      "DarinusRock_ng.png": [
-         128,
-         126,
-         252
-      ],
-      "CrackedSoil_Far1_cm.png": [
-         162,
-         127,
-         92
-      ],
-      "Stone_02_ForAxisXZ_cm.png": [
-         56,
-         58,
-         60
-      ],
-      "RockyDesert_01_ForAxisXZ_far_cm.png": [
-         107,
-         107,
-         107
-      ],
-      "EarthIce_Far2_cm.png": [
-         58,
-         103,
-         114
-      ],
-      "TritonStone_1_cm.png": [
-         50,
-         50,
-         50
-      ],
-      "DeepOcean_ng.png": [
-         126,
-         126,
-         247
-      ],
-      "Rocks_02_cm.png": [
-         60,
-         63,
-         71
-      ],
-      "EarthStone_Far1_cm.png": [
-         84,
-         84,
-         83
-      ],
-      "Sand_02_ForAxisXZ_cm.png": [
-         182,
-         145,
-         100
-      ],
-      "AlienYellowGrass_Far2_cm.png": [
-         111,
-         82,
-         36
-      ],
-      "Grass_old_cm.png": [
-         138,
-         114,
-         68
-      ],
-      "Splash.png": [
-         4,
-         4,
-         4
-      ],
-      "PaintedMetalOrange_cm.png": [
-         254,
-         118,
-         0
-      ],
-      "Gravel_02_cm.png": [
-         164,
-         163,
-         161
-      ],
-      "Stone_01_ForAxisY_distance_cm.png": [
-         31,
-         26,
-         24
-      ],
-      "SafeZoneShield_Disco_alphamask.png": [
-         0,
-         0,
-         0
-      ],
-      "Cloud_sphere_cm.png": [
-         61,
-         91,
-         152
-      ],
-      "Nickel_01_ForAxisXZ_distance_cm.png": [
-         167,
-         163,
-         137
-      ],
-      "Grass_old_Far1_cm.png": [
-         129,
-         106,
-         65
-      ],
-      "Stone_03_ForAxisXZ_distance_cm.png": [
-         56,
-         56,
-         61
-      ],
       "Desert_01_ForAxisXZ_cm.png": [
          152,
          125,
          98
       ],
-      "Iron_02_ForAxisXZ_cm.png": [
-         75,
-         63,
-         61
-      ],
-      "Stone_02_ForAxisY_cm.png": [
-         76,
-         77,
-         77
-      ],
-      "Palm_02_Leaves_cm.png": [
-         0,
-         0,
-         0
-      ],
-      "Sand_02_ForAxisXZ_Far1_cm.png": [
-         180,
-         141,
-         92
-      ],
-      "Rocks_Far2_cm.png": [
-         130,
-         133,
-         140
-      ],
-      "Hat_Normal.png": [
-         127,
-         127,
+      "IceEuropa2_ng.png": [
+         126,
+         126,
          255
       ],
-      "DustyRocks_v01_cm.png": [
-         177,
+      "Ice_02_Far2_cm.png": [
+         86,
+         96,
+         101
+      ],
+      "IceEuropa2_Far1_cm.png": [
+         117,
+         145,
+         159
+      ],
+      "Ice_02_Far1_ng.png": [
          131,
-         92
-      ],
-      "MoonSoil_01_ForAxisXZ_far_cm.png": [
-         98,
-         88,
-         72
-      ],
-      "SafeZoneShield_Disco_add.png": [
-         255,
-         0,
+         129,
          255
       ],
-      "DebugTexture_cm.png": [
-         186,
-         186,
-         186
+      "Ice_02_cm.png": [
+         104,
+         115,
+         120
       ],
-      "RavRock_add.png": [
-         1,
-         1,
-         0
+      "IceEuropa2_Far2_ng.png": [
+         124,
+         127,
+         255
       ],
-      "DarinusGrass_01_ng.png": [
+      "IceEuropa2_Far1_ng.png": [
+         125,
          128,
+         255
+      ],
+      "Ice_02_Far2_ng.png": [
          128,
+         125,
+         255
+      ],
+      "IceEuropa2_cm.png": [
+         131,
+         160,
+         175
+      ],
+      "Ice_02_ng.png": [
+         125,
+         126,
          254
       ],
-      "Hat_Base_Color.png": [
-         6,
-         6,
-         6
+      "IceEuropa2_Far2_cm.png": [
+         102,
+         131,
+         146
       ],
-      "Gravel_02_ng.png": [
-         126,
-         126,
-         239
-      ],
-      "DarkRock1_cm.png": [
-         35,
-         22,
-         12
-      ],
-      "DarinusGrass_03_ng.png": [
-         130,
-         126,
+      "Ice_02_Far1_cm.png": [
+         97,
+         106,
+         111
+      ]
+   },
+   "Crystals": {
+      "AlienSand_ng.png": [
+         128,
+         128,
          252
       ],
-      "Stone_04_ForAxisXZ_distance_cm.png": [
-         66,
-         65,
+      "Crystals_cm.png": [
+         50,
+         45,
          76
+      ]
+   },
+   "MERocks": {
+      "Woods_distance_cm.png": [
+         83,
+         65,
+         52
       ],
-      "RocksDesert_ForAxisXZ_Far1_cm.png": [
-         173,
-         128,
-         94
+      "Woods_cm.png": [
+         69,
+         56,
+         45
       ],
-      "Desert_01_ForAxisXZ_far_cm.png": [
-         80,
-         52,
-         32
-      ],
-      "Woods_02_cm.png": [
-         11,
-         6,
-         4
-      ],
-      "Sand_02_ForAxisXZ_Pixelized_cm.png": [
-         184,
-         143,
-         93
-      ],
-      "EarthGreenGrass_Far1_cm.png": [
-         37,
-         53,
-         20
-      ],
-      "Helium3_01_ForAxisXZ_cm.png": [
-         23,
-         58,
-         74
-      ],
-      "RavLava_cm.png": [
-         247,
-         100,
-         0
+      "Rocks_Snow_cm.png": [
+         78,
+         77,
+         61
       ],
       "Rocks_Grass_cm.png": [
-         63,
+         78,
+         77,
+         61
+      ],
+      "Rocks_Grass_far_cm.png": [
+         107,
+         105,
+         99
+      ],
+      "Woods_distance_ng.png": [
+         96,
+         129,
+         246
+      ],
+      "Woods_ng.png": [
+         120,
+         119,
+         250
+      ],
+      "Rocks_Grass_far_ng.png": [
+         123,
+         122,
+         250
+      ],
+      "Rocks_Grass_ng.png": [
+         122,
+         122,
+         250
+      ],
+      "Woods_Far1_ng.png": [
+         128,
+         128,
+         253
+      ],
+      "Woods_add.png": [
+         241,
+         0,
+         90
+      ],
+      "Woods_Far1_add.png": [
+         250,
+         0,
+         135
+      ],
+      "Woods_Far1_cm.png": [
+         77,
          62,
-         58
+         47
+      ]
+   },
+   "046": {
+      "046_ng.png": [
+         126,
+         127,
+         225
+      ],
+      "046_cm.png": [
+         135,
+         93,
+         6
+      ]
+   },
+   "SoilSnow": {
+      "Soil_Far1_ng.png": [
+         128,
+         127,
+         250
       ],
       "Soil_distance_cm.png": [
          49,
          36,
          23
       ],
-      "Coral_02_cm.png": [
+      "Soil_distance_add.png": [
+         147,
+         255,
+         255
+      ],
+      "Soil_cm.png": [
+         225,
+         237,
+         241
+      ],
+      "Soil_Far2_cm.png": [
+         225,
+         238,
+         241
+      ],
+      "Soil_distance_ng.png": [
+         112,
+         125,
+         255
+      ],
+      "Soil_add.png": [
+         254,
+         0,
+         190
+      ],
+      "Soil_ng.png": [
+         127,
+         126,
+         250
+      ],
+      "Soil_Far1_cm.png": [
+         225,
+         238,
+         241
+      ],
+      "Soil_Thumbnail.png": [
+         135,
+         125,
+         113
+      ],
+      "Soil_Far2_ng.png": [
+         127,
+         127,
+         250
+      ]
+   },
+   "Bylen": {
+      "Bylen_ng.png": [
+         111,
+         120,
+         255
+      ],
+      "Bylen_add.png": [
          0,
          0,
          0
       ],
-      "Bubbles.png": [
-         255,
-         255,
-         255
-      ],
-      "MarsRocks_01_ForAxisXZ_cm.png": [
-         182,
-         108,
-         58
-      ],
-      "AlienSnow_Far2_cm.png": [
-         239,
-         239,
-         239
-      ],
-      "JWaterFullLight.png": [
-         99,
-         202,
-         222
-      ],
-      "EarthStone_cm.png": [
-         87,
-         84,
-         80
-      ],
-      "Ice_01_ForAxisXZ_cm.png": [
-         17,
-         32,
-         43
-      ],
-      "Soil_Far1_cm.png": [
-         120,
-         104,
-         85
-      ],
-      "Cobalt_01_ForAxisXZ_distance_cm.png": [
-         55,
-         46,
-         33
-      ],
-      "Iron_02_ForAxisXZ_distance_cm.png": [
-         80,
-         60,
-         59
-      ]
-   },
-   "Planet 56": {
-      "MarsSoil_cm.png": [
-         36,
-         21,
-         13
-      ],
-      "MarsRocks_cm.png": [
-         35,
-         22,
-         12
-      ],
-      "MarsSoil_ng.png": [
-         126,
-         126,
-         247
-      ],
-      "MarsRocks_ng.png": [
-         175,
-         175,
-         219
+      "Bylen_cm.png": [
+         2,
+         40,
+         47
       ]
    },
    "Alien": {
@@ -1620,124 +2653,125 @@
          2
       ]
    },
-   "Planet snow": {
-      "S_034_cm.png": [
-         225,
-         237,
-         241
+   "SWBF": {
+      "Saltflat_cm.png": [
+         208,
+         208,
+         208
       ],
-      "mud01_cm.png": [
-         80,
-         59,
-         36
+      "Saltflat_cm - Copy.png": [
+         208,
+         208,
+         208
       ],
-      "Woods_grass_Far2_cm.png": [
-         74,
-         71,
-         34
-      ],
-      "034_ng.png": [
+      "Saltflat_ng.png": [
          126,
+         126,
+         246
+      ]
+   },
+   "Doctor/DOC-RavSoil": {
+      "RavSoil_ng.png": [
          127,
-         225
-      ],
-      "Rockymud_cm.png": [
-         54,
-         42,
-         30
-      ],
-      "Woods_grass_Far2_ng.png": [
-         126,
-         126,
-         250
-      ],
-      "mud01_ng.png": [
-         114,
-         116,
-         243
-      ],
-      "034_cm.png": [
-         84,
-         73,
-         62
-      ],
-      "G_034_cm.png": [
-         92,
-         82,
-         70
-      ],
-      "Woods_grass_Far1_ng.png": [
          127,
-         126,
-         252
+         245
       ],
-      "Woods_grass_Far1_cm.png": [
-         85,
-         60,
+      "RavSoil_add.png": [
+         0,
+         0,
+         0
+      ],
+      "RavSoil_ng1.png": [
+         122,
+         124,
+         254
+      ],
+      "RavSoil_cm.png": [
+         7,
+         7,
+         7
+      ]
+   },
+   "Doctor/DOC-DarinusGrass2": {
+      "DarinusGrass2_cm.png": [
+         75,
+         67,
          39
       ]
    },
-   "Crystals": {
-      "AlienSand_ng.png": [
-         128,
-         128,
-         252
-      ],
-      "AlienSand_cm.png": [
-         49,
-         43,
-         75
-      ],
-      "Crystals_cm.png": [
-         50,
-         45,
-         76
-      ],
-      "Crystals_ng.png": [
-         127,
-         127,
-         255
-      ]
-   },
-   "Planet 36/SAND": {
-      "BlackSand_cm.png": [
-         4,
-         4,
-         4
-      ],
-      "BlackSand_ng.png": [
-         111,
-         142,
-         241
-      ]
-   },
    "Doctor/DOC-RavLava": {
-      "RavLava_ng.png": [
-         127,
-         127,
-         253
-      ],
       "RavLava_add.png": [
          255,
          186,
          0
       ],
       "RavLava_cm.png": [
-         242,
-         80,
+         247,
+         100,
          0
+      ],
+      "RavLava_ng.png": [
+         127,
+         127,
+         253
+      ]
+   },
+   "Doctor/DOC-TundraGrass": {
+      "EarthGrass_03_ng.png": [
+         54,
+         190,
+         251
+      ],
+      "EarthGrass_03_cm.png": [
+         87,
+         70,
+         33
       ]
    },
    "Doctor/DOC-DarinusGrass": {
-      "DarinusGrass_ng.png": [
-         77,
-         175,
-         242
-      ],
       "DarinusGrass_cm.png": [
          63,
          43,
          26
+      ],
+      "DarinusGrass_ng.png": [
+         77,
+         175,
+         242
+      ]
+   },
+   "Doctor/DOC-RavRock": {
+      "RavRock_ng.png": [
+         125,
+         125,
+         239
+      ],
+      "RavRock_add.png": [
+         1,
+         1,
+         0
+      ],
+      "RavRock_cm.png": [
+         2,
+         2,
+         2
+      ]
+   },
+   "Doctor/DOC-DarinusRock": {
+      "DarinusRock_add.png": [
+         251,
+         0,
+         184
+      ],
+      "DarinusRock_ng.png": [
+         128,
+         126,
+         252
+      ],
+      "DarinusRock_cm.png": [
+         119,
+         102,
+         86
       ]
    },
    "Doctor/DOC-BeachSand": {
@@ -1752,59 +2786,13 @@
          208
       ]
    },
-   "Doctor/DOC-TundraGrass": {
-      "EarthGrass_03_ng.png": [
-         54,
-         190,
-         251
-      ],
-      "EarthGrass_03_cm.png": [
-         88,
-         71,
-         34
-      ]
-   },
-   "Doctor/DOC-DarinusRock": {
-      "DarinusRock_cm.png": [
-         119,
-         102,
-         86
-      ],
-      "DarinusRock_add.png": [
-         251,
-         0,
-         184
-      ],
-      "DarinusRock_ng.png": [
-         127,
-         126,
-         252
-      ]
-   },
-   "Doctor/DOC-RavSoil": {
-      "RavSoil_ng.png": [
-         127,
-         127,
-         245
-      ],
-      "RavSoil_cm.png": [
-         7,
-         7,
-         7
-      ],
-      "RavSoil_ng1.png": [
-         122,
-         124,
-         254
-      ],
-      "RavSoil_add.png": [
+   "Doctor/DOC-RavCrackedRock": {
+      "RavCrackedRock_add.png": [
          0,
          0,
          0
-      ]
-   },
-   "Doctor/DOC-RavCrackedRock": {
-      "RavCrackedRock_add.png": [
+      ],
+      "RavCrackedRock_add - Copy.png": [
          0,
          0,
          0
@@ -1815,117 +2803,172 @@
          24
       ],
       "RavCrackedRock_ng.png": [
-         128,
+         129,
          128,
          252
-      ],
-      "RavCrackedRock_add - Copy.png": [
-         0,
-         0,
-         0
       ]
    },
-   "Doctor/DOC-RavRock": {
-      "RavRock_cm.png": [
-         2,
-         2,
-         2
-      ],
-      "RavRock_ng.png": [
-         126,
-         125,
-         239
-      ],
-      "RavRock_add.png": [
-         1,
-         1,
-         0
-      ]
-   },
-   "Doctor/DOC-DarinusGrass2": {
-      "DarinusGrass2_cm.png": [
-         75,
-         67,
+   "048": {
+      "048_cm.png": [
+         63,
+         47,
          39
+      ],
+      "048_ng.png": [
+         126,
+         127,
+         244
       ]
    },
-   "Crait/REDSOIL": {
-      "MarsSoil_01_ForAxisXZ_add.png": [
-         253,
+   "DOC-RedSand": {
+      "NeirMud_cm.png": [
+         52,
+         25,
+         5
+      ],
+      "NeirMud_ng.png": [
+         127,
+         127,
+         253
+      ]
+   },
+   "Snow": {
+      "Woods_ng.png": [
+         120,
+         119,
+         250
+      ],
+      "Rocks_Grass_add.png": [
+         246,
          0,
+         121
+      ],
+      "Rocks_Grass_distance_cm.png": [
+         48,
+         48,
+         34
+      ],
+      "Snow_Woods_needles_cm.png": [
+         225,
+         238,
+         240
+      ],
+      "Rocks_Grass_ng.png": [
+         122,
+         121,
+         250
+      ],
+      "Woods_needles_ng.png": [
+         121,
+         122,
+         253
+      ],
+      "Woods_distance_cm.png": [
+         83,
+         65,
+         52
+      ],
+      "Woods_needles_distance_ng.png": [
+         155,
+         148,
+         249
+      ],
+      "Rocks_Grass_distance_ng.png": [
+         145,
+         125,
+         254
+      ],
+      "Woods_cm.png": [
+         69,
+         56,
+         45
+      ],
+      "Woods_needles_distance_cm.png": [
+         107,
+         89,
+         67
+      ],
+      "Rocks_Grass_cm.png": [
+         97,
+         95,
+         75
+      ],
+      "Woods_distance_ng.png": [
+         95,
+         129,
+         246
+      ],
+      "Rocks_Grass_distance_add.png": [
+         116,
+         255,
          255
       ],
-      "MarsSoil_01_ForAxisXZ_far_ng.png": [
+      "Woods_Far1_add.png": [
+         250,
+         0,
+         135
+      ],
+      "Woods_needles_Far1_ng.png": [
+         127,
+         127,
+         250
+      ],
+      "Woods_Far1_cm.png": [
+         77,
+         62,
+         47
+      ],
+      "Woods_needles_Far1_add.png": [
+         255,
+         0,
+         128
+      ],
+      "Woods_Grass_Far1_cm.png": [
+         105,
+         109,
+         66
+      ],
+      "Woods_Far1_ng.png": [
          128,
          128,
-         255
+         253
       ],
-      "MarsSoil_01_ForAxisXZ_ng.png": [
-         126,
-         126,
-         247
-      ],
-      "MarsRocks_01_ForAxisXZ_far_cm.png": [
-         98,
-         64,
-         32
-      ],
-      "MarsSoil_01_ForAxisXZ_far_cm.png": [
-         64,
-         36,
-         16
-      ],
-      "MarsRocks_01_ForAxisXZ_add.png": [
-         239,
-         0,
-         255
-      ],
-      "MarsRocks_01_ForAxisXZ_Rocks_ng.png": [
-         106,
-         131,
+      "Woods_Grass_Far1_ng.png": [
+         127,
+         127,
          248
       ],
-      "MarsRocks_01_Thumbnail.png": [
-         159,
-         106,
-         74
+      "Woods_needles_Far1_cm.png": [
+         95,
+         89,
+         31
       ],
-      "MarsRocks_01_ForAxisXZ_Rocks_cm.png": [
-         192,
-         130,
-         69
+      "Woods_add.png": [
+         242,
+         0,
+         90
       ],
-      "MarsRocks_01_ForAxisXZ_ng.png": [
-         175,
-         176,
-         219
+      "Woods_needles_add.png": [
+         243,
+         0,
+         88
       ],
-      "MarsSoil_01_ForAxisXZ_cm.png": [
-         85,
-         3,
-         1
-      ],
-      "MarsRocks_01_ForAxisXZ_far_ng.png": [
-         128,
-         128,
-         255
-      ],
-      "MarsRocks_01_ForAxisXZ_cm.png": [
-         80,
-         3,
-         0
+      "Woods_Grass_Far1_add.png": [
+         250,
+         0,
+         118
       ]
    },
    "Gravel": {
-      "Gravel_cm.png": [
-         151,
-         150,
-         146
-      ],
       "Gravel_ng.png": [
-         82,
-         93,
+         80,
+         96,
          233
+      ],
+      "Gravel_02_ng.png": [
+         126,
+         126,
+         239
       ],
       "Gravel_cm - Copy.png": [
          151,
@@ -1938,34 +2981,222 @@
          241
       ],
       "Gravel_02_cm.png": [
-         165,
-         165,
-         162
+         164,
+         164,
+         161
       ],
-      "Gravel_02_ng.png": [
-         126,
-         126,
-         239
+      "Gravel_cm.png": [
+         151,
+         150,
+         145
       ]
    },
-   "Bylen": {
-      "Bylen_add.png": [
-         0,
-         0,
+   "Planet snow": {
+      "Woods_grass_Far2_cm.png": [
+         74,
+         71,
+         34
+      ],
+      "034_cm.png": [
+         84,
+         74,
+         63
+      ],
+      "mud01_ng.png": [
+         114,
+         116,
+         243
+      ],
+      "Woods_grass_Far1_ng.png": [
+         126,
+         126,
+         252
+      ],
+      "S_034_cm.png": [
+         225,
+         237,
+         241
+      ],
+      "Woods_grass_Far2_ng.png": [
+         126,
+         126,
+         250
+      ],
+      "Woods_grass_Far1_cm.png": [
+         85,
+         60,
+         39
+      ],
+      "mud01_cm.png": [
+         80,
+         59,
+         36
+      ],
+      "Rockymud_cm.png": [
+         53,
+         41,
+         29
+      ],
+      "034_ng.png": [
+         126,
+         127,
+         225
+      ],
+      "G_034_cm.png": [
+         93,
+         82,
+         70
+      ]
+   },
+   "037": {
+      "037_cm.png": [
+         91,
+         95,
+         56
+      ],
+      "037_ng.png": [
+         129,
+         127,
+         242
+      ]
+   },
+   "Crait/REDSOIL": {
+      "MarsSoil_01_ForAxisXZ_far_ng.png": [
+         128,
+         128,
+         255
+      ],
+      "MarsRocks_01_Thumbnail.png": [
+         159,
+         106,
+         74
+      ],
+      "MarsRocks_01_ForAxisXZ_cm.png": [
+         80,
+         3,
          0
       ],
-      "Bylen_cm.png": [
-         2,
-         40,
-         47
+      "MarsRocks_01_ForAxisXZ_Rocks_ng.png": [
+         106,
+         130,
+         248
       ],
-      "Bylen_ng.png": [
-         111,
-         120,
+      "MarsSoil_01_ForAxisXZ_ng.png": [
+         127,
+         125,
+         247
+      ],
+      "MarsRocks_01_ForAxisXZ_far_cm.png": [
+         98,
+         64,
+         32
+      ],
+      "MarsSoil_01_ForAxisXZ_far_cm.png": [
+         64,
+         36,
+         16
+      ],
+      "MarsSoil_01_ForAxisXZ_cm.png": [
+         85,
+         3,
+         1
+      ],
+      "MarsRocks_01_ForAxisXZ_add.png": [
+         239,
+         0,
          255
+      ],
+      "MarsRocks_01_ForAxisXZ_far_ng.png": [
+         128,
+         128,
+         255
+      ],
+      "MarsSoil_01_ForAxisXZ_add.png": [
+         253,
+         0,
+         255
+      ],
+      "MarsRocks_01_ForAxisXZ_Rocks_cm.png": [
+         192,
+         130,
+         69
+      ],
+      "MarsRocks_01_ForAxisXZ_ng.png": [
+         174,
+         177,
+         219
+      ]
+   },
+   "DarkRock": {
+      "DarkRock_ng.png": [
+         129,
+         130,
+         231
+      ],
+      "Rock033_2K_Color.png": [
+         8,
+         8,
+         6
+      ],
+      "DarkRock1_ng.png": [
+         174,
+         177,
+         219
+      ],
+      "DarkSoil_ng.png": [
+         126,
+         126,
+         247
+      ],
+      "DarkRock1_cm.png": [
+         24,
+         22,
+         20
+      ],
+      "DarkRock_cm.png": [
+         8,
+         8,
+         6
+      ],
+      "Rock033_2K_Normal.png": [
+         130,
+         130,
+         232
+      ],
+      "DarkSoil_cm.png": [
+         26,
+         24,
+         22
+      ]
+   },
+   "DarkRock/s": {
+      "DarkSoil_ng.png": [
+         127,
+         126,
+         247
+      ],
+      "DarkRock1_cm.png": [
+         33,
+         20,
+         11
+      ],
+      "DarkSoil_cm.png": [
+         35,
+         21,
+         12
+      ],
+      "DarkRock1_ng.png": [
+         175,
+         176,
+         219
       ]
    },
    "Reflection": {
+      "Lake_cm.png": [
+         0,
+         5,
+         6
+      ],
       "MuonLake_cm.png": [
          3,
          3,
@@ -1975,508 +3206,144 @@
          127,
          127,
          255
-      ],
-      "Lake_cm.png": [
-         0,
-         5,
-         6
       ]
    },
-   "Snow": {
-      "Woods_needles_Far1_ng.png": [
-         127,
-         127,
-         250
+   "Planet 56": {
+      "MarsSoil_ng.png": [
+         126,
+         126,
+         247
       ],
-      "Snow_Woods_needles_cm.png": [
-         225,
-         238,
-         240
+      "MarsRocks_ng.png": [
+         155,
+         157,
+         226
       ],
-      "Woods_distance_cm.png": [
-         83,
-         65,
-         53
+      "MarsSoil_cm.png": [
+         35,
+         21,
+         12
       ],
-      "Woods_Grass_Far1_add.png": [
-         250,
-         0,
-         136
-      ],
-      "Woods_Grass_Far1_ng.png": [
-         127,
-         127,
-         248
-      ],
-      "Woods_distance_ng.png": [
-         95,
-         133,
-         246
-      ],
-      "Woods_Far1_ng.png": [
-         128,
-         128,
-         253
-      ],
-      "Rocks_Grass_distance_ng.png": [
-         146,
-         125,
-         254
-      ],
-      "Woods_needles_ng.png": [
-         120,
-         122,
-         253
-      ],
-      "Woods_Grass_Far1_cm.png": [
-         106,
-         110,
-         67
-      ],
-      "Woods_needles_add.png": [
-         243,
-         0,
-         88
-      ],
-      "Woods_add.png": [
-         237,
-         0,
-         90
-      ],
-      "Rocks_Grass_distance_cm.png": [
-         49,
-         48,
-         34
-      ],
-      "Rocks_Grass_distance_add.png": [
-         136,
-         255,
-         255
-      ],
-      "Woods_needles_Far1_cm.png": [
-         95,
-         89,
-         31
-      ],
+      "MarsRocks_cm.png": [
+         34,
+         20,
+         12
+      ]
+   },
+   "MEwoods": {
       "Woods_cm.png": [
          69,
          56,
          45
       ],
-      "Rocks_Grass_ng.png": [
-         122,
-         122,
-         250
-      ],
-      "Woods_needles_Far1_add.png": [
-         255,
-         0,
-         128
-      ],
-      "Woods_Far1_cm.png": [
-         77,
-         62,
-         47
-      ],
-      "Woods_needles_distance_cm.png": [
-         108,
-         90,
-         68
-      ],
-      "Woods_ng.png": [
-         120,
-         119,
-         250
-      ],
-      "Woods_needles_distance_ng.png": [
-         159,
-         144,
-         248
-      ],
-      "Rocks_Grass_add.png": [
-         246,
-         0,
-         121
-      ],
-      "Woods_Far1_add.png": [
-         250,
-         0,
-         136
-      ],
-      "Rocks_Grass_cm.png": [
-         97,
-         95,
-         75
-      ]
-   },
-   "Tropical": {
-      "Grass_ng.png": [
-         129,
-         128,
-         252
-      ],
-      "EarthGreenGrass_Far2_ng.png": [
-         145,
-         130,
-         253
-      ],
-      "Grass_cm.png": [
-         51,
-         60,
-         25
-      ],
-      "EarthGreenGrass_Far2_cm.png": [
-         27,
-         41,
-         14
-      ],
-      "EarthGreenGrass_Far1_ng.png": [
-         127,
-         127,
-         253
-      ],
-      "EarthGreenGrass_Far1_cm.png": [
-         37,
-         53,
-         20
-      ]
-   },
-   "046": {
-      "046_cm.png": [
-         135,
-         93,
-         6
-      ],
-      "046_ng.png": [
-         125,
-         127,
-         225
-      ]
-   },
-   "LV": {
-      "lv_ng.png": [
-         125,
-         129,
-         255
-      ],
-      "lv_cm.png": [
-         107,
-         106,
-         98
-      ]
-   },
-   "MERocks": {
       "Woods_distance_cm.png": [
          83,
          65,
          52
       ],
+      "Woods_ng.png": [
+         120,
+         119,
+         250
+      ],
       "Woods_distance_ng.png": [
-         95,
-         133,
+         96,
+         129,
          246
-      ],
-      "Woods_Far1_ng.png": [
-         128,
-         128,
-         253
-      ],
-      "Rocks_Grass_far_ng.png": [
-         122,
-         122,
-         250
-      ],
-      "Rocks_Grass_far_cm.png": [
-         107,
-         105,
-         99
-      ],
-      "Woods_add.png": [
-         242,
-         0,
-         90
-      ],
-      "Woods_cm.png": [
-         69,
-         56,
-         45
-      ],
-      "Rocks_Grass_ng.png": [
-         122,
-         121,
-         250
       ],
       "Woods_Far1_cm.png": [
          77,
          62,
          47
-      ],
-      "Woods_ng.png": [
-         120,
-         119,
-         250
       ],
       "Woods_Far1_add.png": [
          250,
          0,
          135
       ],
-      "Rocks_Snow_cm.png": [
-         78,
-         77,
-         61
-      ],
-      "Rocks_Grass_cm.png": [
-         78,
-         77,
-         61
-      ]
-   },
-   "Trees": {
-      "PalmTree_add.png": [
-         255,
-         0,
-         128
-      ],
-      "Trunks_cm.png": [
-         170,
-         150,
-         119
-      ],
-      "TreeCutout_add.png": [
-         255,
-         0,
-         128
-      ],
-      "TreeEnd_ng.png": [
-         126,
-         127,
+      "Woods_Far1_ng.png": [
+         129,
+         128,
          253
       ],
-      "TreeCutout_ng.png": [
-         126,
+      "Woods_add.png": [
+         242,
+         0,
+         90
+      ]
+   },
+   "default/Pertam": {
+      "DustyRocks_v03_Thumbnail.png": [
+         174,
+         143,
+         105
+      ],
+      "DustyRocks_v01_Thumbnail.png": [
          156,
-         251
-      ],
-      "PalmTreesLOD3_ng.png": [
-         128,
-         127,
-         255
-      ],
-      "PalmTree_alphamask.png": [
-         255,
-         255,
-         255
-      ],
-      "PalmTreesLOD3_add.png": [
-         255,
-         0,
-         128
-      ],
-      "TreeCutout_cm.png": [
-         107,
-         81,
-         55
-      ],
-      "PalmTreesLOD3_cm.png": [
-         0,
-         0,
-         0
-      ],
-      "PalmTree_cm.png": [
-         117,
-         101,
-         85
-      ],
-      "PalmTreesLOD3_alphamask.png": [
-         0,
-         0,
-         0
-      ],
-      "TreeEnd_cm.png": [
-         123,
-         89,
-         61
-      ],
-      "Trunks_ng.png": [
-         129,
-         129,
-         251
-      ],
-      "Trunks_add.png": [
-         252,
-         0,
-         128
-      ],
-      "TreeEnd_add.png": [
-         253,
-         0,
-         128
-      ],
-      "PalmTree_ng.png": [
-         128,
-         131,
-         254
-      ],
-      "BranchesDesert_cm.png": [
-         60,
-         0,
-         23
-      ]
-   },
-   "Trees/Palm_02": {
-      "Palm_02_Leaves_ng.png": [
-         127,
-         127,
-         255
-      ],
-      "palm_2_Palm_2_bark_MetallicSmoothness.png": [
-         0,
-         0,
-         0
-      ],
-      "palm_2_Palm_2_bark_Normal.png": [
-         127,
-         127,
-         255
-      ],
-      "Palm_02_Leaves_alphamask.png": [
-         0,
-         0,
-         0
-      ],
-      "palm_2_Palm_2_leaves_AlbedoTransparency.png": [
-         255,
-         255,
-         255
-      ],
-      "Palm_02_Bark_ng.png": [
-         128,
-         127,
-         254
-      ],
-      "palm_2_Palm_2_leaves_Normal.png": [
-         128,
-         128,
-         255
-      ],
-      "Palm_02_Bark_cm.png": [
-         59,
-         64,
-         11
-      ],
-      "palm_2_Palm_2_bark_AlbedoTransparency.png": [
-         93,
-         97,
-         28
-      ],
-      "Palm_02_Leaves_cm.png": [
-         0,
-         0,
-         0
-      ],
-      "palm_2_Palm_2_leaves_MetallicSmoothness.png": [
-         0,
-         0,
-         0
-      ]
-   },
-   "048": {
-      "048_ng.png": [
-         127,
-         127,
-         244
-      ],
-      "048_cm.png": [
-         63,
-         47,
-         39
-      ]
-   },
-   "DOC-RedSand": {
-      "NeirMud_ng.png": [
-         128,
-         127,
-         253
-      ],
-      "NeirMud_cm.png": [
-         52,
-         25,
-         5
-      ]
-   },
-   "SoilSnow": {
-      "Soil_distance_add.png": [
-         145,
-         255,
-         255
-      ],
-      "Soil_Far2_cm.png": [
-         225,
-         238,
-         241
-      ],
-      "Soil_cm.png": [
-         225,
-         237,
-         241
-      ],
-      "Soil_add.png": [
-         254,
-         0,
-         210
-      ],
-      "Soil_Thumbnail.png": [
-         135,
          125,
-         113
+         88
       ],
-      "Soil_distance_ng.png": [
-         113,
-         124,
-         255
+      "PertamSand_Thumbnail.png": [
+         177,
+         145,
+         111
       ],
-      "Soil_ng.png": [
-         127,
-         126,
-         250
+      "CrackedSoil_Thumbnail.png": [
+         158,
+         128,
+         92
       ],
-      "Soil_Far1_ng.png": [
-         127,
-         126,
-         250
-      ],
-      "Soil_distance_cm.png": [
-         49,
-         36,
-         24
-      ],
-      "Soil_Far1_cm.png": [
-         225,
-         238,
-         241
-      ],
-      "Soil_Far2_ng.png": [
-         127,
-         127,
-         250
+      "DustyRocks_v02_Thumbnail.png": [
+         171,
+         140,
+         104
       ]
    },
-   "SWBF": {
-      "Saltflat_ng.png": [
+   "default/Triton": {
+      "TritonStone_Thumbnail.png": [
+         144,
+         144,
+         141
+      ],
+      "TritonIce_1_ng.png": [
+         130,
+         127,
+         255
+      ],
+      "TritonBlend_Thumbnail.png": [
+         120,
+         121,
+         117
+      ],
+      "TritonBlend_1_ng.png": [
          126,
          126,
-         246
+         255
       ],
-      "Saltflat_cm.png": [
-         208,
-         208,
-         208
+      "TritonStone_1_ng.png": [
+         74,
+         51,
+         200
       ],
-      "Saltflat_cm - Copy.png": [
-         208,
-         208,
-         208
+      "TritonBlend_1_cm.png": [
+         15,
+         15,
+         15
+      ],
+      "TritonIce_Thumbnail.png": [
+         138,
+         144,
+         146
+      ],
+      "TritonStone_1_cm.png": [
+         50,
+         50,
+         50
+      ],
+      "TritonIce_1_cm.png": [
+         196,
+         200,
+         203
       ]
    },
    "ParadiseGrass": {
@@ -2491,345 +3358,239 @@
          248
       ]
    },
-   "Grass": {
-      "ME-Grass_11_ng.png": [
-         126,
-         93,
-         254
+   "Planet 36/SAND": {
+      "BlackSand_ng.png": [
+         110,
+         142,
+         241
       ],
-      "DarinusGrass2_04_cm.png": [
-         77,
-         86,
-         26
-      ],
-      "AlienRockGrass_Tubes01_cm.png": [
-         131,
-         76,
-         46
-      ],
-      "ME-Grass_09_cm.png": [
-         44,
-         62,
+      "BlackSand_cm.png": [
+         4,
+         4,
          4
-      ],
-      "ME-Grass_09_ng.png": [
-         126,
-         93,
-         254
-      ],
-      "DarinusGrass_02_ng.png": [
-         129,
-         128,
-         254
-      ],
-      "54_ng.png": [
-         128,
+      ]
+   },
+   "Tropical": {
+      "EarthGreenGrass_Far1_ng.png": [
+         127,
          126,
          253
       ],
-      "ME-Grass_04_ng.png": [
-         125,
-         92,
-         254
+      "EarthGreenGrass_Far2_cm.png": [
+         27,
+         41,
+         14
       ],
-      "54_cm.png": [
-         56,
-         121,
-         144
-      ],
-      "DarinusGrass_04_ng.png": [
+      "Grass_ng.png": [
          129,
-         126,
-         251
+         127,
+         252
       ],
-      "AlienRockGrass_Tubes01_ng.png": [
-         128,
-         126,
+      "EarthGreenGrass_Far1_cm.png": [
+         37,
+         53,
+         20
+      ],
+      "Grass_cm.png": [
+         51,
+         60,
+         25
+      ],
+      "EarthGreenGrass_Far2_ng.png": [
+         145,
+         130,
          253
-      ],
-      "ME-Grass_11_cm.png": [
-         69,
-         92,
-         18
-      ],
-      "DarinusGrass2_03_cm.png": [
-         45,
-         48,
-         10
-      ],
-      "ME-Grass_04_cm.png": [
-         34,
-         50,
-         8
-      ],
-      "Snow_Woods_grass_01_cm.png": [
-         255,
-         255,
-         255
-      ],
-      "DarinusGrass2_02_cm.png": [
-         56,
-         63,
-         9
-      ],
-      "ME-Grass_13_cm.png": [
-         46,
-         69,
-         3
-      ],
-      "ME-Grass_05_ng.png": [
-         125,
-         94,
-         254
-      ],
-      "ME-Grass_13_ng.png": [
-         126,
-         125,
-         254
-      ],
-      "Snow_Woods_grass_01_ng.png": [
-         128,
-         128,
-         254
-      ],
-      "DarinusGrass2_01_cm.png": [
-         50,
-         49,
-         6
-      ],
-      "DarinusGrass_01_ng.png": [
-         128,
-         128,
-         254
-      ],
-      "DarinusGrass_03_ng.png": [
-         130,
-         126,
-         252
-      ],
-      "ME-Grass_05_cm.png": [
-         72,
-         101,
-         23
       ]
    },
-   "Grass/Alien/Snowgrass": {
-      "AlienGreenGrass_Tubes_cm.png": [
-         0,
-         0,
-         0
-      ],
-      "AlienGreenGrass_Tubes_ng.png": [
-         129,
-         126,
-         252
-      ]
-   },
-   "DarkRock": {
-      "DarkSoil_cm.png": [
-         25,
-         23,
-         22
-      ],
-      "DarkSoil_ng.png": [
-         126,
-         126,
-         247
-      ],
-      "DarkRock_ng.png": [
-         129,
-         130,
-         231
-      ],
-      "Rock033_2K_Normal.png": [
-         130,
-         130,
-         232
-      ],
-      "Rock033_2K_Color.png": [
-         8,
-         8,
-         6
-      ],
-      "DarkRock1_ng.png": [
-         175,
-         175,
-         219
-      ],
-      "DarkRock_cm.png": [
-         8,
-         8,
-         6
-      ],
-      "DarkRock1_cm.png": [
-         24,
-         22,
-         21
-      ]
-   },
-   "DarkRock/s": {
-      "DarkSoil_cm.png": [
-         36,
-         21,
-         13
-      ],
-      "DarkSoil_ng.png": [
-         126,
-         126,
-         247
-      ],
-      "DarkRock1_ng.png": [
+   "Pertam": {
+      "DustyRocks_v03_Thumbnail.png": [
          174,
-         176,
-         219
+         143,
+         105
       ],
-      "DarkRock1_cm.png": [
-         35,
-         22,
-         12
-      ]
-   },
-   "Sky": {
-      "SkyboxClouds_01_cm.png": [
-         228,
-         241,
-         255
+      "DustyRocks_v02_cm.png": [
+         180,
+         137,
+         101
       ],
-      "BylenRing_add.png": [
-         255,
-         189,
-         0
+      "PertamSand_cm.png": [
+         177,
+         137,
+         104
       ],
-      "BylenRing_cm.png": [
-         251,
-         251,
-         250
-      ],
-      "Landsky_texture_cm.png": [
-         255,
-         255,
-         255
-      ],
-      "EarthFarClouds_Alphamask.png": [
-         18,
-         18,
-         18
-      ],
-      "BylenRing_alphamask.png": [
+      "CrackedSoil_add.png": [
          246,
-         246,
-         246
-      ],
-      "Landsky_texture_alphamask.png": [
-         2,
-         2,
-         2
-      ],
-      "EarthFarClouds_cm.png": [
-         255,
-         255,
-         255
-      ],
-      "Cloud_sphere_alphamask.png": [
-         2,
-         2,
-         2
-      ],
-      "BylenClouds_alphamask.png": [
-         255,
-         255,
-         255
-      ],
-      "Cloud_sphere_cm.png": [
-         61,
-         91,
-         152
-      ],
-      "BylenClouds_cm.png": [
-         56,
-         131,
-         182
-      ],
-      "SkyboxClouds_01_alphamask.png": [
          0,
+         255
+      ],
+      "DesertRocks_v1_add.png": [
+         245,
          0,
-         0
-      ]
-   },
-   "Sky/Troep": {
-      "Landsky_texture.png": [
-         255,
-         255,
          255
       ],
-      "BylenRing.png": [
-         251,
-         251,
-         250
+      "CrackedSoil_ng.png": [
+         115,
+         117,
+         239
       ],
-      "BylenClouds.png": [
-         57,
-         131,
-         182
+      "DustyRocks_v01_ng.png": [
+         126,
+         125,
+         254
       ],
-      "EarthFarClouds.png": [
-         255,
-         255,
-         255
-      ]
-   },
-   "MEwoods": {
-      "Woods_distance_cm.png": [
-         83,
-         65,
-         52
-      ],
-      "Woods_distance_ng.png": [
-         95,
-         133,
-         246
-      ],
-      "Woods_Far1_ng.png": [
+      "DesertRocks_v1_ng.png": [
+         126,
          128,
-         128,
-         253
+         255
       ],
-      "Woods_add.png": [
-         242,
+      "DustyRocks_v01_add.png": [
+         245,
          0,
+         255
+      ],
+      "CrackedSoil_Far1_ng.png": [
+         127,
+         127,
+         254
+      ],
+      "DustyRocks_v03_ng.png": [
+         125,
+         129,
+         255
+      ],
+      "CrackedSoil_Far1_add.png": [
+         254,
+         0,
+         255
+      ],
+      "DustyRocks_v01_Thumbnail.png": [
+         156,
+         125,
+         88
+      ],
+      "DustyRocks_v03_add.png": [
+         248,
+         0,
+         255
+      ],
+      "CrackedSoil_cm.png": [
+         167,
+         126,
          90
       ],
-      "Woods_cm.png": [
-         69,
-         56,
-         45
-      ],
-      "Woods_Far1_cm.png": [
-         76,
-         62,
-         46
-      ],
-      "Woods_ng.png": [
-         120,
-         119,
-         250
-      ],
-      "Woods_Far1_add.png": [
-         250,
+      "PertamSand_add.png": [
+         255,
          0,
-         135
+         255
+      ],
+      "PertamSand_ng.png": [
+         136,
+         127,
+         254
+      ],
+      "DustyRocks_v02_ng.png": [
+         126,
+         130,
+         252
+      ],
+      "DustyRocks_v03_cm.png": [
+         181,
+         141,
+         103
+      ],
+      "PertamSand_Thumbnail.png": [
+         177,
+         145,
+         111
+      ],
+      "CrackedSoil_Thumbnail.png": [
+         158,
+         128,
+         92
+      ],
+      "DustyRocks_v02_add.png": [
+         226,
+         0,
+         255
+      ],
+      "DustyRocks_v01_cm.png": [
+         177,
+         132,
+         92
+      ],
+      "DustyRocks_v02_Thumbnail.png": [
+         171,
+         140,
+         104
+      ],
+      "DesertRocks_v1_cm.png": [
+         184,
+         140,
+         99
+      ],
+      "CrackedSoil_Far1_cm.png": [
+         162,
+         127,
+         92
       ]
    },
-   "037": {
-      "037_cm.png": [
-         91,
-         94,
-         56
+   "Triton": {
+      "TritonStone_Thumbnail.png": [
+         144,
+         144,
+         141
       ],
-      "037_ng.png": [
-         128,
+      "TritonIce_1_ng.png": [
+         130,
          127,
-         242
+         255
+      ],
+      "TritonBlend_Thumbnail.png": [
+         120,
+         121,
+         117
+      ],
+      "TritonBlend_1_ng.png": [
+         127,
+         127,
+         255
+      ],
+      "TritonStone_1_ng.png": [
+         74,
+         51,
+         200
+      ],
+      "TritonBlend_1_cm.png": [
+         15,
+         15,
+         15
+      ],
+      "TritonIce_Thumbnail.png": [
+         138,
+         144,
+         146
+      ],
+      "TritonStone_1_cm.png": [
+         50,
+         50,
+         50
+      ],
+      "TritonIce_1_cm.png": [
+         197,
+         200,
+         204
+      ]
+   },
+   "LV": {
+      "lv_cm.png": [
+         107,
+         106,
+         98
+      ],
+      "lv_ng.png": [
+         124,
+         129,
+         255
       ]
    }
 }

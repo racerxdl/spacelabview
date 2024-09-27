@@ -12,6 +12,10 @@ def avg_color(filename):
     print(f"Reading {filename}")
     myimg = cv2.imread(filename)
 
+    if myimg is None:
+        print(f"Error reading {filename}")
+        return 0,0,0
+
     if myimg.shape[0] < 64:
         avg_color_per_row = numpy.average(myimg, axis=0)
         avg_color = numpy.average(avg_color_per_row, axis=0)
@@ -29,6 +33,11 @@ def avg_color(filename):
 
 colors = {}
 
+# see if ./luts/matcoloravg.json exists, if so load it into colors
+if os.path.exists("./luts/matcoloravg.json"):
+    with open("./luts/matcoloravg.json") as f:
+        colors = json.loads(f.read())
+
 for root, dirs, files in os.walk("./assets/DDS"):
     path = root.split(os.sep)
     #print((len(path) - 1) * '---', os.path.basename(root))
@@ -39,6 +48,9 @@ for root, dirs, files in os.walk("./assets/DDS"):
             vr = "default"
         #print(file, fullpath, os.path.isfile(fullpath))
         if os.path.isfile(fullpath) and ".png" in file:
+            if vr in colors and file in colors[vr]:
+                print(f"Skipping {vr}|{file}")
+                continue
             r,g,b = avg_color(fullpath)
             print(f"{vr}|{file} => {r},{g},{b}")
             if not vr in colors:

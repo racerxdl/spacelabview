@@ -184,9 +184,9 @@
                   "SlopeMax": 90.0, 
                   "Layers": [
                      {
-                        "R": 168, 
-                        "G": 127, 
-                        "B": 91, 
+                        "R": 167, 
+                        "G": 126, 
+                        "B": 90, 
                         "Material": "CrackedSoil", 
                         "Depth": 20
                      }
@@ -415,9 +415,9 @@
                   "SlopeMax": 10.0, 
                   "Layers": [
                      {
-                        "R": 88, 
-                        "G": 71, 
-                        "B": 34, 
+                        "R": 87, 
+                        "G": 70, 
+                        "B": 33, 
                         "Material": "DOC-TundraGrass", 
                         "Depth": 1
                      }, 
@@ -578,8 +578,8 @@
                   "Layers": [
                      {
                         "R": 84, 
-                        "G": 73, 
-                        "B": 62, 
+                        "G": 74, 
+                        "B": 63, 
                         "Material": "034", 
                         "Depth": 150
                      }
@@ -617,9 +617,9 @@
                   "SlopeMax": 90.0, 
                   "Layers": [
                      {
-                        "R": 196, 
+                        "R": 197, 
                         "G": 200, 
-                        "B": 203, 
+                        "B": 204, 
                         "Material": "TritonIce", 
                         "Depth": 5
                      }
@@ -705,7 +705,7 @@
                      {
                         "R": 151, 
                         "G": 150, 
-                        "B": 146, 
+                        "B": 145, 
                         "Material": "Gravel", 
                         "Depth": 5
                      }
@@ -726,9 +726,9 @@
                   "SlopeMax": 20.0, 
                   "Layers": [
                      {
-                        "R": 165, 
-                        "G": 165, 
-                        "B": 162, 
+                        "R": 164, 
+                        "G": 164, 
+                        "B": 161, 
                         "Material": "Gravel02", 
                         "Depth": 5
                      }
@@ -762,7 +762,7 @@
                      {
                         "R": 151, 
                         "G": 150, 
-                        "B": 146, 
+                        "B": 145, 
                         "Material": "Gravel", 
                         "Depth": 5
                      }
@@ -801,8 +801,8 @@
                   "SlopeMax": 20.0, 
                   "Layers": [
                      {
-                        "R": 25, 
-                        "G": 23, 
+                        "R": 26, 
+                        "G": 24, 
                         "B": 22, 
                         "Material": "DarkSoilSea", 
                         "Depth": 3
@@ -827,7 +827,7 @@
                      {
                         "R": 24, 
                         "G": 22, 
-                        "B": 21, 
+                        "B": 20, 
                         "Material": "DarkRock1Sea", 
                         "Depth": 3
                      }, 
@@ -855,8 +855,8 @@
                   "SlopeMax": 25.0, 
                   "Layers": [
                      {
-                        "R": 138, 
-                        "G": 114, 
+                        "R": 139, 
+                        "G": 115, 
                         "B": 68, 
                         "Material": "Grass_old", 
                         "Depth": 1
@@ -974,8 +974,8 @@
                   "SlopeMax": 20.0, 
                   "Layers": [
                      {
-                        "R": 25, 
-                        "G": 23, 
+                        "R": 26, 
+                        "G": 24, 
                         "B": 22, 
                         "Material": "DarkSoilSea", 
                         "Depth": 3
@@ -1000,7 +1000,7 @@
                      {
                         "R": 24, 
                         "G": 22, 
-                        "B": 21, 
+                        "B": 20, 
                         "Material": "DarkRock1Sea", 
                         "Depth": 3
                      }, 
@@ -1086,7 +1086,7 @@
                   "Layers": [
                      {
                         "R": 177, 
-                        "G": 131, 
+                        "G": 132, 
                         "B": 92, 
                         "Material": "DustyRocks", 
                         "Depth": 10
@@ -1102,9 +1102,9 @@
                   "SlopeMax": 35.0, 
                   "Layers": [
                      {
-                        "R": 179, 
-                        "G": 136, 
-                        "B": 100, 
+                        "R": 180, 
+                        "G": 137, 
+                        "B": 101, 
                         "Material": "DustyRocks2", 
                         "Depth": 10
                      }
@@ -1166,9 +1166,9 @@
                   "SlopeMax": 35.0, 
                   "Layers": [
                      {
-                        "R": 179, 
-                        "G": 136, 
-                        "B": 100, 
+                        "R": 180, 
+                        "G": 137, 
+                        "B": 101, 
                         "Material": "DustyRocks2", 
                         "Depth": 10
                      }
@@ -1246,8 +1246,8 @@
                   "SlopeMax": 90.0, 
                   "Layers": [
                      {
-                        "R": 242, 
-                        "G": 80, 
+                        "R": 247, 
+                        "G": 100, 
                         "B": 0, 
                         "Material": "DOC-RavLava", 
                         "Depth": 3
@@ -1339,9 +1339,9 @@
                   "SlopeMax": 40.0, 
                   "Layers": [
                      {
-                        "R": 79, 
+                        "R": 80, 
                         "G": 71, 
-                        "B": 39, 
+                        "B": 40, 
                         "Material": "Woods_grass", 
                         "Depth": 1
                      }, 
@@ -1469,9 +1469,9 @@
    "Europa": {
       "Name": "Europa", 
       "DefaultMaterial": {
-         "R": 137, 
-         "G": 167, 
-         "B": 183, 
+         "R": 139, 
+         "G": 169, 
+         "B": 185, 
          "Material": "Ice", 
          "Depth": 0
       }, 
@@ -1484,16 +1484,16 @@
             "Depth": 0
          }, 
          "174": {
-            "R": 137, 
-            "G": 167, 
-            "B": 183, 
+            "R": 139, 
+            "G": 169, 
+            "B": 185, 
             "Material": "Ice", 
             "Depth": 0
          }, 
          "158": {
-            "R": 130, 
-            "G": 159, 
-            "B": 174, 
+            "R": 131, 
+            "G": 160, 
+            "B": 175, 
             "Material": "IceEuropa2", 
             "Depth": 0
          }, 
@@ -1519,9 +1519,9 @@
                   "SlopeMax": 20.0, 
                   "Layers": [
                      {
-                        "R": 130, 
-                        "G": 159, 
-                        "B": 174, 
+                        "R": 131, 
+                        "G": 160, 
+                        "B": 175, 
                         "Material": "IceEuropa2", 
                         "Depth": 5
                      }
@@ -1536,9 +1536,9 @@
                   "SlopeMax": 90.0, 
                   "Layers": [
                      {
-                        "R": 137, 
-                        "G": 167, 
-                        "B": 183, 
+                        "R": 139, 
+                        "G": 169, 
+                        "B": 185, 
                         "Material": "Ice", 
                         "Depth": 5
                      }
@@ -1559,9 +1559,9 @@
                   "SlopeMax": 90.0, 
                   "Layers": [
                      {
-                        "R": 130, 
-                        "G": 159, 
-                        "B": 174, 
+                        "R": 131, 
+                        "G": 160, 
+                        "B": 175, 
                         "Material": "IceEuropa2", 
                         "Depth": 5
                      }
@@ -1576,9 +1576,9 @@
                   "SlopeMax": 20.0, 
                   "Layers": [
                      {
-                        "R": 130, 
-                        "G": 159, 
-                        "B": 174, 
+                        "R": 131, 
+                        "G": 160, 
+                        "B": 175, 
                         "Material": "IceEuropa2", 
                         "Depth": 5
                      }
@@ -1599,9 +1599,9 @@
                   "SlopeMax": 90.0, 
                   "Layers": [
                      {
-                        "R": 130, 
-                        "G": 159, 
-                        "B": 174, 
+                        "R": 131, 
+                        "G": 160, 
+                        "B": 175, 
                         "Material": "IceEuropa2", 
                         "Depth": 5
                      }
@@ -1616,9 +1616,9 @@
                   "SlopeMax": 30.0, 
                   "Layers": [
                      {
-                        "R": 130, 
-                        "G": 159, 
-                        "B": 174, 
+                        "R": 131, 
+                        "G": 160, 
+                        "B": 175, 
                         "Material": "IceEuropa2", 
                         "Depth": 5
                      }
@@ -3560,6 +3560,4711 @@
                         "B": 76, 
                         "Material": "Stone_03", 
                         "Depth": 3
+                     }
+                  ]
+               }
+            ]
+         }
+      }
+   }, 
+   "Planet Agaris - Lava": {
+      "Name": "Planet Agaris - Lava", 
+      "DefaultMaterial": {
+         "R": 87, 
+         "G": 84, 
+         "B": 80, 
+         "Material": "Stone", 
+         "Depth": 0
+      }, 
+      "SimpleMaterials": {}, 
+      "ComplexMaterials": {
+         "0": {
+            "id": 0, 
+            "name": "Planet Features", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "80": {
+            "id": 80, 
+            "name": "Ice lakes ", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "140": {
+            "id": 140, 
+            "name": "marssoil ", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "102": {
+            "id": 102, 
+            "name": "Paradijs", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "20": {
+            "id": 20, 
+            "name": "grass", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "99": {
+            "id": 99, 
+            "name": "Snow", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "113": {
+            "id": 113, 
+            "name": "Ijsland", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "120": {
+            "id": 120, 
+            "name": "Paradijs ", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "150": {
+            "id": 150, 
+            "name": "DeadGrass", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "100": {
+            "id": 100, 
+            "name": "Ice", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "40": {
+            "id": 40, 
+            "name": "Sand", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "165": {
+            "id": 165, 
+            "name": "Doc sand", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "125": {
+            "id": 125, 
+            "name": "RockOcean", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "35": {
+            "id": 35, 
+            "name": "savanna ", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "67": {
+            "id": 67, 
+            "name": "Ocean Algemeen ", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "10": {
+            "id": 10, 
+            "name": "Stone", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "128": {
+            "id": 128, 
+            "name": "redDesert", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "202": {
+            "id": 202, 
+            "name": "Marsalien", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "78": {
+            "id": 78, 
+            "name": "Roads", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "207": {
+            "id": 207, 
+            "name": "Lava ", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "29": {
+            "id": 29, 
+            "name": "ravbeach ", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "33": {
+            "id": 33, 
+            "name": "ravsoil ", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "160": {
+            "id": 160, 
+            "name": "Taiga", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "28": {
+            "id": 28, 
+            "name": "Alpine", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 2, 
+                        "G": 2, 
+                        "B": 2, 
+                        "Material": "DOC-RavRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 7, 
+                        "G": 7, 
+                        "B": 7, 
+                        "Material": "DOC-RavSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 25, 
+                        "G": 24, 
+                        "B": 24, 
+                        "Material": "DOC-RavCrackedRock", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }
+      }
+   }, 
+   "Alien": {
+      "Name": "Alien", 
+      "DefaultMaterial": {
+         "R": 139, 
+         "G": 84, 
+         "B": 51, 
+         "Material": "AlienRockGrass", 
+         "Depth": 0
+      }, 
+      "SimpleMaterials": {
+         "10": {
+            "R": 178, 
+            "G": 119, 
+            "B": 30, 
+            "Material": "AlienOrangeGrass", 
+            "Depth": 0
+         }, 
+         "40": {
+            "R": 189, 
+            "G": 164, 
+            "B": 127, 
+            "Material": "AlienSand", 
+            "Depth": 0
+         }, 
+         "70": {
+            "R": 139, 
+            "G": 84, 
+            "B": 51, 
+            "Material": "AlienRockGrass", 
+            "Depth": 0
+         }, 
+         "100": {
+            "R": 56, 
+            "G": 83, 
+            "B": 0, 
+            "Material": "AlienGreenGrass", 
+            "Depth": 0
+         }, 
+         "130": {
+            "R": 239, 
+            "G": 239, 
+            "B": 239, 
+            "Material": "AlienSnow", 
+            "Depth": 0
+         }, 
+         "160": {
+            "R": 109, 
+            "G": 73, 
+            "B": 64, 
+            "Material": "AlienRockyMountain", 
+            "Depth": 0
+         }, 
+         "180": {
+            "R": 56, 
+            "G": 83, 
+            "B": 0, 
+            "Material": "AlienGreenGrass", 
+            "Depth": 0
+         }
+      }, 
+      "ComplexMaterials": {
+         "82": {
+            "id": 82, 
+            "name": "Lake areas", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 152, 
+                        "G": 83, 
+                        "B": 73, 
+                        "Material": "AlienIce_03", 
+                        "Depth": 20
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "0": {
+            "id": 0, 
+            "name": "DefaultSetUp", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 80.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 239, 
+                        "G": 239, 
+                        "B": 239, 
+                        "Material": "AlienSnow", 
+                        "Depth": 5
+                     }, 
+                     {
+                        "R": 0, 
+                        "G": 167, 
+                        "B": 140, 
+                        "Material": "AlienIce", 
+                        "Depth": 50
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 80.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 0, 
+                        "G": 167, 
+                        "B": 140, 
+                        "Material": "AlienIce", 
+                        "Depth": 50
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.43, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 25.0, 
+                  "LatitudeMax": 80.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 25.0, 
+                  "Layers": [
+                     {
+                        "R": 239, 
+                        "G": 239, 
+                        "B": 239, 
+                        "Material": "AlienSnow", 
+                        "Depth": 2
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.44, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 25.0, 
+                  "LatitudeMax": 80.0, 
+                  "SlopeMin": 25.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 131, 
+                        "G": 103, 
+                        "B": 46, 
+                        "Material": "AlienYellowGrass", 
+                        "Depth": 2
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 70.0, 
+                  "LatitudeMax": 80.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 20.0, 
+                  "Layers": [
+                     {
+                        "R": 239, 
+                        "G": 239, 
+                        "B": 239, 
+                        "Material": "AlienSnow", 
+                        "Depth": 5
+                     }, 
+                     {
+                        "R": 0, 
+                        "G": 167, 
+                        "B": 140, 
+                        "Material": "AlienIce", 
+                        "Depth": 50
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 70.0, 
+                  "LatitudeMax": 80.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 131, 
+                        "G": 103, 
+                        "B": 46, 
+                        "Material": "AlienYellowGrass", 
+                        "Depth": 1
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 55.0, 
+                  "LatitudeMax": 70.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 239, 
+                        "G": 239, 
+                        "B": 239, 
+                        "Material": "AlienSnow", 
+                        "Depth": 5
+                     }, 
+                     {
+                        "R": 0, 
+                        "G": 167, 
+                        "B": 140, 
+                        "Material": "AlienIce", 
+                        "Depth": 50
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 55.0, 
+                  "LatitudeMax": 70.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 20.0, 
+                  "Layers": [
+                     {
+                        "R": 131, 
+                        "G": 103, 
+                        "B": 46, 
+                        "Material": "AlienYellowGrass", 
+                        "Depth": 1
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 55.0, 
+                  "LatitudeMax": 70.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 178, 
+                        "G": 119, 
+                        "B": 30, 
+                        "Material": "AlienOrangeGrass", 
+                        "Depth": 1
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 50.0, 
+                  "LatitudeMax": 55.0, 
+                  "SlopeMin": 15.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 239, 
+                        "G": 239, 
+                        "B": 239, 
+                        "Material": "AlienSnow", 
+                        "Depth": 5
+                     }, 
+                     {
+                        "R": 0, 
+                        "G": 167, 
+                        "B": 140, 
+                        "Material": "AlienIce", 
+                        "Depth": 50
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 50.0, 
+                  "LatitudeMax": 55.0, 
+                  "SlopeMin": 8.0, 
+                  "SlopeMax": 15.0, 
+                  "Layers": [
+                     {
+                        "R": 131, 
+                        "G": 103, 
+                        "B": 46, 
+                        "Material": "AlienYellowGrass", 
+                        "Depth": 1
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 50.0, 
+                  "LatitudeMax": 55.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 8.0, 
+                  "Layers": [
+                     {
+                        "R": 178, 
+                        "G": 119, 
+                        "B": 30, 
+                        "Material": "AlienOrangeGrass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 28, 
+                        "G": 19, 
+                        "B": 15, 
+                        "Material": "AlienSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 45.0, 
+                  "LatitudeMax": 50.0, 
+                  "SlopeMin": 15.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 131, 
+                        "G": 103, 
+                        "B": 46, 
+                        "Material": "AlienYellowGrass", 
+                        "Depth": 1
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 45.0, 
+                  "LatitudeMax": 50.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 15.0, 
+                  "Layers": [
+                     {
+                        "R": 178, 
+                        "G": 119, 
+                        "B": 30, 
+                        "Material": "AlienOrangeGrass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 28, 
+                        "G": 19, 
+                        "B": 15, 
+                        "Material": "AlienSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 40.0, 
+                  "LatitudeMax": 45.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 20.0, 
+                  "Layers": [
+                     {
+                        "R": 178, 
+                        "G": 119, 
+                        "B": 30, 
+                        "Material": "AlienOrangeGrass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 28, 
+                        "G": 19, 
+                        "B": 15, 
+                        "Material": "AlienSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.35, 
+                  "LatitudeMin": 40.0, 
+                  "LatitudeMax": 45.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 56, 
+                        "G": 83, 
+                        "B": 0, 
+                        "Material": "AlienGreenGrass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 28, 
+                        "G": 19, 
+                        "B": 15, 
+                        "Material": "AlienSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 35.0, 
+                  "LatitudeMax": 40.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 178, 
+                        "G": 119, 
+                        "B": 30, 
+                        "Material": "AlienOrangeGrass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 28, 
+                        "G": 19, 
+                        "B": 15, 
+                        "Material": "AlienSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 35.0, 
+                  "LatitudeMax": 40.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 131, 
+                        "G": 103, 
+                        "B": 46, 
+                        "Material": "AlienYellowGrass", 
+                        "Depth": 1
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.35, 
+                  "LatitudeMin": 35.0, 
+                  "LatitudeMax": 40.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 20.0, 
+                  "Layers": [
+                     {
+                        "R": 56, 
+                        "G": 83, 
+                        "B": 0, 
+                        "Material": "AlienGreenGrass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 28, 
+                        "G": 19, 
+                        "B": 15, 
+                        "Material": "AlienSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 30.0, 
+                  "LatitudeMax": 35.0, 
+                  "SlopeMin": 8.0, 
+                  "SlopeMax": 15.0, 
+                  "Layers": [
+                     {
+                        "R": 178, 
+                        "G": 119, 
+                        "B": 30, 
+                        "Material": "AlienOrangeGrass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 28, 
+                        "G": 19, 
+                        "B": 15, 
+                        "Material": "AlienSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 30.0, 
+                  "LatitudeMax": 35.0, 
+                  "SlopeMin": 15.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 131, 
+                        "G": 103, 
+                        "B": 46, 
+                        "Material": "AlienYellowGrass", 
+                        "Depth": 1
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.35, 
+                  "LatitudeMin": 30.0, 
+                  "LatitudeMax": 35.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 8.0, 
+                  "Layers": [
+                     {
+                        "R": 56, 
+                        "G": 83, 
+                        "B": 0, 
+                        "Material": "AlienGreenGrass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 28, 
+                        "G": 19, 
+                        "B": 15, 
+                        "Material": "AlienSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 10.0, 
+                  "LatitudeMax": 13.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 70.0, 
+                  "Layers": [
+                     {
+                        "R": 129, 
+                        "G": 58, 
+                        "B": 44, 
+                        "Material": "AlienRockyTerrain", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 10.0, 
+                  "LatitudeMax": 13.0, 
+                  "SlopeMin": 70.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 109, 
+                        "G": 73, 
+                        "B": 64, 
+                        "Material": "AlienRockyMountain", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 13.0, 
+                  "LatitudeMax": 80.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 109, 
+                        "G": 73, 
+                        "B": 64, 
+                        "Material": "AlienRockyMountain", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 10.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 129, 
+                        "G": 58, 
+                        "B": 44, 
+                        "Material": "AlienRockyTerrain", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.7, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 20.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 239, 
+                        "G": 239, 
+                        "B": 239, 
+                        "Material": "AlienSnow", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.51, 
+                  "MaxHeight": 0.7, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 10.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 129, 
+                        "G": 58, 
+                        "B": 44, 
+                        "Material": "AlienRockyTerrain", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.44, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 20.0, 
+                  "LatitudeMax": 30.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 131, 
+                        "G": 103, 
+                        "B": 46, 
+                        "Material": "AlienYellowGrass", 
+                        "Depth": 1
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.35, 
+                  "MaxHeight": 0.44, 
+                  "LatitudeMin": 20.0, 
+                  "LatitudeMax": 30.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 178, 
+                        "G": 119, 
+                        "B": 30, 
+                        "Material": "AlienOrangeGrass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 28, 
+                        "G": 19, 
+                        "B": 15, 
+                        "Material": "AlienSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.35, 
+                  "LatitudeMin": 20.0, 
+                  "LatitudeMax": 30.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 25.0, 
+                  "Layers": [
+                     {
+                        "R": 56, 
+                        "G": 83, 
+                        "B": 0, 
+                        "Material": "AlienGreenGrass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 28, 
+                        "G": 19, 
+                        "B": 15, 
+                        "Material": "AlienSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.35, 
+                  "LatitudeMin": 20.0, 
+                  "LatitudeMax": 30.0, 
+                  "SlopeMin": 25.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 178, 
+                        "G": 119, 
+                        "B": 30, 
+                        "Material": "AlienOrangeGrass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 28, 
+                        "G": 19, 
+                        "B": 15, 
+                        "Material": "AlienSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.44, 
+                  "LatitudeMin": 15.0, 
+                  "LatitudeMax": 20.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 20.0, 
+                  "Layers": [
+                     {
+                        "R": 56, 
+                        "G": 83, 
+                        "B": 0, 
+                        "Material": "AlienGreenGrass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 28, 
+                        "G": 19, 
+                        "B": 15, 
+                        "Material": "AlienSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.44, 
+                  "LatitudeMin": 15.0, 
+                  "LatitudeMax": 20.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 84, 
+                        "B": 51, 
+                        "Material": "AlienRockGrass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 129, 
+                        "G": 58, 
+                        "B": 44, 
+                        "Material": "AlienRockyTerrain", 
+                        "Depth": 100
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.44, 
+                  "LatitudeMin": 10.0, 
+                  "LatitudeMax": 15.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 15.0, 
+                  "Layers": [
+                     {
+                        "R": 56, 
+                        "G": 83, 
+                        "B": 0, 
+                        "Material": "AlienGreenGrass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 28, 
+                        "G": 19, 
+                        "B": 15, 
+                        "Material": "AlienSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.44, 
+                  "LatitudeMin": 10.0, 
+                  "LatitudeMax": 15.0, 
+                  "SlopeMin": 15.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 84, 
+                        "B": 51, 
+                        "Material": "AlienRockGrass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 129, 
+                        "G": 58, 
+                        "B": 44, 
+                        "Material": "AlienRockyTerrain", 
+                        "Depth": 100
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.44, 
+                  "LatitudeMin": 5.0, 
+                  "LatitudeMax": 10.0, 
+                  "SlopeMin": 15.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 56, 
+                        "G": 83, 
+                        "B": 0, 
+                        "Material": "AlienGreenGrass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 28, 
+                        "G": 19, 
+                        "B": 15, 
+                        "Material": "AlienSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.44, 
+                  "LatitudeMin": 5.0, 
+                  "LatitudeMax": 10.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 15.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 84, 
+                        "B": 51, 
+                        "Material": "AlienRockGrass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 129, 
+                        "G": 58, 
+                        "B": 44, 
+                        "Material": "AlienRockyTerrain", 
+                        "Depth": 100
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.51, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 20.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 239, 
+                        "G": 239, 
+                        "B": 239, 
+                        "Material": "AlienSnow", 
+                        "Depth": 5
+                     }, 
+                     {
+                        "R": 129, 
+                        "G": 58, 
+                        "B": 44, 
+                        "Material": "AlienRockyTerrain", 
+                        "Depth": 100
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.35, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 5.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 15.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 84, 
+                        "B": 51, 
+                        "Material": "AlienRockGrass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 129, 
+                        "G": 58, 
+                        "B": 44, 
+                        "Material": "AlienRockyTerrain", 
+                        "Depth": 100
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.35, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 5.0, 
+                  "SlopeMin": 15.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 28, 
+                        "G": 19, 
+                        "B": 15, 
+                        "Material": "AlienSoil", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 129, 
+                        "G": 58, 
+                        "B": 44, 
+                        "Material": "AlienRockyTerrain", 
+                        "Depth": 100
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.35, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 5.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 20.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 84, 
+                        "B": 51, 
+                        "Material": "AlienRockGrass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 28, 
+                        "G": 19, 
+                        "B": 15, 
+                        "Material": "AlienSoil", 
+                        "Depth": 5
+                     }, 
+                     {
+                        "R": 129, 
+                        "G": 58, 
+                        "B": 44, 
+                        "Material": "AlienRockyTerrain", 
+                        "Depth": 100
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.35, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 5.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 189, 
+                        "G": 164, 
+                        "B": 127, 
+                        "Material": "AlienSand", 
+                        "Depth": 2
+                     }, 
+                     {
+                        "R": 28, 
+                        "G": 19, 
+                        "B": 15, 
+                        "Material": "AlienSoil", 
+                        "Depth": 5
+                     }, 
+                     {
+                        "R": 129, 
+                        "G": 58, 
+                        "B": 44, 
+                        "Material": "AlienRockyTerrain", 
+                        "Depth": 100
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.35, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 5.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 189, 
+                        "G": 164, 
+                        "B": 127, 
+                        "Material": "AlienSand", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 129, 
+                        "G": 58, 
+                        "B": 44, 
+                        "Material": "AlienRockyTerrain", 
+                        "Depth": 100
+                     }
+                  ]
+               }
+            ]
+         }
+      }
+   }, 
+   "EarthLike": {
+      "Name": "EarthLike", 
+      "DefaultMaterial": {
+         "R": 63, 
+         "G": 62, 
+         "B": 58, 
+         "Material": "Rocks_grass", 
+         "Depth": 0
+      }, 
+      "SimpleMaterials": {
+         "10": {
+            "R": 139, 
+            "G": 115, 
+            "B": 68, 
+            "Material": "Grass_old", 
+            "Depth": 0
+         }, 
+         "40": {
+            "R": 182, 
+            "G": 145, 
+            "B": 100, 
+            "Material": "Sand_02", 
+            "Depth": 0
+         }, 
+         "70": {
+            "R": 63, 
+            "G": 62, 
+            "B": 58, 
+            "Material": "Rocks_grass", 
+            "Depth": 0
+         }, 
+         "100": {
+            "R": 80, 
+            "G": 71, 
+            "B": 40, 
+            "Material": "Woods_grass", 
+            "Depth": 0
+         }, 
+         "130": {
+            "R": 225, 
+            "G": 238, 
+            "B": 241, 
+            "Material": "Snow", 
+            "Depth": 0
+         }, 
+         "160": {
+            "R": 87, 
+            "G": 84, 
+            "B": 80, 
+            "Material": "Stone", 
+            "Depth": 0
+         }, 
+         "180": {
+            "R": 50, 
+            "G": 60, 
+            "B": 25, 
+            "Material": "Grass", 
+            "Depth": 0
+         }
+      }, 
+      "ComplexMaterials": {
+         "82": {
+            "id": 82, 
+            "name": "Lake areas", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 20, 
+                        "G": 37, 
+                        "B": 49, 
+                        "Material": "Ice_03", 
+                        "Depth": 20
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "43": {
+            "id": 43, 
+            "name": "Desert", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.85, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 182, 
+                        "G": 145, 
+                        "B": 100, 
+                        "Material": "Sand_02", 
+                        "Depth": 20
+                     }, 
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 40
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "0": {
+            "id": 0, 
+            "name": "DefaultSetUp", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 80.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 225, 
+                        "G": 238, 
+                        "B": 241, 
+                        "Material": "Snow", 
+                        "Depth": 5
+                     }, 
+                     {
+                        "R": 104, 
+                        "G": 115, 
+                        "B": 120, 
+                        "Material": "Ice_02", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 80.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 87, 
+                        "G": 84, 
+                        "B": 80, 
+                        "Material": "Stone", 
+                        "Depth": 50
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.43, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 25.0, 
+                  "LatitudeMax": 80.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 225, 
+                        "G": 238, 
+                        "B": 241, 
+                        "Material": "Snow", 
+                        "Depth": 2
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.44, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 25.0, 
+                  "LatitudeMax": 80.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 35.0, 
+                  "Layers": [
+                     {
+                        "R": 63, 
+                        "G": 62, 
+                        "B": 58, 
+                        "Material": "Rocks_grass", 
+                        "Depth": 2
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 70.0, 
+                  "LatitudeMax": 80.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 20.0, 
+                  "Layers": [
+                     {
+                        "R": 225, 
+                        "G": 238, 
+                        "B": 241, 
+                        "Material": "Snow", 
+                        "Depth": 5
+                     }, 
+                     {
+                        "R": 104, 
+                        "G": 115, 
+                        "B": 120, 
+                        "Material": "Ice_02", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 70.0, 
+                  "LatitudeMax": 80.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 40.0, 
+                  "Layers": [
+                     {
+                        "R": 63, 
+                        "G": 62, 
+                        "B": 58, 
+                        "Material": "Rocks_grass", 
+                        "Depth": 1
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 55.0, 
+                  "LatitudeMax": 70.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 225, 
+                        "G": 238, 
+                        "B": 241, 
+                        "Material": "Snow", 
+                        "Depth": 5
+                     }, 
+                     {
+                        "R": 104, 
+                        "G": 115, 
+                        "B": 120, 
+                        "Material": "Ice_02", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 55.0, 
+                  "LatitudeMax": 70.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 20.0, 
+                  "Layers": [
+                     {
+                        "R": 63, 
+                        "G": 62, 
+                        "B": 58, 
+                        "Material": "Rocks_grass", 
+                        "Depth": 1
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 55.0, 
+                  "LatitudeMax": 70.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 40.0, 
+                  "Layers": [
+                     {
+                        "R": 80, 
+                        "G": 71, 
+                        "B": 40, 
+                        "Material": "Woods_grass", 
+                        "Depth": 1
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 50.0, 
+                  "LatitudeMax": 55.0, 
+                  "SlopeMin": 15.0, 
+                  "SlopeMax": 40.0, 
+                  "Layers": [
+                     {
+                        "R": 225, 
+                        "G": 238, 
+                        "B": 241, 
+                        "Material": "Snow", 
+                        "Depth": 5
+                     }, 
+                     {
+                        "R": 104, 
+                        "G": 115, 
+                        "B": 120, 
+                        "Material": "Ice_02", 
+                        "Depth": 50
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 50.0, 
+                  "LatitudeMax": 55.0, 
+                  "SlopeMin": 8.0, 
+                  "SlopeMax": 15.0, 
+                  "Layers": [
+                     {
+                        "R": 63, 
+                        "G": 62, 
+                        "B": 58, 
+                        "Material": "Rocks_grass", 
+                        "Depth": 1
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 50.0, 
+                  "LatitudeMax": 55.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 8.0, 
+                  "Layers": [
+                     {
+                        "R": 80, 
+                        "G": 71, 
+                        "B": 40, 
+                        "Material": "Woods_grass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 119, 
+                        "G": 104, 
+                        "B": 85, 
+                        "Material": "Soil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 45.0, 
+                  "LatitudeMax": 50.0, 
+                  "SlopeMin": 15.0, 
+                  "SlopeMax": 40.0, 
+                  "Layers": [
+                     {
+                        "R": 63, 
+                        "G": 62, 
+                        "B": 58, 
+                        "Material": "Rocks_grass", 
+                        "Depth": 1
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 45.0, 
+                  "LatitudeMax": 50.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 15.0, 
+                  "Layers": [
+                     {
+                        "R": 80, 
+                        "G": 71, 
+                        "B": 40, 
+                        "Material": "Woods_grass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 119, 
+                        "G": 104, 
+                        "B": 85, 
+                        "Material": "Soil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 40.0, 
+                  "LatitudeMax": 45.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 20.0, 
+                  "Layers": [
+                     {
+                        "R": 80, 
+                        "G": 71, 
+                        "B": 40, 
+                        "Material": "Woods_grass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 119, 
+                        "G": 104, 
+                        "B": 85, 
+                        "Material": "Soil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.35, 
+                  "LatitudeMin": 40.0, 
+                  "LatitudeMax": 45.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 40.0, 
+                  "Layers": [
+                     {
+                        "R": 50, 
+                        "G": 60, 
+                        "B": 25, 
+                        "Material": "Grass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 119, 
+                        "G": 104, 
+                        "B": 85, 
+                        "Material": "Soil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 35.0, 
+                  "LatitudeMax": 40.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 80, 
+                        "G": 71, 
+                        "B": 40, 
+                        "Material": "Woods_grass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 119, 
+                        "G": 104, 
+                        "B": 85, 
+                        "Material": "Soil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 35.0, 
+                  "LatitudeMax": 40.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 40.0, 
+                  "Layers": [
+                     {
+                        "R": 63, 
+                        "G": 62, 
+                        "B": 58, 
+                        "Material": "Rocks_grass", 
+                        "Depth": 1
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.35, 
+                  "LatitudeMin": 35.0, 
+                  "LatitudeMax": 40.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 20.0, 
+                  "Layers": [
+                     {
+                        "R": 50, 
+                        "G": 60, 
+                        "B": 25, 
+                        "Material": "Grass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 119, 
+                        "G": 104, 
+                        "B": 85, 
+                        "Material": "Soil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 30.0, 
+                  "LatitudeMax": 35.0, 
+                  "SlopeMin": 8.0, 
+                  "SlopeMax": 15.0, 
+                  "Layers": [
+                     {
+                        "R": 80, 
+                        "G": 71, 
+                        "B": 40, 
+                        "Material": "Woods_grass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 119, 
+                        "G": 104, 
+                        "B": 85, 
+                        "Material": "Soil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 30.0, 
+                  "LatitudeMax": 35.0, 
+                  "SlopeMin": 15.0, 
+                  "SlopeMax": 40.0, 
+                  "Layers": [
+                     {
+                        "R": 63, 
+                        "G": 62, 
+                        "B": 58, 
+                        "Material": "Rocks_grass", 
+                        "Depth": 1
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.35, 
+                  "LatitudeMin": 30.0, 
+                  "LatitudeMax": 35.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 8.0, 
+                  "Layers": [
+                     {
+                        "R": 50, 
+                        "G": 60, 
+                        "B": 25, 
+                        "Material": "Grass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 119, 
+                        "G": 104, 
+                        "B": 85, 
+                        "Material": "Soil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 10.0, 
+                  "LatitudeMax": 13.0, 
+                  "SlopeMin": 40.0, 
+                  "SlopeMax": 70.0, 
+                  "Layers": [
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 10.0, 
+                  "LatitudeMax": 13.0, 
+                  "SlopeMin": 70.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 87, 
+                        "G": 84, 
+                        "B": 80, 
+                        "Material": "Stone", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 13.0, 
+                  "LatitudeMax": 80.0, 
+                  "SlopeMin": 40.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 87, 
+                        "G": 84, 
+                        "B": 80, 
+                        "Material": "Stone", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 10.0, 
+                  "SlopeMin": 40.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.7, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 20.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 40.0, 
+                  "Layers": [
+                     {
+                        "R": 225, 
+                        "G": 238, 
+                        "B": 241, 
+                        "Material": "Snow", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.51, 
+                  "MaxHeight": 0.7, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 10.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.44, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 20.0, 
+                  "LatitudeMax": 30.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 40.0, 
+                  "Layers": [
+                     {
+                        "R": 63, 
+                        "G": 62, 
+                        "B": 58, 
+                        "Material": "Rocks_grass", 
+                        "Depth": 1
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.35, 
+                  "MaxHeight": 0.44, 
+                  "LatitudeMin": 20.0, 
+                  "LatitudeMax": 30.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 40.0, 
+                  "Layers": [
+                     {
+                        "R": 80, 
+                        "G": 71, 
+                        "B": 40, 
+                        "Material": "Woods_grass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 119, 
+                        "G": 104, 
+                        "B": 85, 
+                        "Material": "Soil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.35, 
+                  "LatitudeMin": 20.0, 
+                  "LatitudeMax": 30.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 25.0, 
+                  "Layers": [
+                     {
+                        "R": 50, 
+                        "G": 60, 
+                        "B": 25, 
+                        "Material": "Grass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 119, 
+                        "G": 104, 
+                        "B": 85, 
+                        "Material": "Soil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.35, 
+                  "LatitudeMin": 20.0, 
+                  "LatitudeMax": 30.0, 
+                  "SlopeMin": 25.0, 
+                  "SlopeMax": 40.0, 
+                  "Layers": [
+                     {
+                        "R": 80, 
+                        "G": 71, 
+                        "B": 40, 
+                        "Material": "Woods_grass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 119, 
+                        "G": 104, 
+                        "B": 85, 
+                        "Material": "Soil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.44, 
+                  "LatitudeMin": 15.0, 
+                  "LatitudeMax": 20.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 20.0, 
+                  "Layers": [
+                     {
+                        "R": 50, 
+                        "G": 60, 
+                        "B": 25, 
+                        "Material": "Grass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 119, 
+                        "G": 104, 
+                        "B": 85, 
+                        "Material": "Soil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.44, 
+                  "LatitudeMin": 15.0, 
+                  "LatitudeMax": 20.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 40.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 115, 
+                        "B": 68, 
+                        "Material": "Grass_old", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 100
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.44, 
+                  "LatitudeMin": 10.0, 
+                  "LatitudeMax": 15.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 15.0, 
+                  "Layers": [
+                     {
+                        "R": 50, 
+                        "G": 60, 
+                        "B": 25, 
+                        "Material": "Grass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 119, 
+                        "G": 104, 
+                        "B": 85, 
+                        "Material": "Soil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.44, 
+                  "LatitudeMin": 10.0, 
+                  "LatitudeMax": 15.0, 
+                  "SlopeMin": 15.0, 
+                  "SlopeMax": 40.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 115, 
+                        "B": 68, 
+                        "Material": "Grass_old", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 100
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.44, 
+                  "LatitudeMin": 5.0, 
+                  "LatitudeMax": 10.0, 
+                  "SlopeMin": 15.0, 
+                  "SlopeMax": 40.0, 
+                  "Layers": [
+                     {
+                        "R": 50, 
+                        "G": 60, 
+                        "B": 25, 
+                        "Material": "Grass", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 119, 
+                        "G": 104, 
+                        "B": 85, 
+                        "Material": "Soil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.44, 
+                  "LatitudeMin": 5.0, 
+                  "LatitudeMax": 10.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 15.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 115, 
+                        "B": 68, 
+                        "Material": "Grass_old", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 100
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.51, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 20.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 40.0, 
+                  "Layers": [
+                     {
+                        "R": 225, 
+                        "G": 238, 
+                        "B": 241, 
+                        "Material": "Snow", 
+                        "Depth": 5
+                     }, 
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 100
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.35, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 5.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 15.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 115, 
+                        "B": 68, 
+                        "Material": "Grass_old", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 100
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.35, 
+                  "MaxHeight": 0.51, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 5.0, 
+                  "SlopeMin": 15.0, 
+                  "SlopeMax": 40.0, 
+                  "Layers": [
+                     {
+                        "R": 119, 
+                        "G": 104, 
+                        "B": 85, 
+                        "Material": "Soil", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 100
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.35, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 5.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 20.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 115, 
+                        "B": 68, 
+                        "Material": "Grass_old", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 119, 
+                        "G": 104, 
+                        "B": 85, 
+                        "Material": "Soil", 
+                        "Depth": 5
+                     }, 
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 100
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.35, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 5.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 115, 
+                        "B": 68, 
+                        "Material": "Grass_old", 
+                        "Depth": 2
+                     }, 
+                     {
+                        "R": 119, 
+                        "G": 104, 
+                        "B": 85, 
+                        "Material": "Soil", 
+                        "Depth": 5
+                     }, 
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 100
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.35, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 5.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 40.0, 
+                  "Layers": [
+                     {
+                        "R": 119, 
+                        "G": 104, 
+                        "B": 85, 
+                        "Material": "Soil", 
+                        "Depth": 1
+                     }, 
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 100
+                     }
+                  ]
+               }
+            ]
+         }
+      }
+   }, 
+   "Mars": {
+      "Name": "Mars", 
+      "DefaultMaterial": {
+         "R": 180, 
+         "G": 107, 
+         "B": 59, 
+         "Material": "MarsSoil", 
+         "Depth": 0
+      }, 
+      "SimpleMaterials": {}, 
+      "ComplexMaterials": {
+         "0": {
+            "id": 0, 
+            "name": "All features", 
+            "rules": [
+               {
+                  "MinHeight": 0.455, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 15.0, 
+                  "Layers": [
+                     {
+                        "R": 225, 
+                        "G": 238, 
+                        "B": 241, 
+                        "Material": "Snow", 
+                        "Depth": 2
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 80.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 60.0, 
+                  "Layers": [
+                     {
+                        "R": 225, 
+                        "G": 238, 
+                        "B": 241, 
+                        "Material": "Snow", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.6, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 182, 
+                        "G": 108, 
+                        "B": 58, 
+                        "Material": "MarsRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.15, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 182, 
+                        "G": 108, 
+                        "B": 58, 
+                        "Material": "MarsRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.15, 
+                  "MaxHeight": 0.18, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 60.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 182, 
+                        "G": 108, 
+                        "B": 58, 
+                        "Material": "MarsRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.09, 
+                  "MaxHeight": 0.12, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 50.0, 
+                  "Layers": [
+                     {
+                        "R": 182, 
+                        "G": 108, 
+                        "B": 58, 
+                        "Material": "MarsRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.1, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 70.0, 
+                  "Layers": [
+                     {
+                        "R": 182, 
+                        "G": 108, 
+                        "B": 58, 
+                        "Material": "MarsRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }
+            ]
+         }
+      }
+   }, 
+   "Moon": {
+      "Name": "Moon", 
+      "DefaultMaterial": {
+         "R": 173, 
+         "G": 170, 
+         "B": 165, 
+         "Material": "MoonRocks", 
+         "Depth": 0
+      }, 
+      "SimpleMaterials": {
+         "190": {
+            "R": 173, 
+            "G": 170, 
+            "B": 165, 
+            "Material": "MoonRocks", 
+            "Depth": 0
+         }, 
+         "174": {
+            "R": 142, 
+            "G": 140, 
+            "B": 135, 
+            "Material": "MoonSoil", 
+            "Depth": 0
+         }, 
+         "158": {
+            "R": 139, 
+            "G": 169, 
+            "B": 185, 
+            "Material": "Ice", 
+            "Depth": 0
+         }
+      }, 
+      "ComplexMaterials": {
+         "48": {
+            "id": 48, 
+            "name": "Craters", 
+            "rules": [
+               {
+                  "MinHeight": 0.5, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 40.0, 
+                  "SlopeMax": 70.0, 
+                  "Layers": [
+                     {
+                        "R": 142, 
+                        "G": 140, 
+                        "B": 135, 
+                        "Material": "MoonSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.3, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 142, 
+                        "G": 140, 
+                        "B": 135, 
+                        "Material": "MoonSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.4, 
+                  "MaxHeight": 0.6, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 142, 
+                        "G": 140, 
+                        "B": 135, 
+                        "Material": "MoonSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.5, 
+                  "LatitudeMin": 60.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 169, 
+                        "B": 185, 
+                        "Material": "Ice", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.25, 
+                  "MaxHeight": 0.5, 
+                  "LatitudeMin": 60.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 60.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 169, 
+                        "B": 185, 
+                        "Material": "Ice", 
+                        "Depth": 5
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "16": {
+            "id": 16, 
+            "name": "Other features", 
+            "rules": [
+               {
+                  "MinHeight": 0.5, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 40.0, 
+                  "SlopeMax": 70.0, 
+                  "Layers": [
+                     {
+                        "R": 142, 
+                        "G": 140, 
+                        "B": 135, 
+                        "Material": "MoonSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.3, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 142, 
+                        "G": 140, 
+                        "B": 135, 
+                        "Material": "MoonSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.4, 
+                  "MaxHeight": 0.6, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 142, 
+                        "G": 140, 
+                        "B": 135, 
+                        "Material": "MoonSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.5, 
+                  "LatitudeMin": 60.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 169, 
+                        "B": 185, 
+                        "Material": "Ice", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.25, 
+                  "MaxHeight": 0.5, 
+                  "LatitudeMin": 60.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 60.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 169, 
+                        "B": 185, 
+                        "Material": "Ice", 
+                        "Depth": 5
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "0": {
+            "id": 0, 
+            "name": "Other features 2", 
+            "rules": [
+               {
+                  "MinHeight": 0.5, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 40.0, 
+                  "SlopeMax": 70.0, 
+                  "Layers": [
+                     {
+                        "R": 142, 
+                        "G": 140, 
+                        "B": 135, 
+                        "Material": "MoonSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.3, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 142, 
+                        "G": 140, 
+                        "B": 135, 
+                        "Material": "MoonSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.4, 
+                  "MaxHeight": 0.6, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 142, 
+                        "G": 140, 
+                        "B": 135, 
+                        "Material": "MoonSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.5, 
+                  "LatitudeMin": 60.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 169, 
+                        "B": 185, 
+                        "Material": "Ice", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.25, 
+                  "MaxHeight": 0.5, 
+                  "LatitudeMin": 60.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 60.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 169, 
+                        "B": 185, 
+                        "Material": "Ice", 
+                        "Depth": 5
+                     }
+                  ]
+               }
+            ]
+         }
+      }
+   }, 
+   "Titan": {
+      "Name": "Titan", 
+      "DefaultMaterial": {
+         "R": 180, 
+         "G": 107, 
+         "B": 59, 
+         "Material": "MarsSoil", 
+         "Depth": 0
+      }, 
+      "SimpleMaterials": {}, 
+      "ComplexMaterials": {
+         "255": {
+            "id": 255, 
+            "name": "Methane sea", 
+            "rules": [
+               {
+                  "MinHeight": 0.6, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.15, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.15, 
+                  "MaxHeight": 0.18, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 60.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 182, 
+                        "G": 108, 
+                        "B": 58, 
+                        "Material": "MarsRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.09, 
+                  "MaxHeight": 0.12, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 50.0, 
+                  "Layers": [
+                     {
+                        "R": 182, 
+                        "G": 108, 
+                        "B": 58, 
+                        "Material": "MarsRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.1, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 70.0, 
+                  "Layers": [
+                     {
+                        "R": 182, 
+                        "G": 108, 
+                        "B": 58, 
+                        "Material": "MarsRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.061, 
+                  "MaxHeight": 0.08, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 0, 
+                        "G": 167, 
+                        "B": 140, 
+                        "Material": "AlienIce", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.06, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 0, 
+                        "G": 167, 
+                        "B": 140, 
+                        "Material": "AlienIce", 
+                        "Depth": 5
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "48": {
+            "id": 48, 
+            "name": "Other features", 
+            "rules": [
+               {
+                  "MinHeight": 0.6, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.15, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.09, 
+                  "MaxHeight": 0.12, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 182, 
+                        "G": 108, 
+                        "B": 58, 
+                        "Material": "MarsRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.1, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 182, 
+                        "G": 108, 
+                        "B": 58, 
+                        "Material": "MarsRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.061, 
+                  "MaxHeight": 0.08, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 0, 
+                        "G": 167, 
+                        "B": 140, 
+                        "Material": "AlienIce", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.06, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 0, 
+                        "G": 167, 
+                        "B": 140, 
+                        "Material": "AlienIce", 
+                        "Depth": 5
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "0": {
+            "id": 0, 
+            "name": "Other features 2", 
+            "rules": [
+               {
+                  "MinHeight": 0.6, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.15, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.09, 
+                  "MaxHeight": 0.12, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 182, 
+                        "G": 108, 
+                        "B": 58, 
+                        "Material": "MarsRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.09, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 182, 
+                        "G": 108, 
+                        "B": 58, 
+                        "Material": "MarsRocks", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.061, 
+                  "MaxHeight": 0.08, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 0, 
+                        "G": 167, 
+                        "B": 140, 
+                        "Material": "AlienIce", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.06, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 0, 
+                        "G": 167, 
+                        "B": 140, 
+                        "Material": "AlienIce", 
+                        "Depth": 5
                      }
                   ]
                }

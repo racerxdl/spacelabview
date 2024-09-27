@@ -19,6 +19,7 @@ def parseXML(fullpath):
             texfile2 = texfile.replace("Textures\\Voxels\\", "").replace("\\", "/")
             texfile = os.path.basename(texfile2.replace("\\","/").replace(".dds", ".png"))
             texpath = texfile2.replace(".dds", ".png").replace(texfile, "").strip()
+            print(texpath)
             if texpath == "":
                 texpath = "default"
             if texpath[len(texpath)-1] == "/":
@@ -39,6 +40,7 @@ for root, dirs, files in os.walk("./assets"):
     #print((len(path) - 1) * '---', os.path.basename(root))
     for file in files:
         if ".xml" in file or ".sbc" in file:
+            print(file)
             fullpath = os.path.join(root, file)
             parseXML(fullpath)
 
