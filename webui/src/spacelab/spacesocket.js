@@ -54,7 +54,7 @@ class SpaceSocket {
                 const basePlanet = planetNameInfo[1] || "";
                 const generatorParams = planetNameInfo.length == 4 ? planetNameInfo[3] : planetNameInfo[2];
                 console.log(`Detected planet ${instanceName} (${name})`);
-                console.log(voxelData);
+                // console.log(JSON.stringify(voxelData, null, 2));
                 const planetDataByInstance = PlanetData[basePlanet.toLowerCase()];
                 const planetDataByName = PlanetData[instanceName.toLowerCase()];
 
@@ -251,7 +251,7 @@ class SpaceSocket {
     gridsCallback(data) {
         const ss = this;
         Object.keys(data).forEach((k) => {
-            console.log(data[k])
+            //console.log(data[k])
             ss.gridUpdateCallback({
                 Grid: data[k],
                 IsNew: true,
