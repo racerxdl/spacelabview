@@ -299,6 +299,10 @@ class SpaceSocket {
             gridMesh.spriteText.visible = false;
             gridMesh.spriteText.position.multiplyScalar(PlanetParams.gridSpriteLabelRadiusOffset);
             gridMesh.name = `${gridData.Name} (${gridData.EntityId})`
+            gridMesh.simpleName = gridData.Name;
+            gridMesh.faction = gridData.Faction;
+            gridMesh.factionTag = gridData.FactionTag;
+            gridMesh.ownerColor = '#' + this.ownerColors[gridData.Faction].toString(16).padStart(6, '0');
             const ng = {
                 gridData: gridData,
                 mesh: gridMesh,
@@ -311,6 +315,8 @@ class SpaceSocket {
                 detail: {
                     id: gridData.EntityId,
                     name: gridData.Name,
+                    faction: gridData.Faction,
+                    factionTag: gridData.FactionTag,
                     mesh: gridMesh,
                 }
             }));

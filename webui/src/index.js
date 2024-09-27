@@ -31,7 +31,6 @@ const KEYCODE = {
 	ARROW_DOWN: 40,
 };
 
-
 async function init() {
 	context.overlaymode = (window.location.hash||"").indexOf("overlay") > -1;
 	// Early listeners
@@ -64,9 +63,11 @@ async function init() {
 		$("#info").hide();
 		$("#planets_bar").hide();
 		$("#chat_bar").hide();
+		$("#grids_bar").hide();
 	}
 	$("#chat").animate({ width: 'toggle' });
 	$("#planets").animate({ height: 'toggle' });
+	$("#grids").animate({ height: 'toggle' });
 
 	updateStatus(`Loading items...`);
 	await preloadAll();
@@ -91,6 +92,7 @@ async function init() {
 	document.getElementById("chat").appendChild(context.chatMsgList);
 	$("#chat_tab").on('click', () => { $("#chat").animate({ width: 'toggle' }); });
 	$("#planets_tab").on('click', () => { $("#planets").animate({ height: 'toggle' }) });
+	$("#grids_tab").on('click', () => { $("#grids").animate({ height: 'toggle' }) });
 
 	context.camera = new THREE.PerspectiveCamera(PlanetParams.viewportFov, SCREEN_WIDTH / SCREEN_HEIGHT, PlanetParams.viewportNear, PlanetParams.viewportFar);
 	context.camera.position.z = PlanetParams.viewportZPos;
@@ -171,11 +173,11 @@ async function init() {
 	window.context = context;
 
 	context.renderModel = new RenderPass(context.scene, context.camera);
-	//const effectFilm = new FilmPass(0.35, 0.75, 2048, false);
+	const effectFilm = new FilmPass(0.35, 0.75, 2048, false);
 
 	context.composer = new EffectComposer(context.renderer);
 	context.composer.addPass(context.renderModel);
-	//context.composer.addPass(effectFilm);
+	context.composer.addPass(effectFilm);
 
 
 	updateStatus(`<B>Connecting...</B>`);
@@ -208,6 +210,7 @@ async function init() {
 	document.addEventListener('newGrid', (event) => {
 		const { mesh } = event.detail;
 		context.gridMeshes.push(mesh);
+		refreshGrids();
 	});
 
 	document.addEventListener('mousemove', onPointerMove);
@@ -218,19 +221,7 @@ async function init() {
 			context.intersectedPlanet.null;
 		}
 		if (context.intersectedGrid != null) {
-			if (context.selectedGrid == null || context.selectedGrid.name != context.intersectedGrid.name) {
-				console.log(`Selected grid ${context.intersectedGrid.name}`)
-				if (context.selectedGrid) {
-					context.selectedGrid.spriteText.visible = false;
-				}
-				context.selectedGrid = context.intersectedGrid;
-				context.selectedGrid.spriteText.visible = true;
-				context.controls.moveTo(context.selectedGrid.position.x, context.selectedGrid.position.y, context.selectedGrid.position.z, true);
-			} else {
-				console.log(`Unselected grid ${context.intersectedGrid.name}`)
-				context.selectedGrid.spriteText.visible = false;
-				context.selectedGrid = null;
-			}
+			selectGrid(context.intersectedGrid);
 		}
 	})
 	// context.renderer.domElement.addEventListener('dblclick', () => {
@@ -281,6 +272,59 @@ function onChatMessage(msg) {
 		const msg = context.chat[i];
 		context.chatMsgList.childNodes[context.chat.length - 1 - i].innerHTML = `<B>${msg.From}</B>: ${msg.Message}`;
 	}
+}
+
+function selectGrid(selectedGrid) {
+	if (context.selectedGrid == null || context.selectedGrid.name != selectedGrid.name) {
+		console.log(`Selected grid ${selectedGrid.name}`)
+		if (context.selectedGrid) {
+			context.selectedGrid.spriteText.visible = false;
+			context.selectedGrid.material.emissive.setHex(context.selectedGrid.currentHex0 );
+			context.selectedGrid.material.color.setHex(context.selectedGrid.currentHex1 );
+			context.selectedGrid.material.emissiveIntensity = context.selectedGrid.currentEmissiveIntensity;
+		}
+		context.selectedGrid = selectedGrid;
+		context.selectedGrid.spriteText.visible = false;
+		context.controls.distance = 20000;
+
+		context.selectedGrid.currentHex0 = context.selectedGrid.material.emissive.getHex();
+		context.selectedGrid.currentHex1 = context.selectedGrid.material.color.getHex();
+		context.selectedGrid.currentEmissiveIntensity = context.selectedGrid.material.emissiveIntensity;
+
+		context.selectedGrid.material.emissive.setHex(0xff0000);
+		context.selectedGrid.material.color.setHex(0xff0000);
+		context.selectedGrid.material.emissiveIntensity = 2.5;
+
+		context.controls.moveTo(context.selectedGrid.position.x, context.selectedGrid.position.y, context.selectedGrid.position.z, true);
+		document.getElementById('focusname').innerText = (`Focused on Grid ${selectedGrid.name}`)
+	} else {
+		console.log(`Unselected grid ${selectedGrid.name}`)
+		context.selectedGrid.spriteText.visible = false;
+
+		context.selectedGrid.material.emissive.setHex(context.selectedGrid.currentHex0 );
+		context.selectedGrid.material.color.setHex(context.selectedGrid.currentHex1 );
+		context.selectedGrid.material.emissiveIntensity = context.selectedGrid.currentEmissiveIntensity;
+
+		context.selectedGrid = null;
+	}
+	refreshGrids();
+}
+
+function refreshGrids() {
+	context.gridMeshes.sort();
+	// Update Grid List
+	const gridOl = document.createElement("ol");
+	context.gridMeshes.map((grid) => {
+		const p = document.createElement("li");
+		p.onclick = () => { selectGrid(grid); }
+		if (context.selectedGrid == grid)
+			p.classList.add("grid-selected");
+		p.innerHTML = `<span style="color: ${grid.ownerColor}">${grid.factionTag} - ${grid.simpleName}</span>`;
+		return p;
+	}).forEach((p) => gridOl.appendChild(p));
+
+	document.getElementById('grids').innerHTML = '';
+	document.getElementById('grids').appendChild(gridOl);
 }
 
 function refreshPlanets() {
@@ -381,7 +425,7 @@ function animate() {
 			context.intersectedGrid.currentHex = context.intersectedGrid.material.emissive.getHex();
 			context.intersectedGrid.material.emissive.setHex(0xff0000);
 			context.intersectedGrid.material.color.setHex(0xff0000);
-			context.intersectedGrid.spriteText.visible = true;
+			// context.intersectedGrid.spriteText.visible = true;
 			context.renderer.domElement.style.cursor = 'pointer';
 		}
 	} else {
@@ -395,7 +439,7 @@ function animate() {
 	}
 
 	if (context.selectedGrid) {
-		context.selectedGrid.spriteText.visible = true;
+		//context.selectedGrid.spriteText.visible = true;
 		context.controls.moveTo(context.selectedGrid.position.x, context.selectedGrid.position.y, context.selectedGrid.position.z, true);
 	}
 
