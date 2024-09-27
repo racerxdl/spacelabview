@@ -13677,5 +13677,2651 @@
          }
       }, 
       "BaseFolder": "assets/Vanilla/PlanetDataFiles/Titan/"
+   }, 
+   "Agaris II": {
+      "Name": "Agaris II", 
+      "DefaultMaterial": {
+         "R": 173, 
+         "G": 170, 
+         "B": 165, 
+         "Material": "MoonRocks", 
+         "Depth": 0
+      }, 
+      "SimpleMaterials": {
+         "190": {
+            "R": 173, 
+            "G": 170, 
+            "B": 165, 
+            "Material": "MoonRocks", 
+            "Depth": 0
+         }, 
+         "174": {
+            "R": 142, 
+            "G": 140, 
+            "B": 135, 
+            "Material": "MoonSoil", 
+            "Depth": 0
+         }, 
+         "158": {
+            "R": 139, 
+            "G": 169, 
+            "B": 185, 
+            "Material": "Ice", 
+            "Depth": 0
+         }
+      }, 
+      "ComplexMaterials": {
+         "48": {
+            "id": 48, 
+            "name": "Craters", 
+            "rules": [
+               {
+                  "MinHeight": 0.5, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 40.0, 
+                  "SlopeMax": 70.0, 
+                  "Layers": [
+                     {
+                        "R": 142, 
+                        "G": 140, 
+                        "B": 135, 
+                        "Material": "MoonSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.3, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 142, 
+                        "G": 140, 
+                        "B": 135, 
+                        "Material": "MoonSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.4, 
+                  "MaxHeight": 0.6, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 142, 
+                        "G": 140, 
+                        "B": 135, 
+                        "Material": "MoonSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.5, 
+                  "LatitudeMin": 60.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 169, 
+                        "B": 185, 
+                        "Material": "Ice", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.25, 
+                  "MaxHeight": 0.5, 
+                  "LatitudeMin": 60.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 60.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 169, 
+                        "B": 185, 
+                        "Material": "Ice", 
+                        "Depth": 5
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "16": {
+            "id": 16, 
+            "name": "Other features", 
+            "rules": [
+               {
+                  "MinHeight": 0.5, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 40.0, 
+                  "SlopeMax": 70.0, 
+                  "Layers": [
+                     {
+                        "R": 142, 
+                        "G": 140, 
+                        "B": 135, 
+                        "Material": "MoonSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.3, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 142, 
+                        "G": 140, 
+                        "B": 135, 
+                        "Material": "MoonSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.4, 
+                  "MaxHeight": 0.6, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 142, 
+                        "G": 140, 
+                        "B": 135, 
+                        "Material": "MoonSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.5, 
+                  "LatitudeMin": 60.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 169, 
+                        "B": 185, 
+                        "Material": "Ice", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.25, 
+                  "MaxHeight": 0.5, 
+                  "LatitudeMin": 60.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 60.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 169, 
+                        "B": 185, 
+                        "Material": "Ice", 
+                        "Depth": 5
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "0": {
+            "id": 0, 
+            "name": "Other features 2", 
+            "rules": [
+               {
+                  "MinHeight": 0.5, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 40.0, 
+                  "SlopeMax": 70.0, 
+                  "Layers": [
+                     {
+                        "R": 142, 
+                        "G": 140, 
+                        "B": 135, 
+                        "Material": "MoonSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.3, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 142, 
+                        "G": 140, 
+                        "B": 135, 
+                        "Material": "MoonSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.4, 
+                  "MaxHeight": 0.6, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 142, 
+                        "G": 140, 
+                        "B": 135, 
+                        "Material": "MoonSoil", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 0.5, 
+                  "LatitudeMin": 60.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 169, 
+                        "B": 185, 
+                        "Material": "Ice", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.25, 
+                  "MaxHeight": 0.5, 
+                  "LatitudeMin": 60.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 60.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 169, 
+                        "B": 185, 
+                        "Material": "Ice", 
+                        "Depth": 5
+                     }
+                  ]
+               }
+            ]
+         }
+      }, 
+      "Ores": {
+         "245": {
+            "Value": 245, 
+            "Type": "Iron_01", 
+            "Start": 5, 
+            "Depth": 7, 
+            "TargetColor": [
+               97, 
+               108, 
+               131
+            ], 
+            "ColorInfluence": 15
+         }, 
+         "235": {
+            "Value": 235, 
+            "Type": "Nickel_01", 
+            "Start": 10, 
+            "Depth": 4, 
+            "TargetColor": [
+               97, 
+               108, 
+               131
+            ], 
+            "ColorInfluence": 15
+         }, 
+         "225": {
+            "Value": 225, 
+            "Type": "Silicon_01", 
+            "Start": 9, 
+            "Depth": 4, 
+            "TargetColor": [
+               97, 
+               108, 
+               131
+            ], 
+            "ColorInfluence": 15
+         }, 
+         "215": {
+            "Value": 215, 
+            "Type": "Silver_01", 
+            "Start": 21, 
+            "Depth": 3, 
+            "TargetColor": [
+               97, 
+               108, 
+               131
+            ], 
+            "ColorInfluence": 15
+         }, 
+         "205": {
+            "Value": 205, 
+            "Type": "Iron_01", 
+            "Start": 5, 
+            "Depth": 7, 
+            "TargetColor": [
+               97, 
+               108, 
+               131
+            ], 
+            "ColorInfluence": 15
+         }, 
+         "195": {
+            "Value": 195, 
+            "Type": "Cobalt_01", 
+            "Start": 15, 
+            "Depth": 4, 
+            "TargetColor": [
+               97, 
+               108, 
+               131
+            ], 
+            "ColorInfluence": 15
+         }, 
+         "185": {
+            "Value": 185, 
+            "Type": "Gold_01", 
+            "Start": 75, 
+            "Depth": 3, 
+            "TargetColor": [
+               97, 
+               108, 
+               131
+            ], 
+            "ColorInfluence": 15
+         }, 
+         "175": {
+            "Value": 175, 
+            "Type": "Platinum_01", 
+            "Start": 112, 
+            "Depth": 2, 
+            "TargetColor": [
+               97, 
+               108, 
+               131
+            ], 
+            "ColorInfluence": 15
+         }, 
+         "155": {
+            "Value": 155, 
+            "Type": "Copper", 
+            "Start": 12, 
+            "Depth": 5, 
+            "TargetColor": [
+               97, 
+               108, 
+               131
+            ], 
+            "ColorInfluence": 15
+         }, 
+         "145": {
+            "Value": 145, 
+            "Type": "Copper", 
+            "Start": 12, 
+            "Depth": 5, 
+            "TargetColor": [
+               97, 
+               108, 
+               131
+            ], 
+            "ColorInfluence": 15
+         }, 
+         "125": {
+            "Value": 125, 
+            "Type": "Bauxite", 
+            "Start": 32, 
+            "Depth": 5, 
+            "TargetColor": [
+               97, 
+               108, 
+               131
+            ], 
+            "ColorInfluence": 15
+         }, 
+         "115": {
+            "Value": 115, 
+            "Type": "Titanium", 
+            "Start": 103, 
+            "Depth": 5, 
+            "TargetColor": [
+               97, 
+               108, 
+               131
+            ], 
+            "ColorInfluence": 15
+         }, 
+         "95": {
+            "Value": 95, 
+            "Type": "Coal", 
+            "Start": 40, 
+            "Depth": 10, 
+            "TargetColor": [
+               97, 
+               108, 
+               131
+            ], 
+            "ColorInfluence": 15
+         }, 
+         "85": {
+            "Value": 85, 
+            "Type": "Sulfur", 
+            "Start": 60, 
+            "Depth": 5, 
+            "TargetColor": [
+               97, 
+               108, 
+               131
+            ], 
+            "ColorInfluence": 15
+         }
+      }, 
+      "BaseFolder": "assets/Ares/PlanetDataFiles/Agaris II/"
+   }, 
+   "Pertam": {
+      "Name": "Pertam", 
+      "DefaultMaterial": {
+         "R": 177, 
+         "G": 137, 
+         "B": 104, 
+         "Material": "PertamSand", 
+         "Depth": 0
+      }, 
+      "SimpleMaterials": {}, 
+      "ComplexMaterials": {
+         "0": {
+            "id": 0, 
+            "name": "Default", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 177, 
+                        "G": 137, 
+                        "B": 104, 
+                        "Material": "PertamSand", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 20.0, 
+                  "Layers": [
+                     {
+                        "R": 181, 
+                        "G": 141, 
+                        "B": 103, 
+                        "Material": "DustyRocks3", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 177, 
+                        "G": 132, 
+                        "B": 92, 
+                        "Material": "DustyRocks", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 35.0, 
+                  "Layers": [
+                     {
+                        "R": 180, 
+                        "G": 137, 
+                        "B": 101, 
+                        "Material": "DustyRocks2", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 35.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "127": {
+            "id": 127, 
+            "name": "PertamDesert", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 177, 
+                        "G": 137, 
+                        "B": 104, 
+                        "Material": "PertamSand", 
+                        "Depth": 30
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "229": {
+            "id": 229, 
+            "name": "GrassOld", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 15.0, 
+                  "Layers": [
+                     {
+                        "R": 139, 
+                        "G": 115, 
+                        "B": 68, 
+                        "Material": "Grass_old", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 15.0, 
+                  "SlopeMax": 20.0, 
+                  "Layers": [
+                     {
+                        "R": 181, 
+                        "G": 141, 
+                        "B": 103, 
+                        "Material": "DustyRocks3", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 177, 
+                        "G": 132, 
+                        "B": 92, 
+                        "Material": "DustyRocks", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 35.0, 
+                  "Layers": [
+                     {
+                        "R": 180, 
+                        "G": 137, 
+                        "B": 101, 
+                        "Material": "DustyRocks2", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 35.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "255": {
+            "id": 255, 
+            "name": "Sand", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 177, 
+                        "G": 137, 
+                        "B": 104, 
+                        "Material": "PertamSand", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 20.0, 
+                  "Layers": [
+                     {
+                        "R": 181, 
+                        "G": 141, 
+                        "B": 103, 
+                        "Material": "DustyRocks3", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 177, 
+                        "G": 132, 
+                        "B": 92, 
+                        "Material": "DustyRocks", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 35.0, 
+                  "Layers": [
+                     {
+                        "R": 180, 
+                        "G": 137, 
+                        "B": 101, 
+                        "Material": "DustyRocks2", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 35.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "194": {
+            "id": 194, 
+            "name": "DustyRocks", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 1.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 181, 
+                        "G": 141, 
+                        "B": 103, 
+                        "Material": "DustyRocks3", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 20.0, 
+                  "Layers": [
+                     {
+                        "R": 177, 
+                        "G": 132, 
+                        "B": 92, 
+                        "Material": "DustyRocks", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 180, 
+                        "G": 137, 
+                        "B": 101, 
+                        "Material": "DustyRocks2", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "102": {
+            "id": 102, 
+            "name": "CrackedSoil", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 5.0, 
+                  "Layers": [
+                     {
+                        "R": 167, 
+                        "G": 126, 
+                        "B": 90, 
+                        "Material": "CrackedSoil", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 5.0, 
+                  "SlopeMax": 25.0, 
+                  "Layers": [
+                     {
+                        "R": 177, 
+                        "G": 132, 
+                        "B": 92, 
+                        "Material": "DustyRocks", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 25.0, 
+                  "SlopeMax": 35.0, 
+                  "Layers": [
+                     {
+                        "R": 180, 
+                        "G": 137, 
+                        "B": 101, 
+                        "Material": "DustyRocks2", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 35.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "51": {
+            "id": 51, 
+            "name": "Soil", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 15.0, 
+                  "Layers": [
+                     {
+                        "R": 119, 
+                        "G": 104, 
+                        "B": 85, 
+                        "Material": "Soil", 
+                        "Depth": 3
+                     }, 
+                     {
+                        "R": 20, 
+                        "G": 37, 
+                        "B": 49, 
+                        "Material": "Ice_03", 
+                        "Depth": 3
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 15.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 177, 
+                        "G": 132, 
+                        "B": 92, 
+                        "Material": "DustyRocks", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 35.0, 
+                  "Layers": [
+                     {
+                        "R": 180, 
+                        "G": 137, 
+                        "B": 101, 
+                        "Material": "DustyRocks2", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 35.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "64": {
+            "id": 64, 
+            "name": "GreenGrass", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 25.0, 
+                  "Layers": [
+                     {
+                        "R": 50, 
+                        "G": 60, 
+                        "B": 25, 
+                        "Material": "Grass", 
+                        "Depth": 3
+                     }, 
+                     {
+                        "R": 20, 
+                        "G": 37, 
+                        "B": 49, 
+                        "Material": "Ice_03", 
+                        "Depth": 5
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 25.0, 
+                  "SlopeMax": 35.0, 
+                  "Layers": [
+                     {
+                        "R": 177, 
+                        "G": 132, 
+                        "B": 92, 
+                        "Material": "DustyRocks", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 35.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "38": {
+            "id": 38, 
+            "name": "OasisIce", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 3.0, 
+                  "Layers": [
+                     {
+                        "R": 119, 
+                        "G": 104, 
+                        "B": 85, 
+                        "Material": "Soil", 
+                        "Depth": 3
+                     }, 
+                     {
+                        "R": 20, 
+                        "G": 37, 
+                        "B": 49, 
+                        "Material": "Ice_03", 
+                        "Depth": 6
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 3.0, 
+                  "SlopeMax": 35.0, 
+                  "Layers": [
+                     {
+                        "R": 50, 
+                        "G": 60, 
+                        "B": 25, 
+                        "Material": "Grass", 
+                        "Depth": 3
+                     }, 
+                     {
+                        "R": 20, 
+                        "G": 37, 
+                        "B": 49, 
+                        "Material": "Ice_03", 
+                        "Depth": 4
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 35.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "204": {
+            "id": 204, 
+            "name": "Rocks", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 10.0, 
+                  "Layers": [
+                     {
+                        "R": 177, 
+                        "G": 137, 
+                        "B": 104, 
+                        "Material": "PertamSand", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 10.0, 
+                  "SlopeMax": 20.0, 
+                  "Layers": [
+                     {
+                        "R": 181, 
+                        "G": 141, 
+                        "B": 103, 
+                        "Material": "DustyRocks3", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 20.0, 
+                  "SlopeMax": 30.0, 
+                  "Layers": [
+                     {
+                        "R": 177, 
+                        "G": 132, 
+                        "B": 92, 
+                        "Material": "DustyRocks", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 30.0, 
+                  "SlopeMax": 35.0, 
+                  "Layers": [
+                     {
+                        "R": 180, 
+                        "G": 137, 
+                        "B": 101, 
+                        "Material": "DustyRocks2", 
+                        "Depth": 10
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 35.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 176, 
+                        "G": 133, 
+                        "B": 98, 
+                        "Material": "DesertRocks", 
+                        "Depth": 30
+                     }
+                  ]
+               }
+            ]
+         }, 
+         "94": {
+            "id": 94, 
+            "name": "RocksTop", 
+            "rules": [
+               {
+                  "MinHeight": 0.0, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 177, 
+                        "G": 132, 
+                        "B": 92, 
+                        "Material": "DustyRocks", 
+                        "Depth": 10
+                     }
+                  ]
+               }
+            ]
+         }
+      }, 
+      "Ores": {
+         "200": {
+            "Value": 200, 
+            "Type": "Iron_02", 
+            "Start": 3, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "220": {
+            "Value": 220, 
+            "Type": "Nickel_01", 
+            "Start": 3, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "240": {
+            "Value": 240, 
+            "Type": "Silicon_01", 
+            "Start": 3, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "250": {
+            "Value": 250, 
+            "Type": "Cobalt_01", 
+            "Start": 3, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "1": {
+            "Value": 1, 
+            "Type": "Iron_02", 
+            "Start": 10, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "4": {
+            "Value": 4, 
+            "Type": "Iron_02", 
+            "Start": 12, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "8": {
+            "Value": 8, 
+            "Type": "Iron_02", 
+            "Start": 14, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "12": {
+            "Value": 12, 
+            "Type": "Iron_02", 
+            "Start": 25, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "16": {
+            "Value": 16, 
+            "Type": "Iron_02", 
+            "Start": 28, 
+            "Depth": 5, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "20": {
+            "Value": 20, 
+            "Type": "Iron_02", 
+            "Start": 31, 
+            "Depth": 5, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "24": {
+            "Value": 24, 
+            "Type": "Nickel_01", 
+            "Start": 10, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "28": {
+            "Value": 28, 
+            "Type": "Nickel_01", 
+            "Start": 11, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "32": {
+            "Value": 32, 
+            "Type": "Nickel_01", 
+            "Start": 11, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "36": {
+            "Value": 36, 
+            "Type": "Nickel_01", 
+            "Start": 24, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "40": {
+            "Value": 40, 
+            "Type": "Nickel_01", 
+            "Start": 27, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "44": {
+            "Value": 44, 
+            "Type": "Nickel_01", 
+            "Start": 30, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "48": {
+            "Value": 48, 
+            "Type": "Silicon_01", 
+            "Start": 9, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "52": {
+            "Value": 52, 
+            "Type": "Silicon_01", 
+            "Start": 13, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "56": {
+            "Value": 56, 
+            "Type": "Silicon_01", 
+            "Start": 10, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "60": {
+            "Value": 60, 
+            "Type": "Silicon_01", 
+            "Start": 22, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "64": {
+            "Value": 64, 
+            "Type": "Silicon_01", 
+            "Start": 25, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "68": {
+            "Value": 68, 
+            "Type": "Silicon_01", 
+            "Start": 27, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "72": {
+            "Value": 72, 
+            "Type": "Cobalt_01", 
+            "Start": 20, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "76": {
+            "Value": 76, 
+            "Type": "Cobalt_01", 
+            "Start": 22, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "80": {
+            "Value": 80, 
+            "Type": "Cobalt_01", 
+            "Start": 26, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "84": {
+            "Value": 84, 
+            "Type": "Cobalt_01", 
+            "Start": 36, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "88": {
+            "Value": 88, 
+            "Type": "Cobalt_01", 
+            "Start": 44, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "92": {
+            "Value": 92, 
+            "Type": "Cobalt_01", 
+            "Start": 62, 
+            "Depth": 5, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "96": {
+            "Value": 96, 
+            "Type": "Silver_01", 
+            "Start": 21, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "100": {
+            "Value": 100, 
+            "Type": "Silver_01", 
+            "Start": 25, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "104": {
+            "Value": 104, 
+            "Type": "Silver_01", 
+            "Start": 31, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "108": {
+            "Value": 108, 
+            "Type": "Silver_01", 
+            "Start": 55, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "112": {
+            "Value": 112, 
+            "Type": "Silver_01", 
+            "Start": 58, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "116": {
+            "Value": 116, 
+            "Type": "Silver_01", 
+            "Start": 63, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "120": {
+            "Value": 120, 
+            "Type": "Magnesium_01", 
+            "Start": 23, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "124": {
+            "Value": 124, 
+            "Type": "Magnesium_01", 
+            "Start": 26, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "128": {
+            "Value": 128, 
+            "Type": "Magnesium_01", 
+            "Start": 29, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "132": {
+            "Value": 132, 
+            "Type": "Magnesium_01", 
+            "Start": 53, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "136": {
+            "Value": 136, 
+            "Type": "Magnesium_01", 
+            "Start": 55, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "140": {
+            "Value": 140, 
+            "Type": "Magnesium_01", 
+            "Start": 59, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "144": {
+            "Value": 144, 
+            "Type": "Iron_02", 
+            "Start": 32, 
+            "Depth": 2, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "148": {
+            "Value": 148, 
+            "Type": "Iron_02", 
+            "Start": 35, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "152": {
+            "Value": 152, 
+            "Type": "Silicon_01", 
+            "Start": 38, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "156": {
+            "Value": 156, 
+            "Type": "Silicon_01", 
+            "Start": 80, 
+            "Depth": 5, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "160": {
+            "Value": 160, 
+            "Type": "Nickel_01", 
+            "Start": 89, 
+            "Depth": 5, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "164": {
+            "Value": 164, 
+            "Type": "Nickel_01", 
+            "Start": 96, 
+            "Depth": 5, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "168": {
+            "Value": 168, 
+            "Type": "Gold_01", 
+            "Start": 40, 
+            "Depth": 2, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "172": {
+            "Value": 172, 
+            "Type": "Gold_01", 
+            "Start": 42, 
+            "Depth": 2, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "176": {
+            "Value": 176, 
+            "Type": "Gold_01", 
+            "Start": 45, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "180": {
+            "Value": 180, 
+            "Type": "Gold_01", 
+            "Start": 80, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "184": {
+            "Value": 184, 
+            "Type": "Gold_01", 
+            "Start": 90, 
+            "Depth": 5, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }, 
+         "188": {
+            "Value": 188, 
+            "Type": "Gold_01", 
+            "Start": 110, 
+            "Depth": 6, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 200
+         }
+      }, 
+      "BaseFolder": "assets/Vanilla/PlanetDataFiles/Pertam/"
+   }, 
+   "Triton": {
+      "Name": "Triton", 
+      "DefaultMaterial": {
+         "R": 225, 
+         "G": 238, 
+         "B": 241, 
+         "Material": "Snow", 
+         "Depth": 0
+      }, 
+      "SimpleMaterials": {}, 
+      "ComplexMaterials": {
+         "0": {
+            "id": 0, 
+            "name": "Planet Features", 
+            "rules": [
+               {
+                  "MinHeight": -0.01, 
+                  "MaxHeight": 0.0003, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 197, 
+                        "G": 200, 
+                        "B": 204, 
+                        "Material": "TritonIce", 
+                        "Depth": 8
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0001, 
+                  "MaxHeight": 0.4, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 33.0, 
+                  "Layers": [
+                     {
+                        "R": 225, 
+                        "G": 238, 
+                        "B": 241, 
+                        "Material": "Snow", 
+                        "Depth": 8
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0001, 
+                  "MaxHeight": 0.4, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 31.0, 
+                  "SlopeMax": 38.0, 
+                  "Layers": [
+                     {
+                        "R": 225, 
+                        "G": 238, 
+                        "B": 241, 
+                        "Material": "Snow", 
+                        "Depth": 8
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.0001, 
+                  "MaxHeight": 0.4, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 36.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 50, 
+                        "G": 50, 
+                        "B": 50, 
+                        "Material": "TritonStone", 
+                        "Depth": 8
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.4, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 0.0, 
+                  "SlopeMax": 60.0, 
+                  "Layers": [
+                     {
+                        "R": 225, 
+                        "G": 238, 
+                        "B": 241, 
+                        "Material": "Snow", 
+                        "Depth": 8
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.4, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 59.0, 
+                  "SlopeMax": 64.0, 
+                  "Layers": [
+                     {
+                        "R": 225, 
+                        "G": 238, 
+                        "B": 241, 
+                        "Material": "Snow", 
+                        "Depth": 8
+                     }
+                  ]
+               }, 
+               {
+                  "MinHeight": 0.4, 
+                  "MaxHeight": 1.0, 
+                  "LatitudeMin": 0.0, 
+                  "LatitudeMax": 90.0, 
+                  "SlopeMin": 63.0, 
+                  "SlopeMax": 90.0, 
+                  "Layers": [
+                     {
+                        "R": 50, 
+                        "G": 50, 
+                        "B": 50, 
+                        "Material": "TritonStone", 
+                        "Depth": 8
+                     }
+                  ]
+               }
+            ]
+         }
+      }, 
+      "Ores": {
+         "200": {
+            "Value": 200, 
+            "Type": "Iron_02", 
+            "Start": 3, 
+            "Depth": 7, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "220": {
+            "Value": 220, 
+            "Type": "Nickel_01", 
+            "Start": 3, 
+            "Depth": 7, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "240": {
+            "Value": 240, 
+            "Type": "Silicon_01", 
+            "Start": 3, 
+            "Depth": 7, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "1": {
+            "Value": 1, 
+            "Type": "Iron_02", 
+            "Start": 10, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "4": {
+            "Value": 4, 
+            "Type": "Iron_02", 
+            "Start": 12, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "8": {
+            "Value": 8, 
+            "Type": "Iron_02", 
+            "Start": 14, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "12": {
+            "Value": 12, 
+            "Type": "Iron_02", 
+            "Start": 25, 
+            "Depth": 5, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "16": {
+            "Value": 16, 
+            "Type": "Iron_02", 
+            "Start": 28, 
+            "Depth": 5, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "20": {
+            "Value": 20, 
+            "Type": "Iron_02", 
+            "Start": 31, 
+            "Depth": 8, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "24": {
+            "Value": 24, 
+            "Type": "Nickel_01", 
+            "Start": 10, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "28": {
+            "Value": 28, 
+            "Type": "Nickel_01", 
+            "Start": 11, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "32": {
+            "Value": 32, 
+            "Type": "Nickel_01", 
+            "Start": 11, 
+            "Depth": 6, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "36": {
+            "Value": 36, 
+            "Type": "Nickel_01", 
+            "Start": 24, 
+            "Depth": 5, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "40": {
+            "Value": 40, 
+            "Type": "Nickel_01", 
+            "Start": 27, 
+            "Depth": 5, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "44": {
+            "Value": 44, 
+            "Type": "Nickel_01", 
+            "Start": 30, 
+            "Depth": 8, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "48": {
+            "Value": 48, 
+            "Type": "Silicon_01", 
+            "Start": 9, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "52": {
+            "Value": 52, 
+            "Type": "Silicon_01", 
+            "Start": 13, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "56": {
+            "Value": 56, 
+            "Type": "Silicon_01", 
+            "Start": 10, 
+            "Depth": 6, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "60": {
+            "Value": 60, 
+            "Type": "Silicon_01", 
+            "Start": 22, 
+            "Depth": 6, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "64": {
+            "Value": 64, 
+            "Type": "Silicon_01", 
+            "Start": 25, 
+            "Depth": 7, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "68": {
+            "Value": 68, 
+            "Type": "Silicon_01", 
+            "Start": 27, 
+            "Depth": 9, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "72": {
+            "Value": 72, 
+            "Type": "Cobalt_01", 
+            "Start": 20, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "76": {
+            "Value": 76, 
+            "Type": "Cobalt_01", 
+            "Start": 22, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "80": {
+            "Value": 80, 
+            "Type": "Cobalt_01", 
+            "Start": 26, 
+            "Depth": 6, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "84": {
+            "Value": 84, 
+            "Type": "Cobalt_01", 
+            "Start": 52, 
+            "Depth": 5, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "88": {
+            "Value": 88, 
+            "Type": "Cobalt_01", 
+            "Start": 55, 
+            "Depth": 6, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "92": {
+            "Value": 92, 
+            "Type": "Cobalt_01", 
+            "Start": 62, 
+            "Depth": 9, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "96": {
+            "Value": 96, 
+            "Type": "Silver_01", 
+            "Start": 21, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "100": {
+            "Value": 100, 
+            "Type": "Silver_01", 
+            "Start": 25, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "104": {
+            "Value": 104, 
+            "Type": "Silver_01", 
+            "Start": 31, 
+            "Depth": 5, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "108": {
+            "Value": 108, 
+            "Type": "Silver_01", 
+            "Start": 55, 
+            "Depth": 8, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "112": {
+            "Value": 112, 
+            "Type": "Silver_01", 
+            "Start": 58, 
+            "Depth": 9, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "116": {
+            "Value": 116, 
+            "Type": "Silver_01", 
+            "Start": 63, 
+            "Depth": 11, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "120": {
+            "Value": 120, 
+            "Type": "Magnesium_01", 
+            "Start": 23, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "124": {
+            "Value": 124, 
+            "Type": "Magnesium_01", 
+            "Start": 26, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "128": {
+            "Value": 128, 
+            "Type": "Magnesium_01", 
+            "Start": 29, 
+            "Depth": 5, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "132": {
+            "Value": 132, 
+            "Type": "Magnesium_01", 
+            "Start": 53, 
+            "Depth": 7, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "136": {
+            "Value": 136, 
+            "Type": "Magnesium_01", 
+            "Start": 55, 
+            "Depth": 8, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "140": {
+            "Value": 140, 
+            "Type": "Magnesium_01", 
+            "Start": 59, 
+            "Depth": 10, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "144": {
+            "Value": 144, 
+            "Type": "Iron_02", 
+            "Start": 32, 
+            "Depth": 2, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "148": {
+            "Value": 148, 
+            "Type": "Iron_02", 
+            "Start": 35, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "152": {
+            "Value": 152, 
+            "Type": "Silicon_01", 
+            "Start": 38, 
+            "Depth": 5, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "156": {
+            "Value": 156, 
+            "Type": "Silicon_01", 
+            "Start": 80, 
+            "Depth": 8, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "160": {
+            "Value": 160, 
+            "Type": "Nickel_01", 
+            "Start": 89, 
+            "Depth": 9, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "164": {
+            "Value": 164, 
+            "Type": "Nickel_01", 
+            "Start": 96, 
+            "Depth": 11, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "168": {
+            "Value": 168, 
+            "Type": "Gold_01", 
+            "Start": 40, 
+            "Depth": 1, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "172": {
+            "Value": 172, 
+            "Type": "Gold_01", 
+            "Start": 42, 
+            "Depth": 2, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "176": {
+            "Value": 176, 
+            "Type": "Gold_01", 
+            "Start": 45, 
+            "Depth": 3, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "180": {
+            "Value": 180, 
+            "Type": "Gold_01", 
+            "Start": 100, 
+            "Depth": 4, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "184": {
+            "Value": 184, 
+            "Type": "Gold_01", 
+            "Start": 107, 
+            "Depth": 5, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }, 
+         "188": {
+            "Value": 188, 
+            "Type": "Gold_01", 
+            "Start": 112, 
+            "Depth": 8, 
+            "TargetColor": [
+               0, 
+               0, 
+               0
+            ], 
+            "ColorInfluence": 0
+         }
+      }, 
+      "BaseFolder": "assets/Vanilla/PlanetDataFiles/Triton/"
    }
 }

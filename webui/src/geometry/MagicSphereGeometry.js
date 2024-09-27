@@ -3,6 +3,7 @@
 */
 
 import * as THREE from 'three';
+import { mergeVertices } from './BufferedGeometryUtils';
 
 let cachedMagicSpheres = {};
 
@@ -10,6 +11,13 @@ function magicSphereGeometry(radius, segments) {
     if (!cachedMagicSpheres[segments]) {
         console.log(`Magic Sphere (${segments}) not cached. Caching it...`)
         cachedMagicSpheres[segments] = new THREE.BoxGeometry(1, 1, 1, segments, segments, segments);
+        // clear normal from vertices
+        cachedMagicSpheres[segments].deleteAttribute('normal');
+        cachedMagicSpheres[segments] = mergeVertices(cachedMagicSpheres[segments]);
+
+        // recreate normal
+        cachedMagicSpheres[segments].computeVertexNormals();
+
         const uv = new THREE.Vector2();
         const repeat = new THREE.Vector2(1 / 3, 1 / 2);
         const offsets = [

@@ -12,7 +12,8 @@ const planets = [
     // Ares At War
     "agaris", "agaris2", "bylen", "planet_crait", "planet_lezuno", "planet_lorus", "planet_thora_4"
 ]
-const cubeMapFaces = ["front", "right", "up", "down", "back", "left"];
+const cubeMapFaces = ["left", "right", "up", "down", "back", "front"];
+const upFaceIdx = cubeMapFaces.indexOf("up");
 
 const imagesToLoad = [
     "img/BackgroundCube-0.jpg",
@@ -46,6 +47,7 @@ async function preloadTexture(texturePath) {
 planets.forEach((planet) => {
     cubeMapFaces.forEach((face) => {
         imagesToLoad.push(`img/planets-cube/${planet}/${face}.jpg`)
+        imagesToLoad.push(`img/planets-cube/${planet}/${face}_normal.jpg`)
         imagesToLoad.push(`img/planets-cube/${planet}/hm/${face}.jpg`)
     })
 })
@@ -83,10 +85,15 @@ function planetHeightMaps(planetPrefix) {
 function planetTextures(planetPrefix) {
     return cubeMapFaces.map((face) => `img/planets-cube/${planetPrefix}/${face}.jpg`);
 }
+function planetNormals(planetPrefix) {
+    return cubeMapFaces.map((face) => `img/planets-cube/${planetPrefix}/${face}_normal.jpg`);
+}
 
 export {
     preloadAll,
     preGenerate,
     planetHeightMaps,
     planetTextures,
+    planetNormals,
+    upFaceIdx,
 }

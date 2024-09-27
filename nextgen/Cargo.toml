@@ -29,3 +29,4 @@ serde = { version = "1.0", features = ["derive"] }
 serde-xml-rs = "0.6.0"
 serde_json = "1.0.96"
 wgpu = "0.15.1"
+lazy_static = "1.4"

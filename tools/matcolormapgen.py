@@ -71,6 +71,11 @@ planets = [
         "planetName": "Planet Thora 4 - Lava",
         "baseAssetPath": "assets/Ares/PlanetDataFiles/Planet Thora 4/"
     },
+    {
+        "planetData": "assets/Ares/PlanetGeneratorDefinitions.sbc",
+        "planetName": "Agaris II",
+        "baseAssetPath": "assets/Ares/PlanetDataFiles/Agaris II/"
+    },
     # Vanilla
     {
         "planetData": "assets/Vanilla/PlanetGeneratorDefinitions.sbc",
@@ -98,7 +103,7 @@ planets = [
         "baseAssetPath": "assets/Vanilla/PlanetDataFiles/Moon/"
     },
     {
-        "planetData": "assets/Vanilla/PlanetGeneratorDefinitions.sbc",
+        "planetData": "assets/Vanilla/Pertam.sbc",
         "planetName": "Pertam",
         "baseAssetPath": "assets/Vanilla/PlanetDataFiles/Pertam/"
     },
@@ -108,7 +113,7 @@ planets = [
         "baseAssetPath": "assets/Vanilla/PlanetDataFiles/Titan/"
     },
     {
-        "planetData": "assets/Vanilla/PlanetGeneratorDefinitions.sbc",
+        "planetData": "assets/Vanilla/Triton.sbc",
         "planetName": "Triton",
         "baseAssetPath": "assets/Vanilla/PlanetDataFiles/Triton/"
     }

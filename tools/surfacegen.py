@@ -12,9 +12,12 @@ from libs.datatypes import *
 from libs.mathtool import *
 
 
-planetData = "assets/Ares/Planet Agaris.sbc"
-planetName = "Planet Agaris"
-baseAssetPath = "assets/Ares/PlanetDataFiles/Planet Agaris/"
+#planetData = "assets/Ares/Planet Agaris.sbc"
+#planetName = "Planet Agaris"
+#baseAssetPath = "assets/Ares/PlanetDataFiles/Planet Agaris/"
+planetData = "assets/Vanilla/PlanetGeneratorDefinitions.sbc"
+planetName = "EarthLike"
+baseAssetPath = "assets/Vanilla/PlanetDataFiles/EarthLike/"
 # planetData = "assets/PlanetGeneratorDefinitions.sbc"
 # planetName = "Europa"
 # baseAssetPath = "assets/Europa/"
@@ -90,9 +93,6 @@ if __name__ == "__main__":
             pd.cache(matfiles, matcoloravg)
             planetDefinitions[pd.Name] = pd
 
-    with open("./luts/matcolormap.json", "w") as f:
-        f.write(MyEncoder().encode(planetDefinitions))
-
     currentPlanet = planetDefinitions[planetName]
     print(currentPlanet.ComplexMaterials)
 
@@ -147,8 +147,7 @@ if __name__ == "__main__":
                     z0, _, _ = hm.getpixel((x0, y0))
                     z1, _, _ = hm.getpixel((x1, y1))
                     z = z1 - z0
-                    a = int(
-                        abs(math.asin(z / math.sqrt(x*x + y*y + z*z)) * rad2deg))
+                    a = int(abs(math.asin(z / math.sqrt(x*x + y*y + z*z)) * rad2deg))
                     sm.putpixel((x0, y0), (a, a, a))
             #for i in range(3):
             #    sm = sm.filter(ImageFilter.GaussianBlur(radius=2))
@@ -166,7 +165,7 @@ if __name__ == "__main__":
                 print(f"Line {y} from {height}")
             for x in range(0, width):
                 v, _, ore = im.getpixel((x, y))
-                if ore == 0 and not ore in pd.Ores:
+                if True or (ore == 0 or not ore in pd.Ores):
                     h, _, _ = hm.getpixel((x, y))
                     s, _, _ = sm.getpixel((x, y))
                     h /= 255.0
@@ -175,7 +174,7 @@ if __name__ == "__main__":
                     tex.putpixel((x, y), color)
                 else:
                     ore = pd.Ores[ore]
-                    if oreColors[ore.Type]:
+                    if ore.Type in oreColors:
                         tex.putpixel((x, y), oreColors[ore.Type])
                     else:
                         tex.putpixel((x, y), ore.TargetColor)

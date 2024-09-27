@@ -24,7 +24,7 @@ fn compute_point(u: f32, v: f32, face: i32) -> vec3<f32> {
     }
 }
 
-const rad2deg: f32 = 57.29577951308232;  // approximately equal to 180/pi
+const rad: f32 = 1.5707963267948966;
 
 @compute
 @workgroup_size(8,8)
@@ -41,7 +41,7 @@ fn main(@builtin(global_invocation_id) global_id: vec3<u32>) {
 
     let point_on_sphere = normalize(point);
     let latitude = asin(point_on_sphere.y);
-    let latitude_degrees = (latitude * rad2deg) / 256.0; // Normalized byte at texture 0..1
-    let color = vec4<f32>(latitude_degrees, latitude_degrees, latitude_degrees, 1.0);
+    let latitude_radian_norm = abs(latitude) / rad;
+    let color = vec4<f32>(latitude_radian_norm, latitude_radian_norm, latitude_radian_norm, 1.0);
     textureStore(texture, vec2<i32>(i32(X), i32(Y)), color);
 }

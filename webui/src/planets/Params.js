@@ -9,14 +9,14 @@ const Params = {
     sphereCubeDivisions: 256, // Number of divisions on Cube Spheres used for Planet Mesh
     waterSphereSegments: 64,
     planetLOD: [
-        { distance:   25000, divisions: 512 },
-        { distance:   50000, divisions: 256 },
-        { distance:  100000, divisions: 128 },
-        { distance:  200000, divisions: 64 },
-        { distance:  400000, divisions: 32 },
-        { distance:  800000, divisions: 16 },
-        { distance: 1600000, divisions: 8 },
-        { distance: 3200000, divisions: 4 },
+        { distance:     500, divisions: 512 },
+        { distance:    2000, divisions: 256 },
+        { distance:    4000, divisions: 128 },
+        { distance:   16000, divisions: 64 },
+        { distance:   64000, divisions: 32 },
+        { distance:  256000, divisions: 16 },
+        { distance: 1024000, divisions: 8 },
+        { distance: 4096000, divisions: 4 },
     ],
     // Grid Mesh
     gridSphereDiameterFactor: 100,

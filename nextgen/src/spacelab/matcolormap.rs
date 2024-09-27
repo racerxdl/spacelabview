@@ -1,11 +1,39 @@
 use std::collections::HashMap;
 
+use lazy_static::lazy_static;
 use serde::{Deserialize, Serialize};
 
 use super::{coloravg::MatColorAverage, matfile::MatFile};
 
 #[derive(Debug, Serialize, Deserialize, PartialEq)]
 pub struct PlanetMaterials(pub HashMap<String, PlanetMaterial>);
+
+lazy_static! {
+    pub static ref ORE_COLORS: HashMap<String, (u8, u8, u8)> = {
+        let mut ore_colors = HashMap::new();
+        ore_colors.insert("Iron_01".to_string(), (255, 216, 0));
+        ore_colors.insert("Iron_02".to_string(), (255, 216, 0));
+        ore_colors.insert("Nickel_01".to_string(), (239, 166, 117));
+        ore_colors.insert("Silicon_01".to_string(), (216, 107, 128));
+        ore_colors.insert("Magnesium_01".to_string(), (0, 255, 255));
+        ore_colors.insert("Cobalt_01".to_string(), (181, 254, 0));
+        ore_colors.insert("Silver_01".to_string(), (145, 145, 145));
+        ore_colors.insert("Gold_01".to_string(), (255, 0, 220));
+        ore_colors.insert("Platinum_01".to_string(), (219, 249, 255));
+        ore_colors.insert("Uraninite_01".to_string(), (155, 114, 241));
+        ore_colors.insert("Copper".to_string(), (184, 115, 51));
+        ore_colors.insert("Bauxite".to_string(), (249, 166, 64));
+        ore_colors.insert("Coal".to_string(), (145, 145, 145));
+        ore_colors.insert("Titanium".to_string(), (81, 127, 84));
+        ore_colors.insert("OilSand".to_string(), (183, 0, 3));
+        ore_colors.insert("Sulfur".to_string(), (190, 167, 151));
+        ore_colors.insert("Lithium".to_string(), (172, 80, 141));
+        ore_colors.insert("Tantalum".to_string(), (255, 0, 0));
+        ore_colors.insert("Cronyx".to_string(), (184, 115, 51));
+        ore_colors.insert("Dorium".to_string(), (181, 254, 0));
+        ore_colors
+    };
+}
 
 #[derive(Debug, Deserialize, Serialize, PartialEq)]
 pub struct OreMap {

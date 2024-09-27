@@ -2586,6 +2586,7 @@ dependencies = [
  "futures",
  "futures-intrusive",
  "image",
+ "lazy_static",
  "nalgebra",
  "quick-xml",
  "rayon",

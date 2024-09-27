@@ -5,7 +5,7 @@ import * as THREE from 'three';
 
 import PlanetData from "../planets/PlanetData";
 import { loadTexture } from "../loaders/TexturePreloader"
-import { planetHeightMaps, planetTextures } from "../loaders/Preloader";
+import { planetHeightMaps, planetNormals, planetTextures, upFaceIdx } from "../loaders/Preloader";
 import PlanetParams from "../planets/Params";
 import { magicSphereGeometry } from "../geometry/MagicSphereGeometry"
 import { pickRandomColor } from '../colors';
@@ -54,6 +54,7 @@ class SpaceSocket {
                 const basePlanet = planetNameInfo[1] || "";
                 const generatorParams = planetNameInfo.length == 4 ? planetNameInfo[3] : planetNameInfo[2];
                 console.log(`Detected planet ${instanceName} (${name})`);
+                console.log(voxelData);
                 const planetDataByInstance = PlanetData[basePlanet.toLowerCase()];
                 const planetDataByName = PlanetData[instanceName.toLowerCase()];
 
@@ -71,31 +72,50 @@ class SpaceSocket {
 
                 planetData.heightMapTextures = planetHeightMaps(planetData.data.pathPrefix);
                 planetData.textures = planetTextures(planetData.data.pathPrefix);
+                planetData.normals = planetNormals(planetData.data.pathPrefix);
 
                 planetData.maxHillSize = (1 + voxelData.HillParameters[1]) * voxelData.Size;
                 planetData.minHillSize = (1 + voxelData.HillParameters[0]) * voxelData.Size;
                 planetData.hillDelta = (planetData.maxHillSize - planetData.minHillSize) / 2;
 
                 planetData.materials = await Promise.all(planetData.textures.map(async (texture, idx) => {
+                    let texRotation = 0;
+                    if (idx == upFaceIdx) {
+                        texRotation = Math.PI;
+                    }
                     const heightMapTexture = planetData.heightMapTextures[idx];
                     const hmTex = await loadTexture(heightMapTexture);
+                    const normalTex = await loadTexture(planetData.normals[idx]);
+                    const texMap = await loadTexture(texture);
+
+                    hmTex.center = new THREE.Vector2(0.5, 0.5);
+                    hmTex.rotation = texRotation;
+                    hmTex.minFilter = hmTex.magFilter = THREE.LinearFilter;
+                    normalTex.center = new THREE.Vector2(0.5, 0.5);
+                    normalTex.rotation = texRotation;
+                    normalTex.minFilter = normalTex.magFilter = THREE.LinearFilter;
+                    texMap.center = new THREE.Vector2(0.5, 0.5);
+                    texMap.rotation = texRotation;
+                    normalTex.minFilter = normalTex.magFilter = THREE.LinearFilter;
+
                     return new THREE.MeshPhongMaterial({
                         specular: 0x333333,
                         shininess: 5,
-                        map: await loadTexture(texture),
+                        map: texMap,
                         displacementMap: hmTex,
                         displacementScale: planetData.hillDelta,
-                        //normalScale: new THREE.Vector2(1, - 1),
+                        //normalMap: normalTex, // Normal map is currently not working due seams
+                        normalScale: new THREE.Vector2(1, - 1),
                         bumpMap: hmTex,
                         bumpScale: planetData.hillDelta / 2,
-                        //wireframe: true
+                        wireframe: false
                     });
                 }));
                 planetData.mesh = new THREE.LOD();
                 PlanetParams.planetLOD.forEach((lod) => {
                     const geometry = magicSphereGeometry(planetData.minHillSize / 2, lod.divisions);
                     const mesh = new THREE.Mesh(geometry, planetData.materials);
-                    planetData.mesh.addLevel(mesh, lod.distance);
+                    planetData.mesh.addLevel(mesh, (voxelData.Size/2) + lod.distance);
                 });
                 // planetData.geometry = magicSphereGeometry(planetData.minHillSize / 2, PlanetParams.sphereCubeDivisions);
                 // planetData.mesh = new THREE.Mesh(planetData.geometry, planetData.materials);
@@ -186,8 +206,6 @@ class SpaceSocket {
                         alpha = await loadTexture(`img/sky/${ringData.alpha}`);
                     }
                     const material = new THREE.MeshLambertMaterial({
-                        specular: 0xFFFFFF,
-                        shininess: 90,
                         color: ringData.color,
                         normalScale: new THREE.Vector2(-1, 1),
                         map,

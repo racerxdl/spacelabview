@@ -14,7 +14,7 @@ use render::{
     planetplugin::{planet_update_system, PlanetData, PlanetSpec, PlanetBundle, default_mesh, PlanetPlugin},
 };
 use renderdoc::{RenderDoc, V110};
-use spacelab::{matcolormap::PlanetMaterials, material_gpu::generate_material_gpu};
+use spacelab::{lutgen_gpu::gpu_generate_slope_inner, matcolormap::PlanetMaterials, material_gpu::generate_material_gpu};
 use wgpu::{Features, PrimitiveTopology};
 
 use crate::spacelab::{
@@ -162,8 +162,6 @@ fn setup(
     });
 }
 
-fn main() {
-    gen_main();
     //App::new()
     //    .add_plugins(DefaultPlugins.set(RenderPlugin {
     //        wgpu_settings: WgpuSettings {
@@ -181,6 +179,9 @@ fn main() {
     //    .add_plugin(PlanetPlugin)
     //    .add_startup_system(setup)
     //    .run();
+
+fn main() {
+    gen_main();
 }
 
 fn gen_planet(planet_definitions: &PlanetMaterials, planet_name: String) {
@@ -207,6 +208,9 @@ fn gen_planet(planet_definitions: &PlanetMaterials, planet_name: String) {
             wgpu::TextureFormat::R32Float,
             Some("HeightMap"),
         );
+        let slope = futures::executor::block_on(gpu_generate_slope_inner(&gpu_device, &heightmap))
+            .unwrap();
+
         let materialmap = Texture::from_file(
             &gpu_device,
             format!(
@@ -233,6 +237,7 @@ fn gen_planet(planet_definitions: &PlanetMaterials, planet_name: String) {
             &heightmap,
             &latlut,
             &normal,
+            &slope,
             &planet_definitions.0[&planet_name],
         ));
 
@@ -279,6 +284,13 @@ fn gen_main() {
             continue;
         }
         println!("Planet: {}", planet);
+        // Gen only Planet Agaris
+        //if planet != "Planet Agaris" {
+        //    continue;
+        //}
+        // if planet != "EarthLike" {
+        //     continue;
+        // }
         gen_planet(&planet_definitions, planet.clone());
     }
 
