@@ -3,13 +3,14 @@ package spacelab
 import "encoding/json"
 
 const (
-	infoEndpoint         = "/info"
-	infoGlobalEndpoint   = infoEndpoint + "/global"
-	infoVoxelsEndpoint   = infoEndpoint + "/voxels"
-	infoFactionsEndpoint = infoEndpoint + "/factions"
-	infoPlayersEndpoint  = infoEndpoint + "/players"
-	infoGridsEndpoint    = infoEndpoint + "/grids"
-	infoV2GridsEndpoint  = infoEndpoint + "/v2grids"
+	infoEndpoint           = "/info"
+	infoGlobalEndpoint     = infoEndpoint + "/global"
+	infoVoxelsEndpoint     = infoEndpoint + "/voxels"
+	infoFactionsEndpoint   = infoEndpoint + "/factions"
+	infoPlayersEndpoint    = infoEndpoint + "/players"
+	infoGridsEndpoint      = infoEndpoint + "/grids"
+	infoGridBlocksEndpoint = infoEndpoint + "/gridblocks"
+	infoV2GridsEndpoint    = infoEndpoint + "/v2grids"
 )
 
 func (s *API) GlobalInfo() (GlobalInfo, error) {
@@ -95,5 +96,16 @@ func (s *API) GridsV2() ([]GridGroup, error) {
 		}
 	}
 
+	return g, err
+}
+
+func (s *API) GridBlocks(gridId string) ([]GridBlock, error) {
+	res, err := s.Get(infoGridBlocksEndpoint+"?gridId="+gridId, nil)
+	if err != nil {
+		return nil, err
+	}
+
+	g := []GridBlock{}
+	err = json.Unmarshal([]byte(res), &g)
 	return g, err
 }

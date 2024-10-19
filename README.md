@@ -27,6 +27,7 @@ Requires nodejs and npm
 ```bash
 cd webui
 npm install
+./node_modules/protobufjs-cli/bin/pbjs -t json ../spaceproto/spaceproto.proto > src/spaceproto/spaceproto.json
 npm run build
 ```
 
@@ -35,6 +36,9 @@ The contents of `dist` folder is WebUI built.
 # Building the Golang Backend
 
 ```bash
+# Regenerate protobuff
+protoc --proto_path=spaceproto spaceproto/*.proto --go_out=.
+
 # Linux / MacOSX
 go build -o agarismap
 # Windows
@@ -52,9 +56,3 @@ Credits:
 * Vanilla Planets (EarthLike, Alien, Moon, Mars, Europa, Triton, Titan, Pertam): [Keen Software House](https://github.com/KeenSoftwareHouse)
 * Agaris: [CptArthur](https://github.com/CptArthur) [Agaris with Roads Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=2567339915)
 * Milkway Skybox: [Milkway Skybox](https://steamcommunity.com/sharedfiles/filedetails/?id=670718659)
-
-# CHANGES TO GAME DATA
-
-Some gamedata is used for generating the required textures. Here are the list of changes I had to do.
-
-Weirdly, I had to swap the front and left images, and rotate 180 degrees the up image.

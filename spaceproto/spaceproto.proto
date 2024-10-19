@@ -1,0 +1,143 @@
+syntax = "proto3";
+
+package spaceproto;
+
+option go_package = "./spaceproto";
+
+message Range {
+    double Min = 1;
+    double Max = 2;
+}
+
+message Vector3 {
+    double x = 1;
+    double y = 2;
+    double z = 3;
+}
+
+message Quaternion {
+    double x = 1;
+    double y = 2;
+    double z = 3;
+    double w = 4;
+}
+
+message GlobalInfo {
+    Vector3 SunNormalized = 1;
+    double SunIntensity = 2;
+    double SmallShipMaxSpeed = 3;
+    double SmallShipMaxAngularSpeed = 4;
+    double LargeShipMaxSpeed = 5;
+    double LargeShipMaxAngularSpeed = 6;
+}
+
+message SpaceMessage {
+    string From = 1;
+    string Message = 2;
+}
+
+message Grid {
+	string Id = 1;
+	string Name = 2;
+	string Owner = 3;
+	string Faction = 4;
+	string FactionTag = 5;
+	int32 Blocks = 6;
+	bool IsPowered = 7;
+	double GridSize = 8;
+	bool IsStatic = 9;
+	bool IsParked = 10;
+	string ParentId = 11;
+	int32 RelGroupId = 12;
+	int32 RelGroupCount = 13;
+	int32 PCU = 14;
+	Vector3 Position = 15;
+	Quaternion Rotation = 16;
+	int64 LastBlocksUpdate = 17;
+}
+
+message GridBlock {
+    Vector3 GridPosition = 1;
+    Vector3 Position = 2;
+    double MaxHealth = 3;
+    double Health = 4;
+    string BlockType = 5;
+}
+
+message GridGroup {
+    string Owner = 1;
+    string Faction = 2;
+    string FactionTag = 3;
+    int32 Blocks = 4;
+    repeated Grid Grids = 5;
+}
+
+message GridUpdate {
+    Grid Grid = 1;
+    bool IsNew = 2;
+    bool IsDeleted = 3;
+}
+
+message Voxel {
+    string Id = 1;
+    string Name = 2;
+    string DebugName = 3;
+    Vector3 Position = 4;
+    Quaternion Rotation = 5;
+    double Size = 6;
+    bool HasAtmosphere = 7;
+    double AtmosphereAltitude = 8;
+    Range HillParameters = 9;
+}
+
+message Player {
+    string Id = 1;
+    string Name = 2;
+    string Faction = 3;
+    string SteamId = 4;
+    bool IsOnline = 5;
+    Vector3 Position = 6;
+    Quaternion Rotation = 7;
+}
+
+message PlayerUpdate {
+    Player Player = 1;
+    bool IsNew = 2;
+    bool IsDeleted = 3;
+}
+
+message PlanetList {
+    map<string, Voxel> Planets = 1;
+}
+
+message GridList {
+    map<string, Grid> Grids = 1;
+}
+
+message Players {
+    map<string, Player> Players = 1;
+}
+
+message GridBlocks {
+    string GridId = 1;
+    repeated GridBlock Blocks = 2;
+}
+
+message GridBlockRequest {
+    string GridId = 1;
+}
+
+message WebsocketMessage {
+    string Type = 1;
+    oneof data {
+        GlobalInfo GlobalInfo = 2;
+        SpaceMessage SpaceMessage = 3;
+        GridUpdate GridUpdate = 4;
+        PlayerUpdate PlayerUpdate = 5;
+        PlanetList PlanetList = 6;
+        GridList GridList = 7;
+        Players Players = 8;
+        GridBlocks GridBlocks = 9;
+        GridBlockRequest GridBlockRequest = 10;
+    }
+}

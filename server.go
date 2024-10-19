@@ -9,10 +9,10 @@ import (
 )
 
 var tagsToErase = []string{
-	"NONE",
 	"SPRT",
 	"ASSERT",
 	"IMBER",
+	"GC",
 }
 
 func shouldEraseTag(tag string) bool {
@@ -25,50 +25,29 @@ func shouldEraseTag(tag string) bool {
 }
 
 func cleanupGrids(s *spacelab.API) {
-	grids, err := s.GridsV2()
+	grids, err := s.Grids()
 	if err != nil {
 		panic(err)
 	}
 
 	_, _ = s.SendMessage("Cleaning grids")
-	deleted := 0
 	gridsToDelete := make([]spacelab.Grid, 0)
 
 	for _, gridGroup := range grids {
-		gridGroup.Tag = strings.ToUpper(gridGroup.Tag)
+		gridGroup.FactionTag = strings.ToUpper(gridGroup.FactionTag)
 
-		if shouldEraseTag(gridGroup.Tag) && gridGroup.Blocks < 20 {
-			gridsToDelete = append(gridsToDelete, gridGroup.Grids...)
+		// if shouldEraseTag(gridGroup.FactionTag) && gridGroup.Blocks < 20 {
+		// 	gridsToDelete = append(gridsToDelete, gridGroup)
+		// }
+
+		if strings.Contains(gridGroup.Name, "(NPC-AAW)Gunship-") ||
+			strings.Contains(gridGroup.Name, "(NPC-AAW)Drone-") ||
+			strings.Contains(gridGroup.Name, "(NPC-AAW)Tetrach-") ||
+			strings.Contains(gridGroup.Name, "(SPRT)") {
+			gridsToDelete = append(gridsToDelete, gridGroup)
 		}
 	}
 
-	// for _, grid := range grids {
-	// 	if grid.RelGroupCount == 1 && grid.Blocks < 20 &&
-	// 		grid.Owner == "Thumbs" ||
-	// 		grid.Owner == "Space Pirates" ||
-	// 		grid.Owner == "Raider Commander" ||
-	// 		grid.Owner == "NONE" {
-	// 		fmt.Println(grid)
-	// 		gridsToDelete = append(gridsToDelete, grid)
-	// 		deleted++
-	// 	} else if grid.IsPowered { // Powered grids criteria
-	// 		if grid.Owner == "Thumbs" ||
-	// 			grid.Owner == "Space Pirates" ||
-	// 			grid.Owner == "Raider Commander" {
-	// 			fmt.Println(grid)
-	// 			gridsToDelete = append(gridsToDelete, grid)
-	// 			deleted++
-	// 		} else if grid.IsStatic && grid.Blocks < 3 {
-	// 			fmt.Println(grid)
-	// 			gridsToDelete = append(gridsToDelete, grid)
-	// 			deleted++
-	// 		}
-	// 	} else if grid.Blocks < 20 {
-	// 		fmt.Println(grid)
-	// 		gridsToDelete = append(gridsToDelete, grid)
-	// 		deleted++
-	// 	}
-	// }
 	if len(gridsToDelete) > 0 {
 		res, err := s.DeleteEntity(gridsToDelete)
 		if err != nil {
@@ -76,7 +55,7 @@ func cleanupGrids(s *spacelab.API) {
 		}
 		fmt.Println(res)
 	}
-	_, _ = s.SendMessage(fmt.Sprintf("Done! Deleted %d grids!", deleted))
+	_, _ = s.SendMessage(fmt.Sprintf("Done! Deleted %d grids!", len(gridsToDelete)))
 }
 
 func main() {

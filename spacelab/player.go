@@ -1,5 +1,7 @@
 package spacelab
 
+import "github.com/racerxdl/spacelabview/spaceproto"
+
 type Player struct {
 	Id       string
 	Name     string
@@ -26,8 +28,28 @@ func (g Player) AtOrigin() bool {
 	return g.X == 0 && g.Y == 0 && g.Z == 0
 }
 
+func (g Player) ToProto() *spaceproto.Player {
+	return &spaceproto.Player{
+		Id:       g.Id,
+		Name:     g.Name,
+		Faction:  g.Faction,
+		SteamId:  g.SteamId,
+		IsOnline: g.IsOnline,
+		Position: g.Position.ToProto(),
+		Rotation: g.Rotation.ToProto(),
+	}
+}
+
 type PlayerUpdate struct {
 	Player    Player
 	IsNew     bool
 	IsDeleted bool
+}
+
+func (pu PlayerUpdate) ToProto() *spaceproto.PlayerUpdate {
+	return &spaceproto.PlayerUpdate{
+		Player:    pu.Player.ToProto(),
+		IsNew:     pu.IsNew,
+		IsDeleted: pu.IsDeleted,
+	}
 }

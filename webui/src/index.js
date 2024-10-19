@@ -362,9 +362,9 @@ function centerOn(voxelName) {
 	context.centeredOn = voxelName;
 	document.getElementById('focusname').innerText = (`Focused on ${planet.instanceName}`)
 
-	context.cameraTargetV.x = planet.voxelData.X;
-	context.cameraTargetV.y = planet.voxelData.Y;
-	context.cameraTargetV.z = planet.voxelData.Z;
+	context.cameraTargetV.x = planet.voxelData.Position.x;
+	context.cameraTargetV.y = planet.voxelData.Position.y;
+	context.cameraTargetV.z = planet.voxelData.Position.z;
 	const planetOrbit = 5000 + planet.voxelData.Size/2;
 	if (context.controls.distance < planetOrbit) {
 		context.controls.distance = planetOrbit;

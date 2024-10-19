@@ -4,6 +4,7 @@ import (
 	"time"
 
 	"github.com/quan-to/slog"
+	"github.com/racerxdl/spacelabview/spaceproto"
 	"github.com/simonfxr/pubsub"
 )
 
@@ -24,6 +25,7 @@ type Notify struct {
 	bus     *pubsub.Bus
 	voxels  map[string]Voxel
 	players map[string]Player
+	blocks  map[string][]GridBlock
 	global  GlobalInfo
 }
 
@@ -33,6 +35,7 @@ func MakeNotify(api *API) *Notify {
 		grids:   make(map[string]Grid),
 		voxels:  make(map[string]Voxel),
 		players: make(map[string]Player),
+		blocks:  make(map[string][]GridBlock),
 		log:     slog.Scope("SpaceNotify"),
 		bus:     pubsub.NewBus(),
 	}
@@ -86,6 +89,7 @@ func (n *Notify) loop() {
 		n.voxels[voxel.Name] = voxel
 	}
 
+	n.log.Info("Notify Loop reached")
 	for n.running {
 		<-checkInterval.C
 		n.refresh()
@@ -98,12 +102,56 @@ func (n *Notify) GetPlanets() map[string]Voxel {
 	return n.voxels
 }
 
+func (n *Notify) GetPlanetsProto() *spaceproto.PlanetList {
+	planets := make(map[string]*spaceproto.Voxel)
+	for k, v := range n.voxels {
+		planets[k] = v.ToProto()
+	}
+	return &spaceproto.PlanetList{
+		Planets: planets,
+	}
+}
+
 func (n *Notify) GetGrids() map[string]Grid {
 	return n.grids
 }
 
+func (n *Notify) GetGridsProto() *spaceproto.GridList {
+	grids := make(map[string]*spaceproto.Grid)
+	for k, v := range n.grids {
+		grids[k] = v.ToProto()
+	}
+	return &spaceproto.GridList{
+		Grids: grids,
+	}
+}
+
 func (n *Notify) GetPlayers() map[string]Player {
 	return n.players
+}
+
+func (n *Notify) GetPlayersProto() *spaceproto.Players {
+	players := make(map[string]*spaceproto.Player)
+	for k, v := range n.players {
+		players[k] = v.ToProto()
+	}
+	return &spaceproto.Players{
+		Players: players,
+	}
+}
+
+func (n *Notify) GetGridBlocks(gridId string) []GridBlock {
+	return n.blocks[gridId]
+}
+
+func (n *Notify) GetGridBlocksProto(gridId string) *spaceproto.GridBlocks {
+	var blocks = []*spaceproto.GridBlock{}
+	for _, v := range n.blocks[gridId] {
+		blocks = append(blocks, v.ToProto())
+	}
+	return &spaceproto.GridBlocks{
+		Blocks: blocks,
+	}
 }
 
 func (n *Notify) refresh() {
@@ -148,7 +196,7 @@ func (n *Notify) updateGrids() {
 
 	gridsNow := make(map[string]string)
 	for _, grid := range grids {
-		if grid.Blocks < minNumBlocks {
+		if grid.Blocks < minNumBlocks && !grid.IsStatic {
 			continue // Skip
 		}
 
@@ -165,6 +213,18 @@ func (n *Notify) updateGrids() {
 		}
 
 		g := n.grids[id]
+
+		if !ok || grid.LastBlocksUpdate-g.LastBlocksUpdate > 30 {
+			// n.log.Debug("Grid %q blocks updated", grid.Name)
+			blocks, err := n.api.GridBlocks(id)
+			if err != nil {
+				n.log.Error("error reading grid blocks: %s", err)
+			} else {
+				g.LastBlocksUpdate = grid.LastBlocksUpdate
+				n.blocks[id] = blocks
+				n.grids[id] = g // Struct, so this is needed
+			}
+		}
 
 		if g.DistanceToGrid(grid) > minDeltaUpdate {
 			n.grids[id] = grid

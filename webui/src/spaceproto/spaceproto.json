@@ -1,0 +1,434 @@
+{
+  "options": {
+    "syntax": "proto3"
+  },
+  "nested": {
+    "spaceproto": {
+      "options": {
+        "go_package": "./spaceproto"
+      },
+      "nested": {
+        "Range": {
+          "fields": {
+            "Min": {
+              "type": "double",
+              "id": 1
+            },
+            "Max": {
+              "type": "double",
+              "id": 2
+            }
+          }
+        },
+        "Vector3": {
+          "fields": {
+            "x": {
+              "type": "double",
+              "id": 1
+            },
+            "y": {
+              "type": "double",
+              "id": 2
+            },
+            "z": {
+              "type": "double",
+              "id": 3
+            }
+          }
+        },
+        "Quaternion": {
+          "fields": {
+            "x": {
+              "type": "double",
+              "id": 1
+            },
+            "y": {
+              "type": "double",
+              "id": 2
+            },
+            "z": {
+              "type": "double",
+              "id": 3
+            },
+            "w": {
+              "type": "double",
+              "id": 4
+            }
+          }
+        },
+        "GlobalInfo": {
+          "fields": {
+            "SunNormalized": {
+              "type": "Vector3",
+              "id": 1
+            },
+            "SunIntensity": {
+              "type": "double",
+              "id": 2
+            },
+            "SmallShipMaxSpeed": {
+              "type": "double",
+              "id": 3
+            },
+            "SmallShipMaxAngularSpeed": {
+              "type": "double",
+              "id": 4
+            },
+            "LargeShipMaxSpeed": {
+              "type": "double",
+              "id": 5
+            },
+            "LargeShipMaxAngularSpeed": {
+              "type": "double",
+              "id": 6
+            }
+          }
+        },
+        "SpaceMessage": {
+          "fields": {
+            "From": {
+              "type": "string",
+              "id": 1
+            },
+            "Message": {
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "Grid": {
+          "fields": {
+            "Id": {
+              "type": "string",
+              "id": 1
+            },
+            "Name": {
+              "type": "string",
+              "id": 2
+            },
+            "Owner": {
+              "type": "string",
+              "id": 3
+            },
+            "Faction": {
+              "type": "string",
+              "id": 4
+            },
+            "FactionTag": {
+              "type": "string",
+              "id": 5
+            },
+            "Blocks": {
+              "type": "int32",
+              "id": 6
+            },
+            "IsPowered": {
+              "type": "bool",
+              "id": 7
+            },
+            "GridSize": {
+              "type": "double",
+              "id": 8
+            },
+            "IsStatic": {
+              "type": "bool",
+              "id": 9
+            },
+            "IsParked": {
+              "type": "bool",
+              "id": 10
+            },
+            "ParentId": {
+              "type": "string",
+              "id": 11
+            },
+            "RelGroupId": {
+              "type": "int32",
+              "id": 12
+            },
+            "RelGroupCount": {
+              "type": "int32",
+              "id": 13
+            },
+            "PCU": {
+              "type": "int32",
+              "id": 14
+            },
+            "Position": {
+              "type": "Vector3",
+              "id": 15
+            },
+            "Rotation": {
+              "type": "Quaternion",
+              "id": 16
+            },
+            "LastBlocksUpdate": {
+              "type": "int64",
+              "id": 17
+            }
+          }
+        },
+        "GridBlock": {
+          "fields": {
+            "GridPosition": {
+              "type": "Vector3",
+              "id": 1
+            },
+            "Position": {
+              "type": "Vector3",
+              "id": 2
+            },
+            "MaxHealth": {
+              "type": "double",
+              "id": 3
+            },
+            "Health": {
+              "type": "double",
+              "id": 4
+            },
+            "BlockType": {
+              "type": "string",
+              "id": 5
+            }
+          }
+        },
+        "GridGroup": {
+          "fields": {
+            "Owner": {
+              "type": "string",
+              "id": 1
+            },
+            "Faction": {
+              "type": "string",
+              "id": 2
+            },
+            "FactionTag": {
+              "type": "string",
+              "id": 3
+            },
+            "Blocks": {
+              "type": "int32",
+              "id": 4
+            },
+            "Grids": {
+              "rule": "repeated",
+              "type": "Grid",
+              "id": 5
+            }
+          }
+        },
+        "GridUpdate": {
+          "fields": {
+            "Grid": {
+              "type": "Grid",
+              "id": 1
+            },
+            "IsNew": {
+              "type": "bool",
+              "id": 2
+            },
+            "IsDeleted": {
+              "type": "bool",
+              "id": 3
+            }
+          }
+        },
+        "Voxel": {
+          "fields": {
+            "Id": {
+              "type": "string",
+              "id": 1
+            },
+            "Name": {
+              "type": "string",
+              "id": 2
+            },
+            "DebugName": {
+              "type": "string",
+              "id": 3
+            },
+            "Position": {
+              "type": "Vector3",
+              "id": 4
+            },
+            "Rotation": {
+              "type": "Quaternion",
+              "id": 5
+            },
+            "Size": {
+              "type": "double",
+              "id": 6
+            },
+            "HasAtmosphere": {
+              "type": "bool",
+              "id": 7
+            },
+            "AtmosphereAltitude": {
+              "type": "double",
+              "id": 8
+            },
+            "HillParameters": {
+              "type": "Range",
+              "id": 9
+            }
+          }
+        },
+        "Player": {
+          "fields": {
+            "Id": {
+              "type": "string",
+              "id": 1
+            },
+            "Name": {
+              "type": "string",
+              "id": 2
+            },
+            "Faction": {
+              "type": "string",
+              "id": 3
+            },
+            "SteamId": {
+              "type": "string",
+              "id": 4
+            },
+            "IsOnline": {
+              "type": "bool",
+              "id": 5
+            },
+            "Position": {
+              "type": "Vector3",
+              "id": 6
+            },
+            "Rotation": {
+              "type": "Quaternion",
+              "id": 7
+            }
+          }
+        },
+        "PlayerUpdate": {
+          "fields": {
+            "Player": {
+              "type": "Player",
+              "id": 1
+            },
+            "IsNew": {
+              "type": "bool",
+              "id": 2
+            },
+            "IsDeleted": {
+              "type": "bool",
+              "id": 3
+            }
+          }
+        },
+        "PlanetList": {
+          "fields": {
+            "Planets": {
+              "keyType": "string",
+              "type": "Voxel",
+              "id": 1
+            }
+          }
+        },
+        "GridList": {
+          "fields": {
+            "Grids": {
+              "keyType": "string",
+              "type": "Grid",
+              "id": 1
+            }
+          }
+        },
+        "Players": {
+          "fields": {
+            "Players": {
+              "keyType": "string",
+              "type": "Player",
+              "id": 1
+            }
+          }
+        },
+        "GridBlocks": {
+          "fields": {
+            "GridId": {
+              "type": "string",
+              "id": 1
+            },
+            "Blocks": {
+              "rule": "repeated",
+              "type": "GridBlock",
+              "id": 2
+            }
+          }
+        },
+        "GridBlockRequest": {
+          "fields": {
+            "GridId": {
+              "type": "string",
+              "id": 1
+            }
+          }
+        },
+        "WebsocketMessage": {
+          "oneofs": {
+            "data": {
+              "oneof": [
+                "GlobalInfo",
+                "SpaceMessage",
+                "GridUpdate",
+                "PlayerUpdate",
+                "PlanetList",
+                "GridList",
+                "Players",
+                "GridBlocks",
+                "GridBlockRequest"
+              ]
+            }
+          },
+          "fields": {
+            "Type": {
+              "type": "string",
+              "id": 1
+            },
+            "GlobalInfo": {
+              "type": "GlobalInfo",
+              "id": 2
+            },
+            "SpaceMessage": {
+              "type": "SpaceMessage",
+              "id": 3
+            },
+            "GridUpdate": {
+              "type": "GridUpdate",
+              "id": 4
+            },
+            "PlayerUpdate": {
+              "type": "PlayerUpdate",
+              "id": 5
+            },
+            "PlanetList": {
+              "type": "PlanetList",
+              "id": 6
+            },
+            "GridList": {
+              "type": "GridList",
+              "id": 7
+            },
+            "Players": {
+              "type": "Players",
+              "id": 8
+            },
+            "GridBlocks": {
+              "type": "GridBlocks",
+              "id": 9
+            },
+            "GridBlockRequest": {
+              "type": "GridBlockRequest",
+              "id": 10
+            }
+          }
+        }
+      }
+    }
+  }
+}

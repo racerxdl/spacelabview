@@ -11,6 +11,7 @@ import { magicSphereGeometry } from "../geometry/MagicSphereGeometry"
 import { pickRandomColor } from '../colors';
 import { newText } from '../draw';
 import { GenerateRing } from '../geometry/Ring';
+import { WebsocketMessage } from '../spaceproto/spaceproto.js';
 
 class SpaceSocket {
 
@@ -74,8 +75,8 @@ class SpaceSocket {
                 planetData.textures = planetTextures(planetData.data.pathPrefix);
                 planetData.normals = planetNormals(planetData.data.pathPrefix);
 
-                planetData.maxHillSize = (1 + voxelData.HillParameters[1]) * voxelData.Size;
-                planetData.minHillSize = (1 + voxelData.HillParameters[0]) * voxelData.Size;
+                planetData.maxHillSize = (1 + voxelData.HillParameters.Max) * voxelData.Size;
+                planetData.minHillSize = (1 + voxelData.HillParameters.Min) * voxelData.Size;
                 planetData.hillDelta = (planetData.maxHillSize - planetData.minHillSize) / 2;
 
                 planetData.materials = await Promise.all(planetData.textures.map(async (texture, idx) => {
@@ -120,9 +121,10 @@ class SpaceSocket {
                 // planetData.geometry = magicSphereGeometry(planetData.minHillSize / 2, PlanetParams.sphereCubeDivisions);
                 // planetData.mesh = new THREE.Mesh(planetData.geometry, planetData.materials);
                 // // planetData.mesh.rotation.y = Math.PI/2;
-                planetData.mesh.position.x = voxelData.X;
-                planetData.mesh.position.y = voxelData.Y;
-                planetData.mesh.position.z = voxelData.Z;
+                planetData.mesh.position.x = voxelData.Position.x || 0;
+                planetData.mesh.position.y = voxelData.Position.y || 0;
+                planetData.mesh.position.z = voxelData.Position.z || 0;
+                // console.log(voxelData)
                 ss.addMesh(planetData.mesh);
 
                 if (planetData.data.water) {
@@ -140,9 +142,9 @@ class SpaceSocket {
                     });
                     planetData.waterMesh = new THREE.Mesh(planetData.waterGeometry, planetData.waterMaterial);
                     planetData.waterMesh.rotation.y = 3.14;
-                    planetData.waterMesh.position.x = voxelData.X;
-                    planetData.waterMesh.position.y = voxelData.Y;
-                    planetData.waterMesh.position.z = voxelData.Z;
+                    planetData.waterMesh.position.x = voxelData.Position.x || 0;
+                    planetData.waterMesh.position.y = voxelData.Position.y || 0;
+                    planetData.waterMesh.position.z = voxelData.Position.z || 0;
                     ss.addMesh(planetData.waterMesh);
                 }
 
@@ -170,9 +172,9 @@ class SpaceSocket {
                             depthWrite: false,
                         });
                         const skyMesh = new THREE.Mesh(geometry , material);
-                        skyMesh.position.x = voxelData.X;
-                        skyMesh.position.y = voxelData.Y;
-                        skyMesh.position.z = voxelData.Z;
+                        skyMesh.position.x = voxelData.Position.x || 0;
+                        skyMesh.position.y = voxelData.Position.y || 0;
+                        skyMesh.position.z = voxelData.Position.z || 0;
                         skyMesh.depthWrite = false;
 
                         skyMesh.rotationAxis = skyData.rotationAxis.clone();
@@ -216,9 +218,9 @@ class SpaceSocket {
                         side: THREE.DoubleSide,
                     });
                     planetData.ring = new THREE.Mesh( geometry, material );
-                    planetData.ring.position.x = voxelData.X;
-                    planetData.ring.position.y = voxelData.Y;
-                    planetData.ring.position.z = voxelData.Z;
+                    planetData.ring.position.x = voxelData.Position.x || 0;
+                    planetData.ring.position.y = voxelData.Position.y || 0;
+                    planetData.ring.position.z = voxelData.Position.z || 0;
                     // planetData.ring.rotation.z = Math.PI/2;
                     planetData.ring.rotation.x = Math.PI/2;
                     ss.addMesh(planetData.ring);
@@ -228,9 +230,9 @@ class SpaceSocket {
                     new THREE.SphereGeometry((planetData.maxHillSize * 1.1) / 2, PlanetParams.waterSphereSegments/4, PlanetParams.waterSphereSegments/4),
                     new THREE.MeshLambertMaterial( { color: 0xFF0000, transparent: true, opacity: 0.2, wireframe: true } )
                 );
-                planetData.boundingSphere.position.x = voxelData.X;
-                planetData.boundingSphere.position.y = voxelData.Y;
-                planetData.boundingSphere.position.z = voxelData.Z;
+                planetData.boundingSphere.position.x = voxelData.Position.x || 0;
+                planetData.boundingSphere.position.y = voxelData.Position.y || 0;
+                planetData.boundingSphere.position.z = voxelData.Position.z || 0;
                 planetData.boundingSphere.visible = false;
                 planetData.boundingSphere.planetName = name;
                 ss.addMesh(planetData.boundingSphere);
@@ -251,7 +253,7 @@ class SpaceSocket {
     gridsCallback(data) {
         const ss = this;
         Object.keys(data).forEach((k) => {
-            //console.log(data[k])
+            // console.log(data[k])
             ss.gridUpdateCallback({
                 Grid: data[k],
                 IsNew: true,
@@ -287,21 +289,21 @@ class SpaceSocket {
             // const geometry = new THREE.SphereGeometry(1000, 8, 8);
             const geometry = new THREE.SphereGeometry(PlanetParams.gridSphereDiameterFactor, PlanetParams.gridSphereSegments, PlanetParams.gridSphereSegments);
             const gridMesh = new THREE.Mesh(geometry, gridMaterial);
-            gridMesh.position.x = gridData.X;
-            gridMesh.position.y = gridData.Y;
-            gridMesh.position.z = gridData.Z;
+            gridMesh.position.x = gridData.Position.x || 0;
+            gridMesh.position.y = gridData.Position.y || 0;
+            gridMesh.position.z = gridData.Position.z || 0;
 
             const gridText = newText(gridData.Name);
-            gridText.position.x = gridData.X;
-            gridText.position.y = gridData.Y;
-            gridText.position.z = gridData.Z;
+            gridText.position.x = gridData.Position.x || 0;
+            gridText.position.y = gridData.Position.y || 0;
+            gridText.position.z = gridData.Position.z || 0;
             gridMesh.spriteText = gridText;
             gridMesh.spriteText.visible = false;
             gridMesh.spriteText.position.multiplyScalar(PlanetParams.gridSpriteLabelRadiusOffset);
             gridMesh.name = `${gridData.Name} (${gridData.EntityId})`
             gridMesh.simpleName = gridData.Name;
             gridMesh.faction = gridData.Faction;
-            gridMesh.factionTag = gridData.FactionTag;
+            gridMesh.factionTag = gridData.FactionTag || gridData.Faction || 'Player';
             gridMesh.ownerColor = '#' + this.ownerColors[gridData.Faction].toString(16).padStart(6, '0');
             const ng = {
                 gridData: gridData,
@@ -352,12 +354,12 @@ class SpaceSocket {
                 this.addMesh(gridI.text);
             }
             const { mesh, text } = this.grids[gridData.EntityId];
-            mesh.position.x = gridData.X;
-            mesh.position.y = gridData.Y;
-            mesh.position.z = gridData.Z;
-            text.position.x = gridData.X;
-            text.position.y = gridData.Y;
-            text.position.z = gridData.Z;
+            mesh.position.x = gridData.Position.x || 0;
+            mesh.position.y = gridData.Position.y || 0;
+            mesh.position.z = gridData.Position.z || 0;
+            text.position.x = gridData.Position.x || 0;
+            text.position.y = gridData.Position.y || 0;
+            text.position.z = gridData.Position.z || 0;
             text.position.multiplyScalar(PlanetParams.gridSpriteLabelRadiusOffset);
 
             this.grids[gridData.EntityId].gridData = gridData;
@@ -374,9 +376,9 @@ class SpaceSocket {
         this.globalInfo = data;
         document.dispatchEvent(new CustomEvent("sunPosition", {
             detail: {
-                x: data.SunNormalizedX,
-                y: data.SunNormalizedY,
-                z: data.SunNormalizedZ,
+                x: data.SunNormalized.x || 0,
+                y: data.SunNormalized.y || 0,
+                z: data.SunNormalized.z || 0,
                 intensity: data.SunIntensity,
             }
         }))
@@ -394,17 +396,19 @@ class SpaceSocket {
         }));
     }
 
-    onMessage(msg) {
+    async onMessage(msg) {
         try {
-            const data = JSON.parse(msg.data);
+            const wsMsg = WebsocketMessage.decode(new Uint8Array(await msg.data.arrayBuffer()));
+            const data = WebsocketMessage.toObject(wsMsg);
+            // console.log(data);
             switch (data.Type) {
-                case "planets": this.planetsUpdateCallback(data.Content); break;
-                case "gridUpdate": this.gridUpdateCallback(data.Content); break;
-                case "playerUpdate": this.gridUpdateCallback(data.Content); break;
-                case "chat": this.newChatCallback(data.Content); break;
-                case "grids": this.gridsCallback(data.Content); break;
-                case "players": this.gridsCallback(data.Content); break;
-                case "globalInfo": this.globalInfoCallback(data.Content); break;
+                case "planets": this.planetsUpdateCallback(data.PlanetList.Planets); break;
+                case "gridUpdate": this.gridUpdateCallback(data.GridUpdate); break;
+                case "playerUpdate": this.gridUpdateCallback(data.PlayerUpdate); break;
+                case "chat": this.newChatCallback(data.SpaceMessage); break;
+                case "grids": this.gridsCallback(data.GridList.Grids); break;
+                case "players": this.gridsCallback(data.Players.Players); break;
+                case "globalInfo": this.globalInfoCallback(data.GlobalInfo); break;
             }
         } catch (e) {
             document.dispatchEvent(new CustomEvent("SpaceError", {
